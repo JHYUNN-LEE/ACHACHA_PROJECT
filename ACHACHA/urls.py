@@ -19,7 +19,7 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('acha_money/', include('acha_money.urls')),
+    path('acha_money/', include('acha_money.urls')),
     # path('all_search/', include('all_search.urls')),
     # path('fast_search/', include('fast_search.urls')),
     path('index/', include('index.urls')),

@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69325ddd-f339-4f4a-9d3b-22e703bc76df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/acha_money/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/all_search/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fast_search/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/acha_money/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ACHACHA/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACHACHA/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ACHACHA/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACHACHA/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acha_money/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/acha_money/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acha_money/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/acha_money/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,13 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,20 +40,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/user/workspaces/ACHACHA&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/user/workspaces/ACHACHA/templates/base",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/base" />
+      <recent name="$PROJECT_DIR$/acha_money/templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/base" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/ACHACHA/bootstrap" />
       <recent name="$PROJECT_DIR$/ACHACHA" />
@@ -88,7 +101,8 @@
       <updated>1662900145180</updated>
       <workItem from="1662900147292" duration="3387000" />
       <workItem from="1662910559854" duration="1000" />
-      <workItem from="1662910564323" duration="10709000" />
+      <workItem from="1662910564323" duration="10847000" />
+      <workItem from="1662958279266" duration="5852000" />
     </task>
     <servers />
   </component>
