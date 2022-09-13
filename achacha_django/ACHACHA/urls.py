@@ -25,5 +25,4 @@ urlpatterns = [
     path('fast_search/', include('fast_search.urls')), 
     path('all_search/', include('all_search.urls')),
     path('acha_money/', include('acha_money.urls')),
-
 ]
