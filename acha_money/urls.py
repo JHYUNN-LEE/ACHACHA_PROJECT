@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.money_index),
+
 ]

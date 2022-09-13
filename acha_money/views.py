@@ -4,3 +4,4 @@ from django.shortcuts import render
 
 def money_index(request):
     return render(request, 'acha_money/money_index.html')
+
