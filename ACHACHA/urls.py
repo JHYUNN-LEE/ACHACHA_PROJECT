@@ -16,12 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index),
+    path('member/', include('member.urls')),
+    path('fast_search/', include('fast_search.urls')), 
+    path('all_search/', include('all_search.urls')),
     path('acha_money/', include('acha_money.urls')),
-    # path('all_search/', include('all_search.urls')),
-    # path('fast_search/', include('fast_search.urls')),
-    path('index/', include('index.urls')),
-    # path('member/', include('member.urls')),
+
 ]
