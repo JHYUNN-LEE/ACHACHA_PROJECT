@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<script>
+    function chageLangSelect(){
+        var langSelect = document.getElementById("selectbox");
+         
+        // select element에서 선택된 option의 value가 저장된다.
+        var selectValue = langSelect.options[langSelect.selectedIndex].value;
+     
+        // select element에서 선택된 option의 text가 저장된다.
+        var selectText = langSelect.options[langSelect.selectedIndex].text;
+    }
+</script>
+
+
+<style>
+    h3 {
+        text-align: center;
+    }
+    
+    form {
+        text-align: center;
+    }
+
+    .img_save_btn {
+        display: flex;
+        justify-content: center;
+    }
+    label {
+        cursor: pointer;
+        font-size: 1em;
+    }
+    
+    /* 못생긴 기존 input 숨기기 */
+    #chooseFile {
+        visibility: hidden;
+    }
+
+</style>
+
+
+
+
+    <h3 class="search_text">이미지로 검색하기</h3>
+    
+    <form action="" method="POST" id="dataForm"> {% csrf_token %}
+        <p class="title">
+            1. 읽어버린 물건의 유형을 선택해 주세요.</p>
+            <select name="category">
+                <option value="" selected disabled>유형 선택</option>    
+                <option value="bag">가방</option>
+                <option value="귀금속">귀금속</option>
+                <option value="옷">옷</option>
+                <option value="스포츠용품">스포츠용품</option>
+                <option value="스포츠용품">기타</option>
+            </select>
+
+        
+        <p class="title">2. 물건의 이미지를 업로드 해주세요. </p>
+        <div class="img_save_btn">   
+            <label class="file-label" for="chooseFile">업로드하기</label>
+        </div>
+        <input class="file" id="chooseFile" type="file" 
+            onchange="dropFile.handleFiles(this.files)"
+            accept="image/png, image/jpeg">
+
+        
+        <p>
+            <input type="button" value="찾기" id="submitButton"/>
+        </p>
+    </form>
+
+{% endblock %}
+
+</body>
+</html>
