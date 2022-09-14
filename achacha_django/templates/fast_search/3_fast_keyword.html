@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<form action="" method="POST" id="dataForm"> {% csrf_token %}
+    <h3 class="search_text">키워드로 검색하기</h3>
+        <p class="choose_btn">
+            1. 잃어버린 물건의 유형<br>
+            <select name="category">
+                <option value="가방">가방</option>
+                <option value="귀금속">귀금속</option>
+                <option value="옷">옷</option>
+                <option value="스포츠용품">스포츠용품</option>
+            </select>
+        </p>
+        <p class="choose_btn">
+            2. 잃어버린 물건의 색상<br>
+            <select name="color">
+                <option value="가방">가방</option>
+                <option value="귀금속">귀금속</option>
+                <option value="옷">옷</option>
+                <option value="스포츠용품">스포츠용품</option>
+            </select>
+        </p>
+        <p class="choose_btn">
+            3. 잃어버린 물건의 유형.<br>
+            <select name="area">
+                <option value="가방">가방</option>
+                <option value="귀금속">귀금속</option>
+                <option value="옷">옷</option>
+                <option value="스포츠용품">스포츠용품</option>
+            </select>
+        </p>
+        <p>
+            <input type="button" value="찾기" id="submitButton"/>
+        </p>
+<form>        
+
+
+{% endblock %}
+
+</body>
+</html>

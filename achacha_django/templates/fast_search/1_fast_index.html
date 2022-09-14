@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<style>
+    h3 {
+        text-align: center;
+    }
+    
+    div {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+
+
+<h3> 분실물 빨리 찾기 </h3>
+<div class="img_btn">
+    <a href="{% url 'image_search' %}" class="button_image">이미지로 분실물 찾아보기</a>
+</div>
+<br>
+
+<div class="key_btn">
+    <a href="{% url 'keyword_search' %}" class="button_keyword">키워드로 분실물 찾아보기</a>
+</div>
+
+
+{% endblock %}
+
+</body>
+</html>
