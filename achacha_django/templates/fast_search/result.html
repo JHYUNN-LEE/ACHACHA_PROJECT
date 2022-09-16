@@ -8,7 +8,13 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-    <span>fast_search 인덱스 임요 </span>
+<h1>Search Result</h1>
+<br><br>    
+    {% if image.image %}
+        <p>{{image.category}}</p>
+        <img src="{{image.image.url}}">
+    <br><br>
+    {% endif %}
 
 {% endblock %}
 
