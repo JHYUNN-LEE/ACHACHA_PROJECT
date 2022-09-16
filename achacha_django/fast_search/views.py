@@ -31,5 +31,4 @@ def uploaded_image(request):
         image.save()
     #print(image.image)
     #print(image.category)
-    #++
     return render(request, 'fast_search/result.html', {'image':image})
