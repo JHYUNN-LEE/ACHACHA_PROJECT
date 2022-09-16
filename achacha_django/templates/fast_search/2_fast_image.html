@@ -46,39 +46,29 @@
     }
 
 </style>
-
-
-
-
     <h3 class="search_text">이미지로 검색하기</h3>
-    
-    <form action="" method="POST" id="dataForm"> {% csrf_token %}
+    <form action="upload/" method="POST" id="dataForm" enctype="multipart/form-data"> {% csrf_token %}
         <p class="title">
-            1. 읽어버린 물건의 유형을 선택해 주세요.</p>
-            <select name="category">
+            1. 잃어버린 물건의 유형을 선택해 주세요.</p>
+            <select name="category" required> <!--필수선택-->
                 <option value="" selected disabled>유형 선택</option>    
                 <option value="bag">가방</option>
-                <option value="귀금속">귀금속</option>
-                <option value="옷">옷</option>
-                <option value="스포츠용품">스포츠용품</option>
-                <option value="스포츠용품">기타</option>
+                <option value="jewelry">귀금속</option>
+                <option value="clothes">옷</option>
+                <option value="sports">스포츠용품</option>
+                <option value="etc">기타</option>
             </select>
-
-        
+    <br>
+    <br>
+    <!-- image/file -->
         <p class="title">2. 물건의 이미지를 업로드 해주세요. </p>
-        <div class="img_save_btn">   
-            <label class="file-label" for="chooseFile">업로드하기</label>
-        </div>
-        <input class="file" id="chooseFile" type="file" 
-            onchange="dropFile.handleFiles(this.files)"
-            accept="image/png, image/jpeg">
-
-        
-        <p>
-            <input type="button" value="찾기" id="submitButton"/>
-        </p>
+        <br>
+        <input type="file" name="uploadfile" accept="image/*" >
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="찾기">
     </form>
-
 {% endblock %}
 
 </body>
