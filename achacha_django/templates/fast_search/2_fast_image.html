@@ -19,6 +19,7 @@
         // select element에서 선택된 option의 text가 저장된다.
         var selectText = langSelect.options[langSelect.selectedIndex].text;
     }
+
 </script>
 
 
@@ -58,17 +59,18 @@
                 <option value="clothes">옷</option>
                 <option value="sports">스포츠용품</option>
                 <option value="etc">기타</option>
+                <option value="wallet">지갑</option>
             </select>
     <br>
     <br>
     <!-- image/file -->
         <p class="title">2. 물건의 이미지를 업로드 해주세요. </p>
         <br>
-        <input type="file" name="uploadfile" accept="image/*" >
+        <input type="file" name="uploadfile" accept="image/png, image/jpeg, image/jpg" >
         <br>
         <br>
         <br>
-        <input type="submit" value="찾기">
+        <input type="submit" id="submit" value="찾기">
     </form>
 {% endblock %}
 
