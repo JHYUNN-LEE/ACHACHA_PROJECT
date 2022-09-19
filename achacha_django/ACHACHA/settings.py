@@ -76,6 +76,10 @@ TEMPLATES = [
     },
 ]
 
+# 추가
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #BASE_DIR/'media'
+
 WSGI_APPLICATION = 'ACHACHA.wsgi.application'
 
 
