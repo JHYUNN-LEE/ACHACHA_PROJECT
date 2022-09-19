@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base/base.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+
+</style>
+</head>
+<body class="bg-gradient-primary">
+    {% if user.is_authenticated %}
+    <div class="container">
+        <div class="card" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">ACHACHA</h5>
+                    <p class="card-text">대신수령 요청기록을 확인해보세요!</p>
+                    <a href="http://127.0.0.1:8000/member/request/" class="btn btn-primary">대신수령 요청기록</a>
+                </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">ACHACHA</h5>
+                    <p class="card-text">대신수령 이행기록을 확인해보세요!</p>
+                    <a href="http://127.0.0.1:8000/member/request/" class="btn btn-primary">대신수령 이행기록</a>
+                </div>
+        </div>
+        {% else %}
+        <div class="card" style="width: 25rem;">
+            <div class="card-body">
+                    <h5 class="card-title">ACHACHA</h5>
+                    <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요!</p>
+                    <a href="http://127.0.0.1:8000/member/register/" class="btn btn-primary">회원가입 하러가기</a>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+{% endblock %}
+</html>
