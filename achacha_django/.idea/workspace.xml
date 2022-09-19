@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69325ddd-f339-4f4a-9d3b-22e703bc76df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/acha_money/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACHACHA/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACHACHA/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACHACHA/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACHACHA/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acha_money/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/acha_money/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acha_money/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/acha_money/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="69325ddd-f339-4f4a-9d3b-22e703bc76df" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/user/workspaces/ACHACHA/templates/base",
+    "last_opened_file_path": "C:/Users/admin/workspaces/pythonProject1/multi_pjt3/ACHACHA/achacha_django",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,6 +95,7 @@
       <workItem from="1662910559854" duration="1000" />
       <workItem from="1662910564323" duration="10847000" />
       <workItem from="1662958279266" duration="5852000" />
+      <workItem from="1663290403575" duration="50000" />
     </task>
     <servers />
   </component>
