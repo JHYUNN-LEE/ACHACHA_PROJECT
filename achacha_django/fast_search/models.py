@@ -8,3 +8,8 @@ class Image(models.Model):
 	
     def __str__(self):
         return self.category
+    
+# AI # test
+class Modeling(models.Model):
+    category = models.CharField(max_length=200)
+    imageNmae = models.CharField(max_length=200)

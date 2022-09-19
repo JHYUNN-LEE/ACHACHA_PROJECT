@@ -6,12 +6,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.fast_index),
-    path('image/', views.image_search, name='image_search'), 
+    path('image/', views.image_search, name='image_search'),
     path('keyword/', views.keyword_search, name='keyword_search'),
-
-    # 추가
     path('image/upload/', views.uploaded_image, name='image_upload'),
-    
 ] 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
