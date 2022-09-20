@@ -11,3 +11,4 @@ urlpatterns = [
     path('image/upload/', views.uploaded_image, name='image_upload'),
 ] 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
