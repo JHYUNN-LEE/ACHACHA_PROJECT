@@ -1,3 +1,5 @@
+{% extends 'base/base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +7,73 @@
     <title>Title</title>
 </head>
 <body>
-{% extends 'base/base.html' %}
 
 {% block content %}
-    <span>all _search 인덱스 임요 ㅇㅇ </span>
-
+    <div class="lost_items">
+        <div class="col-lg-6 mb-4">
+            <div class="right">
+                <table class="table table-bordered" id="dataTable">
+                    <tbody>
+                        <tr>
+                            <td rowspan="4">이미지
+                            </td>
+                            <td><span class="title" style="border-bottom: 0px;">분실물명</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date_time" style="border-bottom: 0px;">습득장소</span></td>
+                        </tr>
+                        <tr>  
+                            <td><span class="cost" style="border-bottom: 0px;">카테고리</span></td>
+                        </tr>
+                        <tr> 
+                            <td><span class="get_place" >장소</span></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4">
+                            {% if item.img_src %}
+                            <div class="left">
+                            {#<img class="lost_img" src="{{}}">#}
+                            </div>
+                            {% endif %}
+                            </td>
+                            <td><span class="title">{{ item.get_name }}</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="date_time">{{ item.get_at }}</span></td>
+                        </tr>
+                        <tr>  
+                            <td><span class="cost">{{ item.category }}</span></td>
+                        </tr>
+                        <tr> 
+                            <td><span class="get_place">{{ item.get_place }}</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<!-- 페이지네이션 !-->
+        <div class="container">
+            <div class="row">
+				<div class="col">
+                    <p><strong></strong></p>
+					<ul class="pagination">
+                        {% if posts.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{posts.previous_page_number}}"><<</a></li>
+                        {% endif %}
+                        {% for p in posts.paginator.page_range %}
+                        <li class="page-item"><a class="page-link" href="?page={{p}}">{{p}}</a></li>
+                        {% endfor %}
+                        {% if posts.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{posts.next_page_number}}">>></a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 </body>

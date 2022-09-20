@@ -3,6 +3,15 @@ from django.shortcuts import render, redirect
 from .models import request
 from .models import implement
 from .forms import UserForm
+# Python
+import json, requests, time, random
+
+# Django
+from django.views import View
+from django.http import JsonResponse
+from .utils import make_signature
+from .models import Authentication
+
 
 def register(request):
     if request.method == "POST":
@@ -28,4 +37,71 @@ def index(request):
 #     return render(request, 'member/login.html')
 
 
+# 네이버 SMS 인증
+class SmsSendView(View):
+    def send_sms(self, phone_number, auth_number):
+        sid = "ncp:sms:kr:292968693103:achacha_auth"
+        sms_uri = "/sms/v2/services/{}/messages".format(sid)
+        sms_url = "https://sens.apigw.ntruss.com{}".format(sms_uri)
+            
+        acc_key_id  = "D3HFVghtWIESI6SSXmlE"          
+        timestamp = str(int(time.time() * 1000))  
 
+        body = {
+            "type": "SMS", 
+            "contentType": "COMM",
+            "from": "01028820828", 
+            "content": f"[아차차 인증번호:{auth_number}]", 
+            "messages": [{"to": f"{phone_number}"}] 
+        }
+        response = requests.post(
+        sms_url, data=json.dumps(body),
+        headers={"Content-Type": "application/json; charset=utf-8",
+                "x-ncp-apigw-timestamp": timestamp,
+                "x-ncp-iam-access-key": acc_key_id,
+                "x-ncp-apigw-signature-v2": make_signature(timestamp)
+                }
+         )
+        return response.text
+        
+# https://codingzipsa.shop/6
+    def post(self, request):
+        # data = json.loads(request.body)
+        data = json.loads(request.body)
+        print("post phone : ", data)
+        if Authentication.DoesNotExist: # DB 입력 로직 작성
+            input_mobile_num = data
+            auth_num = random.randint(10000, 100000)
+            Authentication.objects.create(
+                phone_number=input_mobile_num,
+                auth_number=auth_num,
+            ).save()
+            self.send_sms(phone_number=input_mobile_num, auth_number=auth_num)
+            return JsonResponse({'message': '인증번호 발송 및 DB 입력완료'}, status=200)
+
+        else:
+            auth_mobile = Authentication.objects.get(phone_number=input_mobile_num)
+            auth_mobile.auth_number = auth_num
+            auth_mobile.save()
+            self.send_sms(phone_number=data, auth_number=auth_num)
+            return JsonResponse({'message': '인증번호 발송완료'}, status=200)
+
+
+# 네이버 SMS 인증번호 검증
+class SMSVerificationView(View):
+    def post(self, request):
+        print("SMSVerificationView")
+        phone_number = request.POST.get('phone_number')
+        auth_number = request.POST.get('auth_number')
+        print("phone_number : ", phone_number, "auth_number : ", auth_number)
+        try:
+            verification = Authentication.objects.get(phone_number=phone_number)
+
+            if verification.auth_number == auth_number:
+                return JsonResponse({'message': '인증 완료되었습니다.'}, status=200)
+
+            else:
+                return JsonResponse({'message': '인증 실패입니다.'}, status=400)
+
+        except Authentication.DoesNotExist:
+            return JsonResponse({'message': '해당 휴대폰 번호가 존재하지 않습니다.'}, status=400)

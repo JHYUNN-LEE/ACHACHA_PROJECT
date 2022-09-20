@@ -42,11 +42,17 @@
                 labels: [2016,2017,2018,2019],
                 datasets: [{ 
                     data: [756,845,928,988],
-                    label: "분실물 (단위 : 천개)",
+                    label: "Lost (Unit : 1000ea)",
                     borderColor: "#3e95cd",
+                    fill: false
+                },{ 
+                    data: [512, 589, 633, 580],
+                    label: "Found (Unit : 1000ea)",
+                    borderColor: "#c45850",
                     fill: false
                 }
                 ]
+
             },
         });
     });
