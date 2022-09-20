@@ -79,22 +79,3 @@ $dropdown-border-color: $border-color !default;
 $login-image: 'https://source.unsplash.com/K4mSJ7kc0As/600x800' !default;
 $register-image: 'https://source.unsplash.com/Mv9hjnEUHR4/600x800' !default;
 $password-image: 'https://source.unsplash.com/oWTW-jNGl9I/600x800' !default;
-
-// 추가. breakpoints
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
-
-// 추가. 화면별 max-widths 설정
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
-);
