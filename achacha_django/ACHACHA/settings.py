@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import pymysql
 from re import template
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,15 +86,10 @@ WSGI_APPLICATION = 'ACHACHA.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'achacha',
-        'USER': 'root',
-        'PASSWORD': 'achacha7!',
-        'HOST': '54.64.90.112',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
