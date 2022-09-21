@@ -1,14 +1,18 @@
 {% extends 'base/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .lost_img{
+            width: 300px;
+            border: 1px solid #000000;
+        }
+    </style>
 </head>
 <body>
 
-{% block content %}
     <div class="lost_items">
         <div class="col-lg-6 mb-4">
             <div class="right">
@@ -16,14 +20,16 @@
                     {% for item in posts %}
                     <tbody>
                         <tr>
-                            <td rowspan="4">
+                            <td class="lost_img" rowspan="4">
                             {% if item.img_src %}
                             <div class="left">
                             {#<img class="lost_img" src="{{}}">#}
                             </div>
                             {% endif %}
                             </td>
-                            <td><span class="title">{{ item.get_name }}</span></td>
+                            <td><a href="{% url 'all_detail' item.lost_items_id_pk %}">
+                                <span class="title">
+                                {{ item.get_name }}</span></a></td>
                         </tr>
                         <tr>
                             <td><span class="date_time">{{ item.get_at }}</span></td>
