@@ -1,3 +1,4 @@
+from enum import auto
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from .models import request
@@ -37,7 +38,7 @@ def index(request):
 #     return render(request, 'member/login.html')
 
 
-# 네이버 SMS 인증
+# 인증번호 발송
 class SmsSendView(View):
     def send_sms(self, phone_number, auth_number):
         sid = "ncp:sms:kr:292968693103:achacha_auth"
@@ -64,11 +65,10 @@ class SmsSendView(View):
          )
         return response.text
         
-# https://codingzipsa.shop/6
     def post(self, request):
         # data = json.loads(request.body)
         data = json.loads(request.body)
-        print("post phone : ", data)
+        print("Phone : ", data)
         if Authentication.DoesNotExist: # DB 입력 로직 작성
             input_mobile_num = data
             auth_num = random.randint(10000, 100000)
@@ -87,17 +87,17 @@ class SmsSendView(View):
             return JsonResponse({'message': '인증번호 발송완료'}, status=200)
 
 
-# 네이버 SMS 인증번호 검증
+# 인증번호 확인
 class SMSVerificationView(View):
     def post(self, request):
-        print("SMSVerificationView")
         phone_number = request.POST.get('phone_number')
         auth_number = request.POST.get('auth_number')
-        print("phone_number : ", phone_number, "auth_number : ", auth_number)
+        print("phone_number : ", phone_number, "| auth_number : ", auth_number)
         try:
             verification = Authentication.objects.get(phone_number=phone_number)
 
             if verification.auth_number == auth_number:
+                verification.delete() # 인증된 내역은 삭제
                 return JsonResponse({'message': '인증 완료되었습니다.'}, status=200)
 
             else:
