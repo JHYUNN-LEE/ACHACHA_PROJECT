@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends 'base/base.html' %}
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <title>ACHACHA</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
     $(function() {
-        var count0 = count1 = count2 = 0;
+        var count0 = count1 = 0;
 
         timeCounter();
 
@@ -42,11 +42,18 @@
                 labels: [2016,2017,2018,2019],
                 datasets: [{ 
                     data: [756,845,928,988],
-                    label: "분실물 (단위 : 천개)",
+                    label: "Lost (Unit : 1000ea)",
                     borderColor: "#3e95cd",
-                    fill: false
-                }
+                    fill: true
+                },
+                // { 
+                //     data: [512, 589, 633, 580],
+                //     label: "Found (Unit : 1000ea)",
+                //     borderColor: "#c45850",
+                //     fill: false
+                // }
                 ]
+
             },
         });
     });
@@ -56,7 +63,8 @@
     <style>
         p, h1{
             color: black;
-            text-align: center;
+        }
+        p{
             font-size: 17px;
         }
         button{
@@ -65,25 +73,31 @@
             color: white;
             border: 0px;
             padding: 5px 15px;
+            border-radius:4px;
         }
         div{
             width: 100%;
             text-align: center;
             display: inline-block;
-            margin-top: 10px;
         }
         .name{
             font-size: 12px;
+            color: #969696;
+        }
+        #source{
+            font-size: 10px;
+            color: #969696;
+            float: right;
+            padding: 5px 15px 0 0;
         }
     </style>
 </head>
 <body>
-{% extends 'base/base.html' %}
 
-{% block content %}
     <p> 지금까지 찾아간 분실물 </p>
     <h1> 누적 <span class="number"></span> 건 ! </h1>
     <div class="btn"><button onclick="location.href='all_search/'"> 분실물 지금 바로 확인 </button></div>
+    <br>
     <br>
     <br>
     <p> 당신을 기다리고 있는 현상금 </p>
@@ -91,8 +105,10 @@
     <div class="btn"><button onclick="location.href='acha_money/'"> 지금 바로 찾아주기 </button></div> 
     <br>
     <br>
+    <br>
+    <span class="name">&lt; 연도별 분실물 발생 건수 &gt;</span>
     <canvas id="line-chart" width="300" height="250"></canvas>
-    <p class="name">연도별 분실물 발생 건수</p>
+    <span id="source">(출처 : 경찰청)</span>
 {% endblock %}
 
 </body>
