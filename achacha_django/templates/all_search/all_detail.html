@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% block content %}
+<div class="lost_items">
+    <div class = "row mt-5">
+        <div class = "col-12">
+            <div class = "card" style = "width:100%">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.get_name }}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ item.get_name }}</li>
+                    <li class="list-group-item">{{ item.get_at }}</li>
+                    <li class="list-group-item">{{ item.category }}</li>
+                    <li class="list-group-item">{{ item.get_place }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

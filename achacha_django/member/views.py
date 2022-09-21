@@ -22,6 +22,13 @@ def index(request):
     request_list = request.objects.order_by('-create_date')
     context = {'request_list': request_list}
     return render(request, 'member/request.html', context)
+
+def request(request):
+    return render(request, 'member/request.html')
+
+def implement(request):
+    return render(request, 'member/implement.html')
+
 # Create your views here.
 
 # def login(request):

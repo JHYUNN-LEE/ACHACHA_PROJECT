@@ -15,5 +15,5 @@ class implement(models.Model):
 
 class customuser(AbstractUser):
     # 기본적으로 제공하는 필드 외에 원하는 필드를 적어준다.
-    phone = models.IntegerField(unique=True, null =False, blank =False)
+    phone = models.IntegerField(unique=True, null=True, blank =False)
     address = models.CharField(max_length=50)
