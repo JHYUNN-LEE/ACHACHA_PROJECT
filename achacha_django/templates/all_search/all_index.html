@@ -1,17 +1,20 @@
 {% extends 'base/base.html' %}
 {% load static %}
-
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
-{% block content %}
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .lost_img{
-            width: 300px;
-            border: 1px solid #000000;
+        body{
+            margin: 0;
         }
+        .lost_img{
+            width: 130px;
+        }
+
     </style>
 </head>
 <body>
@@ -52,15 +55,14 @@
         <div class="container">
             <div class="row">
 				<div class="col">
-                    <p><strong></strong></p>
 					<ul class="pagination">
                         {% if posts.has_previous %}
                         <li class="page-item">
-                            <a class="page-link" href="?page={{posts.previous_page_number}}">이전</a>
+                            <a class="page-link" href="?page={{posts.previous_page_number}}">&lt;</a>
                         </li>
                         {% else %}
                         <li class="page-item disabled">
-                            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+                            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">&lt;</a>
                         </li>
                         {% endif %}
                         <!-- 페이지리스트 -->
@@ -80,11 +82,11 @@
                         <!-- 다음페이지 -->
                         {% if posts.has_next %}
                         <li class="page-item">
-                            <a class="page-link" href="?page={{ posts.next_page_number }}">다음</a>
+                            <a class="page-link" href="?page={{ posts.next_page_number }}">&gt;</a>
                         </li>
                         {% else %}
                         <li class="page-item disabled">
-                            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+                            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">&gt;</a>
                         </li>
                         {% endif %}
                     </ul>

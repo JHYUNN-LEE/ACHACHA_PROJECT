@@ -46,8 +46,6 @@ hr {
 }
 
 #create_page > img {
-    width: 6px;
-    height: 6px;
     z-index: 2;
     position: absolute;
     /*left: 5px;*/
@@ -57,7 +55,6 @@ hr {
 }
 
 .pagination {
-    border: 1px solid red;
     position: relative;
     top: 50px;
     left: 100px;

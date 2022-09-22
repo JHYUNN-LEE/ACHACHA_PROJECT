@@ -20,7 +20,7 @@
         {% for item in posts %}
         <div class="lost_items">
 {#            <div class="col-lg-6 mb-4" onclick="location.href='detail/{{ item.posts_id_pk }}/'">#}
-            <div class="col-lg-6 mb-4" onclick="location.href='{% url 'detail' item.posts_id_pk %}'">
+            <div id="row" class="col-lg-6 mb-4" onclick="location.href='{% url 'detail' item.posts_id_pk %}'">
 
                 {% if item.img_src %}
                 <div class="left">
@@ -34,32 +34,61 @@
                     <span class="cost">{{ item.cost }} 원</span>
                     <br>
                     <span class="get_place">보관장소 : {{ item.get_place }}</span>
+                    <hr>
                 </div>
             </div>
+            
 
         </div>
         {% endfor %}
+       
     {% endif %} 
     <hr>
-    <button id="create_page">
+    
         <a href={% url 'post' %}>
-            <img id="post" src="{% static 'acha_money/img/pen.png' %}">
+            <button id="create_page">
+                <img id="post" src="{% static 'acha_money/img/pen.png' %}">
+            </button>
         </a>
-    </button>
+
 {#    <a href="?page1">처음</a>#}
 
-    <div class="pagination">
-        {% if posts.has_previous %}
-            <a href="?page={{posts.previous_page_number}}">이전</a>
-        {% endif %}
-
-        {% for p in posts.paginator.page_range %}
-            <a href="?page={{p}}" class="mx-1">{{p}}</a>
-        {% endfor %}
-
-        {% if posts.has_next %}
-                <a href="?page={{posts.next_page_number}}">다음</a>
-        {% endif %}
+    <div>
+        <ul class="pagination">
+            {% if posts.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{posts.previous_page_number}}">&lt;</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="#">&lt;</a>
+            </li>
+            {% endif %}
+            <!-- 페이지리스트 -->
+            {% for page_number in posts.paginator.page_range %}
+            {% if page_number >= posts.number|add:-3 and page_number <= posts.number|add:3 %}
+            {% if page_number == posts.number %}
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+            </li>
+            {% else %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+            </li>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            <!-- 다음페이지 -->
+            {% if posts.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ posts.next_page_number }}">&gt;</a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="#">&gt;</a>
+            </li>
+            {% endif %}
+        </ul>
     </div>
 
 

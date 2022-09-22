@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 {% extends 'base/base.html' %}
 
 {% block content %}
-
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>    
+        form {
+            text-align: center;
+        }
+        #submitButton{
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .basic_block_low{
+            height: 30px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        select{
+        width: 100%;
+        border-color: lightgray;
+        font-size: small;
+        }
+        input{
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
 <form action="" method="POST" id="dataForm"> {% csrf_token %}
-    <h3 class="search_text">키워드로 검색하기</h3>
-        <p class="choose_btn">
-            1. 잃어버린 물건의 유형<br>
-            <select name="category">
-                <option value="가방">가방</option>
-                <option value="귀금속">귀금속</option>
-                <option value="옷">옷</option>
-                <option value="스포츠용품">스포츠용품</option>
-            </select>
-        </p>
-        <p class="choose_btn">
-            2. 잃어버린 물건의 색상<br>
-            <select name="color">
-                <option value="가방">가방</option>
-                <option value="귀금속">귀금속</option>
-                <option value="옷">옷</option>
-                <option value="스포츠용품">스포츠용품</option>
-            </select>
-        </p>
-        <p class="choose_btn">
-            3. 잃어버린 물건의 유형.<br>
-            <select name="area">
-                <option value="가방">가방</option>
-                <option value="귀금속">귀금속</option>
-                <option value="옷">옷</option>
-                <option value="스포츠용품">스포츠용품</option>
-            </select>
-        </p>
-        <p>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="div_content">
+                <ul role="list" class="feat_list">
+                    <li class="about_subtitle buy">
+                        <div class="subtitle-large">
+                            <p class="choose_btn">
+                                1. 잃어버린 물건의 유형을 선택해 주세요.</p>
+                            <select name="category">
+                                <option value="가방">가방</option>
+                                <option value="귀금속">귀금속</option>
+                                <option value="옷">옷</option>
+                                <option value="스포츠용품">스포츠용품</option>
+                            </select>
+                        </div>
+                    </li>     
+                </ul>
+            </div>
+        </div>
+    </div>  
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="div_content">
+                <ul role="list" class="feat_list">
+                    <li class="about_subtitle buy">
+                        <div class="subtitle-large">
+                            <p class="choose_btn">
+                                2. 잃어버린 물건의 색상을 선택해 주세요.</p>
+                            <select name="category">
+                                <option value="가방">가방</option>
+                                <option value="귀금속">귀금속</option>
+                                <option value="옷">옷</option>
+                                <option value="스포츠용품">스포츠용품</option>
+                            </select>
+                        </div>
+                    </li>     
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="div_content">
+                <ul role="list" class="feat_list">
+                    <li class="about_subtitle buy">
+                        <div class="subtitle-large">
+                            <p class="choose_btn">
+                                3. 잃어버린 날짜를 선택해 주세요.</p>
+                            <input type="date">
+                        </div>
+                    </li>     
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="basic_block_low">
+        <div class="div_content">
             <input type="button" value="찾기" id="submitButton"/>
-        </p>
+        </div>
+    </div>
+
 <form>        
 
 
