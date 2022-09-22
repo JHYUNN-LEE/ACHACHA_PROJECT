@@ -1,8 +1,26 @@
+{% extends 'base/base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 {% extends "base/base.html" %}
 {% block content %}
 <head>
+<<<<<<< HEAD
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    {% for item in seller %}
+        {{ item.users_id }}
+        {{ item.posts_id }}
+    {% endfor %}
+
+    {{posts}}
+    {% for post in posts %}
+        {{ post.posts_id_pk}}
+        {{ post.users_id }}
+    {% endfor%}
+=======
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,6 +48,7 @@
         {{ item.users_id }}
         {{ item.posts_id }}
     {% endfor %}
+>>>>>>> master
 {% endblock %}
 </body>
 </html>
