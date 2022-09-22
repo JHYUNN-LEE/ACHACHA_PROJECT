@@ -7,10 +7,11 @@ app_name = 'member'
 
 urlpatterns = [
     # path('register/', RegisterView.as_view()),
+    path('', views.index),
     path('login/', auth_views.LoginView.as_view(template_name='member/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('register/', views.register, name='register'),
-    path('request/', views.register, name='request'),
+    path('request/', views.request, name='request'),
     path('register/', views.register, name='register'),
     path('implement/', views.register, name='implement'),
     path('mypage/', auth_views.LoginView.as_view(template_name='member/mypageindex.html'), name='mypage')

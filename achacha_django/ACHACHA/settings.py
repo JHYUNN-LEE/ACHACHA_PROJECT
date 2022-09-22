@@ -36,7 +36,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -46,6 +45,7 @@ INSTALLED_APPS = [
     'all_search',
     'fast_search',
     'member',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [

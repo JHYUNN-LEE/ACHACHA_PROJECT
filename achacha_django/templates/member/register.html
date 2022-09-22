@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 {% extends "base/base.html" %}
 {% block content %}
 <head>
     <div class="container my-3">
-        <form method="post" action="{% url 'member:register' %}">
+        <form method="post" action="{% url 'member:register' %}" content='text/html; charset=UTF-8'>
             {% csrf_token %}
             {% include "form_errors.html" %}
             <div class="mb-3">

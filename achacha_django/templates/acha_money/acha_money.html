@@ -31,7 +31,7 @@
                     <div class="title">{{ item.title }}</div>
                     <span class="date_time">{{ item.created_at }}</span>
                     <br>
-                    <span class="cost">{{ item.cost }}</span>
+                    <span class="cost">{{ item.cost }} 원</span>
                     <br>
                     <span class="get_place">보관장소 : {{ item.get_place }}</span>
                 </div>
@@ -39,7 +39,7 @@
 
         </div>
         {% endfor %}
-    {% endif %}
+    {% endif %} 
     <hr>
     <button id="create_page">
         <a href={% url 'post' %}>
