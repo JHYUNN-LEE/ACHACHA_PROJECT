@@ -11,6 +11,9 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('register/', views.register, name='register'),
     path('request/', views.request, name='request'),
+    path('register/', views.register, name='register'),
     path('implement/', views.implement, name='implement'),
-    path('mypage/', auth_views.LoginView.as_view(template_name='member/mypageindex.html'), name='mypage')
+    path('mypage/', auth_views.LoginView.as_view(template_name='member/mypageindex.html'), name='mypage'),
+    path('auth/', views.SmsSendView.as_view(), name='auth'),
+    path('auth_check/', views.SMSVerificationView.as_view(), name='auth_check')
 ]
