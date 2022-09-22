@@ -15,6 +15,7 @@ from django.http import JsonResponse
 from .utils import make_signature
 from .models import Authentication
 from acha_money.models import UserDeal
+from acha_money.models import Posts
 
 
 def register(request):
@@ -38,13 +39,29 @@ def index(request):
     return render(request, 'member/request.html', context)
 
 def request(request):
-    seller = UserDeal.objects.filter(deal='seller')
+    seller = UserDeal.objects.filter(users_id=request.user, deal='seller')
+    seller = seller.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    posts = Posts.objects.filter(users_id=request.user).extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    return render(request, 'member/request.html', {'seller': seller, 'posts': posts})
 
-    print(seller)
-    return render(request, 'member/request.html', {'seller': seller})
+# class requestList():
+#     template_name = "member/request.html"
+#     context_object_name = 'request'
+#
+#     def get_queryset(self, **kwargs):
+#         queryset = UserDeal.objects.filter(users_id = self.request.session.get('user'))
+#         return queryset
+#
+# def request(self, request):
+#     seller = UserDeal.objects.filter(users_id=self.request.session.get('user'))
+#     return render(request, 'member/request.html', {'seller': seller})
+
 
 def implement(request):
-    return render(request, 'member/implement.html')
+    dealer = UserDeal.objects.filter(users_id=request.user, deal='dealer')
+    dealer = dealer.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    posts = Posts.objects.filter(users_id=request.user).extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    return render(request, 'member/request.html', {'seller': dealer, 'posts': posts})
 
 
 
