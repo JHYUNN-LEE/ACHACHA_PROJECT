@@ -12,6 +12,7 @@
 <body>
 {% block content %}
     {% for item in detail %}
+    <form action="{% url 'detail' item.posts_id_pk %}" method="post">{% csrf_token %}
         <div class="detail">
             <div class="title">{{ item.title }}</div>
             <div class="author"></div>
@@ -22,7 +23,11 @@
             <p>사례금: {{ item.cost }} 원</p>
             <p>택배 : {{ item.parcel }}</p>
             <div class="content">{{ item.content }}</div>
+            {% comment %} <input type="button" name"deal" value="찾아주기">
+            <input type="submit" value="완료"> {% endcomment %}
+            <button type="submit" name="deal" value="purchaser">찾아주기
         </div>
+    </form>
     {% endfor %}
 {% endblock %}
 </body>

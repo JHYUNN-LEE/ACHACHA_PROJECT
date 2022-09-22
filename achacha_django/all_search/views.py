@@ -16,8 +16,12 @@ def all_index(request):
     posts = paginator.get_page(page)
 
     client = InsecureClient('http://localhost:50070/')
+    
     return render(request, 'all_search/all_index.html', {'lost_items_list': lost_items_list,
                                                          'posts': posts})
+    
+    
+
 
 def all_detail(request, lost_items_id_pk):
     lost_items_list= LostItems.objects.filter(lost_items_id_pk=lost_items_id_pk)

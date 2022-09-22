@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect
 from .models import request
 from .models import implement
 from .forms import UserForm
+
+
 # Python
 import json, requests, time, random
 
@@ -15,10 +17,12 @@ from .models import Authentication
 from acha_money.models import UserDeal
 from acha_money.models import Posts
 
+
 def register(request):
     if request.method == "POST":
         form = UserForm(request.POST)
         if form.is_valid():
+            # form.address = request.POST['address'].encode('utf-8')
             form.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
@@ -65,6 +69,21 @@ def implement(request):
 
 # def login(request):
 #     return render(request, 'member/login.html')
+
+
+
+def request(request):
+    seller = UserDeal.objects.filter(deal='seller')
+    
+    # posts = Posts.objects.filter(posts_id_pk = seller.posts_id)
+    print(seller)
+    print(seller[2].posts_id)
+    for post_id in range(len(seller)):
+        posts = Posts.objects.filter(posts_id_pk = seller[post_id].posts_id)
+    return render(request, 'member/request.html', {'seller':seller, 'posts':'posts'})
+
+
+
 
 
 # 인증번호 발송

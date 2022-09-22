@@ -1,4 +1,7 @@
 from django.db import models
+from member.models import customuser
+from django.contrib.auth.models import AbstractUser
+
 
 # Create your models here.
 class LostItems(models.Model):
@@ -17,6 +20,8 @@ class LostItems(models.Model):
         db_table = 'lost_items'
 
 
+
+
 class Posts(models.Model):
     posts_id_pk = models.AutoField(primary_key=True)
     users_id = models.CharField(max_length=45, blank=True, null=True)
@@ -33,20 +38,10 @@ class Posts(models.Model):
     class Meta:
         managed = False
         db_table = 'posts'
+        
+        
 
 
-class Users(models.Model):
-    users_id_pk = models.CharField(primary_key=True, max_length=45)
-    name = models.CharField(max_length=45, blank=True, null=True)
-    password = models.CharField(max_length=45, blank=True, null=True)
-    gender = models.CharField(max_length=10, blank=True, null=True)
-    phone = models.CharField(max_length=45, blank=True, null=True)
-    email = models.CharField(max_length=45, blank=True, null=True)
-    addr = models.CharField(max_length=45, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'users'
 
 class UserDeal(models.Model):
     deal_id = models.AutoField(primary_key=True)
@@ -57,3 +52,4 @@ class UserDeal(models.Model):
     class Meta:
         managed = False
         db_table = 'user_deal'
+
