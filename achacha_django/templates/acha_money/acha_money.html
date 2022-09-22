@@ -1,19 +1,19 @@
 {% extends 'base/base.html' %}
+{% block content %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    {% block css %}
-        <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
-    {% endblock %}
+    <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
 
 
-{% block content %}
+
     {% if not posts %}
         <p>작성된 게시글이 없습니다.</p>
     {% else %}

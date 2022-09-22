@@ -2,6 +2,7 @@
 <html lang="en">
 {% extends 'base/base.html' %}
 {% block content %}
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>ACHACHA</title>
@@ -199,8 +200,8 @@ var typingIdx=0;
         #main{
             height: 430px;
             border-radius: 2%;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
-            url('../../static/bootstrap/img/bg.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../../static/bootstrap/img/bg.jpg");
+
         }
         .col-xl-8{
             margin-top: -50px;

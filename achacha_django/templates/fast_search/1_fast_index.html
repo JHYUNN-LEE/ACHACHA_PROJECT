@@ -3,6 +3,7 @@
 <head>
 {% extends 'base/base.html' %}
 {% block content %}
+{% load static %}
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
@@ -39,7 +40,7 @@
             <li class="about_subtitle buy">
                 <div class="subtitle-large">
                     이미지 검색
-                    <img class="rounded-circle" src="../../../static/bootstrap/img/icon_image.png">
+                    <img class="rounded-circle" src="{% static 'bootstrap/img/icon_image.png' %}">
                 </div>
             </li>     
         </ul>
@@ -57,7 +58,7 @@
             <li class="about_subtitle buy">
                 <div class="subtitle-large">
                     키워드 검색
-                    <img class="rounded-circle" src="../../../static/bootstrap/img/icon_keyword.png">
+                    <img class="rounded-circle" src="{% static 'bootstrap/img/icon_keyword.png' %}">
                 </div>
             </li>     
         </ul>

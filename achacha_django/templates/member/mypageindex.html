@@ -2,6 +2,7 @@
 <html lang="en">
 {% extends "base/base.html" %}
 {% block content %}
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -74,7 +75,7 @@
                         <li class="about_subtitle buy">
                             <div class="subtitle-large">
                                 대신수령 요청기록
-                                <img class="rounded-circle" src="../../../static/bootstrap/img/help.png">
+                                <img class="rounded-circle" src="{% static 'bootstrap/img/help.png' %}">
                             </div>
                         </li>     
                     </ul>
@@ -89,7 +90,7 @@
                         <li class="about_subtitle buy">
                             <div class="subtitle-large">
                                 대신수령 이행기록
-                                <img class="rounded-circle" src="../../../static/bootstrap/img/give.png">
+                                <img class="rounded-circle" src="{% static 'bootstrap/img/give.png' %}">
                             </div>
                         </li>     
                     </ul>

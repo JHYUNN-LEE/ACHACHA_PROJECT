@@ -203,7 +203,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="http://127.0.0.1:8000/all_search/">Buttons</a>
+                        <a class="collapse-item" href="all_search/">Buttons</a>
                         <a class="collapse-item" href="cards.html">Cards</a>
                     </div>
                 </div>
@@ -304,8 +304,8 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     </a>
-                    <a href="http://127.0.0.1:8000/">
-                        <img id="logo" class="img-profile rounded-circle" src="../../static/bootstrap/img/logo.png" alt="">
+                    <a href="/">
+                        <img id="logo" class="img-profile rounded-circle" src= "{% static 'bootstrap/img/logo.png' %}" alt="">
                     </a>
 
                     <!-- Topbar Navbar -->
@@ -314,7 +314,7 @@
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
-                                <a class="dropdown-item d-flex align-items-center" href="http://127.0.0.1:8000/fast_search/">
+                                <a class="dropdown-item d-flex align-items-center" href="/fast_search">
                                     <div class="mr-3">
                                         <div class="icon-circle bg-primary">
                                             <i class="fas fa-bell fa-fw text-white"></i>
@@ -325,7 +325,7 @@
                                     </div>
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item d-flex align-items-center" href="http://127.0.0.1:8000/all_search/">
+                                <a class="dropdown-item d-flex align-items-center" href="/all_search">
                                     <div class="mr-3">
                                         <div class="icon-circle bg-primary">
                                             <i class="fas fa-search fa-fw text-white"></i>
@@ -336,7 +336,7 @@
                                     </div>
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item d-flex align-items-center" href="acha_money/">
+                                <a class="dropdown-item d-flex align-items-center" href="/acha_money">
                                     <div class="mr-3">
                                         <div class="icon-circle bg-primary">
                                             <i class="fas fa-donate text-white"></i>
@@ -354,7 +354,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="img-profile rounded-circle"
-                                    src="../../static/bootstrap/img/undraw_profile.svg">
+                                    src="{% static 'bootstrap/img/undraw_profile.svg' %}">
                                 {% if user.is_authenticated %}
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ user.username }}</span>
                                 {% else %}
