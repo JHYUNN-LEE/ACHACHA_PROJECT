@@ -73,3 +73,6 @@ def detail(request, posts_id_pk):
 
 def result(request):
     return render(request, 'acha_money/test_result.html')
+
+def test(request):
+    return render(request, 'acha_money/post.html')
