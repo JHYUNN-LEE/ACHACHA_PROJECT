@@ -13,6 +13,6 @@ def all_index(request):
     posts = paginator.get_page(page)
 
     client = InsecureClient('http://localhost:50070/')
-    with client.read('/user/service_img/')
-    return render(request, 'all_search/all_index.html', {'lost_items_list': lost_items_list,
+    with client.read('/user/service_img/'):
+        return render(request, 'all_search/all_index.html', {'lost_items_list': lost_items_list,
                                                          'posts': posts})
