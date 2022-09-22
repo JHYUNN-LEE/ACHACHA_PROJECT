@@ -54,7 +54,6 @@ def post(request):
     # data = Model.objects.create(title=title, ...)
 
 
-
 def detail(request, posts_id_pk):
     if request.method ==  'POST':
         # user_detail table

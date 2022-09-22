@@ -19,7 +19,6 @@
     {% else %}
         {% for item in posts %}
         <div class="lost_items">
-{#            <div class="col-lg-6 mb-4" onclick="location.href='detail/{{ item.posts_id_pk }}/'">#}
             <div class="col-lg-6 mb-4" onclick="location.href='{% url 'detail' item.posts_id_pk %}'">
 
                 {% if item.img_src %}

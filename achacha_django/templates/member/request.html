@@ -1,26 +1,8 @@
-{% extends 'base/base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 {% extends "base/base.html" %}
 {% block content %}
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{% block content %}
-    {% for item in seller %}
-        {{ item.users_id }}
-        {{ item.posts_id }}
-    {% endfor %}
-
-    {{posts}}
-    {% for post in posts %}
-        {{ post.posts_id_pk}}
-        {{ post.users_id }}
-    {% endfor%}
-=======
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,11 +26,32 @@
 </head>
 
 <body id="page-top">
-    {% for item in seller %}
-        {{ item.users_id }}
-        {{ item.posts_id }}
+    {% if not posts %}
+        <p>작성된 게시글이 없습니다.</p>
+    {% else %}
+        {% for posts in posts %}
+        {% for item in seller %}
+        <div class="lost_items">
+                {% if item.img_src %}
+                <div class="left">
+                    <img class="lost_img" src="{{ item.img_src.url }}">
+                </div>
+                {% endif %}
+                <div class="right">
+                    <div class="title">게시물명 : {{ posts.title }}</div>
+                    <span class="date_time">보관장소 : {{ posts.get_place }}</span>
+                    <br>
+                    <span class="cost">비용 : {{ posts.cost }}</span>
+                    <br>
+                    <span class="get_place">작성일자 : {{ posts.created_at }}</span>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
     {% endfor %}
->>>>>>> master
-{% endblock %}
+    {% endif %}
+
 </body>
+{% endblock %}
 </html>

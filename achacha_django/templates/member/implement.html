@@ -26,39 +26,21 @@
 </head>
 <body id="page-top">
     {% if user.is_authenticated %}
-    <div class="lost_items">
-        <div class="col-lg-6 mb-4">
-            <div class="right">
-                <table class="table table-bordered" id="dataTable">
-                    <tbody>
-                        <tr>
-                            <td class="lost_img" rowspan="4">
-                            {% if item.img_src %}
-                            <div class="left">
-                            {#<img class="lost_img" src="{{}}">#}
+            {% for posts in posts %}
+                {% for item in seller %}
+                    <div class="lost_items">
+                            <div class="right">
+                                <div class="title">게시물명 : {{ posts.title }}</div>
+                                <span class="date_time">보관장소 : {{ posts.get_place }}</span>
+                                <br>
+                                <span class="cost">비용 : {{ posts.cost }}</span>
+                                <br>
+                                <span class="get_place">작성일자 : {{ posts.created_at }}</span>
                             </div>
-                            {% endif %}
-                            </td>
-                            <td>
-                                <span class="title"></span></td>
-                        </tr>
-                        <tr>
-                            <td><span class="date_time"></span></td>
-                        </tr>
-                        <tr>
-                            <td><span class="cost"></span></td>
-                        </tr>
-                        <tr>
-                            <td><span class="get_place"></span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-                <!-- /.container-fluid -->
-
-            </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+    <!-- /.container-fluid -->
             {% else %}
             <div class="card" style="width: 25rem;">
             <div class="card-body">
