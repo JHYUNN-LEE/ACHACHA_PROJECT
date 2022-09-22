@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>ACHACHA</title>
 
     <!-- Custom fonts for this template-->
     <link href="{% static 'bootstrap/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -22,7 +22,12 @@
     <link href="{% static 'bootstrap/css/sb-admin-2.min.css' %}" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
+    {% block js %}
+
+    {% endblock %}
+
     {% block css %}
+
     {% endblock %}
 
 </head>
@@ -32,8 +37,8 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- Sidebar-->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
@@ -71,7 +76,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="http://127.0.0.1:8000/all_search/">Buttons</a>
                         <a class="collapse-item" href="cards.html">Cards</a>
                     </div>
                 </div>
@@ -174,7 +179,7 @@
                     <!-- Topbar Search -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
+                        {% comment %} <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
@@ -182,13 +187,13 @@
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
-                        </div>
+                        </div> {% endcomment %}
                     </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        {% comment %} <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -210,9 +215,9 @@
                                     </div>
                                 </form>
                             </div>
-                        </li>
+                        </li> {% endcomment %}
 
-                        <!-- Nav Item - Alerts -->
+                        {% comment %} <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -329,7 +334,7 @@
                             </div>
                         </li>
 
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <div class="topbar-divider d-none d-sm-block"></div> {% endcomment %}
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -339,8 +344,6 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ user.username }}</span>
                                 {% else %}
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small" onclick="location.href='http://127.0.0.1:8000/member/login/'">로그인</span>
-                                <img class="img-profile rounded-circle"
-                                    src="{% static 'bootstrap/img/undraw_profile.svg' %}">
                                 {% endif %}
                             </a>
                             <!-- Dropdown - User Information -->
@@ -701,7 +704,7 @@
 {#            <footer class="sticky-footer bg-white">#}
 {#                <div class="container my-auto">#}
 {#                    <div class="copyright text-center my-auto">#}
-{#                        <span>Copyright &copy; Your Website 2021</span>#}
+{#                        <span>Copyright &copy; ACHACHA 2022</span>#}
 {#                    </div>#}
 {#                </div>#}
 {#            </footer>#}

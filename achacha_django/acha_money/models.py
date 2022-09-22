@@ -41,6 +41,8 @@ class Posts(models.Model):
         
         
 
+
+
 class UserDeal(models.Model):
     deal_id = models.AutoField(primary_key=True)
     users_id = models.CharField(max_length=45)
