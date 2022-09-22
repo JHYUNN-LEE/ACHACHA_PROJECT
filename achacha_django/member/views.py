@@ -12,7 +12,7 @@ from django.views import View
 from django.http import JsonResponse
 from .utils import make_signature
 from .models import Authentication
-
+from acha_money.models import UserDeal
 
 def register(request):
     if request.method == "POST":
@@ -32,6 +32,18 @@ def index(request):
     request_list = request.objects.order_by('-create_date')
     context = {'request_list': request_list}
     return render(request, 'member/request.html', context)
+
+def request(request):
+    seller = UserDeal.objects.filter(deal='seller')
+
+    print(seller)
+    return render(request, 'member/request.html', {'seller': seller})
+
+def implement(request):
+    return render(request, 'member/implement.html')
+
+
+
 # Create your views here.
 
 # def login(request):

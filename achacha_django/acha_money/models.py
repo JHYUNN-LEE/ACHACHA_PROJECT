@@ -47,3 +47,13 @@ class Users(models.Model):
     class Meta:
         managed = False
         db_table = 'users'
+
+class UserDeal(models.Model):
+    deal_id = models.AutoField(primary_key=True)
+    users_id = models.CharField(max_length=45)
+    posts_id = models.IntegerField()
+    deal = models.CharField(max_length=45)
+
+    class Meta:
+        managed = False
+        db_table = 'user_deal'
