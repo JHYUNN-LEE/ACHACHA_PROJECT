@@ -42,7 +42,6 @@ def post(request):
     # data = Model.objects.create(title=title, ...)
 
 
-
 def detail(request, posts_id_pk):
     detail = Posts.objects.filter(posts_id_pk=posts_id_pk)
     print(detail)

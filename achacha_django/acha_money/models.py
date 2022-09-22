@@ -19,14 +19,14 @@ class LostItems(models.Model):
 
 class Posts(models.Model):
     posts_id_pk = models.AutoField(primary_key=True)
-    users_id_fk1 = models.ForeignKey('Users', models.DO_NOTHING, db_column='users_id_fk1')
+    users_id = models.CharField(max_length=45, blank=True, null=True)
     title = models.CharField(max_length=45, blank=True, null=True)
     content = models.TextField(blank=True, null=True)
     cost = models.IntegerField(blank=True, null=True)
     parcel = models.CharField(max_length=45, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     category = models.CharField(max_length=45, blank=True, null=True)
-    lost_items_id_fk2 = models.ForeignKey(LostItems, models.DO_NOTHING, db_column='lost_items_id_fk2')
+    lost_items_id = models.CharField(max_length=45, blank=True, null=True)
     img_src = models.ImageField(upload_to='acha_money/', max_length=100, blank=True, null=True)
     get_place = models.CharField(max_length=45, blank=True, null=True)
 
