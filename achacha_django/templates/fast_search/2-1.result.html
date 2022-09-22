@@ -1,20 +1,26 @@
+{% extends 'base/base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 
-    <style>
-        #lostImage {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-    </style>
+  <script>
+    function image(){
+      response.data[0]
+    }
+  </script>
+
+  <style>
+      #lostImage {
+          max-width: 100%;
+          height: auto;
+          display: block;
+      }     
+  </style>
 </head>
 <body>
-{% extends 'base/base.html' %}
+
 
 {% block content %}
 
@@ -25,44 +31,16 @@
 <br>
 <!-- 그리드 게시물 -->
 <div class="container-fluid"> 
-    
+  {% for img_src in image_src %}
     <div class="row"> 
     	<div class="col-md-4">
             <!-- img-responsive : image 반응형 -->
-            <img class="img-responsive" size="max-width: 100%;, height: auto; , display: block;" src="https://www.lost112.go.kr/lostnfs/images/uploadImg/thumbnail/20220723/r_20220723125448046.jpg" id="lostImage">
-            <h5>분실물명 / 날짜</h5>
+            <img class="img-responsive" size="max-width: 100%;, height: auto; , display: block;" src="https://www.lost112.go.kr/lostnfs/images/uploadImg/thumbnail/20220723/r_20220723125448046.jpg" id="lostImage1">
+            <h5>{{img_src}}</h5>
         </div>
         <br>
-        <div class="col-md-4">
-            <!-- img-responsive : image 반응형 -->
-            <img class="img-responsive" size="max-width: 100%;, height: auto; , display: block;" src="https://www.lost112.go.kr/lostnfs/images/uploadImg/thumbnail/20220723/r_20220723125448046.jpg" id="lostImage">
-            <h5>분실물명 / 날짜</h5>
-        </div>
-        <br>
-        <div class="col-md-4">
-            <!-- img-responsive : image 반응형 -->
-            <img class="img-responsive" size="max-width: 100%;, height: auto; , display: block;" src="https://www.lost112.go.kr/lostnfs/images/uploadImg/thumbnail/20220723/r_20220723125448046.jpg" id="lostImage">
-            <h5>분실물명 / 날짜</h5>
-        </div>
-        <br>
-        <div class="col-md-4">
-            <!-- img-responsive : image 반응형 -->
-            <img class="img-responsive" size="max-width: 100%;, height: auto; , display: block;" src="https://www.lost112.go.kr/lostnfs/images/uploadImg/thumbnail/20220723/r_20220723125448046.jpg" id="lostImage">
-            <h5>분실물명 / 날짜</h5>
-        </div>
-        <br>
-        <div class="col-md-4">
-            <!-- img-responsive : image 반응형 -->
-            <img class="img-responsive" size="max-width: 100%;, height: auto; , display: block;" src="https://www.lost112.go.kr/lostnfs/images/uploadImg/thumbnail/20220723/r_20220723125448046.jpg" id="lostImage">
-            <h5>분실물명 / 날짜</h5>
-        </div>
-        <br>
-        <div class="col-md-4">
-            <!-- img-responsive : image 반응형 -->
-            <img class="img-responsive" size="max-width: 100%;, height: auto; , display: block;" src="https://www.lost112.go.kr/lostnfs/images/uploadImg/thumbnail/20220723/r_20220723125448046.jpg" id="lostImage">
-            <h5>분실물명 / 날짜</h5>
-        </div>
     </div>
+  {% endfor %}
 </div>
 <br><br><br>
 <nav aria-label="Page navigation">
