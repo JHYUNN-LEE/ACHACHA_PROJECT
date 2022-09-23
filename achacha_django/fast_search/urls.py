@@ -7,8 +7,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.fast_index),
     path('image/', views.image_search, name='image_search'),
-    path('keyword/', views.keyword_search, name='keyword_search'),
     path('image/upload/', views.uploaded_image, name='image_upload'),
+    
+    path('keyword/', views.keyword_search, name='keyword_search'),
+    path('keyword/key_result/', views.find_category_to_es, name='keyword_result'),
+    path('keyword/key_result/detail/<str:images_id_pk>/', views.keyword_detail, name='keyword_detail'),
+  
 ] 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

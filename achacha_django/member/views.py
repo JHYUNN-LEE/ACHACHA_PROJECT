@@ -16,6 +16,7 @@ from django.http import JsonResponse
 from .utils import make_signature
 from .models import Authentication
 from acha_money.models import UserDeal
+from acha_money.models import Posts
 
 
 def register(request):
@@ -39,8 +40,38 @@ def index(request):
     return render(request, 'member/request.html', context)
 
 
+def request(request):
+    user_name = request.user
+    post = Posts.objects.raw("SELECT * FROM posts join user_deal \
+                             on posts.posts_id_pk = user_deal.posts_id \
+                        where user_deal.deal = 'seller' and user_deal.users_id= %s", [user_name])
+    # post = Posts.objects.filter(users_id=request.user)
+    # post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    # print(post)
+    return render(request, 'member/request.html', {'post': post})
+
+
+# class requestList():
+#     template_name = "member/request.html"
+#     context_object_name = 'request'
+#
+#     def get_queryset(self, **kwargs):
+#         queryset = UserDeal.objects.filter(users_id = self.request.session.get('user'))
+#         return queryset
+#
+# def request(self, request):
+#     seller = UserDeal.objects.filter(users_id=self.request.session.get('user'))
+#     return render(request, 'member/request.html', {'seller': seller})
+
+
 def implement(request):
-    return render(request, 'member/implement.html')
+    user_name = request.user
+    post = Posts.objects.raw("SELECT * FROM posts join user_deal \
+                             on posts.posts_id_pk = user_deal.posts_id \
+                        where user_deal.deal = 'purchaser' and user_deal.users_id=%s", [user_name])
+
+    # post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
+    return render(request, 'member/implement.html', {'post': post})
 
 
 
@@ -48,21 +79,6 @@ def implement(request):
 
 # def login(request):
 #     return render(request, 'member/login.html')
-
-
-
-def request(request):
-    seller = UserDeal.objects.filter(deal='seller')
-    
-    # posts = Posts.objects.filter(posts_id_pk = seller.posts_id)
-    print(seller)
-    print(seller[2].posts_id)
-    for post_id in range(len(seller)):
-        posts = Posts.objects.filter(posts_id_pk = seller[post_id].posts_id)
-    # print(posts)
-    # print(posts.values())
-    return render(request, 'member/request.html', {'seller':seller, 'posts':'posts'})
-
 
 
 

@@ -1,0 +1,93 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    {% if not posts %}
+        <p>아차차! 해당되는 분실물이 없습니다.</p>
+    
+    {% else %}
+
+
+        {% for item in posts %}
+        <div class="lost_items">
+            <div id="row" class="col-lg-6 mb-4" onclick="location.href='{% url 'keyword_detail' item.images_id_pk %}'">
+                <div class="left">
+                    <div class="title">{{ item.get_name }}</div>  
+                    <span class="date_time">분실일시 : {{ item.get_at }}</span>
+                    <br>
+                    <span class="date_time">분실장소 : {{ item.center_place }}</span>
+                </div>
+
+                {% if item.img_src %}
+                <div class="right">
+                    <img class="lost_img" src="{{ item.img_src.url }}">
+                </div>
+                {% endif %}
+            </div>
+            <hr>
+        </div>
+        {% endfor %}  
+
+    <!-- pagination -->
+
+
+        <div class="pagination">
+            <ul class="pagination">
+                {% if posts.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{ 1 }}">&lt;&lt;</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{posts.previous_page_number}}">&lt;</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" tabindex="-1" aria-disabled="true" href="#">&lt;</a>
+                </li>
+                {% endif %}
+                <!-- 페이지리스트 -->
+                {% for page_number in posts.paginator.page_range %}
+                {% if page_number >= posts.number|add:-3 and page_number <= posts.number|add:3 %}
+                {% if page_number == posts.number %}
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{page_number}}">{{ page_number }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{page_number}}">{{ page_number }}</a>
+                </li>
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+                <!-- 다음페이지 -->
+                {% if posts.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{posts.next_page_number}}">&gt;</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{ max_index }}">&gt;&gt;</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" tabindex="-1" aria-disabled="true" href="#">&gt;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+
+    {% endif %} 
+
+{% endblock %}
+
+</body>
+
+
+</html>

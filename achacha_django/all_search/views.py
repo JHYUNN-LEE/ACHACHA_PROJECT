@@ -11,16 +11,16 @@ default_page = 1
 
 def all_index(request):
     items_per_page = 10
-    lost_items_list = LostItems.objects.all()
+    lost_items_list = LostItems.objects.all().order_by('-get_at')
     paginator = Paginator(lost_items_list, items_per_page)
     page = request.GET.get('page')
-
+    max_index = len(paginator.page_range)
     posts = paginator.get_page(page)
 
-    client = InsecureClient('http://localhost:50070/')
+    client = InsecureClient('http://54.64.90.112:9870', user="ubuntu")
     
     return render(request, 'all_search/all_index.html', {'lost_items_list': lost_items_list,
-                                                         'posts': posts})
+                                                         'posts': posts, 'max_index': max_index})
     
     
 

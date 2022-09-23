@@ -96,7 +96,6 @@ def post_search(request, posts_id_pk):
 
 
 
-
 def detail(request, posts_id_pk):
     if request.method ==  'POST':
         # user_detail table

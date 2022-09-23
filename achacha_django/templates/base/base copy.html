@@ -23,7 +23,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
     {% block js %}
-
+    <script>
+        const back = () => {
+            window.history.back()
+        }
+    </script>
     {% endblock %}
 
     {% block css %}
@@ -165,7 +169,15 @@
         font-size: 20px;
         font-weight: bold;
         width: 100%;
-        }       
+        }      
+        .back{
+            background-color: white;
+            /* margin-top: -80px; */
+            margin-left: 16px;
+            z-index: 100000000;
+            width: auto;
+
+        } 
         /*  */
     </style>
 </head>
@@ -309,15 +321,16 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top">
                     <a class="nav-link" href="#" id="alertsDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     aria-haspopup="true" aria-expanded="false">
                     <!-- Sidebar Toggle (Topbar) -->
                     <button class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
+                        <i class="fa fa-chevron-left" onclick="back()"></i>
                     </button>
                     </a>
                     <a class="logo" href="/">
                         <img id="logo" class="img-profile rounded-circle" src= "{% static 'bootstrap/img/logo.png' %}" alt="">
                     </a>
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown no-arrow mx-1">
@@ -358,9 +371,7 @@
                                 </a>
                             </div>
                         </li>
-                              
-                        
-
+                                            
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"

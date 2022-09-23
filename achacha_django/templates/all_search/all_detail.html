@@ -1,9 +1,10 @@
-{% extends 'base/base.html' %}
+{% extends 'base/base copy.html' %}
 {% load static %}
 {% block content %}
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<<<<<<< HEAD
     <style>
         .lost_img{
             width: 300px;
@@ -28,6 +29,12 @@
             border-left: none;
         }
     </style>
+=======
+    {% block css %}
+    <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css">
+    {% endblock %}
+
+>>>>>>> master
 </head>
 <body>
 {% for item in lost_items_list %}
@@ -62,19 +69,26 @@
                     <td><span class="get_place">분실물 상태 : {{ item.pickup_check }}</span></td>
                 </tr>
 
-            </tbody>
-        </table>
 
-        <div class="post_data" style="display:none;">
-            <input type="text" name="category" value={{ item.category }}>
-            <input type="text" name="get_place" value={{ item.get_place }}>
-            <input type="text" name="img_src" value={{ item.img_src }}>
+<div class="lost_items">
+
+        {% for item in lost_items_list %}
+        {% if item.img_src %}
+            <div class="img">
+                <img class="img" src="{{ item.img_src.url }}"><br>
+            {#<img class="img" src="{{}}">#}
+            </div>
+        {% endif %}
+        
+        <div class="detail">
+            <div class="title">분실물명 : {{ item.get_name }}</div>  
+            <div class="author">분실일시 : {{ item.get_at }}</div>
+            <div class="author">카테고리 : {{ item.category }}</div>
+            <div class="author">분실장소 : {{ item.find_place }}</div>
+            <div class="author">수령위치 : {{ item.get_place }}</div>
+            <!-- <div class="get_place">분실물 상태 : {{ item.pickup_check }}</div> -->
         </div>
-        <div class="form_submit">
-            <input type="submit" value="찾아주세요">
-        </div>
-    </div>
-</form>
+</div>
 {% endfor %}
 {% endblock %}
 

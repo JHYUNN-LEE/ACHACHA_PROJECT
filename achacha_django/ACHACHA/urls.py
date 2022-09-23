@@ -19,7 +19,7 @@ from django.urls.conf import include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-import member.views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +28,5 @@ urlpatterns = [
     path('fast_search/', include('fast_search.urls')), 
     path('all_search/', include('all_search.urls')),
     path('acha_money/', include('acha_money.urls')),
-    path('accounts/login/', member.views.login),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

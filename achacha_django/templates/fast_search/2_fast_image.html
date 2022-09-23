@@ -45,31 +45,111 @@
     #chooseFile {
         visibility: hidden;
     }
-
+    select{
+        width: 100%;
+        border-color: lightgray;
+        font-size:small;
+    }
+    .upload-name {
+      display: inline-block;
+      height: 40px;
+      padding: 0 10px;
+      vertical-align: middle;
+      border: 1px solid #dddddd;
+      width: 66%;
+      color: #999999;
+      border-radius: 5px;
+      font-size: small;
+    }
+    label {
+      display: inline-block;
+      margin: 0;
+      height: 40px;
+      padding: 8px 10px;
+      vertical-align: middle;
+      border: 1px solid #dddddd;
+      color: #fff;
+      background-color: rgba(0, 53, 109, 0.95);
+      border-radius: 5px;
+      font-size: small;
+      font-weight: lighter;
+    }
+    input[type="file"] {
+      position: absolute;
+      width: 0;
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+    }
+    label:hover {
+        background-color: rgba(1, 20, 40, 0.95);
+    }
+    #submit{
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .basic_block_low{
+        height: 60px;
+    }
 </style>
-    <h3 class="search_text">이미지로 검색하기</h3>
     <form action="upload/" method="POST" id="dataForm" enctype="multipart/form-data"> {% csrf_token %}
-        <p class="title">
-            1. 잃어버린 물건의 유형을 선택해 주세요.</p>
-            <select name="category" required> <!--필수선택-->
-                <option value="" selected disabled>유형 선택</option>    
-                <option value="bag">가방</option>
-                <option value="jewelry">귀금속</option>
-                <option value="clothes">옷</option>
-                <option value="sports">스포츠용품</option>
-                <option value="etc">기타</option>
-                <option value="wallet">지갑</option>
-            </select>
-    <br>
-    <br>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="div_content">
+                <ul role="list" class="feat_list">
+                    <li class="about_subtitle buy">
+                        <div class="subtitle-large">
+                            <p class="title">
+                                1. 잃어버린 물건의 유형을 선택해 주세요.</p>
+                            <select name="category" required> <!--필수선택-->
+                                <option value="" selected disabled>유형 선택</option>    
+                                <option value="bag">가방</option>
+                                <option value="jewelry">귀금속</option>
+                                <option value="clothes">옷</option>
+                                <option value="sports">스포츠용품</option>
+                                <option value="etc">기타</option>
+                                <option value="wallet">지갑</option>
+                            </select>
+                        </div>
+                    </li>     
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
     <!-- image/file -->
-        <p class="title">2. 물건의 이미지를 업로드 해주세요. </p>
-        <br>
-        <input type="file" name="uploadfile" accept="image/png, image/jpeg, image/jpg" >
-        <br>
-        <br>
-        <br>
-        <input type="submit" id="submit" value="찾기">
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="div_content">
+                <ul role="list" class="feat_list">
+                    <li class="about_subtitle buy">
+                        <div class="subtitle-large">
+                            <p class="title">
+                                2. 물건과 비슷한 사진을 업로드 해주세요. </p>
+                                <div>
+                                    <input type="text" class="upload-name" 
+                                        value="이미지를 업로드 하세요" placeholder="이미지를 업로드 하세요" disabled>
+                                    <label for="upload-file">파일선택</label>
+                                    <input type="file" name="uploadfile" accept="image/png, image/jpeg, image/jpg" id="upload-file">
+                                </div>
+                        </div>
+                    </li>     
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <div class="basic_block_low">
+            <div class="div_content">
+                <input type="submit" id="submit" value="찾기">
+            </div>
+        </div>
+
     </form>
 {% endblock %}
 
