@@ -19,6 +19,7 @@ import base64
 from datetime import datetime
 import pandas as pd 
 
+from .models import LostItems, Images
 # pip install elasticsearch
 from elasticsearch import Elasticsearch
 
@@ -27,6 +28,7 @@ from pyhdfs import HdfsClient
 # pip install hdfs
 from hdfs import InsecureClient
 from hdfs.client import Client
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -58,9 +60,7 @@ def uploaded_image(request):
         }
         
         response = requests.post('http://localhost:5001/', data=data)
-        # print(response)
-
-        
+                
         ## flask에서 넘어온 데이터 처리하기
         
         result = response.text
@@ -69,28 +69,49 @@ def uploaded_image(request):
         # image_id 값 추출 / src 찾기 / image 가져오기
         
         image_src_list = []
-        # for i in range(0, 3):
+        image_info = []
+
         for i in range(len(result)):
             image_name = result[i][:-4]
         
             # mysql - image 테이블에서 src 찾아오기
+            Images.objects.filter(images_id_fk1 = image_name).values('src')
             image = Images.objects.filter(images_id_fk1 = image_name).values('src')
-
+            # # 중복값이 있는 경우가 있어서, 그 경우 하나만 가져오도록
+            # if image.count() >= 2:
+            #     image = image.first()
+            
             image_src = image[0]['src']
+            
             image_src_list.append(image_src)
-        # print(image_src_list)
+
+            
+            # mysql - 분실물명, 날짜 가져오기
+            lost_item_data = LostItems.objects.filter(lost_items_id_pk = image_name)[0]
+            image_info.append(lost_item_data)
         
-        # hdfs 연결하기
-        hdfs_client = InsecureClient("http://54.64.90.112:9870/", user="ubuntu")
-        hdfs_client.download('/user/ubuntu/text.txt', './media/', overwrite=False, n_threads =1)
+        # 페이지네이션
+        paginator = Paginator(image_info, 6)
+        page = request.GET.get('page')
+        posts = paginator.get_page(page)
 
-
-        # for r in res:
-        #     line=str(r,encoding='utf8')#open     ,str()         
-        #     print(line)
-
-    return render(request, 'fast_search/2-1.result.html', {'image_src':image_src})
-
+        # AWS에서 실행, hdfs 접속
+        client = InsecureClient("http://54.64.90.112:9870/", user="ubuntu")
+        
+        # 유사 이미지 output for문으로 대조하여 이미지 가져오기
+        ## image_src_list : /user/ubuntu/service_image/XXXX.jpg
+        download_list=[]
+        for img in image_src_list:
+                    download = client.download(img, './media/result_image/', overwrite=True, n_threads = 1)
+                    download
+                    media_route = download[-43:]
+                    download_list.append(media_route)
+        list = zip(download_list, posts)
+        context = {
+            "list" : list,
+            "post" : posts,
+        }
+    return render(request, 'fast_search/2-1.result.html', context)
 
 # es  find hits 함수 
 def trans_source(hits):

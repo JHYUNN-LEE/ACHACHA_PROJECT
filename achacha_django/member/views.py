@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from .models import request
 from .models import implement
 from .forms import UserForm
+from acha_money.models import Posts, UserDeal
 
 
 # Python
@@ -37,6 +38,7 @@ def index(request):
     request_list = request.objects.order_by('-create_date')
     context = {'request_list': request_list}
     return render(request, 'member/request.html', context)
+
 
 def request(request):
     user_name = request.user
@@ -77,7 +79,6 @@ def implement(request):
 
 # def login(request):
 #     return render(request, 'member/login.html')
-
 
 
 
