@@ -42,7 +42,7 @@
                         <div class="subtitle-large">
                             <p class="choose_btn">
                                 1. 잃어버린 물건의 유형을 선택해 주세요.</p>
-                            <select name="category">
+                            <select name="insert_category">
                                 <option value="가방">가방</option>
                                 <option value="귀금속">귀금속</option>
                                 <option value="옷">옷</option>
@@ -63,12 +63,7 @@
                         <div class="subtitle-large">
                             <p class="choose_btn">
                                 2. 잃어버린 물건의 색상을 선택해 주세요.</p>
-                            <select name="category">
-                                <option value="가방">가방</option>
-                                <option value="귀금속">귀금속</option>
-                                <option value="옷">옷</option>
-                                <option value="스포츠용품">스포츠용품</option>
-                            </select>
+                            <input type="text" name="insert_color" placeholder="ex) 파란색, 빨간색">
                         </div>
                     </li>     
                 </ul>
@@ -84,7 +79,7 @@
                         <div class="subtitle-large">
                             <p class="choose_btn">
                                 3. 잃어버린 날짜를 선택해 주세요.</p>
-                            <input type="date">
+                            <input type="date" name="insert_date">
                         </div>
                     </li>     
                 </ul>
@@ -98,7 +93,7 @@
         </div>
     </div>
 
-<form>        
+    
 
 
 {% endblock %}

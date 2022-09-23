@@ -6,12 +6,25 @@ from django.shortcuts import render, redirect
 from django.core.files.base import ContentFile
 from django.core.files.storage import default_storage
 from django.http import HttpResponse, JsonResponse
+from django.core.paginator import Paginator, Page
+
+# models.py
+from .models import LostItems, Images, UploadedImage
+
+# python edit import
 import json
 from requests.exceptions import ConnectionError
 import requests
 import base64
-from .models import LostItems, Images, UploadedImage
+from datetime import datetime
+import pandas as pd 
+
+# pip install elasticsearch
+from elasticsearch import Elasticsearch
+
+# pip install pyhdfs
 from pyhdfs import HdfsClient
+# pip install hdfs
 from hdfs import InsecureClient
 from hdfs.client import Client
 
@@ -77,3 +90,83 @@ def uploaded_image(request):
         #     print(line)
 
     return render(request, 'fast_search/2-1.result.html', {'image_src':image_src})
+
+
+# es  find hits 함수 
+def trans_source(hits):
+    hits_list = []
+    
+    for hit in hits:
+        hits_list.append(hit['_source'])
+    return hits_list
+
+
+# 3-1_keyword_result.html
+def find_category_to_es(request):
+    if request.method == 'GET': 
+        insert_category = request.GET.get("insert_category")
+        insert_color = request.GET.get("insert_color")
+        insert_date = request.GET.get("insert_date")
+        
+    
+    print(insert_category, insert_color, insert_date)
+    #print(insert_category, insert_color, insert_date)
+
+    es = Elasticsearch("http://54.64.90.112:9200")
+
+    res = es.search(index='sample_data', size=10000,
+                query = {    
+                    "bool": {
+                        "must": [
+                            {"match": {"category" : insert_category}},
+                            {"match": {"content.nori_discard": insert_color}},
+                            {"range": {
+                                "get_at": {
+                                    "gte": insert_date,
+                                    "lt": "now"
+                                        }
+                                    }
+                                }
+                            ]
+                        } 
+                    }
+                )
+
+    hits = res['hits']['hits']
+    
+    
+    datas = trans_source(hits)
+    
+    page = request.GET.get('page')
+    paginator = Paginator(datas, 10)
+
+    print(page) 
+
+    posts = paginator.get_page(page)
+    
+    context = {'datas' : datas,
+                'insert_category': insert_category,
+                'insert_color' : insert_color,
+                'insert_date' : insert_date,
+                'posts' : posts}
+
+    return render(request, 'fast_search/3-1_keyword_result.html', context)
+
+
+
+# 3-2_keyword_detail.html
+def keyword_detail(request, images_id_pk):
+    
+    es = Elasticsearch("http://54.64.90.112:9200")
+
+    res = es.search(index='sample_data', size=1,
+                body = { "query":  
+                            {"match": {"images_id_pk" : images_id_pk}},
+                                        }
+            )
+       
+    hits = res['hits']['hits']
+    datas = trans_source(hits)
+    context = {'datas' : datas}
+    
+    return render(request, 'fast_search/3-2_keyword_detail.html', context)
