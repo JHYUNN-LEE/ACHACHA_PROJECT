@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from .models import request
 from .models import implement
 from .forms import UserForm
+from acha_money.models import Posts, UserDeal
 
 
 # Python
@@ -37,11 +38,6 @@ def index(request):
     context = {'request_list': request_list}
     return render(request, 'member/request.html', context)
 
-def request(request):
-    seller = UserDeal.objects.filter(deal='seller')
-
-    print(seller)
-    return render(request, 'member/request.html', {'seller': seller})
 
 def implement(request):
     return render(request, 'member/implement.html')
@@ -63,6 +59,8 @@ def request(request):
     print(seller[2].posts_id)
     for post_id in range(len(seller)):
         posts = Posts.objects.filter(posts_id_pk = seller[post_id].posts_id)
+    # print(posts)
+    # print(posts.values())
     return render(request, 'member/request.html', {'seller':seller, 'posts':'posts'})
 
 

@@ -12,13 +12,16 @@
 </head>
 <body>
 {% block content %}
-        <form method="post" action="{% url 'post' %}" enctype="multipart/form-data"> {% csrf_token %}
+        <form method="post" action="{% url 'update' posts.posts_id_pk %}" enctype="multipart/form-data"> {% csrf_token %}
             <div class="posts">
+                <div class="user-wrap">
+                    <p>작성자: {{ request.user }}</p>
+                </div>
                 <div class="title-wrap">
-                    <input class="title" type="text" name="title" placeholder="글 제목">
+                    <input class="title" type="text" name="title" placeholder="글 제목" value="{{ posts.title }}">
                 </div>
                 <div class="category-wrap">
-                    <select class="category" name="category">
+                    <select class="category" name="category" required>
                         <option value="" disabled selected>카테고리를 선택하세요</option>
                         <option value="가방">가방</option>
                         <option value="귀금속">귀금속</option>
@@ -38,18 +41,18 @@
                 </div>
 
                 <div class="cost-wrap">
-                    <input class="cost" type="text" name="cost" placeholder="사례금">
+                    <input class="cost" type="text" name="cost" placeholder="사례금" value={{ posts.cost }}>
                 </div>
                 <div class="img-wrap">
-                    <input class="img" type="file" name="img_src" multiple>
+                    <input class="img" type="file" name="img_src" value={{ posts.img_src }} multiple>
                 </div>
                 <textarea class="content" name="content">
+                    {{ posts.content }}
                 </textarea>
 
                 <div class="get_place-wrap">
-                    <input class="get_place" type="text" name="get_place" placeholder="분실물의 보관장소를 적어주세요.">
+                    <input class="get_place" type="text" name="get_place" value={{ posts.get_place }} placeholder="분실물의 보관장소를 적어주세요.">
                 </div>
-
                 <div class="parcel-wrap">
                     <input type="checkbox" name="parcel" value="가능">택배로 받아요.
                 </div>
@@ -58,10 +61,12 @@
             
             <input type="checkbox" name="deal" value="seller"> 이 물품이 본인의 물품임을 확인하였습니다. 
 
-            {% comment %} <input type="button" value="취소" class="cancel" onclick="{% url 'acha_money' %}"> {% endcomment %}
-            <a href="{% url 'acha_money' %}"><button>취소</button></a>
-            <input type="submit" value="작성" class="submit">
+            <input type="button" value="취소" class="cancel" onclick="{% url 'acha_money' %}">
+            <input type="submit" value="수정" class="submit">
+
         </form>
+
+
 {% endblock %}
 </body>
 </html>

@@ -10,47 +10,71 @@
             border: 10px solid #000000;
             color: #fafafa;
         }
+
         .table-bordered{
             boarder: 3px solid #000000;
+        }
+
+        table, tr, td{
+            border: none;
+        }
+
+        table {
+            border: 1px solid red;
+            border-left: 1px solid #000000;
+        }
+
+        td {
+            border-left: none;
         }
     </style>
 </head>
 <body>
+{% for item in lost_items_list %}
 
+<form action="{% url 'all_detail' item.lost_items_id_pk%}" method="post">{% csrf_token %}
+    <div class="lost_items">
+        <table class="table table-bordered" id="dataTable" border="0">
+            <tbody>
+                <tr>
+                    <td class="lost_img" rowspan="8">
+                    {% if item.img_src %}
+                    <div class="left">
+                    {#<img class="lost_img" src="{{}}">#}
+                    </div>
+                    {% endif %}
+                    </td>
+                    <td><span class="title">분실물명 : {{ item.get_name }}</span></td>
+                </tr>
+                <tr>
+                    <td><span class="date_time">분실시간 : {{ item.get_at }}</span></td>
+                </tr>
+                <tr>
+                    <td><span class="category">카테고리 : {{ item.category }}</span></td>
+                </tr>
+                <tr>
+                    <td><span class="cost">분실장소 : {{ item.find_place }}</span></td>
+                </tr>
+                <tr>
+                    <td><span class="cost">수령위치 : {{ item.get_place }}</span></td>
+                </tr>
+                <tr>
+                    <td><span class="get_place">분실물 상태 : {{ item.pickup_check }}</span></td>
+                </tr>
 
-<div class="lost_items">
-    <table class="table table-bordered" id="dataTable">
-        {% for item in lost_items_list %}
-        <tbody>
-            <tr>
-                <td class="lost_img" rowspan="8">
-                {% if item.img_src %}
-                <div class="left">
-                {#<img class="lost_img" src="{{}}">#}
-                </div>
-                {% endif %}
-                </td>
-                <td><span class="title">분실물명 : {{ item.get_name }}</span></td>
-            </tr>
-            <tr>
-                <td><span class="date_time">분실시간 : {{ item.get_at }}</span></td>
-            </tr>
-            <tr>
-                <td><span class="cost">카테고리 : {{ item.category }}</span></td>
-            </tr>
-            <tr>
-                <td><span class="cost">분실장소 : {{ item.find_place }}</span></td>
-            </tr>
-            <tr>
-                <td><span class="cost">수령위치 : {{ item.get_place }}</span></td>
-            </tr>
-            <tr>
-                <td><span class="get_place">분실물 상태 : {{ item.pickup_check }}</span></td>
-            </tr>
+            </tbody>
+        </table>
 
-        </tbody>
-    </table>
-</div>
+        <div class="post_data" style="display:none;">
+            <input type="text" name="category" value={{ item.category }}>
+            <input type="text" name="get_place" value={{ item.get_place }}>
+            <input type="text" name="img_src" value={{ item.img_src }}>
+        </div>
+        <div class="form_submit">
+            <input type="submit" value="찾아주세요">
+        </div>
+    </div>
+</form>
 {% endfor %}
 {% endblock %}
 

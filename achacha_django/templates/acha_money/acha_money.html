@@ -22,12 +22,8 @@
 {#            <div class="col-lg-6 mb-4" onclick="location.href='detail/{{ item.posts_id_pk }}/'">#}
             <div class="col-lg-6 mb-4" onclick="location.href='{% url 'detail' item.posts_id_pk %}'">
 
-                {% if item.img_src %}
+                
                 <div class="left">
-                    <img class="lost_img" src="{{ item.img_src.url }}">
-                </div>
-                {% endif %}
-                <div class="right">
                     <div class="title">{{ item.title }}</div>
                     <span class="date_time">{{ item.created_at }}</span>
                     <br>
@@ -35,6 +31,12 @@
                     <br>
                     <span class="get_place">보관장소 : {{ item.get_place }}</span>
                 </div>
+
+                {% if item.img_src %}
+                <div class="right">
+                    <img class="lost_img" src="{{ item.img_src.url }}">
+                </div>
+                {% endif %}
             </div>
 
         </div>

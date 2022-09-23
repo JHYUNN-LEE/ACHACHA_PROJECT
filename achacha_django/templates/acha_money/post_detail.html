@@ -8,6 +8,18 @@
     {% block css %}
         <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css">
     {% endblock %}
+
+    {% block js %}
+        {% comment %} <script>
+            function alert_del(){
+                var res = confirm('게시글을 삭제하시겠습니까?');
+                if (res) {
+                    window.location.href = "{% url 'delete' posts_id_pk %}"
+                    alert('삭제되었습니다.');
+                }  
+            }
+        </script> {% endcomment %}
+    {% endblock %}
 </head>
 <body>
 {% block content %}
@@ -19,13 +31,21 @@
             {% if item.img_src %}
                 <img class="lost_img" src="{{ item.img_src.url }}"><br>
             {% endif %}
+            <p>작성자 {{ item.users_id }}</p>
             <p>카테고리: {{ item.category }}</p>
             <p>사례금: {{ item.cost }} 원</p>
             <p>택배 : {{ item.parcel }}</p>
             <div class="content">{{ item.content }}</div>
-            {% comment %} <input type="button" name"deal" value="찾아주기">
-            <input type="submit" value="완료"> {% endcomment %}
-            <button type="submit" name="deal" value="purchaser">찾아주기
+
+            <div class="submit-wrap">
+                <button type="submit" name="deal" value="purchaser">찾아주기
+            </div>
+            
+            {% comment %} {% if request.user == item.users_id %} {% endcomment %}
+            <a href="{% url 'update' item.posts_id_pk %}">수정</a>
+            <a href="{% url 'delete' item.posts_id_pk %}">삭제</a>
+            {% comment %} <button type="button" onclick="alert_del();">삭제</button> {% endcomment %}
+            {% comment %} {% endif %} {% endcomment %}
         </div>
     </form>
     {% endfor %}
