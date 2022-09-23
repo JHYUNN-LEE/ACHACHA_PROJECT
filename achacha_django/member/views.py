@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect
 from .models import request
 from .models import implement
 from .forms import UserForm
+
+
 # Python
 import json, requests, time, random
 
@@ -12,12 +14,15 @@ from django.views import View
 from django.http import JsonResponse
 from .utils import make_signature
 from .models import Authentication
+from acha_money.models import UserDeal
+from acha_money.models import Posts
 
 
 def register(request):
     if request.method == "POST":
         form = UserForm(request.POST)
         if form.is_valid():
+            # form.address = request.POST['address'].encode('utf-8')
             form.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
@@ -32,10 +37,53 @@ def index(request):
     request_list = request.objects.order_by('-create_date')
     context = {'request_list': request_list}
     return render(request, 'member/request.html', context)
+
+def request(request):
+    seller = UserDeal.objects.filter(users_id=request.user, deal='seller')
+    seller = seller.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    posts = Posts.objects.filter(users_id=request.user).extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    return render(request, 'member/request.html', {'seller': seller, 'posts': posts})
+
+# class requestList():
+#     template_name = "member/request.html"
+#     context_object_name = 'request'
+#
+#     def get_queryset(self, **kwargs):
+#         queryset = UserDeal.objects.filter(users_id = self.request.session.get('user'))
+#         return queryset
+#
+# def request(self, request):
+#     seller = UserDeal.objects.filter(users_id=self.request.session.get('user'))
+#     return render(request, 'member/request.html', {'seller': seller})
+
+
+def implement(request):
+    dealer = UserDeal.objects.filter(users_id=request.user, deal='dealer')
+    dealer = dealer.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    posts = Posts.objects.filter(users_id=request.user).extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    return render(request, 'member/request.html', {'seller': dealer, 'posts': posts})
+
+
+
 # Create your views here.
 
 # def login(request):
 #     return render(request, 'member/login.html')
+
+
+
+def request(request):
+    seller = UserDeal.objects.filter(deal='seller')
+    
+    # posts = Posts.objects.filter(posts_id_pk = seller.posts_id)
+    print(seller)
+    print(seller[2].posts_id)
+    for post_id in range(len(seller)):
+        posts = Posts.objects.filter(posts_id_pk = seller[post_id].posts_id)
+    return render(request, 'member/request.html', {'seller':seller, 'posts':'posts'})
+
+
+
 
 
 # 인증번호 발송
