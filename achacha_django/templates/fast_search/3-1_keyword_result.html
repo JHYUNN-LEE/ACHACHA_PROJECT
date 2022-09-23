@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base/base.html' %}
+
+{% block content %}
+    {% if not posts %}
+        <p>아차차! 해당 검색어는 데이터가 없습니다.</p>
+    
+    {% else %}
+        <div class="wrap">
+            <h1>게시판</h1>
+            <div class="data_list_div">
+                <ul>
+                    {% for result in posts %}
+                    <a href="{% url 'keyword_detail' result.images_id_pk %}" class="title">
+                        <li class="title_list">{{ result.get_name }}</li>
+                        <span class="board_date">분실날짜 - {{ result.get_at }}</span><br>
+                        <span class="lost_place"> 분실장소 - {{ result.center_place }}</span>
+                        <img class="lost_img" src="" alt=""></img>
+                    </a>
+                    {% endfor %}    
+                </ul>    
+            </div>
+        </div>
+        <br>
+
+        <div class="pagination">
+            {% if posts.has_previous %}
+                <a href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&?page={{posts.previous_page_number}}">이전</a>
+            {% endif %}
+    
+            {% for p in posts.paginator.page_range %}
+                <a href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{p}}" class="mx-1">{{p}}</a>
+            {% endfor %}
+    
+            {% if posts.has_next %}
+                    <a href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&?page={{posts.next_page_number}}">다음</a>
+            {% endif %}
+        </div>
+
+        {% endif %} 
+
+{% endblock %}
+
+</body>
+</html>
