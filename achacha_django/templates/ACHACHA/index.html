@@ -5,13 +5,12 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>ACHACHA</title>
     <script>
     $(function() {
         var typingBool = false; 
 var typingIdx=0; 
         // 카운트 효과
-        var count0 = count1 = 0;
+        var count0 = count1 = 3000;
 
         timeCounter();
 
@@ -21,7 +20,7 @@ var typingIdx=0;
 
             function count0Fn() {
             count0++;
-            if (count0 > 1893) {
+            if (count0 > 3569) {
                 clearInterval(id0);
             } else {
                 $(".number").eq(0).text(count0);
