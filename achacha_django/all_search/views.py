@@ -9,7 +9,7 @@ default_page = 1
 
 def all_index(request):
     items_per_page = 10
-    lost_items_list = LostItems.objects.all()
+    lost_items_list = LostItems.objects.all().order_by('-get_at')
     paginator = Paginator(lost_items_list, items_per_page)
     page = request.GET.get('page')
 
