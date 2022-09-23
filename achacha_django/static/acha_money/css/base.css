@@ -39,20 +39,20 @@
     float: right;
     position: fixed;
     bottom: 50px;
-    right: 50px;
-    width: 20px;
-    height: 20px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .post img{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 #post{
     display: inline-block;
     position: sticky;
-    width: 20px;
+    width: 40px;
     border: 1px solid #c9cbd7;
 }
 
