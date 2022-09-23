@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
 {% extends "base/base.html" %}
 {% block content %}
+<html lang="en">
 <head>
 
     <meta charset="utf-8">
@@ -48,31 +48,15 @@
                                                 <label for="username">사용자ID</label>
                                                 <input type="text" class="form-control" name="username" id="username"
                                                     value="{{ form.username.value|default_if_none:'' }}">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="password">비밀번호</label>
+                                                 <input type="password" class="form-control" name="password" id="password"
+                                                     value="{{ form.password.value|default_if_none:'' }}">
+                                            </div>
+                                             <button type="submit" class="btn btn-primary">로그인</button>
+                                            </form>
                                     </div>
-                                <div class="mb-3">
-                                    <label for="password">비밀번호</label>
-                                    <input type="password" class="form-control" name="password" id="password"
-                                            value="{{ form.password.value|default_if_none:'' }}">
-                                </div>
-                                <button type="submit" class="btn btn-primary">로그인</button>
-                            </form>
-                        </div>
-<!--                                        <h1 class="h4 text-gray-900 mb-4">안녕하세요!</h1>-->
-<!--                                    </div>-->
-<!--                                    <form class="user">-->
-<!--                                        <div class="form-group">-->
-<!--                                            <input type="email" class="form-control form-control-user"-->
-<!--                                                id="exampleInputEmail" aria-describedby="emailHelp"-->
-<!--                                                placeholder="Enter Email Address...">-->
-<!--                                        </div>-->
-<!--                                        <div class="form-group">-->
-<!--                                            <input type="password" class="form-control form-control-user"-->
-<!--                                                id="exampleInputPassword" placeholder="Password">-->
-<!--                                        </div>-->
-<!--                                        <a href="index.html" class="btn btn-primary btn-user btn-block">-->
-<!--                                            로그인-->
-<!--                                        </a>-->
-<!--                                    </form>-->
                                     <hr>
                                     <div class="text-center">
                                         <a class="big" href="http://127.0.0.1:8000/member/register/">계정을 만드세요!</a>
@@ -82,13 +66,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
+   
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

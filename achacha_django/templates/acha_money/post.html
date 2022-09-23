@@ -18,7 +18,7 @@
                     <input class="title" type="text" name="title" placeholder="글 제목">
                 </div>
                 <div class="category-wrap">
-                    <select class="category" name="category" required>
+                    <select class="category" name="category">
                         <option value="" disabled selected>카테고리를 선택하세요</option>
                         <option value="가방">가방</option>
                         <option value="귀금속">귀금속</option>
@@ -49,17 +49,19 @@
                 <div class="get_place-wrap">
                     <input class="get_place" type="text" name="get_place" placeholder="분실물의 보관장소를 적어주세요.">
                 </div>
+
                 <div class="parcel-wrap">
                     <input type="checkbox" name="parcel" value="가능">택배로 받아요.
                 </div>
             </div>
 
-            <input type="button" value="취소" class="cancel" onclick="">
+            
+            <input type="checkbox" name="deal" value="seller"> 이 물품이 본인의 물품임을 확인하였습니다. 
+
+            {% comment %} <input type="button" value="취소" class="cancel" onclick="{% url 'acha_money' %}"> {% endcomment %}
+            <a href="{% url 'acha_money' %}"><button>취소</button></a>
             <input type="submit" value="작성" class="submit">
-
         </form>
-
-
 {% endblock %}
 </body>
 </html>

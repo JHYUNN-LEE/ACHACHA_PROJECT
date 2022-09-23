@@ -16,7 +16,6 @@ import pymysql
 from re import template
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-import rest_framework.authentication
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
@@ -36,7 +35,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -46,6 +44,7 @@ INSTALLED_APPS = [
     'all_search',
     'fast_search',
     'member',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [
@@ -118,11 +117,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-    ],
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

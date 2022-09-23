@@ -8,21 +8,50 @@
     {% block css %}
         <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css">
     {% endblock %}
+
+    {% block js %}
+        {% comment %} <script>
+            function alert_del(){
+                var res = confirm('게시글을 삭제하시겠습니까?');
+                if (res) {
+                    window.location.href = "{% url 'delete' posts_id_pk %}"
+                    alert('삭제되었습니다.');
+                }  
+            }
+        </script> {% endcomment %}
+    {% endblock %}
 </head>
 <body>
 {% block content %}
     {% for item in detail %}
-        <div class="detail">
-            <div class="title">{{ item.title }}</div>
-            <div class="author"></div>
+    <form action="{% url 'detail' item.posts_id_pk %}" method="post">{% csrf_token %}
+        <div class="img">
             {% if item.img_src %}
-                <img class="lost_img" src="{{ item.img_src.url }}"><br>
-            {% endif %}
-            <p>카테고리: {{ item.category }}</p>
-            <p>사례금: {{ item.cost }} 원</p>
-            <p>택배 : {{ item.parcel }}</p>
+
+                <img class="img" src="{{ item.img_src.url }}"><br>
+            {% endif %} 
+        </div>   
+        <div class="detail">
+            
+            <div class="title">{{ item.title }}</div>
+            <div class="author">카테고리: {{ item.category }}</div>
+            <div class="author">사례금: {{ item.cost }} 원</div>
+            <div class="author">택배 : {{ item.parcel }}</div>
             <div class="content">{{ item.content }}</div>
+            
         </div>
+
+        <div class="basic_block_low2">
+            <div class="div_content">
+                {% comment %} <input type="button" name"deal" value="찾아주기">
+                <input type="submit" value="완료"> {% endcomment %}
+                <button type="submit" name="deal" value="purchaser" id="submit">찾아주기
+            </div>
+        </div>
+        
+        
+
+    </form>
     {% endfor %}
 {% endblock %}
 </body>
