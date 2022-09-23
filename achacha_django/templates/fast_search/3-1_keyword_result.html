@@ -43,14 +43,17 @@
             <ul class="pagination">
                 {% if posts.has_previous %}
                 <li class="page-item">
-                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&?page={{posts.previous_page_number}}">&lt;</a>
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{ 1 }}">&lt;&lt;</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{posts.previous_page_number}}">&lt;</a>
                 </li>
                 {% else %}
                 <li class="page-item disabled">
                     <a class="page-link" tabindex="-1" aria-disabled="true" href="#">&lt;</a>
                 </li>
                 {% endif %}
-
+                <!-- 페이지리스트 -->
                 {% for page_number in posts.paginator.page_range %}
                 {% if page_number >= posts.number|add:-3 and page_number <= posts.number|add:3 %}
                 {% if page_number == posts.number %}
@@ -64,9 +67,13 @@
                 {% endif %}
                 {% endif %}
                 {% endfor %}
+                <!-- 다음페이지 -->
                 {% if posts.has_next %}
                 <li class="page-item">
-                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&?page={{posts.next_page_number}}">&gt;</a>
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{posts.next_page_number}}">&gt;</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?insert_category={{insert_category}}&insert_color={{insert_color}}&insert_date={{insert_date}}&page={{ max_index }}">&gt;&gt;</a>
                 </li>
                 {% else %}
                 <li class="page-item disabled">

@@ -139,15 +139,18 @@ def find_category_to_es(request):
     
     page = request.GET.get('page')
     paginator = Paginator(datas, 10)
+    
 
     print(page) 
-
+    max_index = len(paginator.page_range)
     posts = paginator.get_page(page)
+   
     
     context = {'datas' : datas,
                 'insert_category': insert_category,
                 'insert_color' : insert_color,
                 'insert_date' : insert_date,
+                'max_index' : max_index,
                 'posts' : posts}
 
     return render(request, 'fast_search/3-1_keyword_result.html', context)
