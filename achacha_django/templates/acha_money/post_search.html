@@ -12,7 +12,9 @@
 </head>
 <body>
 {% block content %}
-        <form method="post" action="{% url 'post' %}" enctype="multipart/form-data"> {% csrf_token %}
+    {% for item in search_item %}
+
+        <form method="post" action="{% url 'post_search' item.posts_id_pk %}" enctype="multipart/form-data"> {% csrf_token %}
             <div class="posts">
                 <div class="title-wrap">
                     <input class="title" type="text" name="title" placeholder="글 제목">
@@ -45,9 +47,9 @@
                 </div>
                 <textarea class="content" name="content">
                 </textarea>
-
+                
                 <div class="get_place-wrap">
-                    <input class="get_place" type="text" name="get_place" placeholder="분실물의 보관장소를 적어주세요.">
+                    <input class="get_place" type="text" name="get_place" value="{{item.get_place}}" placeholder="분실물의 보관장소를 적어주세요.">
                 </div>
 
                 <div class="parcel-wrap">
@@ -58,10 +60,11 @@
             
             <input type="checkbox" name="deal" value="seller"> 이 물품이 본인의 물품임을 확인하였습니다. 
 
-            {% comment %} <input type="button" value="취소" class="cancel" onclick="{% url 'acha_money' %}"> {% endcomment %}
-            <a href="{% url 'acha_money' %}"><button>취소</button></a>
+            <a href="{% url 'acha_money' %}"><button>취소</button></a><br>
             <input type="submit" value="작성" class="submit">
         </form>
+    {% endfor %}
+    
 {% endblock %}
 </body>
 </html>

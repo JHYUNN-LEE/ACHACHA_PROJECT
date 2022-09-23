@@ -6,6 +6,7 @@
 .left {
     width: 60%;
     height: 150px;
+
     /* float: left; */
     display: inline-block;
     font-size: small;
@@ -16,7 +17,7 @@
     width: 40%;
     height: 150px;
     float: right;
-    /*border: 1px solid #f5b7b1;*/
+    border: 1px solid #f5b7b1;
 }
 
 .lost_img {
@@ -30,9 +31,45 @@
     font-size: large;
 }
 
+<<<<<<< HEAD
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid #8c8c8c;
+}
+
+#create_page {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #59A8D9;
+    border: solid #59A8D9;
+    position: relative;
+    left: 40px;
+    top: 420px;
+}
+
+#create_page > img {
+    width: 6px;
+    height: 6px;
+    z-index: 2;
+    position: absolute;
+    /*left: 5px;*/
+    /*top: 5px;*/
+    /*bottom: 10px;*/
+    /*object-fit: cover;*/
+}
+
+.pagination {
+    border: 1px solid red;
+    position: relative;
+    top: 450px;
+    right: 80px;
+=======
 
 .pagination {
     margin: auto;
+>>>>>>> master
 }
 
 .post {
