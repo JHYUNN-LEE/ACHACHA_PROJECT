@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 {% extends 'base/base.html' %}
-
 {% block content %}
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -32,7 +32,7 @@
     </style>
 </head>
 <body>
-<form action="" method="POST" id="dataForm"> {% csrf_token %}
+<form action="key_result/" method="GET" id="dataForm">
 
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-warning shadow h-100 py-2">
@@ -45,7 +45,7 @@
                             <select name="insert_category">
                                 <option value="가방">가방</option>
                                 <option value="귀금속">귀금속</option>
-                                <option value="옷">옷</option>
+                                <option value="옷">의류</option>
                                 <option value="스포츠용품">스포츠용품</option>
                             </select>
                         </div>
@@ -86,14 +86,16 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- <a href=""> -->
     <div class="basic_block_low">
         <div class="div_content">
-            <input type="button" value="찾기" id="submitButton"/>
+            <input type="submit" value="찾기" id="submitButton"/>
         </div>
     </div>
+    <!-- </a> -->
 
-    
+</form>
 
 
 {% endblock %}

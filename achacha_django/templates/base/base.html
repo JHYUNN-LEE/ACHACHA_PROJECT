@@ -148,10 +148,12 @@
             margin: auto;
         }
         #logo{
-            position: absolute;
+            float: left;
             width: 60px;
-            margin-top: -28px;
-            margin-left: 36%;
+            
+        }
+        .logo{
+            margin-left: 38%;
         }
         #content{
             /* background: linear-gradient(rgb(29, 28, 28), black); */
@@ -312,10 +314,9 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     </a>
-                    <a href="/">
+                    <a class="logo" href="/">
                         <img id="logo" class="img-profile rounded-circle" src= "{% static 'bootstrap/img/logo.png' %}" alt="">
                     </a>
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown no-arrow mx-1">
@@ -356,7 +357,9 @@
                                 </a>
                             </div>
                         </li>
-                                            
+                              
+                        
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"

@@ -31,25 +31,6 @@
 }
 
 
-#create_page {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #59A8D9;
-    border: solid #59A8D9;
-    position: relative;
-    left: 280px;
-}
-
-#create_page > img {
-    z-index: 2;
-    position: absolute;
-    /*left: 5px;*/
-    /*top: 5px;*/
-    /*bottom: 10px;*/
-    /*object-fit: cover;*/
-}
-
 .pagination {
     margin: auto;
 }
@@ -59,14 +40,19 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
-    width: 60px;
-    height: 60px;
+    width: 20px;
+    height: 20px;
+}
+
+.post img{
+    width: 20px;
+    height: 20px;
 }
 
 #post{
     display: inline-block;
     position: sticky;
-    width: 60px;
+    width: 20px;
     border: 1px solid #c9cbd7;
 }
 
