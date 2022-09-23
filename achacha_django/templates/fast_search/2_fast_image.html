@@ -48,17 +48,26 @@
 
 </style>
     <h3 class="search_text">이미지로 검색하기</h3>
-    <form action="upload/" method="POST" id="dataForm" enctype="multipart/form-data"> {% csrf_token %}
+    
+    <form action="upload/" method="POST" id="dataForm" enctype="multipart/form-data">{% csrf_token %}
         <p class="title">
             1. 잃어버린 물건의 유형을 선택해 주세요.</p>
             <select name="category" required> <!--필수선택-->
                 <option value="" selected disabled>유형 선택</option>    
                 <option value="bag">가방</option>
-                <option value="jewelry">귀금속</option>
-                <option value="clothes">옷</option>
-                <option value="sports">스포츠용품</option>
-                <option value="etc">기타</option>
                 <option value="wallet">지갑</option>
+                <option value="phone">휴대폰</option>
+                <option value="card">카드</option>
+                <option value="earphones">이어폰</option>
+                <option value="cap">모자</option>
+                <option value="car_key">차키</option>
+                <option value="cloth">옷</option>
+                <option value="document">도서용품, 서류</option>
+                <option value="necklace">목걸이</option>
+                <option value="ring">반지</option>
+                <option value="shoes">신발</option>
+                <option value="shopping_bag">쇼핑백</option>
+                <option value="watch">시계</option>                
             </select>
     <br>
     <br>

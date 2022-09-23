@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,47 +24,46 @@
 
 
 {% block content %}
-
-<h3 class="text-center"><strong>검색 결과</strong></h3>
-<h5 class="text-center">잃어버린 물건을 찾아보세요!</h5>
-<br>
-<br>
-<br>
-<!-- 그리드 게시물 -->
-<div class="container-fluid"> 
-  {% for img_src in image_src %}
-    <div class="row"> 
-    	<div class="col-md-4">
-            <!-- img-responsive : image 반응형 -->
-            <img class="img-responsive" size="max-width: 100%;, height: auto; , display: block;" src="https://www.lost112.go.kr/lostnfs/images/uploadImg/thumbnail/20220723/r_20220723125448046.jpg" id="lostImage1">
-            <h5>{{img_src}}</h5>
-        </div>
+  <h3 class="text-center"><strong>검색 결과</strong></h3>
+  <h5 class="text-center">잃어버린 물건을 찾아보세요!</h5>
+  <br>
+  <h5 class="text-center">검색 결과는 n개 입니다.</h5>
+  <br>
+  <br>
+  <!-- 그리드 게시물 (bootstrap) 기존 -->
+  <div class="container-fluid"> 
+  {% for img, item in list %}
+    <div class="row">   
+      <div class="col-md-4 lost_image">
+        <!-- img-responsive : image 반응형 -->
+        <img class="img-responsive center" src="{{ img }}" id="lostImage1">
         <br>
+        <div class= "lost_info">
+          <span class="lost_item_name">{{ item.get_name }}</span>
+          <span class="lost_item_name">{{ item.get_at }}</span>
+        </div>
+      </div>
+      <br><br>
     </div>
+    <br><br>
   {% endfor %}
-</div>
-<br><br><br>
-<nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">4</a></li>
-      <li class="page-item"><a class="page-link" href="#">5</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  </div>
+  <br><br><br> 
+  
+  <div class="pagination">
+    {% if posts.has_previous %}
+        <a href="?page={{posts.previous_page_number}}">이전</a>
+    {% endif %}
 
-<br><br><br><br>
+    {% for p in posts.paginator.page_range %}
+        <a href="?page={{p}}" class="mx-1">{{p}}</a>
+    {% endfor %}
+
+    {% if posts.has_next %}
+            <a href="?page={{posts.next_page_number}}">다음</a>
+    {% endif %}
+  </div>
+
 
 {% endblock %}
 
