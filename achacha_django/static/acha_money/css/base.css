@@ -31,7 +31,6 @@
     font-size: large;
 }
 
-<<<<<<< HEAD
 hr {
     border: 0;
     height: 0;
@@ -65,11 +64,6 @@ hr {
     position: relative;
     top: 450px;
     right: 80px;
-=======
-
-.pagination {
-    margin: auto;
->>>>>>> master
 }
 
 .post {
