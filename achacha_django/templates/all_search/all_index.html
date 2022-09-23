@@ -54,6 +54,16 @@
 				<div class="col">
                     <p><strong></strong></p>
 					<ul class="pagination">
+                        <!-- 처음 페이지 -->
+                        {% if posts.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ 1 }}">처음</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">처음</a>
+                        </li>
+                        {% endif %}
                         {% if posts.has_previous %}
                         <li class="page-item">
                             <a class="page-link" href="?page={{posts.previous_page_number}}">이전</a>
@@ -81,6 +91,9 @@
                         {% if posts.has_next %}
                         <li class="page-item">
                             <a class="page-link" href="?page={{ posts.next_page_number }}">다음</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ max_index }}">끝</a>
                         </li>
                         {% else %}
                         <li class="page-item disabled">

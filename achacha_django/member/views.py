@@ -39,12 +39,15 @@ def index(request):
     return render(request, 'member/request.html', context)
 
 def request(request):
-    seller = UserDeal.objects.filter(users_id=request.user, deal='dealer')
-    seller = seller.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
-    post = Posts.objects.filter(users_id=request.user)
-    post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
-
+    user_name = request.user
+    post = Posts.objects.raw("SELECT * FROM posts join user_deal \
+                             on posts.posts_id_pk = user_deal.posts_id \
+                        where user_deal.deal = 'seller' and user_deal.users_id= %s", [user_name])
+    # post = Posts.objects.filter(users_id=request.user)
+    # post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    # print(post)
     return render(request, 'member/request.html', {'post': post})
+
 
 # class requestList():
 #     template_name = "member/request.html"
@@ -60,16 +63,12 @@ def request(request):
 
 
 def implement(request):
-    dealer = UserDeal.objects.filter(users_id=request.user, deal='dealer')
-    dealer = dealer.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
-    post = Posts.objects.filter(users_id=request.user)
-    post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
+    user_name = request.user
+    post = Posts.objects.raw("SELECT * FROM posts join user_deal \
+                             on posts.posts_id_pk = user_deal.posts_id \
+                        where user_deal.deal = 'purchaser' and user_deal.users_id=%s", [user_name])
 
-    # post = UserDeal.objects.raw("SELECT * FROM user_deal join posts \
-    #                          on posts.posts_id_pk = user_deal.posts_id \
-    #                     where user_deal.deal = 'purchaser' and user_deal.users_id='suran' ")
-
-    print(post.query)
+    # post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
     return render(request, 'member/implement.html', {'post': post})
 
 
