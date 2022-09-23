@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
@@ -19,41 +18,38 @@
     {% else %}
         {% for item in posts %}
         <div class="lost_items">
-{#            <div class="col-lg-6 mb-4" onclick="location.href='detail/{{ item.posts_id_pk }}/'">#}
+<!-- {#          <div class="col-lg-6 mb-4" onclick="location.href='detail/{{ item.posts_id_pk }}/'">#} -->
             <div id="row" class="col-lg-6 mb-4" onclick="location.href='{% url 'detail' item.posts_id_pk %}'">
-
-                {% if item.img_src %}
                 <div class="left">
-                    <img class="lost_img" src="{{ item.img_src.url }}">
-                </div>
-                {% endif %}
-                <div class="right">
                     <div class="title">{{ item.title }}</div>
                     <span class="date_time">{{ item.created_at }}</span>
                     <br>
-                    <span class="cost">{{ item.cost }} 원</span>
-                    <br>
                     <span class="get_place">보관장소 : {{ item.get_place }}</span>
-                    <hr>
+                    <br>
+                    <span class="cost">{{ item.cost }} 원</span>
                 </div>
-            </div>
+                {% if item.img_src %}
             
-
+                <div class="right">
+                    <img class="lost_img" src="{{ item.img_src.url }}" alt="image">
+                </div>
+                {% endif %}
+            </div>
+            <hr>
         </div>
+        
+                                                                                                                                                                                                                                    
         {% endfor %}
        
     {% endif %} 
-    <hr>
+
     
-        <a href={% url 'post' %}>
-            <button id="create_page">
-                <img id="post" src="{% static 'acha_money/img/pen.png' %}">
-            </button>
-        </a>
+    <a href={% url 'post' %} class="post">
+        <img id="post" class="img-profile rounded-circle" src="{% static 'acha_money/img/pen.png' %}">
+    </a>
 
-{#    <a href="?page1">처음</a>#}
-
-    <div>
+<!-- pagination -->
+    <div class="pagination">
         <ul class="pagination">
             {% if posts.has_previous %}
             <li class="page-item">
