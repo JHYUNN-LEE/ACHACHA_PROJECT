@@ -1,13 +1,13 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
-{% extends 'base/base.html' %}
 
-{% block content %}
 
 <script>
     function chageLangSelect(){
@@ -72,8 +72,8 @@
     }
     input[type="file"] {
       position: absolute;
-      width: 0;
-      height: 0;
+      width: 1px;
+      height: 1px;
       padding: 0;
       overflow: hidden;
       border: 0;
@@ -135,10 +135,9 @@
                             <p class="title">
                                 2. 물건과 비슷한 사진을 업로드 해주세요. </p>
                                 <div>
-                                    <input type="text" class="upload-name" 
-                                    value="이미지를 업로드 하세요" placeholder="이미지를 업로드 하세요" disabled>
-                                    <label for="upload-file">파일선택</label>
-                                    <input type="file" name="uploadfile" accept="image/png, image/jpeg, image/jpg" >
+                                    <input class="upload-name" value="이미지를 업로드 하세요" disabled>
+                                    <label for="uploadfile">파일선택</label>
+                                    <input type="file" name="uploadfile" id="uploadfile" accept="image/png, image/jpeg, image/jpg" >
                                 </div>
                             </div>
                         </li>     

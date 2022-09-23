@@ -5,13 +5,12 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>ACHACHA</title>
     <script>
     $(function() {
         var typingBool = false; 
 var typingIdx=0; 
         // 카운트 효과
-        var count0 = count1 = 0;
+        var count0 = count1 = 3000;
 
         timeCounter();
 
@@ -21,7 +20,7 @@ var typingIdx=0;
 
             function count0Fn() {
             count0++;
-            if (count0 > 1893) {
+            if (count0 > 3569) {
                 clearInterval(id0);
             } else {
                 $(".number").eq(0).text(count0);
@@ -164,7 +163,7 @@ var typingIdx=0;
         }
         p{
             text-align: left;
-            font-size: 17px;
+            font-size: 20px;
         }
         button{
             height: 40px;
@@ -200,7 +199,8 @@ var typingIdx=0;
         #main{
             height: 430px;
             border-radius: 2%;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../../static/bootstrap/img/bg.jpg");
+            background-image: url("../../static/bootstrap/img/by.jpg");
+            background-size: cover;
 
         }
         .col-xl-8{
@@ -221,6 +221,10 @@ var typingIdx=0;
             50%{border-right: 1px solid #000} 
             100%{border-right: 1px solid #fff} 
         }
+        .black{
+            color: black;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -234,8 +238,8 @@ var typingIdx=0;
             <br>
             <br>
             <br>
-            <p> 지금까지 찾아간 분실물 </p>
-            <h1> 누적 <span class="number"></span> 건 ! </h1>
+            <p class="black"> 지금까지 찾아간 분실물 </p>
+            <h1 class="black"> 누적 <span class="number" class="black"></span> 건 ! </h1>
             <div class="btn"><button onclick="location.href='all_search/'"> 분실물 지금 바로 확인 </button></div>
             <br>
             <br>
