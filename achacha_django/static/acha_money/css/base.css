@@ -40,19 +40,13 @@
     position: fixed;
     bottom: 50px;
     right: 30px;
-    width: 40px;
-    height: 40px;
-}
-
-.post img{
-    width: 40px;
-    height: 40px;
+    height: 55px;
 }
 
 #post{
     display: inline-block;
     position: sticky;
-    width: 40px;
+    width: 55px;
     border: 1px solid #c9cbd7;
 }
 

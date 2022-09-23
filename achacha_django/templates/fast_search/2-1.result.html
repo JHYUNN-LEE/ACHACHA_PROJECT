@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-
+  <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
   <script>
     function image(){
       response.data[0]
@@ -31,24 +31,24 @@
   <br>
   <br>
   <!-- 그리드 게시물 (bootstrap) 기존 -->
-  <div class="container-fluid"> 
-  {% for img, item in list %}
-    <div class="row">   
-      <div class="col-md-4 lost_image">
-        <!-- img-responsive : image 반응형 -->
-        <img class="img-responsive center" src="{{ img }}" id="lostImage1">
-        <br>
-        <div class= "lost_info">
-          <span class="lost_item_name">{{ item.get_name }}</span>
-          <span class="lost_item_name">{{ item.get_at }}</span>
+  <div class="lost_items"> 
+    {% for img, item in list %}
+      <div class="row" class="col-lg-6 mb-4"> 
+        <div class="left">
+            <div class="title">{{ item.get_name }}</div>
+            <span class="date_time">{{ item.get_at }}</span>
+        </div>  
+        <div class="right">
+          <!-- img-responsive : image 반응형 -->
+          <img class="img-responsive center" src="{{ img }}" id="lostImage1">
         </div>
       </div>
-      <br><br>
-    </div>
-    <br><br>
-  {% endfor %}
+      <hr>
   </div>
-  <br><br><br> 
+
+    {% endfor %}
+
+
   
   <div class="pagination">
     {% if posts.has_previous %}
