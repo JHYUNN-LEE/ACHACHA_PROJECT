@@ -39,10 +39,12 @@ def index(request):
     return render(request, 'member/request.html', context)
 
 def request(request):
-    seller = UserDeal.objects.filter(users_id=request.user, deal='seller')
+    seller = UserDeal.objects.filter(users_id=request.user, deal='dealer')
     seller = seller.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
-    posts = Posts.objects.filter(users_id=request.user).extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
-    return render(request, 'member/request.html', {'seller': seller, 'posts': posts})
+    post = Posts.objects.filter(users_id=request.user)
+    post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
+
+    return render(request, 'member/request.html', {'post': post})
 
 # class requestList():
 #     template_name = "member/request.html"
@@ -60,8 +62,15 @@ def request(request):
 def implement(request):
     dealer = UserDeal.objects.filter(users_id=request.user, deal='dealer')
     dealer = dealer.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
-    posts = Posts.objects.filter(users_id=request.user).extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
-    return render(request, 'member/request.html', {'seller': dealer, 'posts': posts})
+    post = Posts.objects.filter(users_id=request.user)
+    post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
+
+    # post = UserDeal.objects.raw("SELECT * FROM user_deal join posts \
+    #                          on posts.posts_id_pk = user_deal.posts_id \
+    #                     where user_deal.deal = 'purchaser' and user_deal.users_id='suran' ")
+
+    print(post.query)
+    return render(request, 'member/implement.html', {'post': post})
 
 
 
@@ -69,18 +78,6 @@ def implement(request):
 
 # def login(request):
 #     return render(request, 'member/login.html')
-
-
-
-def request(request):
-    seller = UserDeal.objects.filter(deal='seller')
-    
-    # posts = Posts.objects.filter(posts_id_pk = seller.posts_id)
-    print(seller)
-    print(seller[2].posts_id)
-    for post_id in range(len(seller)):
-        posts = Posts.objects.filter(posts_id_pk = seller[post_id].posts_id)
-    return render(request, 'member/request.html', {'seller':seller, 'posts':'posts'})
 
 
 
