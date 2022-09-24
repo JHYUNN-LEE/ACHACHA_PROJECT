@@ -260,17 +260,17 @@
                         {% if user.is_authenticated %}
                         <a class="collapse-item" href="{% url 'member:logout' %}">로그아웃</a>
                         {% else %}
-                        <a class="collapse-item" href="http://127.0.0.1:8000/member/login/">로그인</a>
+                        <a class="collapse-item" href="/member/login">로그인</a>
                         {% endif %}
                         {% if user.is_authenticated %}
                         <span></span>
                         {% else %}
-                        <a class="collapse-item" href="http://127.0.0.1:8000/member/register/">회원가입</a>
+                        <a class="collapse-item" href="/member/register">회원가입</a>
                         {% endif %}
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="http://127.0.0.1:8000/member/request/">대신수령 요청기록</a>
-                        <a class="collapse-item" href="http://127.0.0.1:8000/member/implement/">대신수령 이행기록</a>
+                        <a class="collapse-item" href="/member/request">대신수령 요청기록</a>
+                        <a class="collapse-item" href="/member/implement">대신수령 이행기록</a>
                     </div>
                 </div>
             </li>
@@ -381,9 +381,16 @@
                                     마이페이지
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" onclick="location.href='/member/login/'">
+                                {% if user.is_authenticated %}
+                                <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" onclick="location.href='/member/logout/'">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     로그아웃
+                                </a>
+                                {% else %}
+                                <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" onclick="location.href='/member/login/'">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    로그인
+                                {% endif %}
                                 </a>
                             </div>
                         </li>
