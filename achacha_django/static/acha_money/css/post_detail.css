@@ -38,14 +38,14 @@
     border-radius: 40px;
     background-color: #FFDD33;
     font-family: Poppins,sans-serif;
-    }
-    .basic_block_low2 input{
-        color: white;
-    }
-    .basic_block_low2:hover input{
-        color: #333333;
-    }
-    .basic_block_low2:hover{
-        background-color: #ffc609;
-    }
+}
+.basic_block_low2 input{
+    color: white;
+}
+.basic_block_low2:hover input{
+    color: #333333;
+}
+.basic_block_low2:hover{
+    background-color: #ffc609;
+}
 

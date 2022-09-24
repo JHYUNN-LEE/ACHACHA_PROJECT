@@ -57,30 +57,29 @@
       border-radius: 5px;
       font-size: small;
     }
-    label {
+    input[type="file"] {
       display: inline-block;
       margin: 0;
       height: 40px;
       padding: 8px 10px;
       vertical-align: middle;
       border: 1px solid #dddddd;
-      color: #fff;
-      background-color: rgba(0, 53, 109, 0.95);
+      /* background-color: rgba(0, 53, 109, 0.95); */
       border-radius: 5px;
       font-size: small;
       font-weight: lighter;
     }
-    input[type="file"] {
+    /*input[type="file"] {
       position: absolute;
       width: 1px;
       height: 1px;
       padding: 0;
       overflow: hidden;
       border: 0;
-    }
-    label:hover {
+    } */
+    /* label:hover {
         background-color: rgba(1, 20, 40, 0.95);
-    }
+    } */
     #submit{
         background-color: transparent;
         border: none;
@@ -135,8 +134,8 @@
                             <p class="title">
                                 2. 물건과 비슷한 사진을 업로드 해주세요. </p>
                                 <div>
-                                    <input class="upload-name" value="이미지를 업로드 하세요" disabled>
-                                    <label for="uploadfile">파일선택</label>
+                                    <!-- <input class="upload-name" value="이미지를 업로드 하세요" disabled> -->
+                                    <!-- <label for="uploadfile">파일선택</label> -->
                                     <input type="file" name="uploadfile" id="uploadfile" accept="image/png, image/jpeg, image/jpg" >
                                 </div>
                             </div>

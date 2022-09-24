@@ -12,11 +12,16 @@
   </script>
 
   <style>
-      /* #lostImage {
-          max-width: 100%;
-          height: auto;
-          display: block;
-      }      */
+    .card{
+        width: 47%;
+        background-color: #fff !important;
+        border: none;
+        margin-right: 3px;
+    }
+    .img{
+        width: 100%;
+        height: 180px;
+    }
   </style>
 </head>
 <body>
@@ -30,22 +35,20 @@
   <br>
   <br>
   <!-- 그리드 게시물 (bootstrap) 기존 -->
-  <div class="lost_items"> 
-    {% for img, item in list %}
-      <div class="row" class="col-lg-6 mb-4"> 
-        <div class="left">
-            <div class="title">{{ item.get_name }}</div>
-            <span class="date_time">{{ item.get_at }}</span>
-        </div>  
-        <div class="right">
-          <!-- img-responsive : image 반응형 -->
-          <img class="img-responsive center" src="{{ img }}" id="lostImage1">
-        </div>
+
+  {% for img, item in list %}
+  <div class="row">
+      <div class="card">
+          <div class="lost_img">
+              <img class="img-responsive center" src="{{ img }}" id="lostImage1">
+              <div class="title">{{ item.get_name }}</div>
+              <div class="date_time">{{ item.get_at }}</div>
+              <br>
+          </div>
       </div>
-      <hr>
   </div>
 
-    {% endfor %}
+  {% endfor %}
 
 
   
