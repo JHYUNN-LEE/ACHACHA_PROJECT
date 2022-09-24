@@ -48,6 +48,7 @@ def all_detail(request, lost_items_id_pk):
         return render(request, 'all_search/all_detail.html', {'lost_items_list': lost_items_list})
     
     
-    
+def all_alarm(request):
+    return redirect(request, 'all_search/all_alarm.html')
 
 

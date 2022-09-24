@@ -32,6 +32,14 @@
   <br>
   <!-- 그리드 게시물 (bootstrap) 기존 -->
 
+  {% if not list %}
+
+  <div class="alarm">
+    아차차! 해당되는 분실물을 찾지 못했습니다.<br>
+    <a href="{% url 'keyword_search' %}">키워드로 검색해 보기</a>
+  </div>
+  {% else %}
+
   <div class="lost_items"> 
     {% for img, item in list %}
       <div class="row" class="col-lg-6 mb-4"> 

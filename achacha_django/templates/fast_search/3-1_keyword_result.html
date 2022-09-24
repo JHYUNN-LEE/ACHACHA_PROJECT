@@ -10,31 +10,38 @@
 
 <body>
     {% if not posts %}
-        <p>아차차! 해당되는 분실물이 없습니다.</p>
-    
+    <div class="alarm">
+        아차차! 해당되는 분실물이 없습니다.<br>
+        비슷한 물건 들어왔을 때 <a href="all_alarm/">알림받기</a>
+    </div>
     {% else %}
-
-
+    <div class="container-fluid">
+        <div class="row" >
         {% for item in posts %}
-        <div class="lost_items">
-            <div id="row" class="col-lg-6 mb-4" onclick="location.href='{% url 'keyword_detail' item.images_id_pk %}'">
-                <div class="left">
-                    <div class="title">{{ item.get_name }}</div>  
-                    <span class="date_time">분실일시 : {{ item.get_at }}</span>
-                    <br>
-                    <span class="date_time">분실장소 : {{ item.center_place }}</span>
-                </div>
-
+            <div class="card_search" onclick="location.href='{% url 'keyword_detail' item.images_id_pk %}'">
                 {% if item.img_src %}
-                <div class="right">
-                    <img class="lost_img" src="{{ item.img_src.url }}">
+                <div class="image_center">
+                    <img class="lost_img" src="{{ item.img_src.url }}" alt="image">
+                </div>
+                {% else %}
+                <div class="image_center">
+                    <img class="lost_img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
                 </div>
                 {% endif %}
+                <br>
+                <div class="title">{{ item.get_name }}</div>  
+                <span class="date_time">{{ item.get_at }}</span>
+                <br>
+                <span class="date_time">{{ item.center_place }}</span>
+                <hr>
             </div>
-            <hr>
+            {% endfor %} 
         </div>
-        {% endfor %}  
-
+        <div class="alarm">
+            혹시 찾으시는 분실물이 없으신가요?<br>
+            비슷한 물건 들어왔을 때 <a href="/all_search/all_alarm/">알림받기</a>
+        </div>
+    </div>
     <!-- pagination -->
 
 

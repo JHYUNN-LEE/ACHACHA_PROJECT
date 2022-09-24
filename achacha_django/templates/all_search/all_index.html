@@ -9,31 +9,36 @@
 </head>
 
 <body>
-
-        {% for item in posts %}
-        <div class="lost_items">
-            <div id="row" class="col-lg-6 mb-4" onclick="location.href='{% url 'all_detail' item.lost_items_id_pk %}'">
-                <div class="left">
-                    <div class="title">{{ item.get_name }}</div>
-                    <span class="date_time">{{ item.get_at }}</span>
-                    <br>
-                    <span class="get_place">{{ item.category }}</span>
-                    <br>
-                    <span class="cost">{{ item.get_place }}</span>
-                </div>
+    <div class="container-fluid">
+        <div class="row" >
+            {% for item in posts %}
+            <div class="card_search" onclick="location.href='{% url 'all_detail' item.lost_items_id_pk %}'">
                 {% if item.img_src %}
-            
-                <div class="right">
+                <div class="image_center">
                     <img class="lost_img" src="{{ item.img_src.url }}" alt="image">
                 </div>
+                {% else %}
+                <div class="image_center">
+                    <img class="lost_img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
+                </div>
                 {% endif %}
+                <br>
+                <div class="title">{{ item.get_name }}</div>
+                <span class="date_time">{{ item.get_at }}</span>
+                <br>
+                <span class="get_place">{{ item.category }}</span>
+                <br>
+                <span class="cost">{{ item.get_place }}</span>
+                <hr>
             </div>
-            <hr>
+            
+            {% endfor %}
         </div>
-        
-                                                                                                                                                                                                                                    
-        {% endfor %}
-       
+        <div class="alarm">
+        혹시 찾으시는 분실물이 없으신가요?<br>
+        비슷한 물건 들어왔을 때 <a href="/all_search/all_alarm/">알림받기</a>
+        </div>
+    </div>
 
 <!-- pagination -->
     <div class="pagination">
