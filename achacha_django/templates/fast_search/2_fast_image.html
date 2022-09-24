@@ -1,13 +1,13 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
-{% extends 'base/base.html' %}
 
-{% block content %}
 
 <script>
     function chageLangSelect(){
@@ -24,11 +24,7 @@
 
 
 <style>
-    h3 {
-        text-align: center;
-    }
-    
-    form {
+   form {
         text-align: center;
     }
 
@@ -45,40 +41,112 @@
     #chooseFile {
         visibility: hidden;
     }
+    select{
+        width: 100%;
+        border-color: lightgray;
+        font-size:small;
+    }
+    .upload-name {
+      display: inline-block;
+      height: 40px;
+      padding: 0 10px;
+      vertical-align: middle;
+      border: 1px solid #dddddd;
+      width: 66%;
+      color: #999999;
+      border-radius: 5px;
+      font-size: small;
+    }
+    input[type="file"] {
+      display: inline-block;
+      margin: 0;
+      height: 40px;
+      padding: 8px 10px;
+      vertical-align: middle;
+      border: 1px solid #dddddd;
+      /* background-color: rgba(0, 53, 109, 0.95); */
+      border-radius: 5px;
+      font-size: small;
+      font-weight: lighter;
+    }
+    /*input[type="file"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+    } */
+    /* label:hover {
+        background-color: rgba(1, 20, 40, 0.95);
+    } */
+    #submit{
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .basic_block_low{
+        height: 60px;
+    }
 
 </style>
-    <h3 class="search_text">이미지로 검색하기</h3>
-    
+   
     <form action="upload/" method="POST" id="dataForm" enctype="multipart/form-data">{% csrf_token %}
-        <p class="title">
-            1. 잃어버린 물건의 유형을 선택해 주세요.</p>
-            <select name="category" required> <!--필수선택-->
-                <option value="" selected disabled>유형 선택</option>    
-                <option value="bag">가방</option>
-                <option value="wallet">지갑</option>
-                <option value="phone">휴대폰</option>
-                <option value="card">카드</option>
-                <option value="earphones">이어폰</option>
-                <option value="cap">모자</option>
-                <option value="car_key">차키</option>
-                <option value="cloth">옷</option>
-                <option value="document">도서용품, 서류</option>
-                <option value="necklace">목걸이</option>
-                <option value="ring">반지</option>
-                <option value="shoes">신발</option>
-                <option value="shopping_bag">쇼핑백</option>
-                <option value="watch">시계</option>                
-            </select>
-    <br>
-    <br>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="div_content">
+                    <ul role="list" class="feat_list">
+                        <li class="about_subtitle buy">
+                            <div class="subtitle-large">
+                                <p class="title">
+                                    1. 잃어버린 물건의 유형을 선택해 주세요.</p>
+                                <select name="category" required> <!--필수선택-->
+                                    <option value="" selected disabled>유형 선택</option>    
+                                    <option value="bag">가방</option>
+                                    <option value="wallet">지갑</option>
+                                    <option value="phone">휴대폰</option>
+                                    <option value="card">카드</option>
+                                    <option value="earphones">이어폰</option>
+                                    <option value="cap">모자</option>
+                                    <option value="car_key">차키</option>
+                                    <option value="cloth">옷</option>
+                                    <option value="document">도서용품, 서류</option>
+                                    <option value="necklace">목걸이</option>
+                                    <option value="ring">반지</option>
+                                    <option value="shoes">신발</option>
+                                    <option value="shopping_bag">쇼핑백</option>
+                                    <option value="watch">시계</option>                
+                                </select>
+                            </div>
+                        </li>     
+                    </ul>
+                </div>
+            </div>
+        </div>
     <!-- image/file -->
-        <p class="title">2. 물건의 이미지를 업로드 해주세요. </p>
-        <br>
-        <input type="file" name="uploadfile" accept="image/png, image/jpeg, image/jpg" >
-        <br>
-        <br>
-        <br>
-        <input type="submit" id="submit" value="찾기">
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="div_content">
+                <ul role="list" class="feat_list">
+                    <li class="about_subtitle buy">
+                        <div class="subtitle-large">
+                            <p class="title">
+                                2. 물건과 비슷한 사진을 업로드 해주세요. </p>
+                                <div>
+                                    <!-- <input class="upload-name" value="이미지를 업로드 하세요" disabled> -->
+                                    <!-- <label for="uploadfile">파일선택</label> -->
+                                    <input type="file" name="uploadfile" id="uploadfile" accept="image/png, image/jpeg, image/jpg" >
+                                </div>
+                            </div>
+                        </li>     
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="basic_block_low">
+            <div class="div_content">
+                <input type="submit" id="submit" value="찾기">
             </div>
         </div>
 

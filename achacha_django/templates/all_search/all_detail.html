@@ -1,85 +1,23 @@
 {% extends 'base/base copy.html' %}
-{% load static %}
 {% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-<<<<<<< HEAD
-    <style>
-        .lost_img{
-            width: 300px;
-            border: 10px solid #000000;
-            color: #fafafa;
-        }
-
-        .table-bordered{
-            boarder: 3px solid #000000;
-        }
-
-        table, tr, td{
-            border: none;
-        }
-
-        table {
-            border: 1px solid red;
-            border-left: 1px solid #000000;
-        }
-
-        td {
-            border-left: none;
-        }
-    </style>
-=======
-    {% block css %}
     <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css">
-    {% endblock %}
-
->>>>>>> master
 </head>
 <body>
-{% for item in lost_items_list %}
-
-<form action="{% url 'all_detail' item.lost_items_id_pk%}" method="post">{% csrf_token %}
-    <div class="lost_items">
-        <table class="table table-bordered" id="dataTable" border="0">
-            <tbody>
-                <tr>
-                    <td class="lost_img" rowspan="8">
-                    {% if item.img_src %}
-                    <div class="left">
-                    {#<img class="lost_img" src="{{}}">#}
-                    </div>
-                    {% endif %}
-                    </td>
-                    <td><span class="title">분실물명 : {{ item.get_name }}</span></td>
-                </tr>
-                <tr>
-                    <td><span class="date_time">분실시간 : {{ item.get_at }}</span></td>
-                </tr>
-                <tr>
-                    <td><span class="category">카테고리 : {{ item.category }}</span></td>
-                </tr>
-                <tr>
-                    <td><span class="cost">분실장소 : {{ item.find_place }}</span></td>
-                </tr>
-                <tr>
-                    <td><span class="cost">수령위치 : {{ item.get_place }}</span></td>
-                </tr>
-                <tr>
-                    <td><span class="get_place">분실물 상태 : {{ item.pickup_check }}</span></td>
-                </tr>
-
-
 <div class="lost_items">
 
-        {% for item in lost_items_list %}
+    {% for item in lost_items_list %}
         {% if item.img_src %}
             <div class="img">
                 <img class="img" src="{{ item.img_src.url }}"><br>
             {#<img class="img" src="{{}}">#}
             </div>
         {% endif %}
-        
+    
         <div class="detail">
             <div class="title">분실물명 : {{ item.get_name }}</div>  
             <div class="author">분실일시 : {{ item.get_at }}</div>
@@ -89,7 +27,7 @@
             <!-- <div class="get_place">분실물 상태 : {{ item.pickup_check }}</div> -->
         </div>
 </div>
-{% endfor %}
+        {% endfor %}
 {% endblock %}
 
 </body>
