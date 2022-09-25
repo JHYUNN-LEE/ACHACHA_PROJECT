@@ -12,7 +12,7 @@ def index(request):
     lost_items_list = Posts.objects.all().order_by('-posts_id_pk')
     # print(lost_items_list)
 
-    paginator = Paginator(lost_items_list, 5)
+    paginator = Paginator(lost_items_list, 10)
     page = request.GET.get('page')
 
     posts = paginator.get_page(page)

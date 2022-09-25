@@ -20,16 +20,25 @@
 }
 
 .lost_img {
-    width: 130px;
-    height: 130px;
+    width: 100%;
+    height: 200px;
 }
 
 .title {
     color: #4e73df;
     font-weight: bold;
-    font-size: large;
+    font-size: 12pt;
+    height: 45px;
 }
 
+.cost{
+    font-size: 10pt;
+    color: black;
+}
+
+.date_time, .get_place{
+    font-size: 10pt;
+}
 
 .pagination {
     margin: auto;
@@ -41,6 +50,8 @@
     bottom: 50px;
     right: 30px;
     height: 55px;
+    /* background-color: white; */
+
 }
 
 #post{
@@ -48,6 +59,7 @@
     position: sticky;
     width: 55px;
     border: 1px solid #c9cbd7;
+    background-color: #4E73DF;
 }
 
 #post:hover{
@@ -58,7 +70,23 @@
     margin: 0 10%;
 }
 
-.cost{
-    font-size: medium;
-    color: black;
+
+.card_search{
+    width: 45%;
+    background-color: #fff !important;
+    border: none;
+    margin-right: 5px;
+    display: inline-block;
+
+}
+
+.row, .image_center{
+    display: flex;
+    justify-content: center;
+}
+
+.alarm{
+    font-size: 9pt;
+    text-align: center;
+    margin-bottom: 8px;
 }
