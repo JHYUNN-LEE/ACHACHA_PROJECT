@@ -148,13 +148,13 @@
             margin: auto;
         }
         #logo{
-            float: left;
             width: 80px;
             
         }
         .logo{
-            margin-left: 33%;
+            margin-left: calc(50% - 52px) !important;           
         }
+
         #content{
             /* background: linear-gradient(rgb(29, 28, 28), black); */
             background-color: white;
@@ -315,9 +315,12 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     </a>
-                    <a class="logo" href="/">
-                        <img id="logo" class="img-profile rounded-circle" src= "{% static 'bootstrap/img/logo_blue.png' %}" alt="">
-                    </a>
+                    <!-- <div class="logo"> -->
+                        <a class="logo" href="/">
+                            <img id="logo" class="img-profile rounded-circle" src= "{% static 'bootstrap/img/logo_blue.png' %}" alt="">
+                        </a>
+                    <!-- </div> -->
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown no-arrow mx-1">
