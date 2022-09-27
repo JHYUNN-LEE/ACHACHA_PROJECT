@@ -1,7 +1,6 @@
 {% extends 'base/base.html' %}
 {% block content %}
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +8,37 @@
 </head>
 
 <body>
+<!-- filter !-->
+<br>
+<form method="GET" action=".">
+    <div class="form-row">
+        <div class="form-group col-12">
+            <div class="input-group">
+                <input class="form-control py-2 border-right-0 border" type="search" name="category" placeholder="카테고리를 입력해주세요" />
+                <span class="input-group-append">
+                    <div class="input-group-text bg-transparent">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-12">
+            <div class="input-group">
+                    <input class="form-control py-2 border-right-0 border" type="search" name="name" placeholder="이름을 입력해주세요">
+                    <span class="input-group-append">
+                        <div class="input-group-text bg-transparent">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">검색</button>
+</form>
+<br>
+<!-- filter !-->
     <div class="container-fluid">
         <div class="row" >
             {% for item in posts %}

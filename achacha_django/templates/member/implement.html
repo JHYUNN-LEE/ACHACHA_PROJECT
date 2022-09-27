@@ -63,17 +63,21 @@
         </div>
     <!-- /.container-fluid -->
         {% else %}
-            <div class="card" style="width: 25rem;">
-            <div class="card-body">
-                    <h5 class="card-title">ACHACHA</h5>
-                    <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요!</p>
-                    <a href="/member/register" class="btn btn-primary">회원가입 하러가기</a>
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="div_content">
+                    <ul role="list" class="feat_list">
+                        <li class="about_subtitle buy">
+                            <div class="subtitle-large">
+                                <h5 class="card-title">ACHACHA</h5>
+                                <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요!</p>
+                                <a href="/member/register/" class="btn btn-primary">회원가입 하러가기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="card-body">
-                    <h5 class="card-title">ACHACHA</h5>
-                    <p class="card-text">로그인을 해주세요!</p>
-                    <a href="/member/login" class="btn btn-primary">로그인 하러가기</a>
-            </div>
+        </div>
         {% endif %}
 
             <!-- End of Main Content -->

@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
-
 from acha_money.models import Posts
 from . models import Alarm
 from . models import LostItems
 from hdfs import InsecureClient
+from .filter import Orderfilter
 from django.views.generic import DetailView
 # Create your views here.
 
@@ -17,11 +17,14 @@ def all_index(request):
     page = request.GET.get('page')
     max_index = len(paginator.page_range)
     posts = paginator.get_page(page)
-
     client = InsecureClient('http://54.64.90.112:9870', user="ubuntu")
-    
-    return render(request, 'all_search/all_index.html', {'lost_items_list': lost_items_list,
-                                                         'posts': posts, 'max_index': max_index})
+    category_contains_query = request.GET.get('category')
+    print(category_contains_query)
+
+    if category_contains_query !='' and category_contains_query is not None:
+        lost_items_list = lost_items_list.filter(category__icontains=category_contains_query)
+    context = {'lost_items_list': lost_items_list, 'posts': posts, 'max_index': max_index}
+    return render(request, 'all_search/all_index.html', context)
     
     
 
