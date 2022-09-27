@@ -12,34 +12,34 @@
     <a href={% url 'post' %} class="post">
         <img id="post" class="img-profile rounded-circle" src="{% static 'acha_money/img/pen_white.png' %}">
     </a>
-    {% if not posts %}
-        <p>작성된 게시글이 없습니다.</p>
-    {% else %}
-        <div class="container-fluid">
-            <div class="row">
-                {% for item in posts %}
-                <div class="card_search" onclick="location.href='{% url 'detail' item.posts_id_pk %}'">
-                    {% if item.img_src %}
-                    <div class="image_center">
-                        <img class="lost_img" src="{{ item.img_src.url }}" alt="image">
-                    </div>
-                    {% else %}
-                    <div class="image_center">
-                        <img class="lost_img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
-                    </div>
-                    {% endif %}
-                    <br>
-                    <div class="title">{{ item.title }}</div>
-                    <span class="date_time">{{ item.created_at }}</span>
-                    <br>
-                    <span class="get_place">{{ item.get_place }}</span>
-                    <br>
-                    <span class="cost">{{ item.cost }} 원</span>
-                    <hr>
+    <div class="container-fluid">
+        {% if not posts %}
+            <p>작성된 게시글이 없습니다.</p>
+        {% else %}
+        <div class="row">
+            {% for item in posts %}
+            <div class="card_search" onclick="location.href='{% url 'detail' item.posts_id_pk %}'">
+                {% if item.img_src %}
+                <div class="image_center">
+                    <img class="lost_img" src="{{ item.img_src.url }}" alt="image">
                 </div>
-                {% endfor %}
+                {% else %}
+                <div class="image_center">
+                    <img class="lost_img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
+                </div>
+                {% endif %}
+                <br>
+                <div class="title">{{ item.title }}</div>
+                <span class="date_time">{{ item.created_at }}</span>
+                <br>
+                <span class="get_place">{{ item.get_place }}</span>
+                <br>
+                <span class="cost">{{ item.cost }} 원</span>
+                <hr>
             </div>
+            {% endfor %}
         </div>
+    </div>
        
     {% endif %} 
 
