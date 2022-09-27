@@ -1,7 +1,6 @@
 {% extends 'base/base.html' %}
 {% block content %}
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +8,11 @@
 </head>
 
 <body>
+{% if user.is_authenticated %}
     <a href={% url 'post' %} class="post">
         <img id="post" class="img-profile rounded-circle" src="{% static 'acha_money/img/pen_white.png' %}">
     </a>
+
     <div class="container-fluid">
         {% if not posts %}
             <p>작성된 게시글이 없습니다.</p>
@@ -40,10 +41,10 @@
             {% endfor %}
         </div>
     </div>
-       
-    {% endif %} 
 
-    
+    {% endif %}
+
+
 
 
 <!-- pagination -->
@@ -90,7 +91,24 @@
             {% endif %}
         </ul>
     </div>
+{% else %}
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="div_content">
+                    <ul role="list" class="feat_list">
+                        <li class="about_subtitle buy">
+                            <div class="subtitle-large">
+                                <h5 class="card-title">ACHACHA</h5>
+                                <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요!</p>
+                                <a href="/member/register/" class="btn btn-primary">회원가입 하러가기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+{% endif %}
 
 {% endblock %}
 
@@ -98,4 +116,3 @@
 
 
 </html>
-
