@@ -39,7 +39,6 @@ def index(request):
     context = {'request_list': request_list}
     return render(request, 'member/request.html', context)
 
-
 def request(request):
     user_name = request.user
     post = Posts.objects.raw("SELECT * FROM posts join user_deal \

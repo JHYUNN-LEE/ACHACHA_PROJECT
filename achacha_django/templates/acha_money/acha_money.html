@@ -1,7 +1,6 @@
 {% extends 'base/base.html' %}
 {% block content %}
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,10 +42,16 @@
        
     {% endif %} 
 
-    
+{% if user.is_authenticated %}
     <a href={% url 'post' %} class="post">
         <img id="post" class="img-profile rounded-circle" src="{% static 'acha_money/img/pen.png' %}">
     </a>
+    {% else %}
+    <a href="/member/login" class="login">
+        <img id="login" class="img-profile rounded-circle" src="{% static 'acha_money/img/pen.png' %}">
+    </a>
+{% endif %}
+
 
 <!-- pagination -->
     <div class="pagination">
