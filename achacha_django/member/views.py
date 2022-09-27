@@ -18,13 +18,30 @@ from .models import Authentication
 from acha_money.models import UserDeal
 from acha_money.models import Posts
 
+# logger import 
+from . import logger
+
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LogoutView
+
+
+
+class LoginView_withlogger(LoginView): 
+    def log_check(request):
+        logger.trace_logger(request)
+
 
 def register(request):
+    logger.trace_logger(request) # view 로그 추적 
+
     if request.method == "POST":
         form = UserForm(request.POST)
+
         if form.is_valid():
             # form.address = request.POST['address'].encode('utf-8')
             form.save()
+            
+
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)  # 사용자 인증
@@ -32,15 +49,18 @@ def register(request):
             return redirect('http://127.0.0.1:8000')
     else:
         form = UserForm()
+        
     return render(request, 'member/register.html', {'form': form})
 
 def index(request):
+    logger.trace_logger(request) # view 로그 추적 
     request_list = request.objects.order_by('-create_date')
     context = {'request_list': request_list}
     return render(request, 'member/request.html', context)
 
 
 def request(request):
+    logger.trace_logger(request) # view 로그 추적 
     user_name = request.user
     post = Posts.objects.raw("SELECT * FROM posts join user_deal \
                              on posts.posts_id_pk = user_deal.posts_id \
@@ -65,6 +85,8 @@ def request(request):
 
 
 def implement(request):
+    
+    logger.trace_logger(request) # view 로그 추적 
     user_name = request.user
     post = Posts.objects.raw("SELECT * FROM posts join user_deal \
                              on posts.posts_id_pk = user_deal.posts_id \

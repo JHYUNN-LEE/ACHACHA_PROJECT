@@ -20,32 +20,41 @@ from datetime import datetime
 import pandas as pd 
 
 from .models import LostItems, Images
+
 # pip install elasticsearch
 from elasticsearch import Elasticsearch
 
-# pip install pyhdfs
-from pyhdfs import HdfsClient
 # pip install hdfs
 from hdfs import InsecureClient
 from hdfs.client import Client
 from django.core.paginator import Paginator
 
+# logger import 
+from . import logger
+
+
 # Create your views here.
 
 # 1_fast_index.html
 def fast_index(request):
+    logger.trace_logger(request) # view 로그 추적 
     return render(request, 'fast_search/1_fast_index.html')
 
 # 2_fast_image.html
 def image_search(request):
+    logger.trace_logger(request) # view 로그 추적 
     return render(request, 'fast_search/2_fast_image.html')
 
 # 3_fast_keyword.html
 def keyword_search(request):
+    logger.trace_logger(request) # view 로그 추적 
     return render(request, 'fast_search/3_fast_keyword.html')
 
 # 2-1.result.html
 def uploaded_image(request):
+
+    logger.trace_logger(request) # view 로그 추적 
+
     if request.method == "POST":
         image = request.FILES['uploadfile'] # 업로드 된 이미지 가져오기
         base64_bytes = base64.b64encode(image.read())   # 이미지 데이터 bytes로 변환
@@ -59,6 +68,14 @@ def uploaded_image(request):
             'category' : category
         }
         
+        # insert 로그 추적 
+        log_context = {
+            'image':str(image),
+            'category' : category
+        }
+        logger.trace_logger_context(request, log_context)
+
+
         response = requests.post('http://localhost:5001/', data=data)
                 
         ## flask에서 넘어온 데이터 처리하기
@@ -107,6 +124,7 @@ def uploaded_image(request):
                     media_route = download[-43:]
                     download_list.append(media_route)
         list = zip(download_list, posts)
+
         context = {
             "list" : list,
             "post" : posts,
@@ -124,6 +142,8 @@ def trans_source(hits):
 
 # 3-1_keyword_result.html
 def find_category_to_es(request):
+
+    logger.trace_logger(request) # view 로그 추적 
     if request.method == 'GET': 
         insert_category = request.GET.get("insert_category")
         insert_color = request.GET.get("insert_color")
@@ -174,6 +194,14 @@ def find_category_to_es(request):
                 'max_index' : max_index,
                 'posts' : posts}
 
+    log_context = {
+            'insert_category':insert_category,
+            'insert_color' : insert_color,
+            'insert_date' : insert_date
+        }
+
+    logger.trace_logger_context(request, log_context)
+
     return render(request, 'fast_search/3-1_keyword_result.html', context)
 
 def all_alarm(request):
@@ -181,6 +209,7 @@ def all_alarm(request):
 
 # 3-2_keyword_detail.html
 def keyword_detail(request, images_id_pk):
+    logger.trace_logger(request)# view 로그 추적 
     
     es = Elasticsearch("http://54.64.90.112:9200")
 
