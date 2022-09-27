@@ -8,9 +8,15 @@ from .filter import Orderfilter
 from django.views.generic import DetailView
 # Create your views here.
 
+# logger import 
+from . import logger
+
 default_page = 1
 
 def all_index(request):
+    # view 로그 추적 
+    logger.trace_logger(request)
+
     items_per_page = 10
     lost_items_list = LostItems.objects.all().order_by('-get_at')
     paginator = Paginator(lost_items_list, items_per_page)
@@ -30,6 +36,9 @@ def all_index(request):
 
 
 def all_detail(request, lost_items_id_pk):
+    # view 로그 추적 
+    logger.trace_logger(request)
+
     if request.method == "POST":
         users_id = request.user
         category = request.POST['category']
@@ -53,6 +62,8 @@ def all_detail(request, lost_items_id_pk):
     
     
 def all_alarm(request):
+    # view 로그 추적 
+    logger.trace_logger(request)
     return render(request, 'all_search/all_alarm.html')
 
 
@@ -60,8 +71,8 @@ def alarmset(request):
     if request.method == "POST":
         # alarm table
         alarm = Alarm()
-        alarm.users_id = 'jinyi' # 로그인 정보 가져와야 함
-        alarm.phone = '01028820828' # 로그인 정보 가져와야 함
+        alarm.users_id = request.user.id 
+        alarm.phone = f'0{request.user.phone}' #핸드폰번호 앞에 0이 사라지는 것 방지
         alarm.category = request.POST['category']
         alarm.src = f'/home/ubuntu/WEB_SERVICE_ACHACHA/ALARM/images/{request.FILES["img_src"]}'
         # alarm.src = request.FILES["img_src"]
