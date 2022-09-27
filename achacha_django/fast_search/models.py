@@ -44,3 +44,15 @@ class UploadedImage(models.Model):
     class Meta:
         managed = False
         db_table = 'uploaded_image'
+
+class Alarm(models.Model):
+    alarm_id = models.AutoField(primary_key=True)
+    users_id = models.CharField(max_length=45, blank=True, null=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    category = models.CharField(max_length=45, blank=True, null=True)
+    src = models.CharField(max_length=100, blank=True, null=True)
+    turn = models.CharField(max_length=2, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'alarm'

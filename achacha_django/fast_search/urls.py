@@ -13,6 +13,7 @@ urlpatterns = [
     path('keyword/key_result/', views.find_category_to_es, name='keyword_result'),
     path('keyword/key_result/detail/<str:images_id_pk>/', views.keyword_detail, name='keyword_detail'),
     path('keyword/key_result/all_alarm/', views.all_alarm, name="all_alarm"),
+    path('keyword/key_result/all_alarm/alarmset/', views.alarmset, name='alarmset'),
   
 ] 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

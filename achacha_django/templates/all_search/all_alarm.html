@@ -56,11 +56,6 @@
         cursor: pointer;
         font-size: 1em;
     }
-    
-    /* 못생긴 기존 input 숨기기 */
-    #chooseFile {
-        visibility: hidden;
-    }
     select{
         width: 100%;
         border-color: lightgray;
@@ -84,22 +79,10 @@
       padding: 8px 10px;
       vertical-align: middle;
       border: 1px solid #dddddd;
-      /* background-color: rgba(0, 53, 109, 0.95); */
       border-radius: 5px;
       font-size: small;
       font-weight: lighter;
     }
-    /*input[type="file"] {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      overflow: hidden;
-      border: 0;
-    } */
-    /* label:hover {
-        background-color: rgba(1, 20, 40, 0.95);
-    } */
     #submit, #toastButton{
         background-color: transparent;
         border: none;
@@ -148,7 +131,7 @@
 
 </style>
    
-    <!-- <form action="upload/" method="POST" id="dataForm" enctype="multipart/form-data">{% csrf_token %} -->
+    <form action="alarmset/" method="POST" id="dataForm" enctype="multipart/form-data">{% csrf_token %}
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-warning shadow h-100 py-2">
                 <div class="div_content">
@@ -192,7 +175,7 @@
                                 <div>
                                     <!-- <input class="upload-name" value="이미지를 업로드 하세요" disabled> -->
                                     <!-- <label for="uploadfile">파일선택</label> -->
-                                    <input type="file" name="uploadfile" id="uploadfile" accept="image/png, image/jpeg, image/jpg" >
+                                    <input type="file" name="img_src" id="uploadfile" accept="image/png, image/jpeg, image/jpg" >
                                 </div>
                             </div>
                         </li>     
@@ -207,7 +190,7 @@
             </div>
         </div>
 
-    <!-- </form> -->
+    </form>
 {% endblock %}
 
 </body>
