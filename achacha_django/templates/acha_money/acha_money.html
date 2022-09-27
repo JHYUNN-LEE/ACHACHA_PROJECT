@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 {% block content %}
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,49 +9,41 @@
 </head>
 
 <body>
-
-
-
-    {% if not posts %}
-        <p>작성된 게시글이 없습니다.</p>
-    {% else %}
-        {% for item in posts %}
-        <div class="lost_items">
-
-<!-- {#          <div class="col-lg-6 mb-4" onclick="location.href='detail/{{ item.posts_id_pk }}/'">#} -->
-            <div id="row" class="col-lg-6 mb-4" onclick="location.href='{% url 'detail' item.posts_id_pk %}'">
-                <div class="left">
-                    <div class="title">{{ item.title }}</div>
-                    <span class="date_time">{{ item.created_at }}</span>
-                    <br>
-                    <span class="get_place">보관장소 : {{ item.get_place }}</span>
-                    <br>
-                    <span class="cost">{{ item.cost }} 원</span>
-                </div>
+    <a href={% url 'post' %} class="post">
+        <img id="post" class="img-profile rounded-circle" src="{% static 'acha_money/img/pen_white.png' %}">
+    </a>
+    <div class="container-fluid">
+        {% if not posts %}
+            <p>작성된 게시글이 없습니다.</p>
+        {% else %}
+        <div class="row">
+            {% for item in posts %}
+            <div class="card_search" onclick="location.href='{% url 'detail' item.posts_id_pk %}'">
                 {% if item.img_src %}
-            
-                <div class="right">
+                <div class="image_center">
                     <img class="lost_img" src="{{ item.img_src.url }}" alt="image">
                 </div>
+                {% else %}
+                <div class="image_center">
+                    <img class="lost_img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
+                </div>
                 {% endif %}
+                <br>
+                <div class="title">{{ item.title }}</div>
+                <span class="date_time">{{ item.created_at }}</span>
+                <br>
+                <span class="get_place">{{ item.get_place }}</span>
+                <br>
+                <span class="cost">{{ item.cost }} 원</span>
+                <hr>
             </div>
-            <hr>
+            {% endfor %}
         </div>
-        
-                                                                                                                                                                                                                                    
-        {% endfor %}
-       
-    {% endif %} 
+    </div>
 
-{% if user.is_authenticated %}
-    <a href={% url 'post' %} class="post">
-        <img id="post" class="img-profile rounded-circle" src="{% static 'acha_money/img/pen.png' %}">
-    </a>
-    {% else %}
-    <a href="/member/login" class="login">
-        <img id="login" class="img-profile rounded-circle" src="{% static 'acha_money/img/pen.png' %}">
-    </a>
-{% endif %}
+    {% endif %}
+
+
 
 
 <!-- pagination -->
@@ -99,13 +92,9 @@
     </div>
 
 
-
-
-
 {% endblock %}
 
 </body>
 
 
 </html>
-

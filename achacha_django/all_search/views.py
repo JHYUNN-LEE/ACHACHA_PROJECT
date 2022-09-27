@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
 
 from acha_money.models import Posts
+from . models import Alarm
 from . models import LostItems
 from hdfs import InsecureClient
 from django.views.generic import DetailView
@@ -48,6 +49,20 @@ def all_detail(request, lost_items_id_pk):
         return render(request, 'all_search/all_detail.html', {'lost_items_list': lost_items_list})
     
     
-    
+def all_alarm(request):
+    return render(request, 'all_search/all_alarm.html')
 
+
+def alarmset(request):
+    if request.method == "POST":
+        # alarm table
+        alarm = Alarm()
+        alarm.users_id = 'jinyi' # 로그인 정보 가져와야 함
+        alarm.phone = '01028820828' # 로그인 정보 가져와야 함
+        alarm.category = request.POST['category']
+        alarm.src = f'/home/ubuntu/WEB_SERVICE_ACHACHA/ALARM/images/{request.FILES["img_src"]}'
+        # alarm.src = request.FILES["img_src"]
+        alarm.turn = 'Y'
+        alarm.save()
+    return redirect('/')
 

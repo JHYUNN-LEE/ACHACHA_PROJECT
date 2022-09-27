@@ -9,7 +9,7 @@ from django.http import HttpResponse, JsonResponse
 from django.core.paginator import Paginator, Page
 
 # models.py
-from .models import LostItems, Images, UploadedImage
+from .models import LostItems, Images, UploadedImage, Alarm
 
 # python edit import
 import json
@@ -111,7 +111,7 @@ def uploaded_image(request):
             "list" : list,
             "post" : posts,
         }
-    return render(request, 'fast_search/2-1.result.html', context)
+    return render(request, 'fast_search/2-1_result.html', context)
 
 # es  find hits 함수 
 def trans_source(hits):
@@ -176,7 +176,8 @@ def find_category_to_es(request):
 
     return render(request, 'fast_search/3-1_keyword_result.html', context)
 
-
+def all_alarm(request):
+    return render(request, 'all_search/all_alarm.html')
 
 # 3-2_keyword_detail.html
 def keyword_detail(request, images_id_pk):
@@ -194,3 +195,17 @@ def keyword_detail(request, images_id_pk):
     context = {'datas' : datas}
     
     return render(request, 'fast_search/3-2_keyword_detail.html', context)
+
+def alarmset(request):
+    if request.method == "POST":
+        # alarm table
+        alarm = Alarm()
+        alarm.users_id = 'jinyi' # 로그인 정보 가져와야 함
+        alarm.phone = '01028820828' # 로그인 정보 가져와야 함
+        alarm.category = request.POST['category']
+        alarm.src = f'/home/ubuntu/WEB_SERVICE_ACHACHA/ALARM/images/{request.FILES["img_src"]}'
+        # alarm.src = request.FILES["img_src"]
+        alarm.turn = 'Y'
+        alarm.save()
+        
+    return redirect('/')

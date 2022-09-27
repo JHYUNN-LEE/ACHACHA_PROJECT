@@ -1,0 +1,105 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
+  <script>
+    function image(){
+      response.data[0]
+    }
+  </script>
+</head>
+<body>
+<div class="container-fluid">
+  <h3 class="text-center"><strong>검색 결과</strong></h3>
+  <h5 class="text-center">잃어버린 물건을 찾아보세요!</h5>
+  <br>
+  <h5 class="text-center">검색 결과는 n개 입니다.</h5>
+  <br>
+  <br>
+  <!-- 그리드 게시물 (bootstrap) 기존 -->
+
+  {% if not list %}
+
+  <div class="alarm">
+    아차차! 해당되는 분실물을 찾지 못했습니다.<br>
+    <a href="{% url 'keyword_search' %}">키워드로 검색해 보기</a>
+  </div>
+  {% else %}
+
+
+    <div class="row" >
+      {% for img, item in list %}
+      <div class="card_search"> 
+        <div class="image_center">
+          <img class="lost_img" src="{{ img }}">
+        </div>
+        <br>
+        <div class="title">{{ item.get_name }}</div>
+        <span class="date_time">{{ item.get_at }}</span>
+        <hr>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="alarm">
+    혹시 찾으시는 분실물이 없으신가요?<br>
+    비슷한 물건 들어왔을 때 <a href="{% url 'all_alarm' %}">알림받기</a>
+    </div>
+  </div>
+  
+
+
+
+  
+  <div class="pagination">
+    <ul class="pagination">
+      {% if posts.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ 1 }}">&lt;&lt;</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="?page={{posts.previous_page_number}}">&lt;</a>
+      </li>
+      {% else %}
+      <li class="page-item disabled">
+          <a class="page-link" tabindex="-1" aria-disabled="true" href="#">&lt;</a>
+      </li>
+      {% endif %}
+
+      {% for page_number in posts.paginator.page_range %}
+      {% if page_number >= posts.number|add:-3 and page_number <= posts.number|add:3 %}
+      {% if page_number == posts.number %}
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="?page={{page_number}}">{{page_number}}</a>
+      </li>
+      {% else %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+      </li>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+
+      {% if posts.has_next %}
+      <li class="page-item">
+        <a a class="page-link" href="?page={{posts.next_page_number}}">&gt;</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="?page={{ max_index }}">&gt;&gt;</a>
+      </li>
+      {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" tabindex="-1" aria-disabled="true" href="#">&gt;</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %} 
+
+{% endblock %}
+
+</body>
+</html>

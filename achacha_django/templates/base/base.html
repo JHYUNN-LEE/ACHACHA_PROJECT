@@ -57,6 +57,7 @@
         background-color: #fff;
         font-family: Poppins,sans-serif;
         color: #121212;
+        border: 1px solid #c9cbd7;
         }   
         .basic_block:hover{
         background-color: #FFDD33;
@@ -148,13 +149,13 @@
             margin: auto;
         }
         #logo{
-            float: left;
             width: 80px;
             
         }
         .logo{
-            margin-left: 33%;
+            margin-left: calc(50% - 52px) !important;           
         }
+
         #content{
             /* background: linear-gradient(rgb(29, 28, 28), black); */
             background-color: white;
@@ -315,9 +316,12 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     </a>
-                    <a class="logo" href="/">
-                        <img id="logo" class="img-profile rounded-circle" src= "{% static 'bootstrap/img/맨발의청춘_blue.png' %}" alt="">
-                    </a>
+                    <!-- <div class="logo"> -->
+                        <a class="logo" href="/">
+                            <img id="logo" class="img-profile rounded-circle" src= "{% static 'bootstrap/img/logo_blue.png' %}" alt="">
+                        </a>
+                    <!-- </div> -->
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown no-arrow mx-1">
