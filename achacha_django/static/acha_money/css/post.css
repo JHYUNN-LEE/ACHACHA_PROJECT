@@ -32,14 +32,11 @@ select option:first-child {
     border-bottom: 1px solid #c9cbd7;
     width: 100%;
     padding: 0 5%;
-    margin-bottom: 10px;
 }
 
 .content {
     width: 100%;
     border: none;
-    margin-bottom: 5px;
-    
 }
 
 textarea{
@@ -47,12 +44,11 @@ textarea{
 }
 
 .get_place{
-    height: 40px;
+    height: 60px;
     border: none;
     border-bottom: 1px solid #c9cbd7;
     width: 100%;
     padding: 0 5%;
-    margin-bottom: 10px;
 }
 .img-wrap{
     margin-bottom: 10px;
