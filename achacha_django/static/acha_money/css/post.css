@@ -54,7 +54,7 @@ textarea{
     margin-bottom: 10px;
 }
 
-a > button{
+.cancel{
     display: inline;
     background-color: grey;
     color: white;
@@ -67,7 +67,7 @@ a > button{
     margin-bottom: 5px;
 }
 
-a > button:hover{
+.cancel:hover{
     background-color: rgb(67, 67, 67);
 }
 .submit{
