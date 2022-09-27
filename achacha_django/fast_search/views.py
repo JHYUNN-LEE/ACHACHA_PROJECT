@@ -111,7 +111,7 @@ def uploaded_image(request):
             "list" : list,
             "post" : posts,
         }
-    return render(request, 'fast_search/2-1.result.html', context)
+    return render(request, 'fast_search/2-1_result.html', context)
 
 # es  find hits 함수 
 def trans_source(hits):
@@ -176,7 +176,8 @@ def find_category_to_es(request):
 
     return render(request, 'fast_search/3-1_keyword_result.html', context)
 
-
+def all_alarm(request):
+    return render(request, 'all_search/all_alarm.html')
 
 # 3-2_keyword_detail.html
 def keyword_detail(request, images_id_pk):
@@ -194,3 +195,4 @@ def keyword_detail(request, images_id_pk):
     context = {'datas' : datas}
     
     return render(request, 'fast_search/3-2_keyword_detail.html', context)
+
