@@ -1,0 +1,197 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+
+<script>
+    $(function() {
+        function chageLangSelect(){
+            var langSelect = document.getElementById("selectbox");
+            
+            // select element에서 선택된 option의 value가 저장된다.
+            var selectValue = langSelect.options[langSelect.selectedIndex].value;
+        
+            // select element에서 선택된 option의 text가 저장된다.
+            var selectText = langSelect.options[langSelect.selectedIndex].text;
+        }
+
+        // 토스트 메시지 띄우고 홈 이동
+        const toast = document.getElementById('toast');  // id가 toast인 요소 div
+        let isToastShown = false;
+        document.getElementById('toastButton').addEventListener('click', function () {
+            console.log("toast click")
+            if (isToastShown) return;   // 토스트 메시지가 띄어져 있다면 함수를 끝냄
+            isToastShown = true;
+            toast.classList.add('show');    // show라는 클래스를 추가해서 토스트 메시지를 띄우는 애니메이션을 발동시킴
+            setTimeout(function () {
+                // 2700ms 후에 show 클래스를 제거함
+                toast.classList.remove('show');
+                isToastShown = false;
+            }, 2700);
+            setTimeout(function() {
+            location.replace('/');
+            }, 1000);
+            
+        });
+    });
+</script>
+
+
+<style>
+   form {
+        text-align: center;
+    }
+
+    .img_save_btn {
+        display: flex;
+        justify-content: center;
+    }
+    label {
+        cursor: pointer;
+        font-size: 1em;
+    }
+    select{
+        width: 100%;
+        border-color: lightgray;
+        font-size:small;
+    }
+    .upload-name {
+      display: inline-block;
+      height: 40px;
+      padding: 0 10px;
+      vertical-align: middle;
+      border: 1px solid #dddddd;
+      width: 66%;
+      color: #999999;
+      border-radius: 5px;
+      font-size: small;
+    }
+    input[type="file"] {
+      display: inline-block;
+      margin: 0;
+      height: 40px;
+      padding: 8px 10px;
+      vertical-align: middle;
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+      font-size: small;
+      font-weight: lighter;
+    }
+    #submit, #toastButton{
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+    .basic_block_low{
+        height: 60px;
+    }
+    #toastButton:active{
+        border: none !important;
+    }
+    #toast {
+            visibility: hidden;  
+            position: fixed;     
+            bottom: 100px;     
+            left: 50%;                  
+            transform: translateX(-50%);    
+            min-width: 100px;    
+            border-radius: 25px;    
+            background-color: #666666;     
+            color: #FFFFFF;    
+            padding: 15px 25px;     
+    }
+    #toast.show {
+        visibility: visible;   
+        animation: fade-in 700ms, fade-out 700ms 2000ms     
+    }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes fade-out {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+</style>
+   
+    <form action="alarmset/" method="POST" id="dataForm" enctype="multipart/form-data">{% csrf_token %}
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="div_content">
+                    <ul role="list" class="feat_list">
+                        <li class="about_subtitle buy">
+                            <div class="subtitle-large">
+                                <p class="title">
+                                    1. 잃어버린 물건의 유형을 선택해 주세요.</p>
+                                <select name="category" required> <!--필수선택-->
+                                    <option value="" selected disabled>유형 선택</option>    
+                                    <option value="bag">가방</option>
+                                    <option value="wallet">지갑</option>
+                                    <option value="phone">휴대폰</option>
+                                    <option value="card">카드</option>
+                                    <option value="earphones">이어폰</option>
+                                    <option value="cap">모자</option>
+                                    <option value="car_key">차키</option>
+                                    <option value="cloth">옷</option>
+                                    <option value="document">도서용품, 서류</option>
+                                    <option value="necklace">목걸이</option>
+                                    <option value="ring">반지</option>
+                                    <option value="shoes">신발</option>
+                                    <option value="shopping_bag">쇼핑백</option>
+                                    <option value="watch">시계</option>                
+                                </select>
+                            </div>
+                        </li>     
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <!-- image/file -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="div_content">
+                <ul role="list" class="feat_list">
+                    <li class="about_subtitle buy">
+                        <div class="subtitle-large">
+                            <p class="title">
+                                2. 물건과 비슷한 사진을 업로드 해주세요. </p>
+                                <div>
+                                    <!-- <input class="upload-name" value="이미지를 업로드 하세요" disabled> -->
+                                    <!-- <label for="uploadfile">파일선택</label> -->
+                                    <input type="file" name="img_src" id="uploadfile" accept="image/png, image/jpeg, image/jpg" >
+                                </div>
+                            </div>
+                        </li>     
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="basic_block_low">
+            <div class="div_content">
+                <button type="submit" id="toastButton">알림설정</button>
+                <div id="toast">알림이 설정되었습니다.</div>
+            </div>
+        </div>
+
+    </form>
+{% endblock %}
+
+</body>
+</html>

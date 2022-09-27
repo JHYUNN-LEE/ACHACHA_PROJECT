@@ -1,47 +1,45 @@
+{% extends 'base/base copy.html' %}
+{% block content %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-{% extends 'base/base.html' %}
 
-{% block content %}
 
-<div class="keyword_div">
-    <table class="detail_table">
-        {% for pk in datas %}
-        <tr>
-            <td><span class="title">분실물명 : {{ pk.get_name }}</span></td>
-        </tr>
-        <tr>
-            <td><span class="date_time">분실시간 : {{ pk.get_at }}</span></td>
-        </tr>
-        <tr>
-            <td><span class="cost">카테고리 : {{ pk.category }}</span></td>
-        </tr>
-        <tr>
-            <td><span class="cost">분실장소 : {{ pk.find_place }}</span></td>
-        </tr>
-        <tr>
-            <td><span class="cost">수령위치 : {{ pk.center_place }}</span></td>
-        </tr>
-        <tr>
-            <td><span class="get_place">분실자 : {{ pk.name }}</span></td>
-        </tr>
-    </table>
-        <input type="button" value="돌아가기" onclick="back()">
+    
 
-        
-        {% endfor %}
-        
-<script>
-    const back = () => {
-        window.history.back()
-    }
-</script>
+<div class="lost_items">
 
+    {% for item in datas %}
+    {% if item.img_src %}
+        <div class="img">
+            <img class="img" src="{{ item.img_src.url }}"><br>
+        {#<img class="img" src="{{}}">#}
+        </div>
+    {% endif %}
+    <div class="detail">
+        <div class="title">분실물명 : {{ item.get_name }}</div>  
+        <div class="author">분실일시 : {{ item.get_at }}</div>
+        <div class="author">카테고리 : {{ item.category }}</div>
+        <div class="author">분실장소 : {{ item.find_place }}</div>
+        <div class="author">수령위치 : {{ item.center_place }}</div>
+        <div class="author">분실자 : {{ item.name }}</div>
+    </div>
+
+
+
+
+    <!-- <input type="button" value="돌아가기" onclick="back()"> -->
+
+    
+   
+</div>    
+
+{% endfor %}
 {% endblock %}
 
 </body>

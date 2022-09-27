@@ -1,0 +1,1302 @@
+[27Sep2022 01:39:27 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:39:29 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 01:39:29 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[27Sep2022 01:39:29 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 304 0
+[27Sep2022 01:39:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:39:59 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:40:04 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17400
+[27Sep2022 01:40:04 INFO [django.server:187] "GET /static/bootstrap/img/icon_image.png HTTP/1.1" 304 0
+[27Sep2022 01:40:04 INFO [django.server:187] "GET /static/bootstrap/img/icon_keyword.png HTTP/1.1" 304 0
+[27Sep2022 01:40:04 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:40:14 INFO [django.server:187] "GET /fast_search/image/ HTTP/1.1" 200 21395
+[27Sep2022 01:40:14 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:40:29 ERROR [django.request:241] Internal Server Error: /fast_search/image/upload/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000021A8069C9A0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021A8069C9A0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 80, in uploaded_image
+    response = requests.post('http://localhost:5001/', data=data)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021A8069C9A0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+[27Sep2022 01:40:29 ERROR [django.server:187] "POST /fast_search/image/upload/ HTTP/1.1" 500 242373
+[27Sep2022 01:40:38 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:41:24 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\ACHACHA\logger.py changed, reloading.
+[27Sep2022 01:41:25 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:41:25 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:43:10 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 01:43:10 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 01:43:11 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:43:11 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:43:23 ERROR [django.request:241] Internal Server Error: /fast_search/image/upload/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001B1A1D03FD0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1A1D03FD0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 80, in uploaded_image
+    response = requests.post('http://localhost:5001/', data=data)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1A1D03FD0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+[27Sep2022 01:43:23 ERROR [django.server:187] "POST /fast_search/image/upload/ HTTP/1.1" 500 242372
+[27Sep2022 01:43:56 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 01:43:56 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 01:43:57 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:43:57 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:44:01 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:44:11 ERROR [django.request:241] Internal Server Error: /fast_search/image/upload/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001AE0F9F39A0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AE0F9F39A0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 80, in uploaded_image
+    response = requests.post('http://localhost:5001/', data=data)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AE0F9F39A0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+[27Sep2022 01:44:11 ERROR [django.server:187] "POST /fast_search/image/upload/ HTTP/1.1" 500 242372
+[27Sep2022 01:45:09 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[27Sep2022 01:45:09 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[27Sep2022 01:45:10 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:45:10 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:45:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:45:17 ERROR [django.request:241] Internal Server Error: /fast_search/image/upload/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 74, in uploaded_image
+    'image':image['InMemoryUploadedFile'],
+TypeError: 'InMemoryUploadedFile' object is not subscriptable
+[27Sep2022 01:45:17 ERROR [django.server:187] "POST /fast_search/image/upload/ HTTP/1.1" 500 82456
+[27Sep2022 01:45:40 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:45:51 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:45:52 INFO [django.server:187] "GET /fast_search/image/ HTTP/1.1" 200 21395
+[27Sep2022 01:45:52 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:46:03 ERROR [django.request:241] Internal Server Error: /fast_search/image/upload/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 74, in uploaded_image
+    'image':image['InMemoryUploadedFile'],
+TypeError: 'InMemoryUploadedFile' object is not subscriptable
+[27Sep2022 01:46:03 ERROR [django.server:187] "POST /fast_search/image/upload/ HTTP/1.1" 500 82456
+[27Sep2022 01:46:34 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[27Sep2022 01:46:34 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[27Sep2022 01:46:34 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:46:34 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:46:38 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:46:47 ERROR [django.request:241] Internal Server Error: /fast_search/image/upload/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000213ED4E4940>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000213ED4E4940>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 80, in uploaded_image
+    response = requests.post('http://localhost:5001/', data=data)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000213ED4E4940>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+[27Sep2022 01:46:47 ERROR [django.server:187] "POST /fast_search/image/upload/ HTTP/1.1" 500 242345
+[27Sep2022 01:47:11 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 01:47:12 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 01:47:12 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:47:12 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:47:46 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[27Sep2022 01:47:46 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[27Sep2022 01:47:46 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:47:47 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:48:13 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:48:13 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:48:18 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 19270
+[27Sep2022 01:48:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 01:56:35 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\ACHACHA\logger.py changed, reloading.
+[27Sep2022 01:56:35 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\ACHACHA\logger.py changed, reloading.
+[27Sep2022 01:56:36 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 01:56:36 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:12:33 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17400
+[27Sep2022 02:12:33 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:12:35 INFO [django.server:187] "GET /all_search HTTP/1.1" 301 0
+[27Sep2022 02:12:35 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 211885
+[27Sep2022 02:12:36 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[27Sep2022 02:12:36 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[27Sep2022 02:12:36 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:12:43 INFO [django.server:187] "GET /all_search/all_detail/F2022091600000007-1/ HTTP/1.1" 200 17062
+[27Sep2022 02:12:43 INFO [django.server:187] "GET /static/bootstrap/img/%EB%A7%A8%EB%B0%9C%EC%9D%98%EC%B2%AD%EC%B6%98_blue.png HTTP/1.1" 200 70399
+[27Sep2022 02:12:43 INFO [django.server:187] "GET /static/acha_money/css/post_detail.css HTTP/1.1" 200 960
+[27Sep2022 02:12:43 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:12:46 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:15:01 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17400
+[27Sep2022 02:15:01 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:15:02 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 19270
+[27Sep2022 02:15:02 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:15:08 INFO [django.server:187] "GET /fast_search/keyword/key_result/?insert_category=%EA%B0%80%EB%B0%A9&insert_color=%EC%97%98%EB%A1%9C%EC%9A%B0&insert_date=2022-09-01 HTTP/1.1" 200 21840
+[27Sep2022 02:15:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:17:05 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 19270
+[27Sep2022 02:17:05 WARNING [django.request:241] Not Found: /favicon.ico
+[27Sep2022 02:17:05 WARNING [django.server:187] "GET /favicon.ico HTTP/1.1" 404 2778
+[27Sep2022 02:17:21 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 02:17:25 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 02:17:25 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 02:17:25 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 02:17:25 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 02:17:25 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 02:17:25 INFO [django.server:80] - Broken pipe from ('127.0.0.1', 57322)
+[27Sep2022 02:17:25 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 02:17:25 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 02:17:25 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 02:17:25 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 02:17:25 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 02:17:25 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 02:17:25 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 02:17:25 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 02:17:25 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 02:17:25 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 02:18:08 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:18:08 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:18:09 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:18:09 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:18:11 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[27Sep2022 02:18:11 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[27Sep2022 02:18:12 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:18:12 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:18:14 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 02:18:14 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 02:18:14 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:18:14 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:18:34 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 02:18:43 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:18:46 INFO [django.server:187] "GET /acha_money HTTP/1.1" 301 0
+[27Sep2022 02:18:46 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17246
+[27Sep2022 02:18:46 INFO [django.server:187] "GET /static/acha_money/img/pen_white.png HTTP/1.1" 200 6968
+[27Sep2022 02:18:46 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:19:11 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17400
+[27Sep2022 02:19:11 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:19:14 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 211885
+[27Sep2022 02:19:14 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:19:17 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 212029
+[27Sep2022 02:19:17 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:20:00 INFO [django.server:187] "GET /all_search/?page=3 HTTP/1.1" 200 212238
+[27Sep2022 02:20:00 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:20:08 INFO [django.server:187] "GET /all_search/?page=4 HTTP/1.1" 200 212368
+[27Sep2022 02:20:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:21:48 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:21:48 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:21:49 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:21:49 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:21:52 INFO [django.server:187] "GET /all_search/?page=5 HTTP/1.1" 200 212444
+[27Sep2022 02:21:53 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:25:05 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:25:05 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:25:06 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:25:06 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:25:22 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:25:22 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:25:23 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:25:23 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:25:26 INFO [django.server:187] "GET /all_search/?page=6 HTTP/1.1" 200 212419
+[27Sep2022 02:25:26 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:26:37 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:26:37 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:26:38 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:26:38 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:26:42 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:26:42 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 02:26:43 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:26:43 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:26:51 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17400
+[27Sep2022 02:26:51 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:26:51 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 19270
+[27Sep2022 02:26:52 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:27:02 INFO [django.server:187] "GET /fast_search/keyword/key_result/?insert_category=%EA%B7%80%EA%B8%88%EC%86%8D&insert_color=%EC%97%98%EB%A1%9C%EC%9A%B0&insert_date=2022-09-01 HTTP/1.1" 200 24274
+[27Sep2022 02:27:02 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:28:14 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 211885
+[27Sep2022 02:28:14 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:28:26 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 212029
+[27Sep2022 02:28:26 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:29:07 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17246
+[27Sep2022 02:29:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:29:11 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 02:29:11 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 02:29:11 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 02:29:11 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 02:29:11 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 02:29:11 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 02:29:11 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 02:29:11 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 02:29:11 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 02:29:11 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 02:29:11 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 02:29:11 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 02:29:11 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 02:29:11 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 02:29:11 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 02:29:11 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 02:30:47 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:30:47 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:30:48 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:30:48 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:31:02 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:31:02 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:31:02 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:31:02 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:31:10 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:31:10 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:31:10 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:31:10 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:31:16 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:31:16 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:31:17 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:31:17 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:31:36 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:31:36 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[27Sep2022 02:31:36 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 02:31:36 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:03:36 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:03:36 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[27Sep2022 09:03:36 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 304 0
+[27Sep2022 09:03:38 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:03:38 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:03:38 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:03:38 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:03:38 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:03:38 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:03:38 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:03:38 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:03:38 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:03:38 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:03:38 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:03:38 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:03:38 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:03:39 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:03:39 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:03:42 INFO [django.server:187] "POST /member/login/ HTTP/1.1" 200 20274
+[27Sep2022 09:03:42 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:03:42 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:03:42 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:03:42 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:03:42 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:03:42 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:03:42 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:03:42 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:03:42 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:03:42 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:03:42 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:03:42 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:03:46 INFO [django.server:187] "GET /member/register HTTP/1.1" 301 0
+[27Sep2022 09:03:46 INFO [django.server:187] "GET /member/register/ HTTP/1.1" 200 22932
+[27Sep2022 09:08:08 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 09:08:09 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 09:08:09 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:08:09 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:17:28 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:17:32 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:17:32 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:17:32 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:17:32 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:17:32 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:17:32 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:17:32 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:17:32 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:17:32 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:17:32 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:17:32 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:17:32 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:17:32 INFO [django.server:80] - Broken pipe from ('127.0.0.1', 50977)
+[27Sep2022 09:17:32 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:19:19 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:19:19 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:19:19 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:19:19 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:23:51 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:23:51 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:23:51 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:23:51 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:23:56 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:23:56 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:23:57 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:23:57 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:24:52 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:24:52 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:24:53 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:24:53 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:25:23 INFO [django.server:187] "POST /member/login/ HTTP/1.1" 200 20274
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[27Sep2022 09:25:23 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[27Sep2022 09:25:23 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:25:23 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:25:23 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:25:23 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:25:23 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:25:23 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:25:23 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:25:23 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:25:23 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:25:23 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:25:23 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:25:23 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:25:23 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:25:23 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:25:40 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:25:40 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[27Sep2022 09:25:53 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:25:53 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:25:53 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:25:53 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:25:53 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:25:53 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:25:53 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:25:53 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:25:53 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:25:53 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:25:53 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:25:53 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:25:53 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:26:28 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:26:28 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:26:28 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:26:28 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:27:08 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:27:08 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:27:08 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:27:08 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:27:16 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:27:17 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:27:17 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:27:17 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:27:53 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:28:20 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:29:29 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:29:30 WARNING [django.request:241] Not Found: /favicon.ico
+[27Sep2022 09:29:30 WARNING [django.server:187] "GET /favicon.ico HTTP/1.1" 404 2778
+[27Sep2022 09:29:31 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:29:31 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:29:31 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:29:31 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:29:31 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:29:31 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:29:31 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:29:31 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:29:31 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:29:31 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:29:31 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:29:31 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:29:31 INFO [django.server:80] - Broken pipe from ('127.0.0.1', 50908)
+[27Sep2022 09:29:31 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:29:31 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:29:31 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:30:02 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:30:02 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:30:41 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:31:59 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:32:01 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:32:01 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:32:01 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:32:01 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:32:01 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:32:01 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:32:01 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:32:01 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:32:01 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:32:01 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:32:01 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:32:01 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:32:01 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:32:01 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:32:01 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:33:46 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:33:46 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:33:59 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:34:37 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:34:39 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:34:39 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:34:39 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:34:39 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:34:39 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:34:39 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:34:39 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:34:39 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:34:39 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:34:39 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:34:39 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:34:39 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:34:39 INFO [django.server:80] - Broken pipe from ('127.0.0.1', 51167)
+[27Sep2022 09:34:39 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:34:39 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:34:39 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:36:00 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:36:01 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:36:25 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:37:24 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:37:26 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:37:26 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:37:26 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:37:26 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:37:26 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:37:26 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:37:26 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:37:26 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:37:26 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:37:26 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:37:26 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:37:26 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:37:26 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:37:32 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:37:32 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:37:32 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:37:32 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:37:32 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:37:37 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:37:44 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:37:44 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:37:44 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:37:44 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:37:44 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:37:44 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:37:44 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:37:44 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:37:44 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:37:44 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:37:44 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:37:44 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:37:44 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:37:44 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:37:44 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:37:44 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:37:44 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:37:44 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:37:57 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:37:57 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:37:57 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:37:57 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:37:57 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:37:57 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:37:57 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:37:57 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:37:57 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:37:57 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:37:57 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:37:57 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:37:57 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:37:57 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:37:57 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:37:57 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:37:57 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:37:57 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:38:12 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:38:12 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:38:12 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:38:12 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:38:12 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:38:12 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:38:12 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:38:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:38:12 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:38:12 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:38:18 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:38:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:38:32 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:38:32 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:38:32 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:38:32 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:38:32 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:38:32 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:38:32 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:38:32 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:38:32 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:38:32 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:38:47 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:38:47 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:39:00 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:41:18 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[27Sep2022 09:41:18 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[27Sep2022 09:41:19 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:41:19 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:41:19 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:41:19 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:41:19 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:41:19 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:41:19 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:41:19 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:41:19 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:41:19 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:41:19 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:41:19 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:41:19 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:41:19 INFO [django.server:80] - Broken pipe from ('127.0.0.1', 51337)
+[27Sep2022 09:41:19 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:41:19 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:41:23 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:41:23 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:41:23 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:41:23 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:41:23 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:42:52 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:42:52 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:42:55 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:42:55 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:42:55 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:42:55 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:42:55 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:42:55 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:42:55 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:42:55 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:42:55 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:42:55 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:42:56 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:42:56 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:42:56 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:42:56 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:43:01 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:43:01 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:43:01 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:43:01 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:43:01 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:43:01 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:43:01 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:43:01 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:43:01 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:43:01 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:43:01 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:43:01 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:43:01 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:43:01 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:43:01 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:43:01 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:46:22 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 09:46:22 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:46:56 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 09:46:57 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:47:09 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 09:47:09 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:47:21 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 09:47:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:47:29 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:47:29 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:47:29 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:47:29 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:47:29 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:47:29 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:47:29 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:47:29 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:47:29 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:47:29 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:47:29 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:47:29 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:47:29 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:47:29 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:47:29 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:47:29 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:47:54 INFO [django.server:187] "GET /member/register HTTP/1.1" 301 0
+[27Sep2022 09:47:54 ERROR [django.request:241] Internal Server Error: /member/register/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py", line 26, in register
+    logger.trace_logger(request) # view 로그 추적
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py", line 24, in trace_logger
+    active_URL = request.GET.path
+AttributeError: 'QueryDict' object has no attribute 'path'
+[27Sep2022 09:47:54 ERROR [django.server:187] "GET /member/register/ HTTP/1.1" 500 71657
+[27Sep2022 09:47:57 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:47:57 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:48:23 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 09:48:23 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:48:26 INFO [django.server:187] "GET /member/register/ HTTP/1.1" 200 22932
+[27Sep2022 09:48:26 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:48:27 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:48:27 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:49:53 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 09:49:53 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:50:01 INFO [django.server:187] "GET /member/register/ HTTP/1.1" 200 22932
+[27Sep2022 09:50:01 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:50:12 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:50:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:50:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:50:12 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:50:12 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:50:12 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:50:12 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:50:12 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:50:12 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:50:12 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:50:12 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:50:12 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:50:12 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:50:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:50:12 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:50:12 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:50:27 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:50:28 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:50:32 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:50:32 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:50:32 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:50:32 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:50:32 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:50:32 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:50:32 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:50:32 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:50:32 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:50:32 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:50:32 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:50:32 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:50:32 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:50:32 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:50:32 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:50:32 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:51:25 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:51:26 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:51:32 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:51:32 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:51:32 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:51:32 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:51:32 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:51:32 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:51:32 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:51:32 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:51:32 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:51:32 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:51:32 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:51:32 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:51:32 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:51:32 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:51:32 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:51:32 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:51:42 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 09:51:43 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 09:51:44 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:51:44 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:51:44 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:51:44 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:51:44 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:51:44 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:51:44 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:51:44 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:51:44 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:51:44 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:51:44 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:51:44 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:51:44 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:51:45 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:52:25 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 09:52:25 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 09:52:25 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:52:25 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 09:52:25 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 09:52:25 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 09:52:25 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 09:52:25 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 09:52:25 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 09:52:25 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 09:52:25 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 09:52:25 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 09:52:25 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 09:52:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 09:52:25 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 09:52:25 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 10:09:26 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 10:09:26 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 10:20:30 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 10:24:09 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 10:32:10 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[27Sep2022 10:32:10 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[27Sep2022 10:32:12 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 10:32:12 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 10:32:12 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 10:32:12 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 10:32:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 10:32:12 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 10:32:12 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 10:32:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 10:32:12 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 10:32:12 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 10:32:12 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 10:32:12 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 10:32:12 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 10:32:12 INFO [django.server:80] - Broken pipe from ('127.0.0.1', 52901)
+[27Sep2022 10:32:31 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 10:32:31 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 10:32:31 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 10:32:31 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 10:32:31 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 10:32:31 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 10:32:31 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 10:32:31 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 10:32:31 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 10:32:31 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 10:32:31 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 10:32:31 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 10:32:31 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 10:32:36 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 13:21:38 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 13:21:39 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 13:21:39 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 13:21:39 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 13:21:39 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 13:21:39 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 13:21:39 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 13:21:39 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 13:21:39 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 13:21:39 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 13:21:39 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 13:21:39 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 13:21:39 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 13:21:39 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 13:21:39 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 13:34:19 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 13:34:20 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:35:10 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 13:35:10 WARNING [django.request:241] Not Found: /favicon.ico
+[27Sep2022 13:35:10 WARNING [django.server:187] "GET /favicon.ico HTTP/1.1" 404 2778
+[27Sep2022 13:35:55 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[27Sep2022 13:35:55 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:35:59 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 13:36:03 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:36:42 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 13:36:42 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:36:49 INFO [django.server:187] "GET /fast_search HTTP/1.1" 301 0
+[27Sep2022 13:36:49 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17400
+[27Sep2022 13:36:49 INFO [django.server:187] "GET /static/bootstrap/img/icon_image.png HTTP/1.1" 200 14383
+[27Sep2022 13:36:49 INFO [django.server:187] "GET /static/bootstrap/img/icon_keyword.png HTTP/1.1" 200 14933
+[27Sep2022 13:36:49 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:36:50 INFO [django.server:187] "GET /fast_search/image/ HTTP/1.1" 200 21395
+[27Sep2022 13:36:50 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:37:00 ERROR [django.request:241] Internal Server Error: /fast_search/image/upload/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\sj\anaconda3\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001E747DC61C0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\sj\anaconda3\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E747DC61C0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 80, in uploaded_image
+    response = requests.post('http://localhost:5001/', data=data)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E747DC61C0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다'))
+[27Sep2022 13:37:00 ERROR [django.server:187] "POST /fast_search/image/upload/ HTTP/1.1" 500 242346
+[27Sep2022 13:37:05 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:37:06 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 13:37:06 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:37:24 INFO [django.server:187] "GET /all_search HTTP/1.1" 301 0
+[27Sep2022 13:37:25 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 211885
+[27Sep2022 13:37:25 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[27Sep2022 13:37:25 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1275
+[27Sep2022 13:37:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:37:52 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 212029
+[27Sep2022 13:37:52 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:38:00 INFO [django.server:187] "GET /all_search/?page=3 HTTP/1.1" 200 212238
+[27Sep2022 13:38:00 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:38:05 INFO [django.server:187] "GET /all_search/all_detail/F2022091600000162-1/ HTTP/1.1" 200 17046
+[27Sep2022 13:38:05 INFO [django.server:187] "GET /static/bootstrap/img/%EB%A7%A8%EB%B0%9C%EC%9D%98%EC%B2%AD%EC%B6%98_blue.png HTTP/1.1" 200 70399
+[27Sep2022 13:38:05 INFO [django.server:187] "GET /static/acha_money/css/post_detail.css HTTP/1.1" 200 960
+[27Sep2022 13:38:05 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:38:05 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:38:09 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17400
+[27Sep2022 13:38:09 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:38:10 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 19270
+[27Sep2022 13:38:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:38:23 INFO [django.server:187] "GET /fast_search/keyword/key_result/?insert_category=%EA%B7%80%EA%B8%88%EC%86%8D&insert_color=%EC%97%98%EB%A1%9C%EC%9A%B0&insert_date=2022-08-01 HTTP/1.1" 200 24679
+[27Sep2022 13:38:23 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:38:48 INFO [django.server:187] "GET /acha_money HTTP/1.1" 301 0
+[27Sep2022 13:38:48 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 18730
+[27Sep2022 13:38:48 INFO [django.server:187] "GET /static/acha_money/img/pen_white.png HTTP/1.1" 200 6968
+[27Sep2022 13:38:48 WARNING [django.request:241] Not Found: /media/acha_money/wallet.jpg
+[27Sep2022 13:38:48 WARNING [django.request:241] Not Found: /media/acha_money/tshirt.png
+[27Sep2022 13:38:48 WARNING [django.server:187] "GET /media/acha_money/wallet.jpg HTTP/1.1" 404 3082
+[27Sep2022 13:38:48 WARNING [django.server:187] "GET /media/acha_money/tshirt.png HTTP/1.1" 404 3082
+[27Sep2022 13:38:48 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:39:07 INFO [django.server:187] "GET /acha_money/detail/2/ HTTP/1.1" 200 17121
+[27Sep2022 13:39:07 WARNING [django.request:241] Not Found: /media/acha_money/tshirt.png
+[27Sep2022 13:39:07 WARNING [django.server:187] "GET /media/acha_money/tshirt.png HTTP/1.1" 404 3082
+[27Sep2022 13:39:07 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:39:13 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:39:16 INFO [django.server:187] "GET /acha_money/post/ HTTP/1.1" 200 18921
+[27Sep2022 13:39:16 INFO [django.server:187] "GET /static/acha_money/css/post.css HTTP/1.1" 200 830
+[27Sep2022 13:39:16 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:39:23 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:39:30 INFO [django.server:187] "GET /acha_money/post/ HTTP/1.1" 200 18921
+[27Sep2022 13:39:30 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:39:50 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:41:26 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 13:41:26 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 13:41:26 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 13:41:26 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 13:41:26 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 13:41:26 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 13:41:26 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 13:41:26 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 13:41:26 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 13:41:26 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 13:41:26 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 13:41:26 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 13:41:26 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 13:41:26 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:41:26 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 13:41:26 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 13:41:38 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 13:41:39 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:41:58 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:42:15 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 18730
+[27Sep2022 13:42:15 WARNING [django.request:241] Not Found: /media/acha_money/tshirt.png
+[27Sep2022 13:42:15 WARNING [django.server:187] "GET /media/acha_money/tshirt.png HTTP/1.1" 404 3082
+[27Sep2022 13:42:15 WARNING [django.request:241] Not Found: /media/acha_money/wallet.jpg
+[27Sep2022 13:42:15 WARNING [django.server:187] "GET /media/acha_money/wallet.jpg HTTP/1.1" 404 3082
+[27Sep2022 13:42:15 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:42:28 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:42:31 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:42:33 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 13:42:33 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 13:42:33 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 13:42:33 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 13:42:33 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 13:42:33 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 13:42:33 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 13:42:33 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 13:42:33 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 13:42:33 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 13:42:33 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 13:42:33 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 13:42:33 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 13:42:33 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:42:33 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 13:42:33 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 13:47:12 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17400
+[27Sep2022 13:47:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:47:13 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 19270
+[27Sep2022 13:47:13 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 13:49:23 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 13:49:24 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:49:32 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 13:49:33 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:49:55 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\ACHACHA\logger.py changed, reloading.
+[27Sep2022 13:49:55 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:50:00 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\logger.py changed, reloading.
+[27Sep2022 13:50:01 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:50:35 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 13:50:36 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:50:45 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\ACHACHA\logger.py changed, reloading.
+[27Sep2022 13:50:46 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:50:50 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 13:50:51 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:50:58 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 13:50:58 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:52:07 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\ACHACHA\logger.py changed, reloading.
+[27Sep2022 13:52:08 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:52:29 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 13:52:29 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:52:43 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 13:52:43 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:52:49 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 13:52:50 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:53:02 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\ACHACHA\logger.py changed, reloading.
+[27Sep2022 13:53:03 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:55:37 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 13:55:38 WARNING [django.request:241] Not Found: /favicon.ico
+[27Sep2022 13:55:38 WARNING [django.server:187] "GET /favicon.ico HTTP/1.1" 404 2778
+[27Sep2022 13:55:42 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17400
+[27Sep2022 13:56:19 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 13:56:38 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\ACHACHA\logger.py changed, reloading.
+[27Sep2022 13:56:39 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:56:57 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\ACHACHA\logger.py changed, reloading.
+[27Sep2022 13:56:57 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:57:17 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\all_search\logger.py changed, reloading.
+[27Sep2022 13:57:18 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:57:23 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\logger.py changed, reloading.
+[27Sep2022 13:57:23 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:57:31 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\logger.py changed, reloading.
+[27Sep2022 13:57:31 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:57:40 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\logger.py changed, reloading.
+[27Sep2022 13:57:41 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 13:59:26 INFO [django.server:187] "GET / HTTP/1.1" 200 23376
+[27Sep2022 13:59:26 WARNING [django.request:241] Not Found: /favicon.ico
+[27Sep2022 13:59:26 WARNING [django.server:187] "GET /favicon.ico HTTP/1.1" 404 2778
+[27Sep2022 14:00:16 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19851
+[27Sep2022 14:00:16 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[27Sep2022 14:00:16 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[27Sep2022 14:00:16 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 14:00:16 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 14:00:16 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[27Sep2022 14:00:16 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[27Sep2022 14:00:16 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[27Sep2022 14:00:16 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[27Sep2022 14:00:16 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[27Sep2022 14:00:16 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[27Sep2022 14:00:16 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[27Sep2022 14:00:16 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[27Sep2022 14:00:16 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[27Sep2022 14:00:16 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[27Sep2022 14:03:45 INFO [django.server:187] "POST /member/login/ HTTP/1.1" 302 0
+[27Sep2022 14:05:19 INFO [django.server:187] "GET / HTTP/1.1" 200 23325
+[27Sep2022 15:07:00 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 15:07:03 INFO [django.server:187] "GET / HTTP/1.1" 200 23411
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[27Sep2022 15:07:06 WARNING [django.request:241] Not Found: /base.html
+[27Sep2022 15:07:06 WARNING [django.server:187] "GET /base.html HTTP/1.1" 404 2772
+[27Sep2022 15:07:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:18 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 19293
+[27Sep2022 15:07:18 WARNING [django.request:241] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[27Sep2022 15:07:18 WARNING [django.server:187] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3130
+[27Sep2022 15:07:18 INFO [django.server:187] "GET /media/acha_money/wallet.jpg HTTP/1.1" 200 131964
+[27Sep2022 15:07:18 INFO [django.server:187] "GET /media/acha_money/tshirt.png HTTP/1.1" 200 233096
+[27Sep2022 15:07:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:19 INFO [django.server:187] "GET /acha_money/detail/2/ HTTP/1.1" 200 20118
+[27Sep2022 15:07:19 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:20 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:21 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 211920
+[27Sep2022 15:07:22 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:23 INFO [django.server:187] "GET /all_search/all_detail/F2022091600000014-1/ HTTP/1.1" 200 17044
+[27Sep2022 15:07:23 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:24 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:08:04 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 19293
+[27Sep2022 15:08:04 INFO [django.server:187] "GET /media/acha_money/wallet.jpg HTTP/1.1" 304 0
+[27Sep2022 15:08:04 INFO [django.server:187] "GET /media/acha_money/tshirt.png HTTP/1.1" 304 0
+[27Sep2022 15:08:04 WARNING [django.request:241] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[27Sep2022 15:08:04 WARNING [django.server:187] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3130
+[27Sep2022 15:08:04 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:08:09 INFO [django.server:187] "GET /acha_money/detail/2/ HTTP/1.1" 200 20118
+[27Sep2022 15:08:09 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181

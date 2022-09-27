@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 {% extends 'base/base.html' %}
-
 {% block content %}
-
-<style>
-    h3 {
-        text-align: center;
-    }
-    
+{% load static %}
+    <meta charset="UTF-8">
+    <style>   
     div {
         text-align: center;
     }
 
     a {
-        text-decoration: none;
+        text-decoration: none !important;
+        color: black;
     }
+    li {
+    text-align: -webkit-match-parent;
+    }
+
+    img{
+        width:15%;
+        float: right;
+    }
+
 </style>
+</head>
+<body>
 
 
-<h3> 분실물 빨리 찾기 </h3>
-<div class="img_btn">
-    <a href="{% url 'image_search' %}" class="button_image">이미지로 분실물 찾아보기</a>
+<a href="{% url 'image_search' %}" class="button_image">
+<div class="basic_block">
+    <div class="div_content">
+        <ul role="list" class="feat_list">
+            <li class="about_subtitle buy">
+                <div class="subtitle-large">
+                    이미지 검색
+                    <img class="rounded-circle" src="{% static 'bootstrap/img/icon_image.png' %}">
+                </div>
+            </li>     
+        </ul>
+        <div class="demo_icon">
+        </div>
+    </div>
 </div>
-<br>
+</a>
 
-<div class="key_btn">
-    <a href="{% url 'keyword_search' %}" class="button_keyword">키워드로 분실물 찾아보기</a>
+
+<a href="{% url 'keyword_search' %}" class="button_keyword">
+<div class="basic_block">
+    <div class="div_content">
+        <ul role="list" class="feat_list">
+            <li class="about_subtitle buy">
+                <div class="subtitle-large">
+                    키워드 검색
+                    <img class="rounded-circle" src="{% static 'bootstrap/img/icon_keyword.png' %}">
+                </div>
+            </li>     
+        </ul>
+    </div>
 </div>
+</a>
 
 
 {% endblock %}

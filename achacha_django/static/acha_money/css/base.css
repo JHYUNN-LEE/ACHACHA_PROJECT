@@ -1,69 +1,92 @@
 .lost_items {
-    /*padding: 5% 0;*/
-    margin: 5% 0;
+    margin: 0 5%;
 }
 
 
 .left {
-    width: 40%;
+    width: 60%;
     height: 150px;
-    float: left;
+
+    /* float: left; */
+    display: inline-block;
+    font-size: small;
     /*border: 1px solid darkgreen;*/
 }
 
-.right {
-    width: 60%;
+.right {   
+    width: 40%;
     height: 150px;
     float: right;
-    /*border: 1px solid #f5b7b1;*/
 }
 
 .lost_img {
-    width: 130px;
-    height: 130px;
+    width: 100%;
+    height: 200px;
 }
 
 .title {
-    color: #434d58;
+    color: #4e73df;
     font-weight: bold;
-    font-size: 21pt;
+    font-size: 12pt;
+    height: 45px;
 }
 
-hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid #8c8c8c;
+.cost{
+    font-size: 10pt;
+    color: black;
 }
 
-#create_page {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #59A8D9;
-    border: solid #59A8D9;
-    position: relative;
-    left: 280px;
-}
-
-#create_page > img {
-    width: 6px;
-    height: 6px;
-    z-index: 2;
-    position: absolute;
-    /*left: 5px;*/
-    /*top: 5px;*/
-    /*bottom: 10px;*/
-    /*object-fit: cover;*/
+.date_time, .get_place{
+    font-size: 10pt;
 }
 
 .pagination {
-    border: 1px solid red;
-    position: relative;
-    top: 50px;
-    left: 100px;
+    margin: auto;
 }
 
-/*#post {*/
-/*    width: 60px;*/
-/*    height: 60px;*/
-/*}*/
+.post {
+    float: right;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    height: 55px;
+    /* background-color: white; */
+
+}
+
+#post{
+    display: inline-block;
+    position: sticky;
+    width: 55px;
+    border: 1px solid #c9cbd7;
+    background-color: #4E73DF;
+}
+
+#post:hover{
+    background-color: #c9cbd7;
+}
+
+.wrapper{
+    margin: 0 10%;
+}
+
+
+.card_search{
+    width: 45%;
+    background-color: #fff !important;
+    border: none;
+    margin-right: 5px;
+    display: inline-block;
+
+}
+
+.row, .image_center{
+    display: flex;
+    justify-content: center;
+}
+
+.alarm{
+    font-size: 9pt;
+    text-align: center;
+    margin-bottom: 8px;
+}

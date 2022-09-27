@@ -1,23 +1,50 @@
-.detail {
-    padding: 0 10%;
-}
-
 .title {
-    font-size: 20pt;
+    font-size: large;
     font-weight: bold;
-    float: left;
 }
 
 .author {
-    font-size: 11pt;
-    float: right;
+    font-size: medium;
     position: relative;
     top: 5pt;
+    margin-bottom: 3px;
 }
 
-.lost_img {
-    width: 300px;
-    height: 300px;
-    display: block;
-    margin: 0 auto;
+.img{
+    margin: auto;
+    width: 180px;
+    height: 240px;
+    color: #fafafa;
 }
+.detail{
+    margin: 10% 5%;
+}
+
+.basic_block_low2{
+    height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    margin: 0 5% 4% 5%;
+    padding: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    border-radius: 40px;
+    background-color: #FFDD33;
+    font-family: Poppins,sans-serif;
+}
+.basic_block_low2 input{
+    color: white;
+}
+.basic_block_low2:hover input{
+    color: #333333;
+}
+.basic_block_low2:hover{
+    background-color: #ffc609;
+}
+

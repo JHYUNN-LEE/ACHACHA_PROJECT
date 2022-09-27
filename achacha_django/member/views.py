@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from .models import request
 from .models import implement
 from .forms import UserForm
+from acha_money.models import Posts, UserDeal
 
 
 # Python
@@ -17,13 +18,30 @@ from .models import Authentication
 from acha_money.models import UserDeal
 from acha_money.models import Posts
 
+# logger import 
+from . import logger
+
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LogoutView
+
+
+
+class LoginView_withlogger(LoginView): 
+    def log_check(request):
+        logger.trace_logger(request)
+
 
 def register(request):
+    logger.trace_logger(request) # view 로그 추적 
+
     if request.method == "POST":
         form = UserForm(request.POST)
+
         if form.is_valid():
             # form.address = request.POST['address'].encode('utf-8')
             form.save()
+            
+
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)  # 사용자 인증
@@ -31,20 +49,27 @@ def register(request):
             return redirect('http://127.0.0.1:8000')
     else:
         form = UserForm()
+        
     return render(request, 'member/register.html', {'form': form})
 
 def index(request):
+    logger.trace_logger(request) # view 로그 추적 
     request_list = request.objects.order_by('-create_date')
     context = {'request_list': request_list}
     return render(request, 'member/request.html', context)
 
-def request(request):
-    seller = UserDeal.objects.filter(users_id=request.user, deal='dealer')
-    seller = seller.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
-    post = Posts.objects.filter(users_id=request.user)
-    post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
 
+def request(request):
+    logger.trace_logger(request) # view 로그 추적 
+    user_name = request.user
+    post = Posts.objects.raw("SELECT * FROM posts join user_deal \
+                             on posts.posts_id_pk = user_deal.posts_id \
+                        where user_deal.deal = 'seller' and user_deal.users_id= %s", [user_name])
+    # post = Posts.objects.filter(users_id=request.user)
+    # post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
+    # print(post)
     return render(request, 'member/request.html', {'post': post})
+
 
 # class requestList():
 #     template_name = "member/request.html"
@@ -60,16 +85,14 @@ def request(request):
 
 
 def implement(request):
-    dealer = UserDeal.objects.filter(users_id=request.user, deal='dealer')
-    dealer = dealer.extra(tables=['posts'], where=['posts.posts_id_pk=user_deal.posts_id'])
-    post = Posts.objects.filter(users_id=request.user)
-    post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
+    
+    logger.trace_logger(request) # view 로그 추적 
+    user_name = request.user
+    post = Posts.objects.raw("SELECT * FROM posts join user_deal \
+                             on posts.posts_id_pk = user_deal.posts_id \
+                        where user_deal.deal = 'purchaser' and user_deal.users_id=%s", [user_name])
 
-    # post = UserDeal.objects.raw("SELECT * FROM user_deal join posts \
-    #                          on posts.posts_id_pk = user_deal.posts_id \
-    #                     where user_deal.deal = 'purchaser' and user_deal.users_id='suran' ")
-
-    print(post.query)
+    # post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
     return render(request, 'member/implement.html', {'post': post})
 
 
@@ -78,7 +101,6 @@ def implement(request):
 
 # def login(request):
 #     return render(request, 'member/login.html')
-
 
 
 
