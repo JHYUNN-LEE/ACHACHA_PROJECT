@@ -111,7 +111,7 @@ def uploaded_image(request):
             "list" : list,
             "post" : posts,
         }
-    return render(request, 'fast_search/2-1.result.html', context)
+    return render(request, 'fast_search/2-1_result.html', context)
 
 # es  find hits 함수 
 def trans_source(hits):
