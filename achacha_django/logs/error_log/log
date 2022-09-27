@@ -1260,3 +1260,43 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5
 [27Sep2022 14:00:16 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
 [27Sep2022 14:03:45 INFO [django.server:187] "POST /member/login/ HTTP/1.1" 302 0
 [27Sep2022 14:05:19 INFO [django.server:187] "GET / HTTP/1.1" 200 23325
+[27Sep2022 15:07:00 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[27Sep2022 15:07:03 INFO [django.server:187] "GET / HTTP/1.1" 200 23411
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[27Sep2022 15:07:03 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[27Sep2022 15:07:06 WARNING [django.request:241] Not Found: /base.html
+[27Sep2022 15:07:06 WARNING [django.server:187] "GET /base.html HTTP/1.1" 404 2772
+[27Sep2022 15:07:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:18 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 19293
+[27Sep2022 15:07:18 WARNING [django.request:241] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[27Sep2022 15:07:18 WARNING [django.server:187] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3130
+[27Sep2022 15:07:18 INFO [django.server:187] "GET /media/acha_money/wallet.jpg HTTP/1.1" 200 131964
+[27Sep2022 15:07:18 INFO [django.server:187] "GET /media/acha_money/tshirt.png HTTP/1.1" 200 233096
+[27Sep2022 15:07:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:19 INFO [django.server:187] "GET /acha_money/detail/2/ HTTP/1.1" 200 20118
+[27Sep2022 15:07:19 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:20 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:21 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 211920
+[27Sep2022 15:07:22 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:23 INFO [django.server:187] "GET /all_search/all_detail/F2022091600000014-1/ HTTP/1.1" 200 17044
+[27Sep2022 15:07:23 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:07:24 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:08:04 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 19293
+[27Sep2022 15:08:04 INFO [django.server:187] "GET /media/acha_money/wallet.jpg HTTP/1.1" 304 0
+[27Sep2022 15:08:04 INFO [django.server:187] "GET /media/acha_money/tshirt.png HTTP/1.1" 304 0
+[27Sep2022 15:08:04 WARNING [django.request:241] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[27Sep2022 15:08:04 WARNING [django.server:187] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3130
+[27Sep2022 15:08:04 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[27Sep2022 15:08:09 INFO [django.server:187] "GET /acha_money/detail/2/ HTTP/1.1" 200 20118
+[27Sep2022 15:08:09 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
