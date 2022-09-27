@@ -6,9 +6,14 @@ from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from all_search.views import all_detail
 
+# logger import 
+from . import logger
+
 # Create your views here.
 
 def index(request):
+    logger.trace_logger(request) # view 로그 추적 
+
     lost_items_list = Posts.objects.all().order_by('-posts_id_pk')
     # print(lost_items_list)
 
@@ -24,6 +29,8 @@ def index(request):
 
 
 def post(request):
+    logger.trace_logger(request) # view 로그 추적 
+
     if request.method == 'POST':
         # posts table
         posts = Posts()
@@ -55,6 +62,8 @@ def post(request):
     # data = Model.objects.create(title=title, ...)
 
 def post_search(request, posts_id_pk):
+    logger.trace_logger(request) # view 로그 추적 
+
     if request.method == 'POST':
         # posts table
         title = request.POST['title']
@@ -97,6 +106,8 @@ def post_search(request, posts_id_pk):
 
 
 def detail(request, posts_id_pk):
+    logger.trace_logger(request) # view 로그 추적 
+
     if request.method ==  'POST':
         # user_detail table
         user_deal = UserDeal()
@@ -119,9 +130,11 @@ def detail(request, posts_id_pk):
 
 
 def result(request):
+    logger.trace_logger(request) # view 로그 추적 
     return render(request, 'acha_money/test_result.html')
 
 def delete(request, posts_id_pk):
+    logger.trace_logger(request) # view 로그 추적 
     post = Posts.objects.get(posts_id_pk=posts_id_pk).delete()
     # if  post.users_id == request.user:
     print(post)
@@ -133,6 +146,8 @@ def delete(request, posts_id_pk):
         
         
 def update(request, posts_id_pk):
+    logger.trace_logger(request) # view 로그 추적 
+    
     if request.method == "POST":
         title = request.POST['title']
         category = request.POST['category']

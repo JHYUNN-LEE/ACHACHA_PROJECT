@@ -7,9 +7,15 @@ from hdfs import InsecureClient
 from django.views.generic import DetailView
 # Create your views here.
 
+# logger import 
+from . import logger
+
 default_page = 1
 
 def all_index(request):
+    # view 로그 추적 
+    logger.trace_logger(request)
+
     items_per_page = 10
     lost_items_list = LostItems.objects.all().order_by('-get_at')
     paginator = Paginator(lost_items_list, items_per_page)
@@ -26,6 +32,9 @@ def all_index(request):
 
 
 def all_detail(request, lost_items_id_pk):
+    # view 로그 추적 
+    logger.trace_logger(request)
+
     if request.method == "POST":
         users_id = request.user
         category = request.POST['category']
@@ -49,6 +58,8 @@ def all_detail(request, lost_items_id_pk):
     
     
 def all_alarm(request):
+    # view 로그 추적 
+    logger.trace_logger(request)
     return render(request, 'all_search/all_alarm.html')
 
 
