@@ -57,8 +57,8 @@ def alarmset(request):
     if request.method == "POST":
         # alarm table
         alarm = Alarm()
-        alarm.users_id = 'jinyi' # 로그인 정보 가져와야 함
-        alarm.phone = '01028820828' # 로그인 정보 가져와야 함
+        alarm.users_id = request.user.id 
+        alarm.phone = f'0{request.user.phone}' #핸드폰번호 앞에 0이 사라지는 것 방지
         alarm.category = request.POST['category']
         alarm.src = f'/home/ubuntu/WEB_SERVICE_ACHACHA/ALARM/images/{request.FILES["img_src"]}'
         # alarm.src = request.FILES["img_src"]
