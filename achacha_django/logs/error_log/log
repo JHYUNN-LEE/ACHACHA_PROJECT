@@ -27,4 +27,4 @@
 [28Sep2022 11:42:43 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 213622
 [28Sep2022 11:42:43 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1522
 [28Sep2022 11:42:52 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 213622
-[28Sep2022 11:42:52 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1563
+[28Sep2022 11:42:52 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 200 156

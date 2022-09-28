@@ -58,6 +58,7 @@ def index(request):
     context = {'request_list': request_list}
     return render(request, 'member/request.html', context)
 
+
 def request(request):
     logger.trace_logger(request) # view 로그 추적 
     user_name = request.user
