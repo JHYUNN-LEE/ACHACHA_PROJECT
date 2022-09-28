@@ -65,6 +65,7 @@ def all_alarm(request):
 
 
 def alarmset(request):
+    logger.trace_logger(request)
     if request.method == "POST":
         # alarm table
         alarm = Alarm()

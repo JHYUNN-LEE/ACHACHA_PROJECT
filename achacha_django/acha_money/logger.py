@@ -104,7 +104,7 @@ def trace_logger_context(request, context):
     content['USER_ID'] = str(user_id)
     content['USER_STATUS'] = 'insert'
 
-    content['context'] = list(context)
+    content['context'] = context
 
     ### 이부부터 사이트에 맞는 request 값을 넣어주세요. ### 
 
