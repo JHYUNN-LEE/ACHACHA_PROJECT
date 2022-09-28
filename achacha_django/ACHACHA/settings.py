@@ -35,7 +35,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django_filters',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -94,7 +93,7 @@ DATABASES = {
         'NAME': 'achacha',
         'USER': 'root',
         'PASSWORD': 'achacha7!',
-        'HOST': '54.64.90.112',
+        'HOST': '35.76.119.109',
         'PORT': '3306',
     }
 }

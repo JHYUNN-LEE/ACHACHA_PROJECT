@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from acha_money.models import Posts
 from . models import Alarm
@@ -65,6 +65,7 @@ def all_alarm(request):
 
 
 def alarmset(request):
+    logger.trace_logger(request)
     if request.method == "POST":
         # alarm table
         alarm = Alarm()
