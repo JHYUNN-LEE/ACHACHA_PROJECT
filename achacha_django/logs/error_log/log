@@ -1300,3 +1300,1216 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5
 [27Sep2022 15:08:04 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
 [27Sep2022 15:08:09 INFO [django.server:187] "GET /acha_money/detail/2/ HTTP/1.1" 200 20118
 [27Sep2022 15:08:09 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 00:24:27 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 00:24:47 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 00:25:08 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 00:25:29 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 00:26:04 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 00:26:09 INFO [django.server:187] "GET / HTTP/1.1" 200 23411
+[28Sep2022 00:26:09 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[28Sep2022 00:26:09 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[28Sep2022 00:26:10 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[28Sep2022 00:26:10 WARNING [django.request:241] Not Found: /favicon.ico
+[28Sep2022 00:26:10 WARNING [django.server:187] "GET /favicon.ico HTTP/1.1" 404 2778
+[28Sep2022 00:26:20 INFO [django.server:187] "GET /fast_search HTTP/1.1" 301 0
+[28Sep2022 00:26:20 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17435
+[28Sep2022 00:26:20 INFO [django.server:187] "GET /static/bootstrap/img/icon_keyword.png HTTP/1.1" 200 14933
+[28Sep2022 00:26:20 INFO [django.server:187] "GET /static/bootstrap/img/icon_image.png HTTP/1.1" 200 14383
+[28Sep2022 00:26:22 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 19305
+[28Sep2022 00:26:24 INFO [django.server:187] "GET /all_search HTTP/1.1" 301 0
+[28Sep2022 00:26:25 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213108
+[28Sep2022 00:26:25 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1275
+[28Sep2022 00:26:25 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[28Sep2022 00:26:35 INFO [django.server:187] "GET /all_search/?category=%EC%A7%80%EA%B0%91&name= HTTP/1.1" 200 213108
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /all_search/?category=%EC%A7%80%EA%B0%91&name= HTTP/1.1" 200 213108
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 00:26:54 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /all_search/?category=%EC%A7%80%EA%B0%91&name= HTTP/1.1" 200 213108
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 00:28:33 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 00:28:41 INFO [django.server:187] "GET /all_search/?category=&name=%EC%9D%B4*%ED%95%99 HTTP/1.1" 200 213108
+[28Sep2022 00:28:53 INFO [django.server:187] "GET /all_search/all_detail/F2022091600000018-1/ HTTP/1.1" 200 17125
+[28Sep2022 00:28:54 INFO [django.server:187] "GET /static/acha_money/css/post_detail.css HTTP/1.1" 200 927
+[28Sep2022 00:34:13 INFO [django.server:187] "GET / HTTP/1.1" 200 23411
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 00:34:13 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 304 0
+[28Sep2022 00:34:16 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17435
+[28Sep2022 00:34:16 INFO [django.server:187] "GET /static/bootstrap/img/icon_image.png HTTP/1.1" 304 0
+[28Sep2022 00:34:16 INFO [django.server:187] "GET /static/bootstrap/img/icon_keyword.png HTTP/1.1" 304 0
+[28Sep2022 00:34:20 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19886
+[28Sep2022 00:34:20 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 00:34:20 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 00:34:20 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 00:34:20 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 00:34:20 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 00:34:20 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 00:34:20 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 00:34:20 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 00:34:20 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 00:34:20 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 00:34:20 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 00:34:20 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 00:34:20 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 00:34:20 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 00:34:20 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 00:34:20 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 00:34:33 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213108
+[28Sep2022 00:34:33 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 00:34:33 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 213252
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 00:36:17 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 00:36:19 INFO [django.server:187] "GET /all_search/?page=4 HTTP/1.1" 200 213591
+[28Sep2022 00:36:22 INFO [django.server:187] "GET /all_search/?page=6 HTTP/1.1" 200 213642
+[28Sep2022 00:36:27 INFO [django.server:187] "GET /all_search/?page=8 HTTP/1.1" 200 213624
+[28Sep2022 01:23:16 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /all_search/?category=%EC%A7%80%EA%B0%91&name= HTTP/1.1" 200 213108
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 01:24:21 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 01:24:23 INFO [django.server:187] "GET /all_search/?category=&name= HTTP/1.1" 200 213108
+[28Sep2022 01:24:26 INFO [django.server:187] "GET /all_search/?category=%EC%A7%80%EA%B0%91&name= HTTP/1.1" 200 213108
+[28Sep2022 01:28:38 INFO [django.server:187] "GET /all_search/?category=%EC%A7%80%EA%B0%91&name= HTTP/1.1" 200 214587
+[28Sep2022 01:28:42 INFO [django.server:187] "GET /all_search/?category=&name=&category=LostItems+object+%28F2022091600000037-1%29 HTTP/1.1" 200 214587
+[28Sep2022 01:28:55 INFO [django.server:187] "GET /all_search/?category=&name=&category=LostItems+object+%28F2022091600000060-1%29 HTTP/1.1" 200 214587
+[28Sep2022 01:30:05 INFO [django.server:187] "GET /all_search/?category=&name=&category=LostItems+object+%28F2022091600000060-1%29 HTTP/1.1" 200 214101
+[28Sep2022 01:30:10 INFO [django.server:187] "GET /all_search/?category=&name=&category=%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C%26%ED%98%84%EA%B8%88 HTTP/1.1" 200 214101
+[28Sep2022 01:30:27 ERROR [django.request:241] Internal Server Error: /all_search/
+Traceback (most recent call last):
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py", line 32, in all_index
+    return render(request, 'all_search/all_index.html', context)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\defaulttags.py", line 854, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '()' from 'item.category.distinct()'
+[28Sep2022 01:30:27 ERROR [django.server:187] "GET /all_search/?category=&name=&category=%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C%26%ED%98%84%EA%B8%88 HTTP/1.1" 500 268575
+[28Sep2022 01:30:42 INFO [django.server:80] - Broken pipe from ('127.0.0.1', 9483)
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /all_search/?category=&name=&category=LostItems+object+%28F2022091600000060-1%29 HTTP/1.1" 200 213964
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 01:30:42 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 01:32:20 INFO [django.server:187] "GET /all_search/?category=&name=&category= HTTP/1.1" 200 214101
+[28Sep2022 01:32:26 INFO [django.server:187] "GET /all_search/?category=&name=&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 214101
+[28Sep2022 01:32:31 INFO [django.server:187] "GET /all_search/?category=&name=&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 214101
+[28Sep2022 01:32:34 INFO [django.server:187] "GET /all_search/?category=&name=&category=%EC%8B%A0%EB%B6%84%EC%A6%9D%26%EC%B9%B4%EB%93%9C HTTP/1.1" 200 214101
+[28Sep2022 01:33:05 INFO [django.server:187] "GET /all_search/?category=&name=&category=%ED%9C%B4%EB%8C%80%ED%8F%B0 HTTP/1.1" 200 214101
+[28Sep2022 01:36:55 INFO [django.server:187] "GET /all_search/?category=&name=&category=%ED%9C%B4%EB%8C%80%ED%8F%B0 HTTP/1.1" 200 213578
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /all_search/?category=&name=&category=%ED%9C%B4%EB%8C%80%ED%8F%B0 HTTP/1.1" 200 213717
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 01:45:47 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 01:45:51 INFO [django.server:187] "GET /all_search/?name=&category=%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C%26%ED%98%84%EA%B8%88 HTTP/1.1" 200 213717
+[28Sep2022 01:45:57 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:46:02 INFO [django.server:187] "GET /all_search/?name=&category=%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C%26%ED%98%84%EA%B8%88 HTTP/1.1" 200 213717
+[28Sep2022 01:46:02 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:46:45 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213717
+[28Sep2022 01:46:45 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:46:54 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213717
+[28Sep2022 01:46:55 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:46:56 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213717
+[28Sep2022 01:46:57 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:46:58 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213717
+[28Sep2022 01:46:58 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:48:10 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213717
+[28Sep2022 01:48:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:48:11 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213717
+[28Sep2022 01:48:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:49:35 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:50:01 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213717
+[28Sep2022 01:50:02 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:50:28 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213717
+[28Sep2022 01:50:28 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213717
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 01:55:09 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 01:55:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 01:58:18 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213936
+[28Sep2022 01:58:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:06:49 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 02:06:49 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 02:06:49 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 02:06:49 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 213968
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 02:08:52 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:10:47 INFO [django.server:187] "GET /all_search/?name=&category=Choose... HTTP/1.1" 200 214028
+[28Sep2022 02:10:47 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:10:52 INFO [django.server:187] "GET /all_search/all_detail/F2022091600000014-1/ HTTP/1.1" 200 17108
+[28Sep2022 02:10:52 INFO [django.server:187] "GET /static/acha_money/css/post_detail.css HTTP/1.1" 304 0
+[28Sep2022 02:10:52 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:10:56 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:11:04 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 214028
+[28Sep2022 02:11:04 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:19:38 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:19:41 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:21:29 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215033
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 02:21:34 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 02:21:35 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:21:41 WARNING [django.request:241] Not Found: /all_search/all_search/
+[28Sep2022 02:21:41 WARNING [django.server:187] "POST /all_search/all_search/ HTTP/1.1" 404 3456
+[28Sep2022 02:21:59 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:22:41 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215034
+[28Sep2022 02:22:42 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:22:47 INFO [django.server:187] "POST /all_search/ HTTP/1.1" 200 16
+[28Sep2022 02:27:58 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:28:00 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:28:10 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215034
+[28Sep2022 02:28:11 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:28:17 ERROR [django.request:241] Internal Server Error: /all_search/
+Traceback (most recent call last):
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py", line 55, in all_index
+    return JsonResponse(search_result)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\http\response.py", line 691, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\core\serializers\json.py", line 106, in default
+    return super().default(o)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+[28Sep2022 02:28:17 ERROR [django.server:187] "POST /all_search/ HTTP/1.1" 500 99197
+[28Sep2022 02:28:27 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:28:29 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:28:36 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215034
+[28Sep2022 02:28:37 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:28:40 INFO [django.server:187] "POST /all_search/ HTTP/1.1" 200 16
+[28Sep2022 02:32:03 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:32:06 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:32:08 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215034
+[28Sep2022 02:32:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:32:14 INFO [django.server:187] "POST /all_search/ HTTP/1.1" 200 16
+[28Sep2022 02:32:47 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:32:48 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:32:50 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215034
+[28Sep2022 02:32:51 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:32:55 INFO [django.server:187] "POST /all_search/ HTTP/1.1" 200 16
+[28Sep2022 02:33:36 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:33:38 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215034
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 02:33:40 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:33:47 INFO [django.server:187] "POST /all_search/ HTTP/1.1" 200 31
+[28Sep2022 02:33:57 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:33:58 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:34:07 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215034
+[28Sep2022 02:34:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:34:21 INFO [django.server:187] "POST /all_search/ HTTP/1.1" 200 13899
+[28Sep2022 02:34:55 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:34:57 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:34:59 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215034
+[28Sep2022 02:35:00 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:35:09 INFO [django.server:187] "POST /all_search/ HTTP/1.1" 200 13915
+[28Sep2022 02:35:46 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:35:48 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:35:56 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215034
+[28Sep2022 02:35:56 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:36:04 ERROR [django.request:241] Internal Server Error: /all_search/
+Traceback (most recent call last):
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py", line 63, in all_index
+    return JsonResponse(search_result)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\http\response.py", line 691, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\admin\workspaces\djangoProject\venv\lib\site-packages\django\core\serializers\json.py", line 106, in default
+    return super().default(o)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Page is not JSON serializable
+[28Sep2022 02:36:04 ERROR [django.server:187] "POST /all_search/ HTTP/1.1" 500 106899
+[28Sep2022 02:42:31 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:42:33 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:44:55 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:44:56 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:48:10 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:48:11 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 19831
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 02:52:15 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 02:52:16 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:52:46 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:52:47 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:53:08 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 02:53:10 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 02:53:12 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215149
+[28Sep2022 02:53:12 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 02:53:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:53:25 INFO [django.server:187] "GET /all_search?name=%EA%B9%80*%EC%A7%84&category=%EC%8B%A0%EB%B6%84%EC%A6%9D&%EC%B9%B4%EB%93%9C/ HTTP/1.1" 301 0
+[28Sep2022 02:53:25 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%8B%A0%EB%B6%84%EC%A6%9D&%EC%B9%B4%EB%93%9C/ HTTP/1.1" 200 19831
+[28Sep2022 02:53:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:53:41 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%8B%A0%EB%B6%84%EC%A6%9D&%EC%B9%B4%EB%93%9C/ HTTP/1.1" 200 19831
+[28Sep2022 02:53:42 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:53:47 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%8B%A0%EB%B6%84%EC%A6%9D&%EC%B9%B4%EB%93%9C/ HTTP/1.1" 200 19831
+[28Sep2022 02:53:47 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:53:49 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%8B%A0%EB%B6%84%EC%A6%9D&%EC%B9%B4%EB%93%9C/ HTTP/1.1" 200 19831
+[28Sep2022 02:53:49 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:53:56 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215149
+[28Sep2022 02:53:56 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:54:01 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:54:10 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%8B%A0%EB%B6%84%EC%A6%9D&%EC%B9%B4%EB%93%9C/ HTTP/1.1" 200 19831
+[28Sep2022 02:54:11 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:55:14 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:55:15 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:55:22 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 28030
+[28Sep2022 02:55:23 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:55:27 INFO [django.server:187] "GET /all_search/?page=4 HTTP/1.1" 200 215543
+[28Sep2022 02:55:28 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:55:35 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%A7%80%EA%B0%91/ HTTP/1.1" 200 19832
+[28Sep2022 02:55:35 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:56:45 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%A7%80%EA%B0%91/ HTTP/1.1" 200 19819
+[28Sep2022 02:56:45 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:56:54 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215137
+[28Sep2022 02:56:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:56:59 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 28017
+[28Sep2022 02:56:59 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:57:08 INFO [django.server:187] "GET /all_search/all_detail/V0000412H09030012-1/ HTTP/1.1" 200 17091
+[28Sep2022 02:57:08 INFO [django.server:187] "GET /static/acha_money/css/post_detail.css HTTP/1.1" 304 0
+[28Sep2022 02:57:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:57:11 INFO [django.server:187] "GET /all_search/all_detail/V0000412H09030012-1/ HTTP/1.1" 200 17091
+[28Sep2022 02:57:11 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:57:19 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 215137
+[28Sep2022 02:57:19 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:57:35 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%97%B4&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 23538
+[28Sep2022 02:57:35 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:57:40 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:58:14 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%97%B4&category=%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C&%ED%98%84%EA%B8%88 HTTP/1.1" 200 18714
+[28Sep2022 02:58:15 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:59:20 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%97%B4&category=%EC%9C%A0%EA%B0%80%EC%A6%9D%EA%B6%8C&%ED%98%84%EA%B8%88 HTTP/1.1" 200 18714
+[28Sep2022 02:59:20 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 02:59:24 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 214032
+[28Sep2022 02:59:24 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:00:57 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213422
+[28Sep2022 03:00:58 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:01:01 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 20938
+[28Sep2022 03:01:01 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:01:10 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%ED%9C%B4%EB%8C%80%ED%8F%B0 HTTP/1.1" 200 21662
+[28Sep2022 03:01:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:05:17 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 03:05:18 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 03:05:49 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 03:05:50 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 03:06:00 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 03:06:01 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 03:06:03 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%ED%9C%B4%EB%8C%80%ED%8F%B0 HTTP/1.1" 200 22346
+[28Sep2022 03:06:04 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:06:12 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%ED%9C%B4%EB%8C%80%ED%8F%B0 HTTP/1.1" 200 22346
+[28Sep2022 03:06:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:06:17 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 214106
+[28Sep2022 03:06:17 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:06:29 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80%EC%84%B8%EC%A7%84&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 21622
+[28Sep2022 03:06:30 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:06:39 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 03:06:40 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 03:06:46 INFO [django.server:187] "GET / HTTP/1.1" 200 23726
+[28Sep2022 03:06:46 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 304 0
+[28Sep2022 03:06:47 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:06:50 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 214106
+[28Sep2022 03:06:50 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:07:00 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%A3%BC%ED%95%99&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 23647
+[28Sep2022 03:07:01 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:07:05 INFO [django.server:187] "GET /all_search/all_detail/F2022051200003913-1/ HTTP/1.1" 200 17095
+[28Sep2022 03:07:05 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:07:14 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:07:24 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 214250
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 03:09:25 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 03:09:33 INFO [django.server:187] "GET /all_search/?page=3 HTTP/1.1" 200 214499
+[28Sep2022 03:09:33 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:10:19 INFO [django.server:187] "GET /all_search/?page=4 HTTP/1.1" 200 214629
+[28Sep2022 03:10:19 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:10:27 INFO [django.server:187] "GET /all_search/?page=5 HTTP/1.1" 200 214705
+[28Sep2022 03:10:27 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:10:44 INFO [django.server:187] "GET /all_search/?page=6 HTTP/1.1" 200 214680
+[28Sep2022 03:10:44 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:11:00 INFO [django.server:187] "GET /all_search/?page=7 HTTP/1.1" 200 214634
+[28Sep2022 03:11:00 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:11:10 INFO [django.server:187] "GET /all_search/?page=8 HTTP/1.1" 200 214662
+[28Sep2022 03:11:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:11:21 INFO [django.server:187] "GET /all_search/?page=9 HTTP/1.1" 200 214641
+[28Sep2022 03:11:21 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:11:39 INFO [django.server:187] "GET /all_search/?page=10 HTTP/1.1" 200 214678
+[28Sep2022 03:11:39 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:11:56 INFO [django.server:187] "GET /all_search/?page=11 HTTP/1.1" 200 214648
+[28Sep2022 03:11:57 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:12:05 INFO [django.server:187] "GET /all_search/?page=12 HTTP/1.1" 200 214595
+[28Sep2022 03:12:05 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:12:12 INFO [django.server:187] "GET /all_search/?page=13 HTTP/1.1" 200 214703
+[28Sep2022 03:12:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:12:19 INFO [django.server:187] "GET /all_search/?page=14 HTTP/1.1" 200 214732
+[28Sep2022 03:12:19 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:12:32 INFO [django.server:187] "GET /all_search/?page=15 HTTP/1.1" 200 214808
+[28Sep2022 03:12:32 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:12:39 INFO [django.server:187] "GET /all_search/?page=16 HTTP/1.1" 200 214740
+[28Sep2022 03:12:39 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:12:45 INFO [django.server:187] "GET /all_search/?page=17 HTTP/1.1" 200 214749
+[28Sep2022 03:12:45 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:12:50 INFO [django.server:187] "GET /all_search/?page=18 HTTP/1.1" 200 214730
+[28Sep2022 03:12:51 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:13:14 INFO [django.server:187] "GET /all_search/?page=19 HTTP/1.1" 200 214707
+[28Sep2022 03:13:14 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:13:26 INFO [django.server:187] "GET /all_search/?page=20 HTTP/1.1" 200 214816
+[28Sep2022 03:13:26 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:13:31 INFO [django.server:187] "GET /all_search/?page=21 HTTP/1.1" 200 214780
+[28Sep2022 03:13:32 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:13:36 INFO [django.server:187] "GET /all_search/?page=22 HTTP/1.1" 200 214781
+[28Sep2022 03:13:37 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:13:42 INFO [django.server:187] "GET /all_search/?page=23 HTTP/1.1" 200 214661
+[28Sep2022 03:13:42 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:13:47 INFO [django.server:187] "GET /all_search/?page=24 HTTP/1.1" 200 214784
+[28Sep2022 03:13:47 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:13:54 INFO [django.server:187] "GET /all_search/?page=25 HTTP/1.1" 200 214783
+[28Sep2022 03:13:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:13:58 INFO [django.server:187] "GET /all_search/?page=26 HTTP/1.1" 200 214651
+[28Sep2022 03:13:59 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:14:02 INFO [django.server:187] "GET /all_search/?page=27 HTTP/1.1" 200 214677
+[28Sep2022 03:14:02 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:14:06 INFO [django.server:187] "GET /all_search/?page=28 HTTP/1.1" 200 214700
+[28Sep2022 03:14:07 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:14:11 INFO [django.server:187] "GET /all_search/?page=29 HTTP/1.1" 200 214738
+[28Sep2022 03:14:11 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:14:17 INFO [django.server:187] "GET /all_search/?page=30 HTTP/1.1" 200 214800
+[28Sep2022 03:14:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:14:25 INFO [django.server:187] "GET /all_search/?page=31 HTTP/1.1" 200 214686
+[28Sep2022 03:14:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:14:38 INFO [django.server:187] "GET /all_search/?page=32 HTTP/1.1" 200 214763
+[28Sep2022 03:14:38 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:14:45 INFO [django.server:187] "GET /all_search/?page=33 HTTP/1.1" 200 214752
+[28Sep2022 03:14:45 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:14:50 INFO [django.server:187] "GET /all_search/?page=34 HTTP/1.1" 200 214749
+[28Sep2022 03:14:51 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:14:59 INFO [django.server:187] "GET /all_search/?page=35 HTTP/1.1" 200 214741
+[28Sep2022 03:15:00 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:15:04 INFO [django.server:187] "GET /all_search/?page=36 HTTP/1.1" 200 214676
+[28Sep2022 03:15:05 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:15:09 INFO [django.server:187] "GET /all_search/?page=37 HTTP/1.1" 200 214722
+[28Sep2022 03:15:09 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:15:15 INFO [django.server:187] "GET /all_search/?page=38 HTTP/1.1" 200 214766
+[28Sep2022 03:15:15 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:15:18 INFO [django.server:187] "GET /all_search/?page=39 HTTP/1.1" 200 214701
+[28Sep2022 03:15:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:15:21 INFO [django.server:187] "GET /all_search/?page=40 HTTP/1.1" 200 214746
+[28Sep2022 03:15:21 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:15:25 INFO [django.server:187] "GET /all_search/?page=41 HTTP/1.1" 200 214752
+[28Sep2022 03:15:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:15:28 INFO [django.server:187] "GET /all_search/?page=42 HTTP/1.1" 200 214682
+[28Sep2022 03:15:28 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:15:38 INFO [django.server:187] "GET /all_search/?page=43 HTTP/1.1" 200 214778
+[28Sep2022 03:15:38 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:15:41 INFO [django.server:187] "GET /all_search/?page=44 HTTP/1.1" 200 214623
+[28Sep2022 03:15:41 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:16:13 INFO [django.server:187] "GET /all_search/?page=45 HTTP/1.1" 200 214683
+[28Sep2022 03:16:13 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:16:16 INFO [django.server:187] "GET /all_search/?page=46 HTTP/1.1" 200 214678
+[28Sep2022 03:16:16 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:16:18 INFO [django.server:187] "GET /all_search/?page=47 HTTP/1.1" 200 214737
+[28Sep2022 03:16:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:16:20 INFO [django.server:187] "GET /all_search/?page=48 HTTP/1.1" 200 214663
+[28Sep2022 03:16:20 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:13 INFO [django.server:187] "GET /all_search/?page=49 HTTP/1.1" 200 214659
+[28Sep2022 03:18:13 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:18 INFO [django.server:187] "GET /all_search/?page=50 HTTP/1.1" 200 214744
+[28Sep2022 03:18:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:24 INFO [django.server:187] "GET /all_search/?page=51 HTTP/1.1" 200 214808
+[28Sep2022 03:18:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:29 INFO [django.server:187] "GET /all_search/?page=52 HTTP/1.1" 200 214796
+[28Sep2022 03:18:29 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:33 INFO [django.server:187] "GET /all_search/?page=53 HTTP/1.1" 200 214595
+[28Sep2022 03:18:33 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:37 INFO [django.server:187] "GET /all_search/?page=54 HTTP/1.1" 200 214745
+[28Sep2022 03:18:37 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:40 INFO [django.server:187] "GET /all_search/?page=55 HTTP/1.1" 200 214788
+[28Sep2022 03:18:40 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:50 INFO [django.server:187] "GET /all_search/?page=56 HTTP/1.1" 200 214792
+[28Sep2022 03:18:50 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:54 INFO [django.server:187] "GET /all_search/?page=57 HTTP/1.1" 200 214687
+[28Sep2022 03:18:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:18:58 INFO [django.server:187] "GET /all_search/?page=58 HTTP/1.1" 200 214724
+[28Sep2022 03:18:58 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:19:04 INFO [django.server:187] "GET /all_search/?page=59 HTTP/1.1" 200 214690
+[28Sep2022 03:19:04 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:19:08 INFO [django.server:187] "GET /all_search/?page=60 HTTP/1.1" 200 214724
+[28Sep2022 03:19:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:19:16 INFO [django.server:187] "GET /all_search/?page=61 HTTP/1.1" 200 214721
+[28Sep2022 03:19:16 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:19:20 INFO [django.server:187] "GET /all_search/?page=62 HTTP/1.1" 200 214700
+[28Sep2022 03:19:20 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:19:25 INFO [django.server:187] "GET /all_search/?page=64 HTTP/1.1" 200 214711
+[28Sep2022 03:19:25 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:19:30 INFO [django.server:187] "GET /all_search/?page=66 HTTP/1.1" 200 214789
+[28Sep2022 03:19:30 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:19:41 INFO [django.server:187] "GET /all_search/?page=67 HTTP/1.1" 200 214767
+[28Sep2022 03:19:41 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:19:46 INFO [django.server:187] "GET /all_search/?page=68 HTTP/1.1" 200 214760
+[28Sep2022 03:19:47 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:21:08 INFO [django.server:187] "GET /all_search/?page=68 HTTP/1.1" 200 214485
+[28Sep2022 03:21:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:21:13 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%A7%84&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26919
+[28Sep2022 03:21:13 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:21:19 INFO [django.server:187] "GET /all_search/?name=%EA%B9%80*%EC%97%B4&category=%EC%A0%84%EC%9E%90%EA%B8%B0%EA%B8%B0 HTTP/1.1" 200 19321
+[28Sep2022 03:21:20 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:21:29 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%9E%90%EB%8F%99%EC%B0%A8 HTTP/1.1" 200 19321
+[28Sep2022 03:21:29 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:21:48 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%9C%EC%A7%84&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26832
+[28Sep2022 03:21:48 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:21:51 INFO [django.server:187] "GET /all_search/?page=5 HTTP/1.1" 200 214444
+[28Sep2022 03:21:51 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:21:54 INFO [django.server:187] "GET /all_search/?page=7195 HTTP/1.1" 200 208252
+[28Sep2022 03:21:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:21:56 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:21:58 INFO [django.server:187] "GET /all_search/?page=6 HTTP/1.1" 200 214419
+[28Sep2022 03:21:59 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:22:00 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:22:10 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%9C%EC%A7%84&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26832
+[28Sep2022 03:22:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:22:14 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 214029
+[28Sep2022 03:22:14 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:22:17 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:22:26 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 214029
+[28Sep2022 03:22:26 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:22:28 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:23:03 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%9C%EC%A7%84&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26832
+[28Sep2022 03:23:04 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:23:08 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 214029
+[28Sep2022 03:23:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:23:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:23:32 INFO [django.server:187] "GET /all_search/?page=5 HTTP/1.1" 200 214444
+[28Sep2022 03:23:32 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 03:23:38 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:03:23 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 09:03:29 INFO [django.server:187] "GET / HTTP/1.1" 200 23726
+[28Sep2022 09:03:29 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 09:03:29 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 09:03:29 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 09:03:29 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 09:03:30 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 09:03:30 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 09:03:30 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 09:03:30 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 09:03:30 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 09:03:30 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 09:03:30 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 09:03:30 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[28Sep2022 09:03:30 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 304 0
+[28Sep2022 09:03:31 WARNING [django.request:241] Not Found: /favicon.ico
+[28Sep2022 09:03:31 WARNING [django.server:187] "GET /favicon.ico HTTP/1.1" 404 2778
+[28Sep2022 09:03:57 INFO [django.server:187] "GET /all_search HTTP/1.1" 301 0
+[28Sep2022 09:03:57 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213885
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1275
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[28Sep2022 09:03:58 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213885
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1275
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[28Sep2022 09:04:31 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[28Sep2022 09:04:39 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213885
+[28Sep2022 09:05:14 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213885
+[28Sep2022 09:05:25 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 20001
+[28Sep2022 09:05:54 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 20001
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1275
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[28Sep2022 09:05:55 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[28Sep2022 09:06:32 INFO [django.server:187] "GET /all_search/all_detail/F2022070100002371-1/ HTTP/1.1" 200 17110
+[28Sep2022 09:06:32 INFO [django.server:187] "GET /static/acha_money/css/post_detail.css HTTP/1.1" 200 927
+[28Sep2022 09:06:36 INFO [django.server:187] "GET / HTTP/1.1" 200 23726
+[28Sep2022 09:06:36 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[28Sep2022 09:06:38 WARNING [django.request:241] Not Found: /base.html
+[28Sep2022 09:06:38 WARNING [django.server:187] "GET /base.html HTTP/1.1" 404 2772
+[28Sep2022 09:06:47 INFO [django.server:187] "GET /all_search HTTP/1.1" 301 0
+[28Sep2022 09:06:47 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213885
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213885
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1275
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[28Sep2022 09:07:54 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213885
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1275
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[28Sep2022 09:09:28 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[28Sep2022 09:09:45 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 20001
+[28Sep2022 09:10:12 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213886
+[28Sep2022 09:10:13 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213886
+[28Sep2022 09:10:14 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213886
+[28Sep2022 09:10:17 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213886
+[28Sep2022 09:10:45 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213916
+[28Sep2022 09:10:47 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213916
+[28Sep2022 09:10:51 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 20032
+[28Sep2022 09:11:48 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 20032
+[28Sep2022 09:12:05 INFO [django.server:187] "GET /all_search/all_detail/F2022070100002371-1/ HTTP/1.1" 200 17110
+[28Sep2022 09:12:05 INFO [django.server:187] "GET /static/acha_money/css/post_detail.css HTTP/1.1" 200 927
+[28Sep2022 09:12:56 INFO [django.utils.autoreload:266] C:\Users\admin\workspaces\pythonProject1\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 09:12:58 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 09:17:49 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 20031
+[28Sep2022 09:17:50 INFO [django.server:187] "GET /all_search/all_detail/F2022070100002371-1/ HTTP/1.1" 200 17110
+[28Sep2022 09:18:03 INFO [django.server:187] "GET /all_search/all_detail/F2022070100002371-1/ HTTP/1.1" 200 17110
+[28Sep2022 09:18:41 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26912
+[28Sep2022 09:18:45 INFO [django.server:187] "GET /all_search/all_detail/F2022091400000610-1/ HTTP/1.1" 200 17108
+[28Sep2022 09:18:49 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 214059
+[28Sep2022 09:19:05 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26912
+[28Sep2022 09:19:08 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 214059
+[28Sep2022 09:19:22 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 20031
+[28Sep2022 09:19:24 INFO [django.server:187] "GET /all_search/all_detail/F2022070100002371-1/ HTTP/1.1" 200 17110
+[28Sep2022 09:21:58 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:22:21 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26912
+[28Sep2022 09:22:21 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:22:43 INFO [django.server:187] "GET / HTTP/1.1" 200 23725
+[28Sep2022 09:22:45 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[28Sep2022 09:22:49 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:22:52 INFO [django.server:187] "GET /fast_search HTTP/1.1" 301 0
+[28Sep2022 09:22:52 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17749
+[28Sep2022 09:22:52 INFO [django.server:187] "GET /static/bootstrap/img/icon_keyword.png HTTP/1.1" 200 14933
+[28Sep2022 09:22:52 INFO [django.server:187] "GET /static/bootstrap/img/icon_image.png HTTP/1.1" 200 14383
+[28Sep2022 09:22:52 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:22:53 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 19619
+[28Sep2022 09:22:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:23:21 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:23:30 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:22 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:26 INFO [django.server:187] "GET /all_search HTTP/1.1" 301 0
+[28Sep2022 09:25:27 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213915
+[28Sep2022 09:25:27 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:31 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 20031
+[28Sep2022 09:25:31 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:32 INFO [django.server:187] "GET /all_search/all_detail/F2022070100002371-1/ HTTP/1.1" 200 17110
+[28Sep2022 09:25:32 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:34 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:38 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 21450
+[28Sep2022 09:25:38 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:40 INFO [django.server:187] "GET /all_search/all_detail/V0001968H04110006-1/ HTTP/1.1" 200 17114
+[28Sep2022 09:25:40 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:43 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:53 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26912
+[28Sep2022 09:25:53 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:25:59 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 21450
+[28Sep2022 09:26:00 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:26:03 INFO [django.server:187] "GET /all_search/all_detail/V0001968H04110006-1/ HTTP/1.1" 200 17114
+[28Sep2022 09:26:03 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:26:06 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:28:50 INFO [django.server:187] "GET /acha_money HTTP/1.1" 301 0
+[28Sep2022 09:28:51 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17371
+[28Sep2022 09:28:51 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:29:40 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17332
+[28Sep2022 09:29:41 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:29:43 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17332
+[28Sep2022 09:29:43 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:30:01 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19102
+[28Sep2022 09:30:01 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 09:30:01 WARNING [django.request:241] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:30:01 WARNING [django.server:187] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4517
+[28Sep2022 09:30:01 WARNING [django.server:187] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4565
+[28Sep2022 09:30:01 WARNING [django.request:241] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 09:30:01 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:30:01 WARNING [django.server:187] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4496
+[28Sep2022 09:30:01 WARNING [django.server:187] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4559
+[28Sep2022 09:30:01 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:30:28 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:30:38 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19102
+[28Sep2022 09:30:39 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:30:40 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:35:42 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 16665
+[28Sep2022 09:35:43 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:35:44 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 09:35:44 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 09:35:44 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 09:35:44 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 09:35:44 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 09:35:44 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 09:35:44 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:35:44 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 09:35:44 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 09:35:44 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:35:44 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 09:35:44 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 09:35:44 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 09:35:44 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:35:44 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 09:35:44 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 09:35:45 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 09:35:45 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 09:35:47 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 16665
+[28Sep2022 09:35:48 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:37:10 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17332
+[28Sep2022 09:37:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:37:53 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 09:37:53 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 09:37:53 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 09:37:53 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 09:37:53 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 09:37:54 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 09:37:54 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 09:37:54 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:37:54 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 09:37:54 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:37:54 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 09:37:54 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 09:37:54 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 09:37:54 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 09:37:54 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 09:37:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:37:54 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 09:37:54 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 09:38:00 INFO [django.server:187] "GET / HTTP/1.1" 200 23725
+[28Sep2022 09:38:00 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:02 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17749
+[28Sep2022 09:38:02 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:06 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19102
+[28Sep2022 09:38:06 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 09:38:06 WARNING [django.server:187] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4517
+[28Sep2022 09:38:06 WARNING [django.request:241] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:38:06 WARNING [django.server:187] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4565
+[28Sep2022 09:38:06 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:38:06 WARNING [django.server:187] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4559
+[28Sep2022 09:38:06 WARNING [django.request:241] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 09:38:06 WARNING [django.server:187] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4496
+[28Sep2022 09:38:06 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:08 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 09:38:08 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 09:38:08 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 09:38:08 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 09:38:08 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 09:38:08 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 09:38:08 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 09:38:08 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:38:08 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:38:08 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 09:38:08 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 09:38:08 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 09:38:08 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 09:38:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:08 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 09:38:08 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 09:38:08 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 09:38:08 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 09:38:12 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19102
+[28Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 09:38:12 WARNING [django.server:187] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4517
+[28Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:38:12 WARNING [django.server:187] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4565
+[28Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:38:12 WARNING [django.server:187] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4559
+[28Sep2022 09:38:12 WARNING [django.request:241] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 09:38:12 WARNING [django.server:187] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4496
+[28Sep2022 09:38:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:14 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17749
+[28Sep2022 09:38:15 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:17 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213915
+[28Sep2022 09:38:18 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:19 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17332
+[28Sep2022 09:38:19 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:23 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19102
+[28Sep2022 09:38:23 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 09:38:23 WARNING [django.server:187] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4517
+[28Sep2022 09:38:23 WARNING [django.request:241] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:38:23 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:38:23 WARNING [django.server:187] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4565
+[28Sep2022 09:38:23 WARNING [django.server:187] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4559
+[28Sep2022 09:38:23 WARNING [django.request:241] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 09:38:23 WARNING [django.server:187] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4496
+[28Sep2022 09:38:23 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:25 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 09:38:26 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 09:38:26 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 09:38:26 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 09:38:26 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 09:38:26 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 09:38:26 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 09:38:26 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:38:26 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:38:26 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 09:38:26 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 09:38:26 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 09:38:26 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 09:38:26 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:26 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 09:38:26 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 09:38:26 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 09:38:26 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 09:38:31 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19102
+[28Sep2022 09:38:31 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 09:38:31 WARNING [django.server:187] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4517
+[28Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:38:32 WARNING [django.server:187] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4565
+[28Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:38:32 WARNING [django.request:241] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 09:38:32 WARNING [django.server:187] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4559
+[28Sep2022 09:38:32 WARNING [django.server:187] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4496
+[28Sep2022 09:38:32 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:34 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19102
+[28Sep2022 09:38:34 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 09:38:34 WARNING [django.request:241] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 09:38:34 WARNING [django.server:187] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4517
+[28Sep2022 09:38:34 WARNING [django.server:187] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4565
+[28Sep2022 09:38:34 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 09:38:34 WARNING [django.request:241] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 09:38:34 WARNING [django.server:187] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4559
+[28Sep2022 09:38:34 WARNING [django.server:187] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4496
+[28Sep2022 09:38:34 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 09:38:36 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213915
+[28Sep2022 09:38:37 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:44:00 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 10:44:03 INFO [django.server:187] "GET / HTTP/1.1" 200 23725
+[28Sep2022 10:44:04 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 304 0
+[28Sep2022 10:44:08 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:44:11 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17332
+[28Sep2022 10:44:11 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:44:12 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 10:44:12 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 10:44:12 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 10:44:12 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 10:44:12 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 10:44:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 10:44:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 10:44:12 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 10:44:12 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 10:44:12 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 10:44:12 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 10:44:12 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 10:44:12 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 10:44:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:44:12 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 10:44:12 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 10:44:12 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 10:44:12 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 10:44:26 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 10:44:26 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 10:44:26 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 10:44:26 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 10:44:26 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:44:33 INFO [django.server:187] "POST /member/login/ HTTP/1.1" 200 20551
+[28Sep2022 10:44:33 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 10:44:33 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 10:44:33 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 10:44:33 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 10:44:33 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 10:44:33 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 10:44:33 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 10:44:33 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 10:44:33 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 10:44:33 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 10:44:33 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 10:44:33 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 10:44:33 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:44:33 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 10:44:33 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 10:44:33 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 10:44:33 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 10:44:38 INFO [django.server:187] "POST /member/login/ HTTP/1.1" 302 0
+[28Sep2022 10:44:39 INFO [django.server:187] "GET / HTTP/1.1" 200 23674
+[28Sep2022 10:44:39 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:44:44 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 19530
+[28Sep2022 10:44:44 INFO [django.server:187] "GET /static/acha_money/img/pen_white.png HTTP/1.1" 200 6968
+[28Sep2022 10:44:44 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:44:44 INFO [django.server:187] "GET /media/acha_money/tshirt.png HTTP/1.1" 200 233096
+[28Sep2022 10:44:44 WARNING [django.request:241] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 10:44:44 WARNING [django.server:187] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3160
+[28Sep2022 10:44:44 INFO [django.server:187] "GET /media/acha_money/wallet.jpg HTTP/1.1" 200 131964
+[28Sep2022 10:44:49 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213864
+[28Sep2022 10:44:50 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:44:54 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 19980
+[28Sep2022 10:44:54 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:00 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 21399
+[28Sep2022 10:45:00 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:06 INFO [django.server:187] "GET /all_search/?name=%EC%B5%9C%EC%88%98%EB%9E%80&category=%EC%A0%84%EC%9E%90%EA%B8%B0%EA%B8%B0 HTTP/1.1" 200 19300
+[28Sep2022 10:45:06 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:15 INFO [django.server:187] "GET / HTTP/1.1" 200 23674
+[28Sep2022 10:45:16 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:18 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213864
+[28Sep2022 10:45:19 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:20 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17698
+[28Sep2022 10:45:20 INFO [django.server:187] "GET /static/bootstrap/img/icon_image.png HTTP/1.1" 304 0
+[28Sep2022 10:45:20 INFO [django.server:187] "GET /static/bootstrap/img/icon_keyword.png HTTP/1.1" 304 0
+[28Sep2022 10:45:20 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:24 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 19568
+[28Sep2022 10:45:24 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:37 INFO [django.server:187] "GET /fast_search/keyword/key_result/?insert_category=%EC%98%B7&insert_color=%EB%85%B8%EB%9E%91&insert_date=2022-09-08 HTTP/1.1" 200 16810
+[28Sep2022 10:45:37 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:40 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:49 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19463
+[28Sep2022 10:45:49 INFO [django.server:187] "GET /static/bootstrap/img/help.png HTTP/1.1" 200 17056
+[28Sep2022 10:45:49 INFO [django.server:187] "GET /static/bootstrap/img/give.png HTTP/1.1" 200 18796
+[28Sep2022 10:45:49 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:50 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 10:45:50 WARNING [django.server:187] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4517
+[28Sep2022 10:45:50 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 10:45:50 WARNING [django.server:187] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4559
+[28Sep2022 10:45:50 WARNING [django.request:241] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 10:45:50 WARNING [django.server:187] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4565
+[28Sep2022 10:45:50 WARNING [django.request:241] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 10:45:50 WARNING [django.server:187] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4496
+[28Sep2022 10:45:52 INFO [django.server:187] "GET /member/logout/ HTTP/1.1" 302 0
+[28Sep2022 10:45:52 INFO [django.server:187] "GET / HTTP/1.1" 200 23725
+[28Sep2022 10:45:52 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:56 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 10:45:56 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 10:45:56 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 10:45:56 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 10:45:56 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 10:45:56 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 10:45:56 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 10:45:56 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 10:45:56 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 10:45:56 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 10:45:56 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 10:45:56 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 10:45:56 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 10:45:56 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:45:56 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 10:45:56 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 10:45:56 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 10:45:56 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 10:46:03 INFO [django.server:187] "POST /member/login/ HTTP/1.1" 302 0
+[28Sep2022 10:46:03 INFO [django.server:187] "GET / HTTP/1.1" 200 23674
+[28Sep2022 10:46:04 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:46:06 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19463
+[28Sep2022 10:46:06 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:46:07 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 10:46:07 WARNING [django.server:187] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4517
+[28Sep2022 10:46:07 WARNING [django.request:241] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 10:46:07 WARNING [django.server:187] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4565
+[28Sep2022 10:46:07 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 10:46:07 WARNING [django.server:187] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4559
+[28Sep2022 10:46:07 WARNING [django.request:241] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 10:46:07 WARNING [django.server:187] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4496
+[28Sep2022 10:46:08 INFO [django.server:187] "GET /member/request/ HTTP/1.1" 200 19068
+[28Sep2022 10:46:09 WARNING [django.request:241] Not Found: /member/request/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 10:46:09 WARNING [django.server:187] "GET /member/request/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4568
+[28Sep2022 10:46:09 WARNING [django.request:241] Not Found: /member/request/vendor/jquery/jquery.min.js
+[28Sep2022 10:46:09 WARNING [django.server:187] "GET /member/request/vendor/jquery/jquery.min.js HTTP/1.1" 404 4520
+[28Sep2022 10:46:09 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:46:09 WARNING [django.request:241] Not Found: /member/request/js/sb-admin-2.min.js
+[28Sep2022 10:46:09 WARNING [django.server:187] "GET /member/request/js/sb-admin-2.min.js HTTP/1.1" 404 4499
+[28Sep2022 10:46:09 WARNING [django.request:241] Not Found: /member/request/vendor/datatables/dataTables.bootstrap4.min.js
+[28Sep2022 10:46:09 WARNING [django.server:187] "GET /member/request/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 404 4577
+[28Sep2022 10:46:09 WARNING [django.request:241] Not Found: /member/request/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 10:46:09 WARNING [django.server:187] "GET /member/request/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4562
+[28Sep2022 10:46:09 WARNING [django.request:241] Not Found: /member/request/vendor/datatables/jquery.dataTables.min.js
+[28Sep2022 10:46:09 WARNING [django.server:187] "GET /member/request/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 404 4565
+[28Sep2022 10:46:09 WARNING [django.request:241] Not Found: /member/request/js/demo/datatables-demo.js
+[28Sep2022 10:46:09 WARNING [django.server:187] "GET /member/request/js/demo/datatables-demo.js HTTP/1.1" 404 4517
+[28Sep2022 10:46:11 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19463
+[28Sep2022 10:46:11 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:46:12 INFO [django.server:187] "GET /member/implement HTTP/1.1" 301 0
+[28Sep2022 10:46:13 INFO [django.server:187] "GET /member/implement/ HTTP/1.1" 200 19061
+[28Sep2022 10:46:13 WARNING [django.request:241] Not Found: /member/implement/vendor/jquery/jquery.min.js
+[28Sep2022 10:46:13 WARNING [django.server:187] "GET /member/implement/vendor/jquery/jquery.min.js HTTP/1.1" 404 4526
+[28Sep2022 10:46:13 WARNING [django.request:241] Not Found: /member/implement/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 10:46:13 WARNING [django.server:187] "GET /member/implement/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4574
+[28Sep2022 10:46:13 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:46:13 WARNING [django.request:241] Not Found: /member/implement/js/sb-admin-2.min.js
+[28Sep2022 10:46:13 WARNING [django.server:187] "GET /member/implement/js/sb-admin-2.min.js HTTP/1.1" 404 4505
+[28Sep2022 10:46:13 WARNING [django.request:241] Not Found: /member/implement/vendor/datatables/dataTables.bootstrap4.min.js
+[28Sep2022 10:46:13 WARNING [django.server:187] "GET /member/implement/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 404 4583
+[28Sep2022 10:46:14 WARNING [django.request:241] Not Found: /member/implement/vendor/datatables/jquery.dataTables.min.js
+[28Sep2022 10:46:14 WARNING [django.server:187] "GET /member/implement/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 404 4571
+[28Sep2022 10:46:14 WARNING [django.request:241] Not Found: /member/implement/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 10:46:14 WARNING [django.server:187] "GET /member/implement/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4568
+[28Sep2022 10:46:14 WARNING [django.request:241] Not Found: /member/implement/js/demo/datatables-demo.js
+[28Sep2022 10:46:14 WARNING [django.server:187] "GET /member/implement/js/demo/datatables-demo.js HTTP/1.1" 404 4523
+[28Sep2022 10:46:15 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19463
+[28Sep2022 10:46:15 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:46:17 INFO [django.server:187] "GET /member/logout/ HTTP/1.1" 302 0
+[28Sep2022 10:46:17 INFO [django.server:187] "GET / HTTP/1.1" 200 23725
+[28Sep2022 10:46:17 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:46:19 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 10:46:20 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 10:46:20 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 10:46:20 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 10:46:20 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 10:46:20 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 10:46:20 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 10:46:20 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 10:46:20 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 10:46:20 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 10:46:20 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 10:46:20 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 10:46:20 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 10:46:20 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:46:20 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 10:46:20 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 10:46:20 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 10:46:20 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 10:46:21 INFO [django.server:187] "GET /member/register HTTP/1.1" 301 0
+[28Sep2022 10:46:21 INFO [django.server:187] "GET /member/register/ HTTP/1.1" 200 23281
+[28Sep2022 10:46:21 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 11:02:03 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 11:02:03 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 11:02:06 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17332
+[28Sep2022 11:02:06 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
