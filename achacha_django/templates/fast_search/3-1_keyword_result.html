@@ -30,10 +30,14 @@
                 </div>
                 {% endif %}
                 <br>
-                <div class="title">{{ item.get_name }}</div>  
-                <span class="date_time">{{ item.get_at }}</span>
-                <br>
-                <span class="date_time">{{ item.center_place }}</span>
+                <div class="info">
+                    <div class="title">{{ item.get_name }}</div>  
+                    <span class="date_time">{{ item.get_at }}</span>
+                    <br>
+                    <span class="date_time">{{ item.center_place }}</span>
+                    <br>
+                    <span class="date_time">{{ item.name }}</span>
+                </div>
                 <hr>
             </div>
             {% endfor %} 

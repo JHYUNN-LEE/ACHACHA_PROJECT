@@ -37,8 +37,10 @@
           </a>
         </div>
         <br>
-        <div class="title">{{ item.get_name }}</div>
-        <span class="date_time">{{ item.get_at }}</span>
+        <div class="info">
+          <div class="title">{{ item.get_name }}</div>
+          <span class="date_time">{{ item.get_at }}</span>
+        </div>
         <hr>
       </div>
       {% endfor %}

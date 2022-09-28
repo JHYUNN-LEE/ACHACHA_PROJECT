@@ -1,4 +1,5 @@
 import time
+from unicodedata import category
 from urllib import request
 from django.shortcuts import render, redirect
 
@@ -24,7 +25,7 @@ from .models import LostItems, Images
 # pip install elasticsearch
 from elasticsearch import Elasticsearch
 
-# pip install hd
+# pip install hdfs
 from hdfs import InsecureClient
 from hdfs.client import Client
 from django.core.paginator import Paginator
@@ -32,7 +33,10 @@ from django.core.paginator import Paginator
 # logger import 
 from . import logger
 
-from itertools import chain
+
+# acha_money connect with Posts 
+from acha_money.models import Posts
+
 # Create your views here.
 
 # 1_fast_index.html
@@ -86,14 +90,12 @@ def uploaded_image(request):
     
     image_src_list = []
     detail_info = []
-  
-    
+
     for i in range(len(result)):
         image_id = result[i][:-4] # 관리번호 값 추출
     
         # mysql - image 테이블에서 src 찾아오기
         image = Images.objects.filter(images_id_fk1 = image_id).values('src')
-        # image2 = Images.objects.filter(images_id_fk1 = image_name)
         
         if image.exists():
             image_src = image[0]['src']
@@ -118,10 +120,8 @@ def uploaded_image(request):
                 media_route = download[-43:]
                 download_list.append(media_route)
 
-
     object_list = zip(download_list, detail_info)
     converted_list = list(object_list)
-    
     
     paginator = Paginator(converted_list, 6)
     page = request.GET.get('page', 1)
@@ -172,7 +172,7 @@ def find_category_to_es(request):
 
     es = Elasticsearch("http://54.64.90.112:9200")
 
-    res = es.search(index='sample_data', size=10000,
+    res = es.search(index='lost112_sample', size=10000,
                 query = {    
                     "bool": {
                         "must": [
@@ -226,21 +226,48 @@ def all_alarm(request):
 
 # 3-2_keyword_detail.html
 def keyword_detail(request, images_id_pk):
-    logger.trace_logger(request)# view 로그 추적 
-    
-    es = Elasticsearch("http://54.64.90.112:9200")
+    if request.method == "POST":
 
-    res = es.search(index='sample_data', size=1,
-                body = { "query":  
-                            {"match": {"images_id_pk" : images_id_pk}},
-                                        }
-            )
-       
-    hits = res['hits']['hits']
-    datas = trans_source(hits)
-    context = {'datas' : datas}
-    
-    return render(request, 'fast_search/3-2_keyword_detail.html', context)
+        users_id = str(request.user)
+        category = request.POST.get('category')
+        get_place = request.POST.get('get_place')
+
+        img_src = request.FILES.get('img_src')
+        
+        lost_items_id = images_id_pk
+        
+        print(users_id, category, get_place, img_src)
+
+        search_item = Posts.objects.create(users_id=users_id,
+                    category=category,
+                    get_place=get_place,
+                    img_src=img_src,
+                    lost_items_id = lost_items_id
+        ) 
+        
+        
+        context = {
+            'search_item': search_item
+        }
+
+        return redirect('/acha_money/post_search/{}'.format(search_item.posts_id_pk), context)
+
+    else:
+        logger.trace_logger(request)# view 로그 추적 
+        
+        es = Elasticsearch("http://54.64.90.112:9200")
+
+        res = es.search(index='lost112_sample', size=1,
+                    body = { "query":  
+                                {"match": {"images_id_pk" : images_id_pk}},
+                                            }
+                )
+        
+        hits = res['hits']['hits']
+        datas = trans_source(hits)
+        context = {'datas' : datas}
+        
+        return render(request, 'fast_search/3-2_keyword_detail.html', context)
 
 def alarmset(request):
     if request.method == "POST":

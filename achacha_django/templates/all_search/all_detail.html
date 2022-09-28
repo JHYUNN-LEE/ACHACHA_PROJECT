@@ -1,4 +1,4 @@
-{% extends 'base/base copy.html' %}
+{% extends 'base/base.html' %}
 {% block content %}
 {% load static %}
 <!DOCTYPE html>
@@ -19,11 +19,13 @@
         {% endif %}
     
         <div class="detail">
-            <div class="title">분실물명 : {{ item.get_name }}</div>  
-            <div class="author">분실일시 : {{ item.get_at }}</div>
-            <div class="author">카테고리 : {{ item.category }}</div>
-            <div class="author">분실장소 : {{ item.find_place }}</div>
-            <div class="author">수령위치 : {{ item.get_place }}</div>
+            <div class="title">분실물명 : {{ item.get_name }}</div>
+            <div class="date_time">분실시간 : {{ item.get_at }}</div>
+            <div class="category">카테고리 : {{ item.category }}</div>
+            <div class="lost_place">분실장소 : {{ item.find_place }}</div>
+            <div class="location">수령위치 : {{ item.get_place }}</div>
+            <div class="lost_name">분실자 : {{ item.name }}</div>
+
             <!-- <div class="get_place">분실물 상태 : {{ item.pickup_check }}</div> -->
         </div>
 </div>
