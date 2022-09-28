@@ -1218,3 +1218,390 @@ elasticsearch.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no
 [28Sep2022 22:01:27 INFO [django.server:161] "GET /media/acha_money/wallet.jpg HTTP/1.1" 304 0
 [28Sep2022 22:01:27 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
 [28Sep2022 22:01:27 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:35:20 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 22:36:14 INFO [django.utils.autoreload:637] Watching for file changes with StatReloader
+[28Sep2022 22:36:17 INFO [django.server:161] "GET / HTTP/1.1" 200 28478
+[28Sep2022 22:36:32 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219660
+[28Sep2022 22:36:32 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 22:36:34 INFO [django.server:161] "GET /all_search/all_detail/F2022091600000007-1/ HTTP/1.1" 200 17079
+[28Sep2022 22:36:34 INFO [django.server:161] "GET /static/acha_money/css/post_detail.css HTTP/1.1" 200 927
+[28Sep2022 22:37:03 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 21433
+[28Sep2022 22:37:04 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24953
+[28Sep2022 22:37:04 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 22:37:04 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 22:37:04 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 22:37:04 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[28Sep2022 22:37:04 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[28Sep2022 22:37:04 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 22:37:04 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 22:37:04 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 22:37:04 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[28Sep2022 22:37:04 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[28Sep2022 22:37:04 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[28Sep2022 22:37:04 INFO [django.server:75] - Broken pipe from ('127.0.0.1', 52394)
+
+[28Sep2022 22:37:04 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[28Sep2022 22:37:04 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 22:37:04 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[28Sep2022 22:37:09 INFO [django.server:161] "POST /member/login/ HTTP/1.1" 302 0
+[28Sep2022 22:37:10 INFO [django.server:161] "GET / HTTP/1.1" 200 28429
+[28Sep2022 22:37:13 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25258
+[28Sep2022 22:37:13 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 22:37:13 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:37:15 INFO [django.server:161] "GET /acha_money/detail/4/ HTTP/1.1" 200 20010
+[28Sep2022 22:37:29 INFO [django.server:161] "GET /acha_money/detail/2/ HTTP/1.1" 200 19982
+[28Sep2022 22:37:37 INFO [django.server:161] "GET /acha_money/detail/1/ HTTP/1.1" 200 20001
+[28Sep2022 22:37:39 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24904
+[28Sep2022 22:37:45 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25258
+[28Sep2022 22:37:45 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 22:37:45 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:37:47 INFO [django.server:161] "GET /acha_money/detail/1/ HTTP/1.1" 200 20001
+[28Sep2022 22:37:50 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24904
+[28Sep2022 22:39:24 INFO [django.utils.autoreload:637] Watching for file changes with StatReloader
+[28Sep2022 22:39:27 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24904
+[28Sep2022 22:39:28 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 22:39:28 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[28Sep2022 22:39:28 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 22:39:28 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[28Sep2022 22:39:28 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 22:39:28 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[28Sep2022 22:39:28 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 22:39:28 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[28Sep2022 22:39:28 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 22:39:28 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[28Sep2022 22:39:28 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 22:39:28 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[28Sep2022 22:39:29 INFO [django.server:161] "GET / HTTP/1.1" 200 28429
+[28Sep2022 22:39:33 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219611
+[28Sep2022 22:39:35 INFO [django.server:161] "GET /all_search/all_detail/F2022091600000007-1/ HTTP/1.1" 200 21943
+[28Sep2022 22:39:43 INFO [django.server:161] "GET /fast_search/ HTTP/1.1" 200 22453
+[28Sep2022 22:39:49 INFO [django.server:161] "GET /fast_search/keyword/ HTTP/1.1" 200 24415
+[28Sep2022 22:40:26 INFO [django.server:161] "GET / HTTP/1.1" 200 28429
+[28Sep2022 22:40:30 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219611
+[28Sep2022 22:41:36 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:42:35 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25258
+[28Sep2022 22:42:35 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 22:42:35 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:42:36 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 22:42:36 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:44:08 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219611
+[28Sep2022 22:44:09 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:44:13 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25258
+[28Sep2022 22:44:13 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:44:13 INFO [django.server:161] "GET /media/acha_money/cap_blue.png HTTP/1.1" 304 0
+[28Sep2022 22:44:13 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 22:44:13 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:48:58 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25258
+[28Sep2022 22:48:58 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 22:48:58 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:48:59 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 22:48:59 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:50:47 INFO [django.server:161] "GET /acha_money/post/ HTTP/1.1" 200 24978
+[28Sep2022 22:50:47 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:50:47 INFO [django.server:161] "GET /static/acha_money/css/post.css HTTP/1.1" 200 1549
+[28Sep2022 22:51:16 INFO [django.server:161] "POST /acha_money/post/ HTTP/1.1" 302 0
+[28Sep2022 22:51:17 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 26045
+[28Sep2022 22:51:17 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:51:17 INFO [django.server:161] "GET /media/acha_money/%EB%AF%B8%EB%8B%88%EC%96%B8%EC%A6%88%EC%97%90%EC%96%B4%ED%8C%9F.jpg HTTP/1.1" 200 48380
+[28Sep2022 22:51:17 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 22:51:17 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:51:45 INFO [django.server:161] "GET /acha_money/post/ HTTP/1.1" 200 24987
+[28Sep2022 22:51:45 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:52:30 INFO [django.server:161] "GET / HTTP/1.1" 200 28429
+[28Sep2022 22:52:30 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:52:33 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 26045
+[28Sep2022 22:52:34 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:52:34 INFO [django.server:161] "GET /media/acha_money/%EB%AF%B8%EB%8B%88%EC%96%B8%EC%A6%88%EC%97%90%EC%96%B4%ED%8C%9F.jpg HTTP/1.1" 304 0
+[28Sep2022 22:52:34 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 22:52:34 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:52:35 INFO [django.server:161] "GET /acha_money/post/ HTTP/1.1" 200 24987
+[28Sep2022 22:52:35 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:52:56 INFO [django.server:161] "POST /acha_money/post/ HTTP/1.1" 302 0
+[28Sep2022 22:52:56 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 26795
+[28Sep2022 22:52:57 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:52:57 INFO [django.server:161] "GET /media/acha_money/%EB%AF%B8%EB%8B%88%EC%96%B8%EC%A6%88%EC%97%90%EC%96%B4%ED%8C%9F.jpg HTTP/1.1" 304 0
+[28Sep2022 22:52:57 INFO [django.server:161] "GET /media/acha_money/%EC%A7%80%EA%B0%91.jpg HTTP/1.1" 200 131964
+[28Sep2022 22:52:57 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 22:52:57 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:53:38 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 26795
+[28Sep2022 22:53:38 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:53:38 INFO [django.server:161] "GET /media/acha_money/%EC%A7%80%EA%B0%91.jpg HTTP/1.1" 304 0
+[28Sep2022 22:53:38 INFO [django.server:161] "GET /media/acha_money/%EB%AF%B8%EB%8B%88%EC%96%B8%EC%A6%88%EC%97%90%EC%96%B4%ED%8C%9F.jpg HTTP/1.1" 304 0
+[28Sep2022 22:53:38 WARNING [django.request:230] Not Found: /media/acha_money/가방_p0NF2rL.jpeg
+[28Sep2022 22:53:38 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_p0NF2rL.jpeg HTTP/1.1" 404 3144
+[28Sep2022 22:55:24 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25324
+[28Sep2022 22:55:24 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 22:55:24 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:55:25 INFO [django.server:161] "GET /media/acha_money/%EC%A7%80%EA%B0%91.jpg HTTP/1.1" 304 0
+[28Sep2022 22:55:25 INFO [django.server:161] "GET /media/acha_money/%EB%AF%B8%EB%8B%88%EC%96%B8%EC%A6%88%EC%97%90%EC%96%B4%ED%8C%9F.jpg HTTP/1.1" 304 0
+[28Sep2022 22:57:19 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25324
+[28Sep2022 22:57:20 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:57:20 INFO [django.server:161] "GET /media/acha_money/%EB%AF%B8%EB%8B%88%EC%96%B8%EC%A6%88%EC%97%90%EC%96%B4%ED%8C%9F.jpg HTTP/1.1" 304 0
+[28Sep2022 22:57:20 INFO [django.server:161] "GET /media/acha_money/%EC%A7%80%EA%B0%91.jpg HTTP/1.1" 304 0
+[28Sep2022 22:57:28 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25324
+[28Sep2022 22:57:29 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:57:34 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25324
+[28Sep2022 22:57:34 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:57:45 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 21433
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1617
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[28Sep2022 22:57:46 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:57:47 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24953
+[28Sep2022 22:57:47 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 22:57:47 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 22:57:47 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[28Sep2022 22:57:47 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[28Sep2022 22:57:47 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 22:57:47 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 22:57:47 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 22:57:47 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[28Sep2022 22:57:47 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[28Sep2022 22:57:47 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 22:57:47 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[28Sep2022 22:57:47 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[28Sep2022 22:57:47 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:57:48 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 22:57:48 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[28Sep2022 22:57:48 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 22:57:48 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[28Sep2022 22:57:54 INFO [django.server:161] "POST /member/login/ HTTP/1.1" 302 0
+[28Sep2022 22:57:55 INFO [django.server:161] "GET / HTTP/1.1" 200 28429
+[28Sep2022 22:57:55 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:57:55 INFO [django.server:161] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[28Sep2022 22:57:57 INFO [django.server:161] "GET /all_search HTTP/1.1" 301 0
+[28Sep2022 22:57:58 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219611
+[28Sep2022 22:57:58 INFO [django.server:161] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[28Sep2022 22:57:58 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:59:07 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219611
+[28Sep2022 22:59:07 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:59:10 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219611
+[28Sep2022 22:59:10 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219660
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 59348
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 200 170746
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 200 89503
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84384
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 200 1836
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173084
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 200 3687
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 200 1092
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1402
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 200 2858
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 22:59:48 INFO [django.server:161] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[28Sep2022 23:00:00 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219660
+[28Sep2022 23:00:00 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1404
+[28Sep2022 23:00:00 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:07 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219660
+[28Sep2022 23:00:07 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1402
+[28Sep2022 23:00:07 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:13 INFO [django.server:161] "GET /fast_search HTTP/1.1" 301 0
+[28Sep2022 23:00:13 INFO [django.server:161] "GET /fast_search/ HTTP/1.1" 200 22502
+[28Sep2022 23:00:13 INFO [django.server:161] "GET /static/bootstrap/img/icon_keyword.png HTTP/1.1" 200 14933
+[28Sep2022 23:00:13 INFO [django.server:161] "GET /static/bootstrap/img/icon_image.png HTTP/1.1" 200 14383
+[28Sep2022 23:00:13 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:14 INFO [django.server:161] "GET /fast_search/keyword/ HTTP/1.1" 200 24464
+[28Sep2022 23:00:14 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:30 ERROR [django.request:230] Internal Server Error: /fast_search/keyword/key_result/
+Traceback (most recent call last):
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\2022_DS_Bootcamp\3_DSDE_collabo\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 167, in find_category_to_es
+    "lt": "now"
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elasticsearch\_sync\client\utils.py", line 414, in wrapped
+    return api(*args, **kwargs)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elasticsearch\_sync\client\__init__.py", line 3771, in search
+    "POST", __path, params=__query, headers=__headers, body=__body
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elasticsearch\_sync\client\_base.py", line 295, in perform_request
+    client_meta=self._client_meta,
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elastic_transport\_transport.py", line 334, in perform_request
+    request_timeout=request_timeout,
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elastic_transport\_node\_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x00000250FFB2ACF8>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다))
+[28Sep2022 23:00:30 ERROR [django.server:161] "GET /fast_search/keyword/key_result/?insert_category=%EA%B0%80%EB%B0%A9&insert_color=%EA%B2%80%EC%A0%95&insert_date=2022-09-05 HTTP/1.1" 500 124919
+[28Sep2022 23:00:30 INFO [django.server:75] - Broken pipe from ('127.0.0.1', 53285)
+
+[28Sep2022 23:00:30 ERROR [django.request:230] Internal Server Error: /fast_search/keyword/key_result/
+Traceback (most recent call last):
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\2022_DS_Bootcamp\3_DSDE_collabo\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 167, in find_category_to_es
+    "lt": "now"
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elasticsearch\_sync\client\utils.py", line 414, in wrapped
+    return api(*args, **kwargs)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elasticsearch\_sync\client\__init__.py", line 3771, in search
+    "POST", __path, params=__query, headers=__headers, body=__body
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elasticsearch\_sync\client\_base.py", line 295, in perform_request
+    client_meta=self._client_meta,
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elastic_transport\_transport.py", line 334, in perform_request
+    request_timeout=request_timeout,
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elastic_transport\_node\_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x00000250FFC16F98>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다))
+[28Sep2022 23:00:30 ERROR [django.server:161] "GET /fast_search/keyword/key_result/?insert_category=%EA%B0%80%EB%B0%A9&insert_color=%EA%B2%80%EC%A0%95&insert_date=2022-09-05 HTTP/1.1" 500 124919
+[28Sep2022 23:00:34 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:36 INFO [django.server:161] "GET /all_search HTTP/1.1" 301 0
+[28Sep2022 23:00:37 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219660
+[28Sep2022 23:00:37 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 23:00:37 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:41 INFO [django.server:161] "GET /acha_money HTTP/1.1" 301 0
+[28Sep2022 23:00:41 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 21433
+[28Sep2022 23:00:41 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 23:00:41 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:41 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24953
+[28Sep2022 23:00:41 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 23:00:41 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 23:00:41 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[28Sep2022 23:00:41 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[28Sep2022 23:00:41 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 23:00:41 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 23:00:41 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[28Sep2022 23:00:41 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 23:00:41 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 23:00:41 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[28Sep2022 23:00:41 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[28Sep2022 23:00:41 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[28Sep2022 23:00:41 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:41 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 23:00:41 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[28Sep2022 23:00:48 INFO [django.server:161] "POST /member/login/ HTTP/1.1" 302 0
+[28Sep2022 23:00:48 INFO [django.server:161] "GET / HTTP/1.1" 200 28429
+[28Sep2022 23:00:48 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:48 INFO [django.server:161] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[28Sep2022 23:00:52 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25324
+[28Sep2022 23:00:52 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 23:00:52 INFO [django.server:161] "GET /static/acha_money/img/pen_white.png HTTP/1.1" 200 6968
+[28Sep2022 23:00:52 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:00:52 INFO [django.server:161] "GET /media/acha_money/%EC%A7%80%EA%B0%91.jpg HTTP/1.1" 200 131964
+[28Sep2022 23:00:52 INFO [django.server:161] "GET /media/acha_money/%EB%AF%B8%EB%8B%88%EC%96%B8%EC%A6%88%EC%97%90%EC%96%B4%ED%8C%9F.jpg HTTP/1.1" 200 48380
+[28Sep2022 23:00:53 INFO [django.server:161] "GET /media/acha_money/cap_blue.png HTTP/1.1" 200 104022
+[28Sep2022 23:00:53 INFO [django.server:161] "GET /media/acha_money/tshirt.png HTTP/1.1" 200 233096
+[28Sep2022 23:01:32 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:01:33 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24904
+[28Sep2022 23:01:33 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:01:35 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 219611
+[28Sep2022 23:01:35 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:01:43 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 25324
+[28Sep2022 23:01:43 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 23:01:43 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:01:43 INFO [django.server:161] "GET /media/acha_money/%EC%A7%80%EA%B0%91.jpg HTTP/1.1" 304 0
+[28Sep2022 23:01:46 INFO [django.server:161] "GET /fast_search/ HTTP/1.1" 200 22453
+[28Sep2022 23:01:46 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:01:48 INFO [django.server:161] "GET /fast_search/keyword/ HTTP/1.1" 200 24415
+[28Sep2022 23:01:48 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:05 ERROR [django.request:230] Internal Server Error: /fast_search/keyword/key_result/
+Traceback (most recent call last):
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\2022_DS_Bootcamp\3_DSDE_collabo\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 167, in find_category_to_es
+    "lt": "now"
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elasticsearch\_sync\client\utils.py", line 414, in wrapped
+    return api(*args, **kwargs)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elasticsearch\_sync\client\__init__.py", line 3771, in search
+    "POST", __path, params=__query, headers=__headers, body=__body
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elasticsearch\_sync\client\_base.py", line 295, in perform_request
+    client_meta=self._client_meta,
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elastic_transport\_transport.py", line 334, in perform_request
+    request_timeout=request_timeout,
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\elastic_transport\_node\_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x00000250FFB617F0>: Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다))
+[28Sep2022 23:02:05 ERROR [django.server:161] "GET /fast_search/keyword/key_result/?insert_category=%EA%B0%80%EB%B0%A9&insert_color=%EA%B2%80%EC%A0%95&insert_date=2022-09-06 HTTP/1.1" 500 125346
+[28Sep2022 23:02:15 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:18 INFO [django.server:161] "GET /member/mypage/ HTTP/1.1" 200 24218
+[28Sep2022 23:02:18 INFO [django.server:161] "GET /static/bootstrap/img/help.png HTTP/1.1" 200 17056
+[28Sep2022 23:02:18 INFO [django.server:161] "GET /static/bootstrap/img/give.png HTTP/1.1" 200 18796
+[28Sep2022 23:02:18 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:18 WARNING [django.request:230] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 23:02:18 WARNING [django.server:161] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4518
+[28Sep2022 23:02:18 WARNING [django.request:230] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 23:02:18 WARNING [django.server:161] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4566
+[28Sep2022 23:02:18 WARNING [django.request:230] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 23:02:18 WARNING [django.server:161] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4560
+[28Sep2022 23:02:18 WARNING [django.request:230] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 23:02:18 WARNING [django.server:161] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4497
+[28Sep2022 23:02:20 INFO [django.server:161] "GET /member/implement HTTP/1.1" 301 0
+[28Sep2022 23:02:20 INFO [django.server:161] "GET /member/implement/ HTTP/1.1" 200 23816
+[28Sep2022 23:02:20 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 23:02:21 WARNING [django.request:230] Not Found: /member/implement/vendor/jquery/jquery.min.js
+[28Sep2022 23:02:21 WARNING [django.server:161] "GET /member/implement/vendor/jquery/jquery.min.js HTTP/1.1" 404 4527
+[28Sep2022 23:02:21 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:21 WARNING [django.request:230] Not Found: /member/implement/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 23:02:21 WARNING [django.server:161] "GET /member/implement/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4575
+[28Sep2022 23:02:21 WARNING [django.request:230] Not Found: /member/implement/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 23:02:21 WARNING [django.server:161] "GET /member/implement/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4569
+[28Sep2022 23:02:21 WARNING [django.request:230] Not Found: /member/implement/js/sb-admin-2.min.js
+[28Sep2022 23:02:21 WARNING [django.server:161] "GET /member/implement/js/sb-admin-2.min.js HTTP/1.1" 404 4506
+[28Sep2022 23:02:21 WARNING [django.request:230] Not Found: /member/implement/vendor/datatables/jquery.dataTables.min.js
+[28Sep2022 23:02:21 WARNING [django.server:161] "GET /member/implement/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 404 4572
+[28Sep2022 23:02:21 WARNING [django.request:230] Not Found: /member/implement/vendor/datatables/dataTables.bootstrap4.min.js
+[28Sep2022 23:02:21 WARNING [django.server:161] "GET /member/implement/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 404 4584
+[28Sep2022 23:02:21 WARNING [django.request:230] Not Found: /member/implement/js/demo/datatables-demo.js
+[28Sep2022 23:02:21 WARNING [django.server:161] "GET /member/implement/js/demo/datatables-demo.js HTTP/1.1" 404 4524
+[28Sep2022 23:02:24 INFO [django.server:161] "GET /member/mypage/ HTTP/1.1" 200 24218
+[28Sep2022 23:02:24 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:25 INFO [django.server:161] "GET /member/request HTTP/1.1" 301 0
+[28Sep2022 23:02:26 INFO [django.server:161] "GET /member/request/ HTTP/1.1" 200 23823
+[28Sep2022 23:02:26 WARNING [django.request:230] Not Found: /member/request/vendor/jquery/jquery.min.js
+[28Sep2022 23:02:26 WARNING [django.server:161] "GET /member/request/vendor/jquery/jquery.min.js HTTP/1.1" 404 4521
+[28Sep2022 23:02:26 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:26 WARNING [django.request:230] Not Found: /member/request/vendor/datatables/jquery.dataTables.min.js
+[28Sep2022 23:02:26 WARNING [django.server:161] "GET /member/request/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 404 4566
+[28Sep2022 23:02:26 WARNING [django.request:230] Not Found: /member/request/js/sb-admin-2.min.js
+[28Sep2022 23:02:26 WARNING [django.server:161] "GET /member/request/js/sb-admin-2.min.js HTTP/1.1" 404 4500
+[28Sep2022 23:02:26 WARNING [django.request:230] Not Found: /member/request/vendor/datatables/dataTables.bootstrap4.min.js
+[28Sep2022 23:02:26 WARNING [django.server:161] "GET /member/request/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 404 4578
+[28Sep2022 23:02:26 WARNING [django.request:230] Not Found: /member/request/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 23:02:26 WARNING [django.server:161] "GET /member/request/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4569
+[28Sep2022 23:02:26 WARNING [django.request:230] Not Found: /member/request/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 23:02:26 WARNING [django.server:161] "GET /member/request/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4563
+[28Sep2022 23:02:27 WARNING [django.request:230] Not Found: /member/request/js/demo/datatables-demo.js
+[28Sep2022 23:02:27 WARNING [django.server:161] "GET /member/request/js/demo/datatables-demo.js HTTP/1.1" 404 4518
+[28Sep2022 23:02:29 INFO [django.server:161] "GET /member/logout/ HTTP/1.1" 302 0
+[28Sep2022 23:02:29 INFO [django.server:161] "GET / HTTP/1.1" 200 28478
+[28Sep2022 23:02:29 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:33 INFO [django.server:161] "GET /member/register/ HTTP/1.1" 200 28034
+[28Sep2022 23:02:33 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:39 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24953
+[28Sep2022 23:02:39 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 23:02:39 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 23:02:39 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[28Sep2022 23:02:39 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[28Sep2022 23:02:39 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 23:02:39 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 23:02:39 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 23:02:39 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 23:02:39 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[28Sep2022 23:02:39 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[28Sep2022 23:02:39 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[28Sep2022 23:02:39 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[28Sep2022 23:02:39 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:39 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 23:02:39 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[28Sep2022 23:02:51 INFO [django.server:161] "POST /member/login/ HTTP/1.1" 302 0
+[28Sep2022 23:02:52 INFO [django.server:161] "GET / HTTP/1.1" 200 28429
+[28Sep2022 23:02:52 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 23:02:54 INFO [django.server:161] "GET /member/logout/ HTTP/1.1" 302 0
+[28Sep2022 23:02:54 INFO [django.server:161] "GET / HTTP/1.1" 200 28478
+[28Sep2022 23:02:54 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
