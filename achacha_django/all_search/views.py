@@ -1,35 +1,41 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
+
 from acha_money.models import Posts
 from . models import Alarm
 from . models import LostItems
 from hdfs import InsecureClient
-from .filter import Orderfilter
 from django.views.generic import DetailView
 # Create your views here.
+
+# logger import 
+from . import logger
 
 default_page = 1
 
 def all_index(request):
+    # view 로그 추적 
+    logger.trace_logger(request)
+
     items_per_page = 10
     lost_items_list = LostItems.objects.all().order_by('-get_at')
     paginator = Paginator(lost_items_list, items_per_page)
     page = request.GET.get('page')
     max_index = len(paginator.page_range)
     posts = paginator.get_page(page)
-    client = InsecureClient('http://54.64.90.112:9870', user="ubuntu")
-    category_contains_query = request.GET.get('category')
-    print(category_contains_query)
 
-    if category_contains_query !='' and category_contains_query is not None:
-        lost_items_list = lost_items_list.filter(category__icontains=category_contains_query)
-    context = {'lost_items_list': lost_items_list, 'posts': posts, 'max_index': max_index}
-    return render(request, 'all_search/all_index.html', context)
+    client = InsecureClient('http://54.64.90.112:9870', user="ubuntu")
+    
+    return render(request, 'all_search/all_index.html', {'lost_items_list': lost_items_list,
+                                                         'posts': posts, 'max_index': max_index})
     
     
 
 
 def all_detail(request, lost_items_id_pk):
+    # view 로그 추적 
+    logger.trace_logger(request)
+
     if request.method == "POST":
         users_id = request.user
         category = request.POST['category']
@@ -53,6 +59,8 @@ def all_detail(request, lost_items_id_pk):
     
     
 def all_alarm(request):
+    # view 로그 추적 
+    logger.trace_logger(request)
     return render(request, 'all_search/all_alarm.html')
 
 
@@ -60,8 +68,8 @@ def alarmset(request):
     if request.method == "POST":
         # alarm table
         alarm = Alarm()
-        alarm.users_id = 'jinyi' # 로그인 정보 가져와야 함
-        alarm.phone = '01028820828' # 로그인 정보 가져와야 함
+        alarm.users_id = request.user.id 
+        alarm.phone = f'0{request.user.phone}' #핸드폰번호 앞에 0이 사라지는 것 방지
         alarm.category = request.POST['category']
         alarm.src = f'/home/ubuntu/WEB_SERVICE_ACHACHA/ALARM/images/{request.FILES["img_src"]}'
         # alarm.src = request.FILES["img_src"]
