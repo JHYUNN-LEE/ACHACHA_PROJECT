@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-v#d(@2foe)gd_w0b-6h^uqr=zll)tg1czkq1)6v#@dqyjd236v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -191,6 +191,17 @@ LOGGING = {
             'when': "midnight",
             'formatter': 'request_format',
         },
+        #pip install python-logstash
+        'logstash': {
+            'level': 'INFO',
+            'class': 'logstash.TCPLogstashHandler',
+            'host': '54.64.90.112',
+            'port': 5044,
+            'version': 1,
+            'fqdn' : True,
+            'message_type' : 'logstash',
+            'tags' : ['django'],
+        }
     },
     'loggers': {
         'django': {
@@ -199,7 +210,7 @@ LOGGING = {
             'propagate': False,
         },
         'user_acctive.request': {
-            'handlers': ['service_trace'],
+            'handlers': ['service_trace', 'logstash'],
             'level': 'INFO',
         },
     }

@@ -17,8 +17,6 @@
   <h3 class="text-center"><strong>검색 결과</strong></h3>
   <h5 class="text-center">잃어버린 물건을 찾아보세요!</h5>
   <br>
-  <h5 class="text-center">검색 결과는 n개 입니다.</h5>
-  <br>
   <br>
   <!-- 그리드 게시물 (bootstrap) 기존 -->
 
@@ -30,12 +28,13 @@
   </div>
   {% else %}
 
-
     <div class="row" >
-      {% for img, item in list %}
-      <div class="card_search"> 
+      {% for img, item in posts %}
+      <div class="card_search">
         <div class="image_center">
-          <img class="lost_img" src="{{ img }}">
+          <a href="/fast_search/image/img_result/detail/{{item.lost_items_id_pk}}">
+            <img class="lost_img" src="{{ img }}">
+          </a>
         </div>
         <br>
         <div class="info">
@@ -84,7 +83,6 @@
       {% endif %}
       {% endif %}
       {% endfor %}
-
       {% if posts.has_next %}
       <li class="page-item">
         <a a class="page-link" href="?page={{posts.next_page_number}}">&gt;</a>
@@ -99,7 +97,7 @@
       {% endif %}
     </ul>
   </div>
-  {% endif %} 
+  {% endif %}
 
 {% endblock %}
 
