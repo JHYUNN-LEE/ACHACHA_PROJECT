@@ -8,6 +8,7 @@
     <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
     <!-- JQuery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -53,12 +54,14 @@
                 </div>
                 {% endif %}
                 <br>
-                <div class="title">{{ item.get_name }}</div>
-                <span class="date_time">{{ item.get_at }}</span>
-                <br>
-                <span class="get_place">{{ item.category }}</span>
-                <br>
-                <span class="cost">{{ item.get_place }}</span>
+                <div class="info">
+                    <div class="title">{{ item.get_name }}</div>
+                    <span class="date_time">{{ item.get_at }}</span>
+                    <br>
+                    <span class="get_place">{{ item.category }}</span>
+                    <br>
+                    <span class="cost">{{ item.get_place }}</span>
+                </div>
                 <hr>
             </div>
             
@@ -75,10 +78,12 @@
         <ul class="pagination">
             {% if posts.has_previous %}
             <li class="page-item">
-                <a class="page-link" href="?page={{ 1 }}">&lt;&lt;</a>
+                <!-- <a class="page-link" href="?page={{ 1 }}">&lt;&lt;</a> -->
+                <a class="page-link" onclick="pagefirst()">&lt;&lt;</a>
             </li>
             <li class="page-item">
-                <a class="page-link" href="?page={{posts.previous_page_number}}">&lt;</a>
+                <!-- <a class="page-link" href="?page={{posts.previous_page_number}}">&lt;</a> -->
+                <a class="page-link" onclick="pagebf()">&lt;</a>
             </li>
             {% else %}
             <li class="page-item disabled">
@@ -89,12 +94,14 @@
             {% for page_number in posts.paginator.page_range %}
             {% if page_number >= posts.number|add:-3 and page_number <= posts.number|add:3 %}
             {% if page_number == posts.number %}
-            <li class="page-item active" aria-current="page">
-                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+            <li class="page-item active" aria-current="page" id="current">
+                <!-- <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a> -->
+                <a class="page-link" onclick="pagemv(this)">{{ page_number }}</a>
             </li>
             {% else %}
             <li class="page-item">
-                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+                <!-- <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a> -->
+                <a class="page-link"onclick="pagemv(this)">{{ page_number }}</a>
             </li>
             {% endif %}
             {% endif %}
@@ -102,10 +109,12 @@
             <!-- 다음페이지 -->
             {% if posts.has_next %}
             <li class="page-item">
-                <a class="page-link" href="?page={{ posts.next_page_number }}">&gt;</a>
+                <!-- <a class="page-link" href="?page={{ posts.next_page_number }}">&gt;</a> -->
+                <a class="page-link" onclick="pagenx()">&gt;</a>
             </li>
             <li class="page-item">
-                <a class="page-link" href="?page={{ max_index }}">&gt;&gt;</a>
+                <!-- <a class="page-link" href="?page={{ max_index }}">&gt;&gt;</a> -->
+                <a class="page-link" onclick="pagelast()">&gt;&gt;</a>
             </li>
             {% else %}
             <li class="page-item disabled">
