@@ -2513,3 +2513,176 @@ TypeError: Object of type Page is not JSON serializable
 [28Sep2022 11:02:03 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
 [28Sep2022 11:02:06 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 17332
 [28Sep2022 11:02:06 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 12:56:45 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 12:56:51 INFO [django.server:187] "GET / HTTP/1.1" 200 23725
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/js/sb-admin-2.js HTTP/1.1" 304 0
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/vendor/chart.js/Chart.min.js HTTP/1.1" 304 0
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 0
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-area-demo.js HTTP/1.1" 304 0
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/js/demo/chart-pie-demo.js HTTP/1.1" 304 0
+[28Sep2022 12:56:51 INFO [django.server:187] "GET /static/bootstrap/img/undraw_profile.svg HTTP/1.1" 304 0
+[28Sep2022 12:56:52 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 200 18251
+[28Sep2022 12:56:52 INFO [django.server:187] "GET /static/bootstrap/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+[28Sep2022 12:56:52 INFO [django.server:187] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[28Sep2022 12:56:52 WARNING [django.request:241] Not Found: /favicon.ico
+[28Sep2022 12:56:52 WARNING [django.server:187] "GET /favicon.ico HTTP/1.1" 404 2778
+[28Sep2022 12:56:56 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 12:57:06 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 16680
+[28Sep2022 12:57:06 INFO [django.server:187] "GET /static/acha_money/css/base.css HTTP/1.1" 200 1275
+[28Sep2022 12:57:06 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 12:57:06 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 12:57:06 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 12:57:06 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:57:06 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 12:57:06 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:57:06 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 12:57:06 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 12:57:06 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 12:57:06 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 12:57:06 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 12:57:06 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 12:57:06 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 12:57:06 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 12:57:06 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 12:57:06 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 12:57:06 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 12:57:06 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:57:06 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:57:12 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17749
+[28Sep2022 12:57:12 INFO [django.server:187] "GET /static/bootstrap/img/icon_image.png HTTP/1.1" 200 14383
+[28Sep2022 12:57:12 INFO [django.server:187] "GET /static/bootstrap/img/icon_keyword.png HTTP/1.1" 200 14933
+[28Sep2022 12:57:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 12:57:15 INFO [django.server:187] "GET /member/mypage/ HTTP/1.1" 200 19091
+[28Sep2022 12:57:15 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery/jquery.min.js
+[28Sep2022 12:57:15 WARNING [django.server:187] "GET /member/mypage/vendor/jquery/jquery.min.js HTTP/1.1" 404 4517
+[28Sep2022 12:57:15 WARNING [django.request:241] Not Found: /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 12:57:15 WARNING [django.request:241] Not Found: /member/mypage/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 12:57:15 WARNING [django.request:241] Not Found: /member/mypage/js/sb-admin-2.min.js
+[28Sep2022 12:57:15 WARNING [django.server:187] "GET /member/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4565
+[28Sep2022 12:57:15 WARNING [django.server:187] "GET /member/mypage/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4559
+[28Sep2022 12:57:15 WARNING [django.server:187] "GET /member/mypage/js/sb-admin-2.min.js HTTP/1.1" 404 4496
+[28Sep2022 12:57:15 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 12:57:23 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 20200
+[28Sep2022 12:57:23 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 12:57:23 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 12:57:23 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:57:23 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:57:23 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 12:57:23 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 12:57:23 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 12:57:23 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 12:57:23 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 12:57:23 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 12:57:23 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 12:57:23 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 12:57:23 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 12:57:23 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 12:57:23 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 12:57:23 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:57:23 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:59:13 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19926
+[28Sep2022 12:59:13 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 12:59:13 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 12:59:13 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:59:13 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 12:59:13 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 12:59:13 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:59:13 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 12:59:13 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:59:14 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19926
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 12:59:14 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:59:14 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:59:18 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19926
+[28Sep2022 12:59:19 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 12:59:19 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:59:19 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 12:59:19 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 12:59:19 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 12:59:19 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:59:19 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 12:59:19 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 12:59:19 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 12:59:19 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 12:59:19 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 12:59:19 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 12:59:19 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 12:59:19 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 12:59:36 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213572
+[28Sep2022 12:59:36 INFO [django.server:187] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 200 40047
+[28Sep2022 12:59:43 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%A3%BC%ED%95%99&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 23113
+[28Sep2022 13:01:43 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%A3%BC%ED%95%99&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 19698
+[28Sep2022 13:02:00 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%A3%BC%ED%95%99&category=%EC%9D%98%EB%A5%98 HTTP/1.1" 200 19008
+[28Sep2022 13:02:21 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%A3%BC%ED%95%99&category=%EC%BB%B4%ED%93%A8%ED%84%B0 HTTP/1.1" 200 19008
+[28Sep2022 13:02:29 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EC%A0%84%EC%9E%90%EA%B8%B0%EA%B8%B0 HTTP/1.1" 200 19704
+[28Sep2022 13:02:32 INFO [django.server:187] "GET /all_search/all_detail/V0001998H08200002-1/ HTTP/1.1" 200 16993
+[28Sep2022 13:02:32 INFO [django.server:187] "GET /static/acha_money/css/post_detail.css HTTP/1.1" 200 927
+[28Sep2022 13:02:41 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26569
+[28Sep2022 13:02:43 INFO [django.server:187] "GET /all_search/all_detail/F2022091200000125-1/ HTTP/1.1" 200 17004
+[28Sep2022 13:02:48 INFO [django.server:187] "GET /all_search/all_detail/V0002122H09100004-1/ HTTP/1.1" 200 17005
+[28Sep2022 13:06:27 INFO [django.server:187] "GET /all_search/all_detail/F2022091200000125-1/ HTTP/1.1" 200 17075
+[28Sep2022 13:06:43 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26569
+[28Sep2022 13:06:46 INFO [django.server:187] "GET /all_search/all_detail/F2022091500002361-1/ HTTP/1.1" 200 17081
+[28Sep2022 13:07:09 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 21107
+[28Sep2022 13:07:22 INFO [django.server:187] "GET /all_search/?name=%EC%9D%B4%EC%84%B1%EB%AF%BC&category=%EC%A7%80%EA%B0%91 HTTP/1.1" 200 26569
+[28Sep2022 13:10:38 INFO [django.utils.autoreload:266] C:\Users\jooin\PycharmProjects\multi_pjt3\ACHACHA_PROJECT\achacha_django\all_search\views.py changed, reloading.
+[28Sep2022 13:10:41 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[28Sep2022 13:10:59 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 16337
+[28Sep2022 13:10:59 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19857
+[28Sep2022 13:11:00 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 13:11:00 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 13:11:00 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 13:11:00 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 13:11:00 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 13:11:00 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 13:11:00 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 13:11:00 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 13:11:00 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 13:11:00 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 13:11:00 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 13:11:00 INFO [django.server:80] - Broken pipe from ('127.0.0.1', 54054)
+[28Sep2022 13:11:00 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 13:14:39 INFO [django.server:187] "GET /all_search/all_detail/F2022091200000125-1/ HTTP/1.1" 200 17075
+[28Sep2022 13:14:46 INFO [django.server:187] "GET /all_search/?page=2 HTTP/1.1" 200 213716
+[28Sep2022 13:17:56 INFO [django.server:187] "GET / HTTP/1.1" 200 23139
+[28Sep2022 13:18:12 INFO [django.server:187] "GET /acha_money/ HTTP/1.1" 200 16094
+[28Sep2022 13:18:12 INFO [django.server:187] "GET /member/login/ HTTP/1.1" 200 19614
+[28Sep2022 13:18:12 WARNING [django.request:241] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[28Sep2022 13:18:12 WARNING [django.server:187] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4550
+[28Sep2022 13:18:12 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 13:18:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery/jquery.min.js
+[28Sep2022 13:18:12 WARNING [django.request:241] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[28Sep2022 13:18:12 WARNING [django.request:241] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[28Sep2022 13:18:12 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 13:18:12 WARNING [django.request:241] Not Found: /member/login/js/sb-admin-2.min.js
+[28Sep2022 13:18:12 WARNING [django.server:187] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4493
+[28Sep2022 13:18:12 WARNING [django.server:187] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4556
+[28Sep2022 13:18:12 WARNING [django.server:187] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4514
+[28Sep2022 13:18:12 WARNING [django.server:187] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4562
+[28Sep2022 13:18:12 WARNING [django.request:241] Not Found: /member/login/css/sb-admin-2.min.css
+[28Sep2022 13:18:12 WARNING [django.server:187] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4499
+[28Sep2022 13:18:15 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 17163
+[28Sep2022 13:18:19 INFO [django.server:187] "GET /all_search/ HTTP/1.1" 200 213329

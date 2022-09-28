@@ -380,11 +380,14 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
+                                {% if user.is_authenticated %}
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" onclick="location.href='/member/mypage/'">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     마이페이지
                                 </a>
                                 <div class="dropdown-divider"></div>
+                                {% else %}
+                                {% endif %}
                                 {% if user.is_authenticated %}
                                 <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" onclick="location.href='/member/logout/'">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -801,14 +804,5 @@
     {% endblock %}
 
 </body>
-<script>
-    function search(){
-        var name = $('#input_name').val();
-        var category = $('#input_category').val();
-        console.log(name, category);
 
-        document.location=`?name=${name}&category=${category}`
-    }
-
-</script>
 </html>
