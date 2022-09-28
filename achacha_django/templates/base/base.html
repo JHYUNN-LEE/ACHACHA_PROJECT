@@ -795,11 +795,20 @@
     <!-- Page level custom scripts -->
     <script src="{% static 'bootstrap/js/demo/chart-area-demo.js' %}"></script>
     <script src="{% static 'bootstrap/js/demo/chart-pie-demo.js' %}"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     {% block content %}
 
     {% endblock %}
 
 </body>
+<script>
+    function search(){
+        var name = $('#input_name').val();
+        var category = $('#input_category').val();
+        console.log(name, category);
 
+        document.location=`?name=${name}&category=${category}`
+    }
+
+</script>
 </html>
