@@ -9,7 +9,7 @@ from django.http import HttpResponse, JsonResponse
 from django.core.paginator import Paginator, Page
 
 # models.py
-from .models import LostItems, Images, UploadedImage, Alarm
+from .models import LostItems, Images, Alarm
 
 # python edit import
 import json
@@ -24,7 +24,7 @@ from .models import LostItems, Images
 # pip install elasticsearch
 from elasticsearch import Elasticsearch
 
-# pip install hdfs
+# pip install hd
 from hdfs import InsecureClient
 from hdfs.client import Client
 from django.core.paginator import Paginator
@@ -32,7 +32,7 @@ from django.core.paginator import Paginator
 # logger import 
 from . import logger
 
-
+from itertools import chain
 # Create your views here.
 
 # 1_fast_index.html
@@ -57,14 +57,13 @@ def uploaded_image(request):
 
     if request.method == "POST":
         image = request.FILES['uploadfile'] # 업로드 된 이미지 가져오기
-        base64_bytes = base64.b64encode(image.read())   # 이미지 데이터 bytes로 변환
-        base64_string = base64_bytes.decode('utf-8')    # bytes 데이터 string 변환(bytes자체를 보내면 안 보내져서 일단 str로 변환했음)
+        bytes_image = base64.b64encode(image.read())   # 이미지 데이터 bytes로 변환
+        str_image = bytes_image.decode('utf-8')    # bytes to str (bytes자체를 보내면 값이 안 넘어가서, str으로 변환)
         
-        category = request.POST.getlist('category') # 선택된 카테고리 데이터 가져오기
-        category = category[0]  # 리스트에서 추출
+        category = request.POST.get('category') # 선택된 카테고리 데이터 가져오기
         
         data = {
-            'image' : base64_string,
+            'image' : str_image,
             'category' : category
         }
         
@@ -75,61 +74,79 @@ def uploaded_image(request):
         }
         logger.trace_logger_context(request, log_context)
 
-
+        global response
         response = requests.post('http://localhost:5001/', data=data)
-                
-        ## flask에서 넘어온 데이터 처리하기
+                    
+    ## flask에서 넘어온 데이터 처리하기
         
-        result = response.text
-        result = eval(result) # string to list
+    result = response.text
+    result = eval(result) # string to list
+    
+    # 관리번호 값 추출 / src 찾기 / image 가져오기
+    
+    image_src_list = []
+    detail_info = []
+  
+    
+    for i in range(len(result)):
+        image_id = result[i][:-4] # 관리번호 값 추출
+    
+        # mysql - image 테이블에서 src 찾아오기
+        image = Images.objects.filter(images_id_fk1 = image_id).values('src')
+        # image2 = Images.objects.filter(images_id_fk1 = image_name)
         
-        # image_id 값 추출 / src 찾기 / image 가져오기
-        
-        image_src_list = []
-        image_info = []
-
-        for i in range(len(result)):
-            image_name = result[i][:-4]
-        
-            # mysql - image 테이블에서 src 찾아오기
-            Images.objects.filter(images_id_fk1 = image_name).values('src')
-            image = Images.objects.filter(images_id_fk1 = image_name).values('src')
-            # # 중복값이 있는 경우가 있어서, 그 경우 하나만 가져오도록
-            # if image.count() >= 2:
-            #     image = image.first()
-            
+        if image.exists():
             image_src = image[0]['src']
-            
             image_src_list.append(image_src)
-
             
             # mysql - 분실물명, 날짜 가져오기
-            lost_item_data = LostItems.objects.filter(lost_items_id_pk = image_name)[0]
-            image_info.append(lost_item_data)
-        
-        # 페이지네이션
-        paginator = Paginator(image_info, 6)
-        page = request.GET.get('page')
-        posts = paginator.get_page(page)
+            lost_item_data = LostItems.objects.filter(lost_items_id_pk = image_id)[0]
+            detail_info.append(lost_item_data)
 
-        # AWS에서 실행, hdfs 접속
-        client = InsecureClient("http://54.64.90.112:9870/", user="ubuntu")
-        
-        # 유사 이미지 output for문으로 대조하여 이미지 가져오기
-        ## image_src_list : /user/ubuntu/service_image/XXXX.jpg
-        download_list=[]
-        for img in image_src_list:
-                    download = client.download(img, './media/result_image/', overwrite=True, n_threads = 1)
-                    download
-                    media_route = download[-43:]
-                    download_list.append(media_route)
-        list = zip(download_list, posts)
+        else : 
+            pass
+    
+    # AWS에서 실행, hdfs 접속
+    client = InsecureClient("http://54.64.90.112:9870/", user="ubuntu")
+    
+    # 유사 이미지 output for문으로 대조하여 이미지 가져오기 (가져온 이미지 list : download_list)
+    ## image_src_list : /user/ubuntu/service_image/XXXX.jpg
+    download_list=[]
+    for img in image_src_list:
+                download = client.download(img, './media/result_image/', overwrite=True, n_threads = 1)
+                download
+                media_route = download[-43:]
+                download_list.append(media_route)
 
-        context = {
-            "list" : list,
-            "post" : posts,
-        }
-    return render(request, 'fast_search/2-1_result.html', context)
+
+    object_list = zip(download_list, detail_info)
+    converted_list = list(object_list)
+    
+    
+    paginator = Paginator(converted_list, 6)
+    page = request.GET.get('page', 1)
+    max_index = len(paginator.page_range)
+    posts = paginator.get_page(page)
+    
+    context = {
+        "list" : converted_list,
+        "posts" : posts,
+        "max_index" : max_index
+    }
+    return render(request, 'fast_search/2-1_image_result.html', context)
+
+# 2-2_image_detail.html
+def image_detail(request, lost_items_id_pk):
+    logger.trace_logger(request)
+    
+    detail_info = LostItems.objects.filter(lost_items_id_pk = lost_items_id_pk)[0]
+    
+    image_src = f'/media/result_image/{lost_items_id_pk}.jpg'
+    
+    context = {"image_src" : image_src,
+               "detail_info" : detail_info} 
+    
+    return render(request, 'fast_search/2-2_image_detail.html', context)
 
 # es  find hits 함수 
 def trans_source(hits):
