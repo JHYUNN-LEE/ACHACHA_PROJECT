@@ -3,8 +3,11 @@
 {% load static %}
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -14,19 +17,7 @@
     <div class="form-row">
         <div class="form-group col-12">
             <div class="input-group">
-                <input class="form-control py-2 border-right-0 border" type="search" name="category" placeholder="카테고리를 입력해주세요" />
-                <span class="input-group-append">
-                    <div class="input-group-text bg-transparent">
-                        <i class="fa fa-search"></i>
-                    </div>
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-12">
-            <div class="input-group">
-                    <input class="form-control py-2 border-right-0 border" type="search" name="name" placeholder="이름을 입력해주세요">
+                    <input class="form-control py-2 border-right-0 border" type="search" name="name" id="input_name" placeholder="이름을 입력해주세요">
                     <span class="input-group-append">
                         <div class="input-group-text bg-transparent">
                             <i class="fa fa-search"></i>
@@ -35,7 +26,25 @@
             </div>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">검색</button>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="input_category">Category</label>
+        <select id="input_category" class="form-control" name="category">
+          <option selected>카테고리를 선택해주세요!</option>
+          <option value="지갑">지갑</option>
+          <option value="가방">가방</option>
+          <option value="유가증권&현금">유가증권&현금</option>
+          <option value="전자기기">전자기기</option>
+          <option value="신분증&카드">신분증&카드</option>
+          <option value="자동차">자동차</option>
+          <option value="컴퓨터">컴퓨터</option>
+          <option value="의류">의류</option>
+          <option value="도서용품&서류">도서용품&서류</option>
+          <option value="스포츠">스포츠</option>
+        </select>
+    </div>
+    <button type="button" onclick="search()" class="btn btn-primary">검색</button>
+</div>
 </form>
 <br>
 <!-- filter !-->
@@ -116,13 +125,9 @@
     </div>
 
 
-
-
-
 {% endblock %}
 
 </body>
-
 
 </html>
 
