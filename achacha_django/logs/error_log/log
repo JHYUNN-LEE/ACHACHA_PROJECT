@@ -2458,3 +2458,26 @@ TypeError: Object of type Page is not JSON serializable
 [28Sep2022 10:45:16 INFO [django.server:161] "GET /all_search/?name=undefined&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 18865
 [28Sep2022 10:45:16 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
 [28Sep2022 10:45:16 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:51:11 INFO [django.utils.autoreload:637] Watching for file changes with StatReloader
+[28Sep2022 10:51:15 INFO [django.server:161] "GET /all_search/?name=undefined&category=%EA%B0%80%EB%B0%A9 HTTP/1.1" 200 19020
+[28Sep2022 10:51:15 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 10:51:15 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:51:16 INFO [django.server:161] "GET / HTTP/1.1" 200 23725
+[28Sep2022 10:51:16 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:51:16 INFO [django.server:161] "GET /static/bootstrap/img/by.jpg HTTP/1.1" 200 143470
+[28Sep2022 10:51:20 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 213584
+[28Sep2022 10:51:20 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:51:28 INFO [django.server:161] "GET /all_search/?name=undefined&category=bag HTTP/1.1" 200 19020
+[28Sep2022 10:51:28 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:51:39 INFO [django.server:161] "GET /all_search/?name=undefined&category=bag HTTP/1.1" 200 19020
+[28Sep2022 10:51:39 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:51:43 INFO [django.server:161] "GET / HTTP/1.1" 200 23725
+[28Sep2022 10:51:44 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:51:46 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 213584
+[28Sep2022 10:51:47 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:52:34 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 213584
+[28Sep2022 10:52:34 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[28Sep2022 10:52:34 INFO [django.server:161] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[28Sep2022 10:52:38 INFO [django.server:161] "GET / HTTP/1.1" 200 23725
+[28Sep2022 10:52:47 INFO [django.server:161] "GET /all_search/ HTTP/1.1" 200 213584
+[28Sep2022 10:52:52 INFO [django.server:161] "GET /all_search/?name=undefined&category=bag HTTP/1.1" 200 19020
