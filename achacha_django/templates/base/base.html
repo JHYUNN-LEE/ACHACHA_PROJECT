@@ -817,51 +817,133 @@
 
         document.location=`?name=${name}&category=${category}`
     }
+
+    // Pagination
+    // 숫자 클릭
     function pagemv(ths){
         var urlParams = new URL(location.href).searchParams;
         var page = $(ths).text();
         var name = urlParams.get('name');
         var category = urlParams.get('category');
+        // 필터 했을 때
         if (name != null){
-            console.log(name);
-            console.log(category);
-            console.log(page);
+            console.log(name, category, page);
             location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
         }
+        // 필터 안 했을 때
         else{
             location.href=location.pathname+'?page='+page
         }
     }
-
+    // < 클릭
     function pagebf(){
         var urlParams = new URL(location.href).searchParams;
         var name = urlParams.get('name');
         var category = urlParams.get('category');
-        if (page != null){
-            var page = urlParams.get('page')-1;
-            console.log(name);
-            console.log(category);
-            console.log(page);
-            location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
+        var page = urlParams.get('page');
+        // 필터 했을 때
+        if (name != null){
+            // page 파라미터 있을 때
+            if (page > 0){
+                var page = urlParams.get('page')-1;
+                console.log(name, category, page);
+                location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
+            }
+            // page 0 일 때 (맨 끝)
+            else {
+                var page = parseInt($('#current').text())-1;
+                console.log(name, category, page);
+                location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
+            }
+
         }
+        // 필터 안 했을 때
         else{
-            var page = urlParams.get('page')-1;
-            location.href=location.pathname+'?page='+page
+            // page 파라미터 있을 때
+            if (page > 0){
+                var page = urlParams.get('page')-1;
+                console.log(name, category, page);
+                location.href=location.pathname+'?page='+page
+            }
+            // page 0 일 때 (맨 끝)
+            else {
+                var page = parseInt($('#current').text())-1;
+                console.log(name, category, page);
+                location.href=location.pathname+'?page='+page
+            }
         }
     }
+    // > 클릭
     function pagenx(){
         var urlParams = new URL(location.href).searchParams;
         var name = urlParams.get('name');
         var category = urlParams.get('category');
-        if (page != null){
-            var page = parseInt(urlParams.get('page'))+1;
-            console.log(name);
-            console.log(category);
-            console.log(page);
+        var page = urlParams.get('page');
+        // 필터 했을 때
+        if (name != null){
+            // page 파라미터 있을 때
+            if (page != null){
+                var page = parseInt(urlParams.get('page'))+1;
+                console.log(name, category, page);
+                location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
+            }
+            // page 파라미터 없을 때 (첫 화면)
+            else {
+                var page = 1+1;
+                console.log(name, category, page);
+                location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
+            }
+
+        }
+        // 필터 안 했을 때
+        else{
+            // page 파라미터 있을 때
+            if (page != null){
+                var page = parseInt(urlParams.get('page'))+1;
+                console.log(name, category, page);
+                location.href=location.pathname+'?page='+page
+            }
+            // page 파라미터 없을 때 (첫 화면)
+            else {
+                var page = 1+1;
+                console.log(name, category, page);
+                location.href=location.pathname+'?page='+page
+            }
+        }
+    }
+    // << 클릭
+    function pagefirst(){
+        var urlParams = new URL(location.href).searchParams;
+        var name = urlParams.get('name');
+        var category = urlParams.get('category');
+        // 필터 했을 때
+        if (name != null){
+            var page = 1;
+            console.log(name, category, page);
             location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
         }
+        // 필터 안 했을 때
         else{
-            var page = 2;
+            var page = 1;
+            console.log(name, category, page);
+            location.href=location.pathname+'?page='+page
+        }
+    }
+    // >> 클릭
+    function pagelast(){
+        var urlParams = new URL(location.href).searchParams;
+        var name = urlParams.get('name');
+        var category = urlParams.get('category');
+        // 필터 했을 때
+        if (name != null){
+            var page = 0;
+            console.log(name, category, page);
+            location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
+        }
+        // 필터 안 했을 때
+        else{
+            var page = 0;
+            console.log(name, category, page);
             location.href=location.pathname+'?page='+page
         }
     }

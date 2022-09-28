@@ -78,7 +78,8 @@
         <ul class="pagination">
             {% if posts.has_previous %}
             <li class="page-item">
-                <a class="page-link" href="?page={{ 1 }}">&lt;&lt;</a>
+                <!-- <a class="page-link" href="?page={{ 1 }}">&lt;&lt;</a> -->
+                <a class="page-link" onclick="pagefirst()">&lt;&lt;</a>
             </li>
             <li class="page-item">
                 <!-- <a class="page-link" href="?page={{posts.previous_page_number}}">&lt;</a> -->
@@ -93,13 +94,13 @@
             {% for page_number in posts.paginator.page_range %}
             {% if page_number >= posts.number|add:-3 and page_number <= posts.number|add:3 %}
             {% if page_number == posts.number %}
-            <li class="page-item active" aria-current="page">
-                <!-- <a class="page-link" href="?name={{name}}&category={{category}}&page={{ page_number }}" onclick="pagemv(page_number)">{{ page_number }}</a> -->
+            <li class="page-item active" aria-current="page" id="current">
+                <!-- <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a> -->
                 <a class="page-link" onclick="pagemv(this)">{{ page_number }}</a>
             </li>
             {% else %}
             <li class="page-item">
-                <!-- <a class="page-link" href="?name={{name}}&category={{category}}&page={{ page_number }}"  onclick="pagemv(page_number)">{{ page_number }}</a> -->
+                <!-- <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a> -->
                 <a class="page-link"onclick="pagemv(this)">{{ page_number }}</a>
             </li>
             {% endif %}
@@ -112,7 +113,8 @@
                 <a class="page-link" onclick="pagenx()">&gt;</a>
             </li>
             <li class="page-item">
-                <a class="page-link" href="?page={{ max_index }}">&gt;&gt;</a>
+                <!-- <a class="page-link" href="?page={{ max_index }}">&gt;&gt;</a> -->
+                <a class="page-link" onclick="pagelast()">&gt;&gt;</a>
             </li>
             {% else %}
             <li class="page-item disabled">
