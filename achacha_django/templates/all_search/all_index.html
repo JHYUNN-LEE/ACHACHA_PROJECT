@@ -6,7 +6,8 @@
 
     <meta charset="UTF-8">
     <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
-    
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -15,33 +16,29 @@
 <form method="GET" action=".">
     <div class="form-row">
         <div class="input-group">
+            <!-- <label for="input_category">Category</label> -->
             <select id="input_category" class="form-control" name="category">
                 <option selected disabled>카테고리</option>
-                <option value="bag">가방</option>
-                <option value="wallet">지갑</option>
-                <option value="phone">휴대폰</option>
-                <option value="card">카드</option>
-                <option value="earphones">이어폰</option>
-                <option value="cap">모자</option>
-                <option value="car_key">차키</option>
-                <option value="cloth">옷</option>
-                <option value="document">도서용품, 서류</option>
-                <option value="necklace">목걸이</option>
-                <option value="ring">반지</option>
-                <option value="shoes">신발</option>
-                <option value="shopping_bag">쇼핑백</option>
-                <option value="watch">시계</option>    
+                <option value="지갑">지갑</option>
+                <option value="가방">가방</option>
+                <option value="유가증권&현금">유가증권&현금</option>
+                <option value="전자기기">전자기기</option>
+                <option value="신분증&카드">신분증&카드</option>
+                <option value="자동차">자동차</option>
+                <option value="컴퓨터">컴퓨터</option>
+                <option value="의류">의류</option>
+                <option value="도서용품&서류">도서용품&서류</option>
+                <option value="스포츠">스포츠</option>
             </select>
         </div>
-     
         <div class="input-group">
-            <input class="form-control" id="name" type="search" name="name" placeholder="분실자명">
-        </div>
+            <input class="form-control py-2 border" type="search" name="name" id="input_name" placeholder="분실자명">
+        </div>   
         <button type="button" onclick="search()" class="btn btn-primary">검색</button>
     </div>
 </form>
 <br>
-
+<!-- filter !-->
     <div class="container-fluid">
         <div class="row" >
             {% for item in posts %}
@@ -124,4 +121,3 @@
 </body>
 
 </html>
-
