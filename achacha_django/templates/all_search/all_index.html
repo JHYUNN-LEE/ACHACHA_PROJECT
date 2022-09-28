@@ -5,6 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
+    <script>
+        $(function() {
+            input.style.borderRadius = "5px"; 
+           
+        });
+    </script>
+
 </head>
 
 <body>
@@ -12,30 +19,44 @@
 <br>
 <form method="GET" action=".">
     <div class="form-row">
-        <div class="form-group col-12">
-            <div class="input-group">
-                <input class="form-control py-2 border-right-0 border" type="search" name="category" placeholder="카테고리를 입력해주세요" />
-                <span class="input-group-append">
-                    <div class="input-group-text bg-transparent">
-                        <i class="fa fa-search"></i>
-                    </div>
-                </span>
-            </div>
+        <div class="input-group">
+            <input id="input" class="form-control" type="search" name="category" list="category" placeholder="카테고리" />
+                <datalist id="category">
+                    <option value="wallet">지갑</option>
+                    <option value="card">카드</option>
+                    <!-- <option value="phone">휴대폰</option>
+                    <option value="bag">가방</option>
+                    <option value="earphones">이어폰</option>
+                    <option value="cap">모자</option>
+                    <option value="car_key">차키</option>
+                    <option value="cloth">옷</option>
+                    <option value="document">도서용품, 서류</option>
+                    <option value="necklace">목걸이</option>
+                    <option value="ring">반지</option>
+                    <option value="shoes">신발</option>
+                    <option value="shopping_bag">쇼핑백</option>
+                    <option value="watch">시계</option>                        -->
+                </datalist>
+            
+            <!-- <span class="input-group-append">
+                <div class="input-group-text bg-transparent">
+                    <i class="fa fa-search"></i>
+                </div>
+            </span> -->
         </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-12">
-            <div class="input-group">
-                    <input class="form-control py-2 border-right-0 border" type="search" name="name" placeholder="이름을 입력해주세요">
-                    <span class="input-group-append">
-                        <div class="input-group-text bg-transparent">
-                            <i class="fa fa-search"></i>
-                        </div>
-                    </span>
-            </div>
+     
+        <div class="input-group">
+            <input class="form-control" type="search" name="name" placeholder="분실자명">
+            <!-- <span class="input-group-append">
+                <div class="input-group-text bg-transparent">
+                    <i class="fa fa-search"></i>
+                </div>
+            </span> -->
         </div>
+        <button type="submit" class="btn btn-primary">검색</button>
     </div>
-    <button type="submit" class="btn btn-primary">검색</button>
+    
+
 </form>
 <br>
 <!-- filter !-->
