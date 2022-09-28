@@ -30,12 +30,14 @@
                 </div>
                 {% endif %}
                 <br>
-                <div class="title">{{ item.title }}</div>
-                <span class="date_time">{{ item.created_at }}</span>
-                <br>
-                <span class="get_place">{{ item.get_place }}</span>
-                <br>
-                <span class="cost">{{ item.cost }} 원</span>
+                <div class="info">
+                    <div class="title">{{ item.title }}</div>
+                    <span class="date_time">{{ item.created_at }}</span>
+                    <br>
+                    <span class="get_place">{{ item.get_place }}</span>
+                    <br>
+                    <span class="cost">{{ item.cost }} 원</span>
+                </div>
                 <hr>
             </div>
             {% endfor %}

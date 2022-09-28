@@ -397,6 +397,11 @@
                                 <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" onclick="location.href='/member/login/'">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     로그인
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" onclick="location.href='/member/register/'">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    회원가입
                                 {% endif %}
                                 </a>
                             </div>
@@ -804,5 +809,61 @@
     {% endblock %}
 
 </body>
+<script>
+    function search(){
+        var name = $('#input_name').val();
+        var category = $('#input_category').val();
+        console.log(name, category);
 
+        document.location=`?name=${name}&category=${category}`
+    }
+    function pagemv(ths){
+        var urlParams = new URL(location.href).searchParams;
+        var page = $(ths).text();
+        var name = urlParams.get('name');
+        var category = urlParams.get('category');
+        if (name != null){
+            console.log(name);
+            console.log(category);
+            console.log(page);
+            location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
+        }
+        else{
+            location.href=location.pathname+'?page='+page
+        }
+    }
+
+    function pagebf(){
+        var urlParams = new URL(location.href).searchParams;
+        var name = urlParams.get('name');
+        var category = urlParams.get('category');
+        if (page != null){
+            var page = urlParams.get('page')-1;
+            console.log(name);
+            console.log(category);
+            console.log(page);
+            location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
+        }
+        else{
+            var page = urlParams.get('page')-1;
+            location.href=location.pathname+'?page='+page
+        }
+    }
+    function pagenx(){
+        var urlParams = new URL(location.href).searchParams;
+        var name = urlParams.get('name');
+        var category = urlParams.get('category');
+        if (page != null){
+            var page = parseInt(urlParams.get('page'))+1;
+            console.log(name);
+            console.log(category);
+            console.log(page);
+            location.href=location.pathname+'?name='+name+'&category='+category+'&page='+page
+        }
+        else{
+            var page = 2;
+            location.href=location.pathname+'?page='+page
+        }
+    }
+</script>
 </html>
