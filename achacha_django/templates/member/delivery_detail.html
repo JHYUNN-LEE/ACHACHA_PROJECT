@@ -27,6 +27,35 @@
 <body>
 {% if user.is_authenticated %}
     <div class="lost_items">
+<<<<<<< HEAD
+        <div class="col-lg-6 mb-4">
+            {% for post in posts %}
+                <div class="title">{{ post.title }}</div>
+                <span class="created_at">{{ post.created_at}}</span>
+                <br>
+                <span class="user_name">작성자: {{ request.user }}</span>
+                <br>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <span class="cost">{{ post.cost }}</span>
+                <hr>
+=======
+=======
+>>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
+                <span class="get_place">보관장소: {{ post.get_place }}</span>
+                <br>
+                <span class="cost">{{ post.cost }}</span>
+                
+                <br>
+                <button class="find_check">수령 완료
+                <button class="accept_check">배송 완료
+<<<<<<< HEAD
+>>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
+=======
+>>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
+            {% endfor %}
+        </div>
+=======
         {% for post in posts %}
         {% if post.lost_items_id %}
             <div class="img">
@@ -49,6 +78,7 @@
         
         {% endfor %}
         
+>>>>>>> d23731c64710931a79ca3f351503c02b322de7ab
     </div>
 
     <!-- /.container-fluid -->

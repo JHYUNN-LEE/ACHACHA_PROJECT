@@ -173,7 +173,7 @@ def find_category_to_es(request):
 
     es = Elasticsearch("http://54.64.90.112:9200")
 
-    res = es.search(index='lost112_sample', size=10000,
+    res = es.search(index='lost112', size=10000,
                 query = {    
                     "bool": {
                         "must": [
@@ -200,7 +200,7 @@ def find_category_to_es(request):
     paginator = Paginator(datas, 10)
     
 
-    print(page) 
+    print(datas) 
     max_index = len(paginator.page_range)
     posts = paginator.get_page(page)
    
@@ -237,7 +237,7 @@ def keyword_detail(request, images_id_pk):
         
         lost_items_id = images_id_pk
         
-        print(users_id, category, get_place, img_src)
+        #print(users_id, category, get_place, img_src)
 
         search_item = Posts.objects.create(users_id=users_id,
                     category=category,
@@ -245,7 +245,11 @@ def keyword_detail(request, images_id_pk):
                     img_src=img_src,
                     lost_items_id = lost_items_id
         ) 
-        
+        deal= request.POST['deal']
+        #print(deal)
+        user_deal = UserDeal.objects.create(users_id= users_id,
+                                        posts_id= search_item.posts_id_pk,
+                                        deal= deal)
         
         user_deal = UserDeal.objects.create(users_id=users_id,
                                         posts_id=search_item.posts_id_pk,
@@ -262,7 +266,7 @@ def keyword_detail(request, images_id_pk):
         
         es = Elasticsearch("http://54.64.90.112:9200")
 
-        res = es.search(index='lost112_sample', size=1,
+        res = es.search(index='lost112', size=1,
                     body = { "query":  
                                 {"match": {"images_id_pk" : images_id_pk}},
                                             }
@@ -271,6 +275,8 @@ def keyword_detail(request, images_id_pk):
         hits = res['hits']['hits']
         datas = trans_source(hits)
         context = {'datas' : datas}
+
+        print(datas)
         
         return render(request, 'fast_search/3-2_keyword_detail.html', context)
 

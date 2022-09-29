@@ -13,11 +13,95 @@
     ul{
         list-style:none;
         padding-left:0px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+
      }
+    
+    h4{
+        text-align: center;     
+    }
 
     li{
-        padding-left: 5px;        
+        padding-left: 10%; 
+        font-size: 14px;       
     }
+
+    p{
+        line-height: 3;
+    }
+
+
+    #submitButton{
+        width: 230px;
+        height: 40px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        margin-top: 5px;
+        position: relative;
+        display: block;
+        border-radius: 18px;
+        background-color: #1c89ff;
+        border: solid 1px transparent;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .1s ease-in-out;
+        
+    }
+    #submitButton:hover {
+            background-color: grey;
+            border-color: #fff; 
+        }
+    #submitButton:active{background-color: aqua;}/* 마우스 한번클릭후 */
+    #submitButton:visited{color:white;}
+
+    #submit_notice{ 
+        margin-top: -10px;
+        font-size: 13px;
+        text-align: center;
+        color: #1c89ff;
+    }
+    
+    #last{
+        margin-bottom: 60px;
+    }
+
+    .title {
+        position: relative;
+        height: 40px;
+        width: 230px;
+        font-size: 21px;
+        border-radius: 5em; 
+        padding: 0.3em 1em; 
+        background: #F9F9F9; 
+        box-shadow: 1px 2px 10px rgba(61, 85, 236, 0.2);  
+        margin:0 auto;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #1c89ff;
+
+    }
+
+    .content{
+        font-size: 15px;
+    }
+
+    .image_center{
+        
+        position: relative;
+        height: 330px;
+        width: 300px;
+        margin: 0 auto;
+
+    }
+
+    .lost_img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
 </style>
 
 {% for pk in datas %}
@@ -25,8 +109,52 @@
 <form action="{% url 'keyword_detail' pk.images_id_pk %}" method="POST" id="dataForm"> {% csrf_token %}
   
 
-<div class="keyword_div">
+    <div class="keyword_div">
+
+        <div class="image_center">
+            <img class="lost_img" src="{% get_static_prefix %}image/{{ pk.images_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='{% get_static_prefix %}bootstrap/img/no_image.png'">
+        </div>
+
+        <ul> <!-- 분실 정보 -->
+            <h4 class="title">분실 품목</h4>
+            <li>분실물명 : <span class="content">{{ pk.get_name }}</span></li>
+            <li>카테고리 : <span class="content">{{ pk.category }}</span></li>
+        </ul>
+
+        <ul>    
+            <h4 class="title">분실 정보</h4>
+            <li>분실날짜 : <span class="content">{{ pk.get_at }}</span></li>
+            <li>분실시간 : <span class="content">{{ pk.get_time }}</span></li>         
+            <li>분실장소 : <span class="content">{{ pk.find_place }}</span></li>
+            <li>분실자 : <span class="content">{{ pk.name }}</span></li>
+        </ul>
+
+        <ul id="last">
+            <h4 class="title">보관 장소</h4>
+            <li>유실물센터 : <span class="content" id="location">{{ pk.center_place }}</span></li>
+            <li>센터번호 : <span class="content">{{ pk.center_number }}</span></li>
+        </ul>
+
+    </div>
+
+    {% if pk.name != "-" %} <!-- 이름이 있는 사람만 submit 할 수 있게 해줍니다. -->
+    <div class="submitButton" id="submit_notice">
+        대신 수령 요청이 가능한 분실물입니다.<br>
+        보상을 올려 물건을 택배로 받아 볼 수 있습니다! 
+    <div>
+        
+    <input name="acha_money_board" type="submit" value="대신 수령 작성하러 가기" class="submitButton" id="submitButton"/>
+    {% endif %}
     
+<<<<<<< HEAD
+    <!-- 카카오 지도 api -->
+    <p>
+        <h4 class="title"> 관련 위치 보기 </h4> 
+        <div id="map" style="width:100%;height:300px;"></div>
+    </p>
+
+
+=======
     <ul> <!-- 분실이미지 삽입 --> 
         <li><img class="lost_img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='../../static/bootstrap/img/no_image.png'"></li>
     </ul>
@@ -48,11 +176,16 @@
         <li>센터번호 : <span class="content">{{ pk.center_number }}</span></li>
     </ul>
     <ul>
+>>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
 
     <!-- redirect 해주기 위해 input 해줌 div 태그는 숨김 -->
     <div style="visibility: hidden;">   
         <input type="text" name="get_place" value= {{pk.center_place}}>
         <input type="text" name="category" value= {{pk.category}}> 
+<<<<<<< HEAD
+        <input type="hidden" name="deal" value="owner">
+    </div>  
+=======
     </div>
 
     {% if pk.name != "-" %} <!-- 이름이 있는 사람만 submit 할 수 있게 해줍니다. -->
@@ -61,14 +194,10 @@
     {% endif %}
     </ul>
 
+>>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
     {% endfor %}  
+  
 </form>
-
-    <ul>
-    <h4> 위치보기 </h4> 
-    <div id="map" style="width:100%;height:300px;"></div>
-    </ul>    
-
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1196626d8c73a211eed3a1a57afe54c1&libraries=services"></script>
 <script>
 
@@ -81,7 +210,7 @@
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
         mapOption = {
             center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
-            level: 4// 지도의 확대 레벨
+            level: 5// 지도의 확대 레벨
         };  
 
     // 지도를 생성합니다    
