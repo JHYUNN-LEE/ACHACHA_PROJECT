@@ -59,7 +59,7 @@ def index(request):
     return render(request, 'member/request.html', context)
 
 
-def request(request):
+def owner(request):
     logger.trace_logger(request) # view 로그 추적 
     user_name = request.user
     posts = Posts.objects.raw("SELECT * FROM posts join user_deal \
