@@ -13,7 +13,7 @@
         <ul>
         {% for item in lost_items_list %}
             <div class="image_center">
-                <img class="img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image">
+                <img class="img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='../../static/bootstrap/img/no_image.png'">
             </div>
             <h4>분실 품목</h4>
             <li>분실물명 : <span class="title" name="title">{{ item.get_name }}</span></li>

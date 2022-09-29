@@ -5,10 +5,10 @@
     <title>Title</title>
 </head>
 <body>
+
 {% extends 'base/base.html' %}
-
 {% block content %}
-
+{% load static %}
 <style>
     ul{
         list-style:none;
@@ -28,7 +28,7 @@
 <div class="keyword_div">
     
     <ul> <!-- 분실이미지 삽입 --> 
-        <li><img class="lost_img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image"></li>
+        <li><img class="lost_img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='../../static/bootstrap/img/no_image.png'"></li>
     </ul>
     <ul> <!-- 분실 정보 -->
         <h4 class="title">분실 품목</h4>
