@@ -11,12 +11,9 @@
 <div class="lost_items">
 
     {% for item in lost_items_list %}
-        {% if item.img_src %}
-            <div class="img">
-                <img class="img" src="{{ item.img_src.url }}"><br>
-            {#<img class="img" src="{{}}">#}
-            </div>
-        {% endif %}
+        <div class="image_center">
+            <img class="lost_img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image">
+        </div>
     
         <div class="detail">
             <div class="title">분실물명 : {{ item.get_name }}</div>
