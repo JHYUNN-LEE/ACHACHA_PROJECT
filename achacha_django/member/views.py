@@ -46,7 +46,7 @@ def register(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)  # 사용자 인증
             login(request, user)  # 로그인
-            return redirect('http://127.0.0.1:8000')
+            return redirect('http://54.64.90.112:8000')
     else:
         form = UserForm()
         

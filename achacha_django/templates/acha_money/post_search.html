@@ -55,9 +55,9 @@
             </div>
 
             
-            <input type="checkbox" name="deal" value="seller"> 이 물품이 본인의 물품임을 확인하였습니다. 
+            <input type="checkbox" name="deal" value="owner"> 이 물품이 본인의 물품임을 확인하였습니다. 
 
-            <a href="{% url 'acha_money' %}"><button>취소</button></a><br>
+            <a href="{% url 'delete' item.posts_id_pk %}"><button>취소</button></a><br>
             <input type="submit" value="작성" class="submit">
         </form>
     {% endfor %}
