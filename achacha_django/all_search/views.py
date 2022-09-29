@@ -29,6 +29,7 @@ def all_index(request):
 
     items_per_page = 10
     paginator = Paginator(lost_items_list, items_per_page)
+    print(paginator)
     page = request.GET.get('page')
     max_index = len(paginator.page_range)
     posts = paginator.get_page(page)

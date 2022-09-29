@@ -20,6 +20,13 @@
     border: none;
     border-bottom: 1px solid #c9cbd7;
 
+<<<<<<< HEAD
+select {
+    height: 100px;
+    padding: 5% 0;
+    line-height: 100px;
+=======
+>>>>>>> master
 }
 
 select option:first-child {
@@ -67,6 +74,12 @@ textarea{
     margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
+.submit {
+    position: relative;
+    right: 250px;
+    top: 10px;
+=======
 .cancel:hover{
     background-color: rgb(67, 67, 67);
 }
@@ -84,6 +97,7 @@ textarea{
 }
 .submit:hover{
     background-color: #1449e6; 
+>>>>>>> master
 }
 
 .content_box{

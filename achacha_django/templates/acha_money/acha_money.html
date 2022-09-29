@@ -1,4 +1,4 @@
-{% extends 'base/base.html' %}
+r{% extends 'base/base.html' %}
 {% block content %}
 {% load static %}
 <html lang="en">
@@ -75,6 +75,7 @@
             <li class="page-item">
                 <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
             </li>
+            <p>{{page_number}}</p>
             {% endif %}
             {% endif %}
             {% endfor %}

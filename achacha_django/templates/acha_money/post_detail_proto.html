@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block css %}
+        <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css">
+    {% endblock %}
+
+</head>
+<body>
+{% block content %}
+    {% for item in detail_proto %}
+    <form action="{% url 'detail_proto' item.posts_id_pk %}" method="post">{% csrf_token %}
+        <div class="img">
+            {% if item.img_src %}
+                <img class="img" src="{{ item.img_src.url }}"><br>
+            {% endif %} 
+        </div>   
+        <div class="detail">
+            
+            <div class="title">{{ item.title }}</div>
+            <div class="author">카테고리: {{ item.category }}</div>
+            <div class="author">사례금: {{ item.cost }} 원</div>
+            <div class="author">택배 : {{ item.parcel }}</div>
+            <div class="author">보관장소: {{ item.get_place }}</div>
+            <div class="author">{{ item.content }}</div>
+            
+        </div>
+
+        <div class="basic_block_low2">
+            <div class="div_content">
+                <button type="submit" name="deal" value="delivery" id="submit" onclick="phone_alert()">찾아주기
+            </div>
+        </div>
+    </form>
+    {% endfor %}
+
+    <script>
+        function phone_alert() {
+            alert("보관장소에 연락 하여, 대신수령이 가능한지 확인해주세요.\n확인 후 마이페이지에서 '전화 확인' 버튼을 눌러주세요.🫶")        
+        }
+    </script>
+{% endblock %}
+</body>
+</html>
