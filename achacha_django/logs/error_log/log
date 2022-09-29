@@ -2566,3 +2566,282 @@ django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' 
 [29Sep2022 00:43:56 INFO [django.server:187] "GET /static/acha_money/css/post.css HTTP/1.1" 200 1549
 [29Sep2022 00:43:56 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
 >>>>>>> master
+[29Sep2022 09:02:51 INFO [django.utils.autoreload:637] Watching for file changes with StatReloader
+[29Sep2022 09:02:57 INFO [django.server:161] "GET / HTTP/1.1" 200 28478
+[29Sep2022 09:02:58 INFO [django.server:161] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[29Sep2022 09:02:58 WARNING [django.request:230] Not Found: /favicon.ico
+[29Sep2022 09:02:58 WARNING [django.server:161] "GET /favicon.ico HTTP/1.1" 404 2779
+[29Sep2022 09:03:07 ERROR [django.request:230] Internal Server Error: /all_search/
+Traceback (most recent call last):
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\2022_DS_Bootcamp\3_DSDE_collabo\ACHACHA_PROJECT\achacha_django\all_search\views.py", line 38, in all_index
+    return render(request, 'all_search/all_index.html', context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\defaulttags.py", line 171, in render
+    len_values = len(values)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\paginator.py", line 177, in __len__
+    return len(self.object_list)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\models\query.py", line 68, in __iter__
+    for row in compiler.results_iter(results):
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\models\sql\compiler.py", line 1122, in apply_converters
+    value = converter(value, expression, connection)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\backends\mysql\operations.py", line 313, in convert_datetimefield_value
+    value = timezone.make_aware(value, self.connection.timezone)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\utils\timezone.py", line 242, in make_aware
+    return timezone.localize(value, is_dst=is_dst)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\pytz\__init__.py", line 244, in localize
+    if dt.tzinfo is not None:
+AttributeError: 'datetime.date' object has no attribute 'tzinfo'
+[29Sep2022 09:03:07 ERROR [django.server:161] "GET /all_search/ HTTP/1.1" 500 205133
+[29Sep2022 09:05:21 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24953
+[29Sep2022 09:05:21 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:05:21 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:05:21 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[29Sep2022 09:05:21 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:05:21 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[29Sep2022 09:05:21 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[29Sep2022 09:05:21 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:05:21 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[29Sep2022 09:05:21 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[29Sep2022 09:05:21 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[29Sep2022 09:05:21 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[29Sep2022 09:05:21 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[29Sep2022 09:05:21 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:05:21 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:05:21 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:05:21 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:05:28 INFO [django.server:161] "POST /member/login/ HTTP/1.1" 200 25305
+[29Sep2022 09:05:28 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:05:28 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:05:28 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:05:28 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:05:28 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[29Sep2022 09:05:28 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[29Sep2022 09:05:28 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[29Sep2022 09:05:28 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[29Sep2022 09:05:28 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[29Sep2022 09:05:28 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[29Sep2022 09:05:28 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[29Sep2022 09:05:28 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[29Sep2022 09:05:28 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:05:28 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:05:35 INFO [django.server:161] "POST /member/login/ HTTP/1.1" 200 25305
+[29Sep2022 09:05:35 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:05:35 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:05:35 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:05:35 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[29Sep2022 09:05:35 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[29Sep2022 09:05:35 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:05:35 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[29Sep2022 09:05:35 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[29Sep2022 09:05:35 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[29Sep2022 09:05:35 INFO [django.server:75] - Broken pipe from ('127.0.0.1', 49770)
+
+[29Sep2022 09:05:35 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[29Sep2022 09:05:35 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[29Sep2022 09:05:35 INFO [django.server:75] - Broken pipe from ('127.0.0.1', 49805)
+
+[29Sep2022 09:05:35 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[29Sep2022 09:05:35 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:05:35 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:05:37 INFO [django.server:161] "GET / HTTP/1.1" 200 28478
+[29Sep2022 09:05:39 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 21433
+[29Sep2022 09:05:40 INFO [django.server:161] "GET /static/acha_money/css/base.css HTTP/1.1" 304 0
+[29Sep2022 09:05:40 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24953
+[29Sep2022 09:05:40 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:05:40 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:05:40 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:05:40 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:05:40 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[29Sep2022 09:05:40 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[29Sep2022 09:05:40 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[29Sep2022 09:05:40 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[29Sep2022 09:05:40 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[29Sep2022 09:05:40 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[29Sep2022 09:05:40 INFO [django.server:75] - Broken pipe from ('127.0.0.1', 49806)
+
+[29Sep2022 09:05:40 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[29Sep2022 09:05:40 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[29Sep2022 09:05:40 INFO [django.server:75] - Broken pipe from ('127.0.0.1', 49814)
+
+[29Sep2022 09:05:40 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:05:40 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:05:41 INFO [django.server:161] "GET /member/register HTTP/1.1" 301 0
+[29Sep2022 09:05:42 INFO [django.server:161] "GET /member/register/ HTTP/1.1" 200 28034
+[29Sep2022 09:05:57 INFO [django.server:161] "POST /member/auth/ HTTP/1.1" 200 87
+[29Sep2022 09:06:10 INFO [django.server:161] "POST /member/auth_check/ HTTP/1.1" 200 71
+[29Sep2022 09:06:14 INFO [django.server:161] "POST /member/register/ HTTP/1.1" 302 0
+[29Sep2022 09:06:15 INFO [django.server:161] "GET / HTTP/1.1" 200 28429
+[29Sep2022 09:06:21 ERROR [django.request:230] Internal Server Error: /all_search/
+Traceback (most recent call last):
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\2022_DS_Bootcamp\3_DSDE_collabo\ACHACHA_PROJECT\achacha_django\all_search\views.py", line 38, in all_index
+    return render(request, 'all_search/all_index.html', context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\template\defaulttags.py", line 171, in render
+    len_values = len(values)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\core\paginator.py", line 177, in __len__
+    return len(self.object_list)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\models\query.py", line 68, in __iter__
+    for row in compiler.results_iter(results):
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\models\sql\compiler.py", line 1122, in apply_converters
+    value = converter(value, expression, connection)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\db\backends\mysql\operations.py", line 313, in convert_datetimefield_value
+    value = timezone.make_aware(value, self.connection.timezone)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\django\utils\timezone.py", line 242, in make_aware
+    return timezone.localize(value, is_dst=is_dst)
+  File "C:\Users\JINYI\Anaconda3\envs\achacha\lib\site-packages\pytz\__init__.py", line 244, in localize
+    if dt.tzinfo is not None:
+AttributeError: 'datetime.date' object has no attribute 'tzinfo'
+[29Sep2022 09:06:21 ERROR [django.server:161] "GET /all_search/ HTTP/1.1" 500 205346
+[29Sep2022 09:06:47 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24904
+[29Sep2022 09:06:48 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[29Sep2022 09:06:48 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[29Sep2022 09:06:48 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[29Sep2022 09:06:48 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[29Sep2022 09:06:54 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24904
+[29Sep2022 09:06:54 INFO [django.server:75] - Broken pipe from ('127.0.0.1', 49815)
+
+[29Sep2022 09:06:55 INFO [django.server:161] "GET /member/register/ HTTP/1.1" 200 27985
+[29Sep2022 09:07:00 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24904
+[29Sep2022 09:07:01 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[29Sep2022 09:07:01 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[29Sep2022 09:07:01 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:07:01 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:07:01 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[29Sep2022 09:07:01 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[29Sep2022 09:07:01 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[29Sep2022 09:07:01 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[29Sep2022 09:07:01 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:07:01 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:07:01 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[29Sep2022 09:07:01 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[29Sep2022 09:08:18 INFO [django.server:161] "GET / HTTP/1.1" 200 28429
+[29Sep2022 09:08:21 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 29625
+[29Sep2022 09:08:21 INFO [django.server:161] "GET /static/acha_money/img/pen_white.png HTTP/1.1" 304 0
+[29Sep2022 09:08:21 INFO [django.server:161] "GET /static/bootstrap/img/no_image.png HTTP/1.1" 304 0
+[29Sep2022 09:08:21 WARNING [django.request:230] Not Found: /media/acha_money/자바의정석_Ykm3Zk9.jpeg
+[29Sep2022 09:08:21 WARNING [django.server:161] "GET /media/acha_money/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_Ykm3Zk9.jpeg HTTP/1.1" 404 3198
+[29Sep2022 09:08:21 WARNING [django.request:230] Not Found: /media/acha_money/가방_8Ruk6VS.jpeg
+[29Sep2022 09:08:21 WARNING [django.server:161] "GET /media/acha_money/%EA%B0%80%EB%B0%A9_8Ruk6VS.jpeg HTTP/1.1" 404 3144
+[29Sep2022 09:08:34 INFO [django.server:161] "GET /member/logout/ HTTP/1.1" 302 0
+[29Sep2022 09:08:34 INFO [django.server:161] "GET / HTTP/1.1" 200 28478
+[29Sep2022 09:08:37 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 21412
+[29Sep2022 09:08:37 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24953
+[29Sep2022 09:08:37 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:08:37 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:08:37 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:08:37 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[29Sep2022 09:08:37 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[29Sep2022 09:08:37 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[29Sep2022 09:08:37 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:08:37 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[29Sep2022 09:08:37 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[29Sep2022 09:08:37 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[29Sep2022 09:08:37 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[29Sep2022 09:08:37 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[29Sep2022 09:08:45 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24953
+[29Sep2022 09:08:45 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[29Sep2022 09:08:45 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:08:45 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[29Sep2022 09:08:45 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[29Sep2022 09:08:45 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[29Sep2022 09:08:45 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:08:45 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[29Sep2022 09:08:45 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:08:45 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[29Sep2022 09:08:45 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[29Sep2022 09:08:45 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[29Sep2022 09:08:45 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:08:45 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:08:45 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:08:45 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:08:45 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:08:57 INFO [django.server:161] "GET /acha_money/ HTTP/1.1" 200 21412
+[29Sep2022 09:08:57 INFO [django.server:161] "GET /member/login/ HTTP/1.1" 200 24953
+[29Sep2022 09:08:57 WARNING [django.request:230] Not Found: /member/login/vendor/fontawesome-free/css/all.min.css
+[29Sep2022 09:08:57 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:08:57 WARNING [django.server:161] "GET /member/login/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 4551
+[29Sep2022 09:08:57 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
+[29Sep2022 09:08:57 WARNING [django.request:230] Not Found: /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js
+[29Sep2022 09:08:57 WARNING [django.request:230] Not Found: /member/login/vendor/jquery-easing/jquery.easing.min.js
+[29Sep2022 09:08:57 WARNING [django.request:230] Not Found: /member/login/vendor/jquery/jquery.min.js
+[29Sep2022 09:08:57 WARNING [django.request:230] Not Found: /member/login/js/sb-admin-2.min.js
+[29Sep2022 09:08:57 WARNING [django.server:161] "GET /member/login/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 4563
+[29Sep2022 09:08:57 WARNING [django.server:161] "GET /member/login/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 4557
+[29Sep2022 09:08:57 WARNING [django.server:161] "GET /member/login/vendor/jquery/jquery.min.js HTTP/1.1" 404 4515
+[29Sep2022 09:08:57 INFO [django.server:75] - Broken pipe from ('127.0.0.1', 49848)
+
+[29Sep2022 09:08:57 INFO [django.server:75] - Broken pipe from ('127.0.0.1', 49850)
+
+[29Sep2022 09:08:57 WARNING [django.server:161] "GET /member/login/js/sb-admin-2.min.js HTTP/1.1" 404 4494
+[29Sep2022 09:08:57 WARNING [django.request:230] Not Found: /member/login/css/sb-admin-2.min.css
+[29Sep2022 09:08:57 WARNING [django.server:161] "GET /member/login/css/sb-admin-2.min.css HTTP/1.1" 404 4500
