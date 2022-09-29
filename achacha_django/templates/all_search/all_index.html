@@ -44,15 +44,9 @@
         <div class="row" >
             {% for item in posts %}
             <div class="card_search" onclick="location.href='{% url 'all_detail' item.lost_items_id_pk %}'">
-                {% if item.img_src %}
                 <div class="image_center">
-                    <img class="lost_img" src="{{ item.img_src.url }}" alt="image">
+                    <img class="lost_img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='../../static/bootstrap/img/no_image.png'">
                 </div>
-                {% else %}
-                <div class="image_center">
-                    <img class="lost_img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
-                </div>
-                {% endif %}
                 <br>
                 <div class="info">
                     <div class="title">{{ item.get_name }}</div>
@@ -72,6 +66,7 @@
         비슷한 물건 들어왔을 때 <a href="{% url 'all_alarm' %}">알림받기</a>
         </div>
     </div>
+</form>
 
 <!-- pagination -->
     <div class="pagination">
