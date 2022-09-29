@@ -11,9 +11,10 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='member/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('register/', views.register, name='register'),
-    path('request/', views.request, name='request'),
-    path('register/', views.register, name='register'),
-    path('implement/', views.implement, name='implement'),
+    path('delivery/', views.delivery, name='delivery'),
+    path('delivery/delivery_detail/<int:posts_id_pk>/', views.delivery_detail, name='delivery_detail'),
+    path('owner/', views.owner, name='owner'),
+    path('owner/owner_detail/<int:posts_id_pk>/', views.owner_detail, name='owner_detail'),
     path('mypage/', auth_views.LoginView.as_view(template_name='member/mypageindex.html'), name='mypage'),
     path('auth/', views.SmsSendView.as_view(), name='auth'),
     path('auth_check/', views.SMSVerificationView.as_view(), name='auth_check')

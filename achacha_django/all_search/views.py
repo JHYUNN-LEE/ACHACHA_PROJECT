@@ -13,9 +13,11 @@ def all_index(request):
     items_per_page = 10
     lost_items_list = LostItems.objects.all().order_by('-get_at')
     paginator = Paginator(lost_items_list, items_per_page)
+    print(paginator)
     page = request.GET.get('page')
     max_index = len(paginator.page_range)
     posts = paginator.get_page(page)
+    print(posts)
 
     client = InsecureClient('http://54.64.90.112:9870', user="ubuntu")
     

@@ -8,6 +8,7 @@
     <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
+
 <div class="lost_items">
 
     {% for item in lost_items_list %}
@@ -24,6 +25,7 @@
             <div class="author">카테고리 : {{ item.category }}</div>
             <div class="author">분실장소 : {{ item.find_place }}</div>
             <div class="author">수령위치 : {{ item.get_place }}</div>
+            <div class="author">분실자명 : {{ item.name }}</div>
             <!-- <div class="get_place">분실물 상태 : {{ item.pickup_check }}</div> -->
         </div>
 </div>

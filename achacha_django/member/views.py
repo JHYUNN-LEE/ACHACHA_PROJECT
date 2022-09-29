@@ -40,15 +40,15 @@ def index(request):
     return render(request, 'member/request.html', context)
 
 
-def request(request):
+def owner(request):
     user_name = request.user
-    post = Posts.objects.raw("SELECT * FROM posts join user_deal \
+    posts = Posts.objects.raw("SELECT * FROM posts join user_deal \
                              on posts.posts_id_pk = user_deal.posts_id \
-                        where user_deal.deal = 'seller' and user_deal.users_id= %s", [user_name])
+                        where user_deal.deal = 'owner' and user_deal.users_id= %s", [user_name])
     # post = Posts.objects.filter(users_id=request.user)
     # post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id'])
     # print(post)
-    return render(request, 'member/request.html', {'post': post})
+    return render(request, 'member/owner.html', {'posts': posts})
 
 
 # class requestList():
@@ -64,14 +64,14 @@ def request(request):
 #     return render(request, 'member/request.html', {'seller': seller})
 
 
-def implement(request):
+def delivery(request):
     user_name = request.user
-    post = Posts.objects.raw("SELECT * FROM posts join user_deal \
+    posts = Posts.objects.raw("SELECT * FROM posts join user_deal \
                              on posts.posts_id_pk = user_deal.posts_id \
-                        where user_deal.deal = 'purchaser' and user_deal.users_id=%s", [user_name])
+                        where user_deal.deal = 'delivery' and user_deal.users_id=%s", [user_name])
 
     # post = post.extra(tables=['user_deal'], where=['posts.posts_id_pk=user_deal.posts_id']).distinct()
-    return render(request, 'member/implement.html', {'post': post})
+    return render(request, 'member/delivery.html', {'posts': posts})
 
 
 
@@ -150,3 +150,13 @@ class SMSVerificationView(View):
 
         except Authentication.DoesNotExist:
             return JsonResponse({'message': '해당 휴대폰 번호가 존재하지 않습니다.'}, status=400)
+        
+        
+        
+def delivery_detail(request, posts_id_pk):
+    posts = Posts.objects.filter(posts_id_pk=posts_id_pk)
+    return render(request, 'member/delivery_detail.html', {'posts': posts})
+
+def owner_detail(request, posts_id_pk):
+    posts = Posts.objects.filter(posts_id_pk=posts_id_pk)
+    return render(request, 'member/owner_detail.html', {'posts': posts})

@@ -26,40 +26,16 @@
 {% if user.is_authenticated %}
     <div class="lost_items">
         <div class="col-lg-6 mb-4">
-            <div class="right">
-                <table class="table table-bordered" id="dataTable">
-                    {% for posts in post %}
-                            <tbody>
-                                <tr>
-                                    <td class="lost_img" rowspan="5">
-<!--                                    {% if item.img_src %}-->
-<!--                                    <div class="left">-->
-<!--                                        {#<img class="lost_img" src="{{}}">#}-->
-<!--                                        <p>{{ posts.users_id }}</p>-->
-<!--                                    </div>-->
-<!--                                    {% endif %}-->
-                                    </td>
-                                    <td><span class="title">
-                                        게시물명 : {{ posts.title }}</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="location">카테고리 : {{ posts.category }}</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="cost">비용 : {{ posts.cost }}</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="time">작성 시간 : {{ posts.created_at }}</span></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="time">내용 : {{ posts.content }}</span></td>
-                                </tr>
-                            </tbody>
-                    {% endfor %}
-                    </table>
-                </div>
-            </div>
+            {% for post in posts %}
+                <div class="title">{{ post.title }}</div>
+                <span class="created_at">{{ post.created_at}}</span>
+                <br>
+                <span class="cost">{{ post.cost }}</span>
+                <hr>
+            {% endfor %}
         </div>
+        
+        
         {% else %}
             <div class="card" style="width: 25rem;">
             <div class="card-body">

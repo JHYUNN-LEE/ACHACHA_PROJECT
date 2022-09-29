@@ -27,7 +27,7 @@
 select {
     height: 100px;
     padding: 5% 0;
-    line-height: 100px;:
+    line-height: 100px;
 }
 
 select option:first-child {
@@ -59,8 +59,8 @@ select option:first-child {
 
 .submit {
     position: relative;
-    left: 260px;
-    top: 30px;
+    right: 250px;
+    top: 10px;
 }
 
 

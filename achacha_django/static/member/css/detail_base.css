@@ -1,0 +1,15 @@
+.title {
+    color: #4e73df;
+    font-weight: bold;
+    font-size: 15pt;
+    height: 45px;
+}
+
+.created_at {
+    font-size: 12pt;
+}
+
+.cost {
+    font-size: 12pt;
+    color: black;
+}
