@@ -63,9 +63,19 @@
                     </div>
                 </div>  
             </div>
+<<<<<<< HEAD
         </div>
     </form>
 </div>
+=======
+
+            
+            <input type="checkbox" name="deal" value="owner"> 이 물품이 본인의 물품임을 확인하였습니다. 
+
+            <a href="{% url 'delete' item.posts_id_pk %}"><button>취소</button></a><br>
+            <input type="submit" value="작성" class="submit">
+        </form>
+>>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
     {% endfor %}
     
 {% endblock %}

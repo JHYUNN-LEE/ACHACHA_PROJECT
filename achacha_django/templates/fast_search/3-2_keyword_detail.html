@@ -146,6 +146,7 @@
     <input name="acha_money_board" type="submit" value="대신 수령 작성하러 가기" class="submitButton" id="submitButton"/>
     {% endif %}
     
+<<<<<<< HEAD
     <!-- 카카오 지도 api -->
     <p>
         <h4 class="title"> 관련 위치 보기 </h4> 
@@ -153,13 +154,47 @@
     </p>
 
 
+=======
+    <ul> <!-- 분실이미지 삽입 --> 
+        <li><img class="lost_img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='../../static/bootstrap/img/no_image.png'"></li>
+    </ul>
+    <ul> <!-- 분실 정보 -->
+        <h4 class="title">분실 품목</h4>
+        <li>분실물명 : <span class="content">{{ pk.get_name }}</span></li>
+        <li>카테고리 : <span class="content">{{ pk.category }}</span></li>
+    </ul>
+    <ul>    
+        <h4 class="title">분실 정보</h4>
+        <li>분실날짜 : <span class="content">{{ pk.get_at }}</span></li>
+        <li>분실시간 : <span class="content">{{ pk.get_time }}</span></li>         
+        <li>분실장소 : <span class="content">{{ pk.find_place }}</span></li>
+        <li>분실자 : <span class="content">{{ pk.name }}</span></li>
+    </ul>
+    <ul>
+        <h4 class="title">보관 장소</h4>
+        <li>유실물센터 : <span class="content" id="location">{{ pk.center_place }}</span></li>
+        <li>센터번호 : <span class="content">{{ pk.center_number }}</span></li>
+    </ul>
+    <ul>
+>>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
 
     <!-- redirect 해주기 위해 input 해줌 div 태그는 숨김 -->
     <div style="visibility: hidden;">   
         <input type="text" name="get_place" value= {{pk.center_place}}>
         <input type="text" name="category" value= {{pk.category}}> 
+<<<<<<< HEAD
         <input type="hidden" name="deal" value="owner">
     </div>  
+=======
+    </div>
+
+    {% if pk.name != "-" %} <!-- 이름이 있는 사람만 submit 할 수 있게 해줍니다. -->
+    <input type="hidden" name="deal" value="owner">
+    <input name="acha_money_board" type="submit" value="대신 수령 요청하기" id="submitButton"/>
+    {% endif %}
+    </ul>
+
+>>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
     {% endfor %}  
   
 </form>
