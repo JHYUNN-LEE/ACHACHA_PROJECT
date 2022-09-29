@@ -63,7 +63,7 @@ def post_search(request, posts_id_pk):
     if request.method == 'POST':
         # posts table
         title = request.POST['title']
-        category = request.POST['category']
+        category = request.POST.get('category')
         cost = request.POST['cost']
         # 이미지 파일이 없을 경우 None으로 받음
         try:
@@ -72,7 +72,7 @@ def post_search(request, posts_id_pk):
             img_src = None
         
         content = request.POST['content']
-        parcel = request.POST['parcel']
+        parcel = request.POST.get('parcel')
         created_at = timezone.now()
         get_place = request.POST['get_place']
         posts = Posts.objects.filter(posts_id_pk=posts_id_pk)
@@ -106,21 +106,14 @@ def detail(request, posts_id_pk):
 
     if request.method ==  'POST':
         # user_detail table
-        user_deal = UserDeal()
-        user_deal.users_id = request.user
-        user_deal.posts_id = posts_id_pk
-        user_deal.deal = request.POST.get('deal', '')
-        user_deal.save()
+        users_id = request.user
+        user_deal = UserDeal.objects.create(users_id=users_id,
+                                        posts_id=posts_id_pk,
+                                        deal=request.POST['deal'])
         return redirect('acha_money')
         
     else:
         detail = Posts.objects.filter(posts_id_pk=posts_id_pk)
-        print(detail)
-        
-        # if detail.users_id == request.user:
-            # detail = True
-        # else:
-            # detail = False
         return render(request, 'acha_money/post_detail.html', {'detail': detail})
 
 def detail_proto(request, posts_id_pk):

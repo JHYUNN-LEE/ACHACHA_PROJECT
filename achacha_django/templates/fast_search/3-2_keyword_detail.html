@@ -142,8 +142,11 @@
         대신 수령 요청이 가능한 분실물입니다.<br>
         보상을 올려 물건을 택배로 받아 볼 수 있습니다! 
     <div>
+        
     <input name="acha_money_board" type="submit" value="대신 수령 작성하러 가기" class="submitButton" id="submitButton"/>
     {% endif %}
+    
+    <!-- 카카오 지도 api -->
     <p>
         <h4 class="title"> 관련 위치 보기 </h4> 
         <div id="map" style="width:100%;height:300px;"></div>
@@ -155,7 +158,8 @@
     <div style="visibility: hidden;">   
         <input type="text" name="get_place" value= {{pk.center_place}}>
         <input type="text" name="category" value= {{pk.category}}> 
-    </div>
+        <input type="hidden" name="deal" value="owner">
+    </div>  
     {% endfor %}  
   
 </form>

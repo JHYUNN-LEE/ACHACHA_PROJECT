@@ -5451,3 +5451,318 @@ django.utils.datastructures.MultiValueDictKeyError: 'category'
 [29Sep2022 19:55:39 INFO [django.server:187] "GET /fast_search/keyword/key_result/detail/V0002108H08210008-1/ HTTP/1.1" 200 27251
 [29Sep2022 19:55:39 WARNING [django.server:187] "GET /static/image/V0002108H08210008-1.jpg HTTP/1.1" 404 1846
 [29Sep2022 19:55:39 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 19:58:35 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\models.py changed, reloading.
+[29Sep2022 19:58:35 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 19:58:47 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\member\views.py changed, reloading.
+[29Sep2022 19:58:47 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:05:05 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:05:34 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[29Sep2022 20:05:35 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:05:40 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[29Sep2022 20:05:40 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:05:48 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[29Sep2022 20:05:49 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:06:15 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\views.py changed, reloading.
+[29Sep2022 20:06:16 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:06:43 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\acha_money\migrations\0001_initial.py changed, reloading.
+[29Sep2022 20:06:44 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:06:48 INFO [django.server:187] "GET / HTTP/1.1" 200 28478
+[29Sep2022 20:06:53 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:06:59 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 22502
+[29Sep2022 20:06:59 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:07:01 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 25889
+[29Sep2022 20:07:01 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:07:09 INFO [django.server:187] "GET /fast_search/keyword/key_result/?insert_category=%EA%B0%80%EB%B0%A9&insert_color=%EC%97%98%EB%A1%9C%EC%9A%B0&insert_date=2022-09-22 HTTP/1.1" 200 21598
+[29Sep2022 20:07:09 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:07:11 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:07:16 INFO [django.server:187] "GET /fast_search/keyword/key_result/?insert_category=%EA%B0%80%EB%B0%A9&insert_color=%EC%97%98%EB%A1%9C%EC%9A%B0&insert_date=2022-08-02 HTTP/1.1" 200 31844
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/V0002164H08260010-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/V0000244H08030008-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/F2022080400004082-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/V0002108H08120020-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/V0002108H08210008-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/F2022081600000640-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/V0001511H08260092-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/V0001511H08280016-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/V0002100H08110008-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 WARNING [django.server:187] "GET /static/image/V0001511H08150048-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:16 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:07:19 INFO [django.server:187] "GET /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 200 27654
+[29Sep2022 20:07:19 WARNING [django.server:187] "GET /static/image/F2022080400004082-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:07:19 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:07:22 ERROR [django.request:241] Internal Server Error: /fast_search/keyword/key_result/detail/F2022080400004082-1/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'deal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 252, in keyword_detail
+    deal=request.POST['deal'])
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'deal'
+[29Sep2022 20:07:22 ERROR [django.server:187] "POST /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 500 78927
+[29Sep2022 20:13:29 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:13:30 ERROR [django.request:241] Internal Server Error: /fast_search/keyword/key_result/detail/F2022080400004082-1/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'deal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 252, in keyword_detail
+    deal=request.POST['deal'])
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'deal'
+[29Sep2022 20:13:30 ERROR [django.server:187] "POST /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 500 78927
+[29Sep2022 20:14:10 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:14:11 ERROR [django.request:241] Internal Server Error: /fast_search/keyword/key_result/detail/F2022080400004082-1/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'deal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 252, in keyword_detail
+    deal=request.POST['deal'])
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'deal'
+[29Sep2022 20:14:11 ERROR [django.server:187] "POST /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 500 78927
+[29Sep2022 20:15:11 ERROR [django.request:241] Internal Server Error: /fast_search/keyword/key_result/detail/F2022080400004082-1/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'deal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 252, in keyword_detail
+    deal=request.POST['deal'])
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'deal'
+[29Sep2022 20:15:11 ERROR [django.server:187] "POST /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 500 78927
+[29Sep2022 20:15:12 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:15:13 ERROR [django.request:241] Internal Server Error: /fast_search/keyword/key_result/detail/F2022080400004082-1/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'deal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 252, in keyword_detail
+    deal=request.POST['deal'])
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'deal'
+[29Sep2022 20:15:13 ERROR [django.server:187] "POST /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 500 78927
+[29Sep2022 20:16:45 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[29Sep2022 20:16:46 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:16:49 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:16:51 ERROR [django.request:241] Internal Server Error: /fast_search/keyword/key_result/detail/F2022080400004082-1/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'deal' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 250, in keyword_detail
+    user_deal = UserDeal.objects.create(users_id=users_id,
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\models\query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\models\base.py", line 831, in save
+    self.save_base(
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\models\base.py", line 882, in save_base
+    updated = self._save_table(
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\models\base.py", line 1025, in _save_table
+    results = self._do_insert(
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\models\base.py", line 1066, in _do_insert
+    return manager._insert(
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1657, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\sj\anaconda3\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'deal' cannot be null")
+[29Sep2022 20:16:51 ERROR [django.server:187] "POST /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 500 217798
+[29Sep2022 20:17:40 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[29Sep2022 20:17:41 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:18:07 ERROR [django.request:241] Internal Server Error: /fast_search/keyword/key_result/detail/F2022080400004082-1/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'deal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 252, in keyword_detail
+    deal=request.POST['deal'])
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'deal'
+[29Sep2022 20:18:07 ERROR [django.server:187] "POST /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 500 78927
+[29Sep2022 20:21:39 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:21:41 ERROR [django.request:241] Internal Server Error: /fast_search/keyword/key_result/detail/F2022080400004082-1/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'deal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 252, in keyword_detail
+    deal=request.POST['deal'])
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'deal'
+[29Sep2022 20:21:41 ERROR [django.server:187] "POST /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 500 78927
+[29Sep2022 20:22:39 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[29Sep2022 20:22:40 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:22:44 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[29Sep2022 20:22:44 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:22:46 INFO [django.server:187] "GET /static/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 316181
+[29Sep2022 20:22:47 ERROR [django.request:241] Internal Server Error: /fast_search/keyword/key_result/detail/F2022080400004082-1/
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'deal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py", line 248, in keyword_detail
+    deal= request.POST['deal']
+  File "C:\Users\sj\anaconda3\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'deal'
+[29Sep2022 20:22:47 ERROR [django.server:187] "POST /fast_search/keyword/key_result/detail/F2022080400004082-1/ HTTP/1.1" 500 78954
+[29Sep2022 20:22:57 INFO [django.server:187] "GET / HTTP/1.1" 200 28478
+[29Sep2022 20:22:57 INFO [django.server:187] "GET /static/bootstrap/img/logo_blue.png HTTP/1.1" 304 0
+[29Sep2022 20:23:04 INFO [django.server:187] "GET /fast_search/ HTTP/1.1" 200 22502
+[29Sep2022 20:23:07 INFO [django.server:187] "GET /fast_search/keyword/ HTTP/1.1" 200 25889
+[29Sep2022 20:23:23 INFO [django.server:187] "GET /fast_search/keyword/key_result/?insert_category=%EA%B0%80%EB%B0%A9&insert_color=%EA%B2%80%EC%A0%95&insert_date=2022-07-01 HTTP/1.1" 200 35068
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/V0000331H09050002-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/F2022090500002688-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/V0000336H07160012-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/V0000294H08130002-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/V0000244H07020024-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/V0003422H09110006-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/F2022082400000526-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/F2022081000002631-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/F2022083000002933-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/F2022091300003038-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:23 INFO [django.server:187] "GET /fast_search/keyword/key_result/detail/V0000336H07160012-1/ HTTP/1.1" 200 27373
+[29Sep2022 20:23:23 WARNING [django.server:187] "GET /static/image/V0000336H07160012-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:27 INFO [django.server:187] "GET /fast_search/keyword/key_result/detail/V0000331H09050002-1/ HTTP/1.1" 200 27799
+[29Sep2022 20:23:27 WARNING [django.server:187] "GET /static/image/V0000331H09050002-1.jpg HTTP/1.1" 404 1846
+[29Sep2022 20:23:30 INFO [django.server:187] "POST /fast_search/keyword/key_result/detail/V0000331H09050002-1/ HTTP/1.1" 302 0
+[29Sep2022 20:23:30 INFO [django.server:187] "GET /acha_money/post_search/79 HTTP/1.1" 301 0
+[29Sep2022 20:23:31 INFO [django.server:187] "GET /acha_money/post_search/79/ HTTP/1.1" 200 24984
+[29Sep2022 20:23:31 INFO [django.server:187] "GET /static/acha_money/css/post.css HTTP/1.1" 200 1546
+[29Sep2022 20:23:59 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[29Sep2022 20:24:00 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
+[29Sep2022 20:24:18 INFO [django.utils.autoreload:266] C:\Users\sj\workspace\ACHACHA_PROJECT\achacha_django\fast_search\views.py changed, reloading.
+[29Sep2022 20:24:19 INFO [django.utils.autoreload:677] Watching for file changes with StatReloader
