@@ -1,6 +1,5 @@
-.title {
-    color: #4e73df;
-    font-weight: bold;
+.lost_items {
+    margin: 0 10% 0 0;
 }
 
 .img{
@@ -42,8 +41,11 @@
     background-color: #ffc609;
 }
 
-h5{
+h4, h5{
     margin: 20px 0 10px 0;
+    color: #4e73df;
+    font-weight: bold;
+
 }
 
 li{
@@ -94,4 +96,28 @@ ul > button{
 ul > button:hover{
     background-color: #1449e6;
 
+}
+
+.subheading{
+    margin: 0 20px 0 0;
+    color: #4e73df;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.subtitle{
+    border: 1px solid #e3e6f0;
+    width: 100px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.subcontent{
+    margin: 0;
+    display: inline-block;
+}
+
+.phrase{
+    margin-bottom: 20px;
+    padding: 0;
 }

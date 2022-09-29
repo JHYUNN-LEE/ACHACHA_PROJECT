@@ -20,11 +20,7 @@
         {% for item in posts %}
             <div class="card_search" onclick="location.href='{% url 'keyword_detail' item.images_id_pk %}'">
                 <div class="image_center">
-<<<<<<< HEAD
-                    <img class="lost_img" src="{% get_static_prefix %}image/{{ item.images_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='{% get_static_prefix %}bootstrap/img/no_image.png'">
-=======
                     <img class="lost_img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='../../static/bootstrap/img/no_image.png'">
->>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
                 </div>
                 <br>
                 <div class="info">
