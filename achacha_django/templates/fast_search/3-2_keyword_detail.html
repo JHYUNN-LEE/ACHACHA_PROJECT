@@ -56,6 +56,7 @@
     </div>
 
     {% if pk.name != "-" %} <!-- 이름이 있는 사람만 submit 할 수 있게 해줍니다. -->
+    <input type="hidden" name="deal" value="owner">
     <input name="acha_money_board" type="submit" value="대신 수령 요청하기" id="submitButton"/>
     {% endif %}
     </ul>

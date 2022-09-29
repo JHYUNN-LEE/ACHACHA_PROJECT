@@ -11,6 +11,7 @@ from django.core.paginator import Paginator, Page
 
 # models.py
 from .models import LostItems, Images, Alarm
+from acha_money.models import UserDeal
 
 # python edit import
 import json
@@ -246,8 +247,12 @@ def keyword_detail(request, images_id_pk):
         ) 
         
         
+        user_deal = UserDeal.objects.create(users_id=users_id,
+                                        posts_id=search_item.posts_id_pk,
+                                        deal=request.POST['deal'])
+        
         context = {
-            'search_item': search_item
+            'search_item': search_item,
         }
 
         return redirect('/acha_money/post_search/{}'.format(search_item.posts_id_pk), context)

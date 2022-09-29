@@ -46,7 +46,7 @@ def register(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)  # 사용자 인증
             login(request, user)  # 로그인
-            return redirect('http://127.0.0.1:8000')
+            return redirect('http://54.64.90.112:8000')
     else:
         form = UserForm()
         
@@ -59,7 +59,7 @@ def index(request):
     return render(request, 'member/request.html', context)
 
 
-def request(request):
+def owner(request):
     logger.trace_logger(request) # view 로그 추적 
     user_name = request.user
     posts = Posts.objects.raw("SELECT * FROM posts join user_deal \
@@ -84,13 +84,8 @@ def request(request):
 #     return render(request, 'member/request.html', {'seller': seller})
 
 
-<<<<<<< HEAD
 def delivery(request):
-=======
-def implement(request):
-    
     logger.trace_logger(request) # view 로그 추적 
->>>>>>> master
     user_name = request.user
     posts = Posts.objects.raw("SELECT * FROM posts join user_deal \
                              on posts.posts_id_pk = user_deal.posts_id \
