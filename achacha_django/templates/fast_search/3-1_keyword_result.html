@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 {% block content %}
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,19 +20,22 @@
         <div class="row" >
         {% for item in posts %}
             <div class="card_search" onclick="location.href='{% url 'keyword_detail' item.images_id_pk %}'">
+                {% if item.img_src %}
                 <div class="image_center">
-                    <img class="lost_img" src="{% get_static_prefix %}image/{{ item.lost_items_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='../../static/bootstrap/img/no_image.png'">
+                    <img class="lost_img" src="{{ item.img_src.url }}" alt="image">
                 </div>
+                {% else %}
+                <div class="image_center">
+                    <img class="lost_img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
+                </div>
+                {% endif %}
                 <br>
-                <div class="info">
-                    <div class="title">{{ item.get_name }}</div>  
-                    <span class="date_time">{{ item.get_at }}</span>
-                    <br>
-                    <span class="date_time">{{ item.center_place }}</span>
-                    <br>
-                    <span class="date_time">{{ item.name }}<s/span>
-                </div>
-                <hr>
+                <div class="title">{{ item.get_name }}</div>  
+                <span class="date_time">{{ item.get_at }}</span>
+                <br>
+                <span class="date_time">{{ item.center_place }}</span>
+                <br>
+                <span class="date_time">{{ item.name }}</span>
             </div>
             {% endfor %} 
         </div>
