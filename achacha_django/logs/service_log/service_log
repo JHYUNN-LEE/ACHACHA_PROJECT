@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 2022-Sep-28 00:21:10 INFO [user_acctive.request:59] {'datetime': '2022-09-28 00:21:10', 'scheme': 'http', 'method': 'GET', 'HOST_URL': 'localhost:8001', 'ACTIVE_URL': '/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
 2022-Sep-28 00:21:16 INFO [user_acctive.request:59] {'datetime': '2022-09-28 00:21:16', 'scheme': 'http', 'method': 'GET', 'HOST_URL': 'localhost:8001', 'ACTIVE_URL': '/fast_search/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
 2022-Sep-28 00:21:18 INFO [user_acctive.request:59] {'datetime': '2022-09-28 00:21:18', 'scheme': 'http', 'method': 'GET', 'HOST_URL': 'localhost:8001', 'ACTIVE_URL': '/fast_search/keyword/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
@@ -50,7 +50,6 @@
 2022-Sep-28 06:30:04 INFO [user_acctive.request:59] {'datetime': '2022-09-28 06:30:04', 'scheme': 'http', 'method': 'GET', 'HOST_URL': 'localhost:8001', 'ACTIVE_URL': '/fast_search/image/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
 2022-Sep-28 06:30:31 INFO [user_acctive.request:59] {'datetime': '2022-09-28 06:30:31', 'scheme': 'http', 'method': 'POST', 'HOST_URL': 'localhost:8001', 'ACTIVE_URL': '/fast_search/image/upload/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
 2022-Sep-28 06:30:31 INFO [user_acctive.request:111] {'datetime': '2022-09-28 06:30:31', 'scheme': 'http', 'method': 'POST', 'HOST_URL': 'localhost:8001', 'ACTIVE_URL': '/fast_search/image/upload/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'insert', 'context': ['image', 'category']}
-=======
 2022-Sep-28 11:35:59 INFO [user_acctive.request:59] {'datetime': '2022-09-28 11:35:59', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
 2022-Sep-28 11:36:08 INFO [user_acctive.request:59] {'datetime': '2022-09-28 11:36:08', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/all_search/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
 2022-Sep-28 11:36:15 INFO [user_acctive.request:59] {'datetime': '2022-09-28 11:36:15', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/all_search/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
@@ -495,18 +494,4 @@
 2022-Sep-29 00:43:28 INFO [user_acctive.request:59] {'datetime': '2022-09-29 00:43:28', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/fast_search/keyword/key_result/detail/V0002108H08210008-1/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
 2022-Sep-29 00:43:53 INFO [user_acctive.request:59] {'datetime': '2022-09-29 00:43:53', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/fast_search/keyword/key_result/detail/F2022080400004082-1/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
 2022-Sep-29 00:43:55 INFO [user_acctive.request:59] {'datetime': '2022-09-29 00:43:55', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/acha_money/post_search/17/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
->>>>>>> master
-2022-Sep-29 09:02:56 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:02:56', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
-2022-Sep-29 09:03:03 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:03:03', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/all_search/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
-2022-Sep-29 09:05:36 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:05:36', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
-2022-Sep-29 09:05:39 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:05:39', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/acha_money/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
-2022-Sep-29 09:05:41 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:05:41', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/member/register/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
-2022-Sep-29 09:06:12 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:06:12', 'scheme': 'http', 'method': 'POST', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/member/register/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
-2022-Sep-29 09:06:15 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:06:14', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/', 'ip': '127.0.0.1', 'USER_ID': 'jinyi', 'USER_STATUS': 'view'}
-2022-Sep-29 09:06:19 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:06:19', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/all_search/', 'ip': '127.0.0.1', 'USER_ID': 'jinyi', 'USER_STATUS': 'view'}
-2022-Sep-29 09:06:54 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:06:53', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/member/register/', 'ip': '127.0.0.1', 'USER_ID': 'jinyi', 'USER_STATUS': 'view'}
-2022-Sep-29 09:08:17 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:08:16', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/', 'ip': '127.0.0.1', 'USER_ID': 'jinyi', 'USER_STATUS': 'view'}
-2022-Sep-29 09:08:21 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:08:20', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/acha_money/', 'ip': '127.0.0.1', 'USER_ID': 'jinyi', 'USER_STATUS': 'view'}
-2022-Sep-29 09:08:34 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:08:34', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
-2022-Sep-29 09:08:37 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:08:37', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/acha_money/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
-2022-Sep-29 09:08:55 INFO [user_acctive.request:59] {'datetime': '2022-09-29 09:08:55', 'scheme': 'http', 'method': 'GET', 'HOST_URL': '127.0.0.1:8000', 'ACTIVE_URL': '/acha_money/', 'ip': '127.0.0.1', 'USER_ID': 'AnonymousUser', 'USER_STATUS': 'view'}
+
