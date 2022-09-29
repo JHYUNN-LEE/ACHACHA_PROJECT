@@ -1,5 +1,6 @@
 
 {% extends "base/base.html" %}
+{% load static %}
 {% block content %}
 <head>
     <meta charset="utf-8">
@@ -20,42 +21,55 @@
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css" >
 
 </head>
 <body>
 {% if user.is_authenticated %}
     <div class="lost_items">
-        <div class="col-lg-6 mb-4">
-            {% for post in posts %}
-                <div class="title">{{ post.title }}</div>
-                <span class="created_at">{{ post.created_at}}</span>
-                <br>
-                <span class="get_place">보관장소: {{ post.get_place }}</span>
-                <br>
-                <span class="cost">{{ post.cost }} 원</span>
-
-                <br>
-                <button class="phone_check">전화 확인
-                <button class="pay_check">송금하기
-                <br>
-                
-            {% endfor %}
+        {% for post in posts %}
+        {% if post.lost_items_id %}
+            <div class="img">
+                <img class="img" src="{% get_static_prefix %}image/{{ item.lost_items_id }}.jpg" alt="image" onerror="this.onerror=null; this.src='{% static 'bootstrap/img/no_image.png' %}';">
+            </div>
+        {% else %}
+            <div class="img">
+                <img class="img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
+            </div>
+        {% endif %}
+        <ul>
+            <li>분실물명 : <span class="title" name="title">{{ post.title }}</span></li>
+            <li>작성일시 : <span class="lost_date" name="lost_date">{{ post.created_at}}</span></li>
+            <li>보관장소 : <span class="lost_place" name="lost_place">{{ post.get_place }}</span></li>
+            <li>사례금 : <span class="cost" name="cost">{{ post.cost }} 원</span></li>
+            <button class="phone_check">대신 수령 전화 확인
+            <button class="pay_check">송금하기
+        </ul>        
+        
+        {% endfor %}
             
-        </div>
+    </div> 
         
         
         {% else %}
-            <div class="card" style="width: 25rem;">
-            <div class="card-body">
-                    <h5 class="card-title">ACHACHA</h5>
-                    <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요!</p>
-                    <a href="/member/register" class="btn btn-primary">회원가입 하러가기</a>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card border-left-warning shadow w-100 py-2" style="margin-bottom: 5px;">
+                    <div class="card-body">
+                        <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
+                        <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요!</p>
+                        <a href="/member/register" class="btn btn-primary">회원가입 하러가기</a>
+                    </div>
+                </div>
+                <div class="card border-left-warning shadow w-100 py-2">
+                    <div class="card-body">
+                        <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
+                        <p class="card-text">로그인을 해주세요!</p>
+                        <a href="/member/login" class="btn btn-primary">로그인 하러가기</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                    <h5 class="card-title">ACHACHA</h5>
-                    <p class="card-text">로그인을 해주세요!</p>
-                    <a href="/member/login" class="btn btn-primary">로그인 하러가기</a>
-            </div>
+        </div>
         {% endif %}
 
             <!-- End of Main Content -->
