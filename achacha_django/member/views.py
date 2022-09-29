@@ -84,13 +84,12 @@ def request(request):
 #     return render(request, 'member/request.html', {'seller': seller})
 
 
-<<<<<<< HEAD
+
 def delivery(request):
-=======
-def implement(request):
+
     
     logger.trace_logger(request) # view 로그 추적 
->>>>>>> master
+
     user_name = request.user
     posts = Posts.objects.raw("SELECT * FROM posts join user_deal \
                              on posts.posts_id_pk = user_deal.posts_id \
