@@ -22,12 +22,12 @@
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-    <link href="{% static 'member/css/delivery.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css" >
 </head>
-<body id="page-top">
+<body>
 {% if user.is_authenticated %}
     <div class="lost_items">
+<<<<<<< HEAD
         <div class="col-lg-6 mb-4">
             {% for post in posts %}
                 <div class="title">{{ post.title }}</div>
@@ -55,21 +55,52 @@
 >>>>>>> 8641faaa8d7b93f7632c250873114f606f3485c6
             {% endfor %}
         </div>
+=======
+        {% for post in posts %}
+        {% if post.lost_items_id %}
+            <div class="img">
+                <img class="img" src="{% get_static_prefix %}image/{{ item.lost_items_id }}.jpg" alt="image" onerror="this.onerror=null; this.src='{% static 'bootstrap/img/no_image.png' %}';">
+            </div>
+        {% else %}
+            <div class="img">
+                <img class="img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
+            </div>
+        {% endif %}
+        <ul>
+            <li>분실물명 : <span class="title" name="title">{{ post.title }}</span></li>
+            <li>작성일시 : <span class="lost_date" name="lost_date">{{ post.created_at}}</span></li>
+            <li>작성자 : <span class="author" name="author">{{ request.user }}</span></li>
+            <li>보관장소 : <span class="lost_place" name="lost_place">{{ post.get_place }}</span></li>
+            <li>사례금 : <span class="cost" name="cost">{{ post.cost }} 원</span></li>
+            <button class="find_check">대신 수령 완료
+            <button class="accept_check">배송 완료
+        </ul>
+        
+        {% endfor %}
+        
+>>>>>>> d23731c64710931a79ca3f351503c02b322de7ab
     </div>
 
     <!-- /.container-fluid -->
 {% else %}
-    <div class="card" style="width: 25rem;">
-    <div class="card-body">
-            <h5 class="card-title">ACHACHA</h5>
-            <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요!</p>
-            <a href="/member/register" class="btn btn-primary">회원가입 하러가기</a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="card border-left-warning shadow w-100 py-2" style="margin-bottom: 5px;">
+            <div class="card-body">
+                <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
+                <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요!</p>
+                <a href="/member/register" class="btn btn-primary">회원가입 하러가기</a>
+            </div>
+        </div>
+        <div class="card border-left-warning shadow w-100 py-2">
+            <div class="card-body">
+                <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
+                <p class="card-text">로그인을 해주세요!</p>
+                <a href="/member/login" class="btn btn-primary">로그인 하러가기</a>
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-            <h5 class="card-title">ACHACHA</h5>
-            <p class="card-text">로그인을 해주세요!</p>
-            <a href="/member/login" class="btn btn-primary">로그인 하러가기</a>
-    </div>
+</div>
 {% endif %}
 
     <!-- End of Main Content -->
