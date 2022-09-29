@@ -89,19 +89,53 @@
     <!-- <form action="{% url 'detail' item.posts_id_pk %}" method="post">{% csrf_token %} -->
         <form method="post"> {% csrf_token %}
             <div class="img">
-            {% if item.img_src %}
-                <img class="img" src="{{ item.img_src.url }}"><br>
+                {% if item.img_src %}
+                <div class="img">
+                    <img class="img" src="{{ item.img_src.url }}">
+                </div>
+            {% else %}
+                <div class="img">
+                    <img class="img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
+                </div>
             {% endif %} 
         </div>   
-        <div class="detail">
-            
-            <div class="title">{{ item.title }}</div>
-            <div class="author">카테고리: {{ item.category }}</div>
-            <div class="author">사례금 : {{ item.cost }} 원</div>
-            <div class="author">보관장소 : {{ item.get_place }}</div>
-            <div class="author">택배 : {{ item.parcel }}</div>
-            <div class="author">보관장소: {{ item.get_place }}</div>
-            <div class="content">{{ item.content }}</div>
+        <div class="lost_items">
+            <ul>
+                <div class="phrase">
+                    <div class="subheading">
+                        <li class="subtitle">분실 품목</li>
+                        <li class="">　</li>
+                    </div>
+                    <div class="subcontent">
+                        <li>분실물명 : <span class="title" name="title">{{ item.title }}</span></li>
+                        <li>카테고리 : <span class="category" name="category">{{ item.category }}</span></li>
+                    </div>
+                </div>
+                <hr>
+                <div class="phrase">
+                    <div class="subheading">
+                        <li class="subtitle">보관 장소</li>
+                        <li class="">　</li>
+                    </div>
+                    <div class="subcontent">
+                        <li>유실물센터 : <span class="location" name="location" id="location">{{ item.get_place }}</span></li>
+                        <li>센터번호 : <span class="content">{{ item.center_number }}</span></li>
+                    </div>
+                </div>
+                <hr>
+                <div class="phrase">
+                    <div class="subheading">
+                        <li class="subtitle">요청 정보</li>
+                        <li class="">　</li>
+                    </div>
+                    <div class="subcontent">
+                        <li>요청일시 : <span class="lost_date" name="lost_date">{{ item.created_at }}</span></li>
+                        <li>사례금 : <span class="cost" name="cost">{{ item.cost }}</span></li>
+                        <li>택배가능 : <span class="content">{{ item.parcel }}</span></li>
+                        <li>특이사항 : <span class="content">{{ item.content }}</span></li>
+                    </div>
+                </div>
+            </ul>
             
         </div>
             <a href="#pop_info_1" class="btn_open">
