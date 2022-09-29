@@ -250,10 +250,7 @@ def keyword_detail(request, images_id_pk):
         user_deal = UserDeal.objects.create(users_id= users_id,
                                         posts_id= search_item.posts_id_pk,
                                         deal= deal)
-        
-        user_deal = UserDeal.objects.create(users_id=users_id,
-                                        posts_id=search_item.posts_id_pk,
-                                        deal=request.POST['deal'])
+    
         
         context = {
             'search_item': search_item,
