@@ -9,13 +9,14 @@
 </head>
 
 <body>
-    {% if not posts %}
-    <div class="alarm">
-        아차차! 해당되는 분실물이 없습니다.<br>
-        비슷한 물건 들어왔을 때 <a href="all_alarm/">알림받기</a>
-    </div>
-    {% else %}
+
     <div class="container-fluid">
+        {% if not posts %}
+        <div class="alarm">
+            아차차! 해당되는 분실물이 없습니다.<br>
+            비슷한 물건 들어왔을 때 <a href="all_alarm/">알림받기</a>
+        </div>
+        {% else %}
         <div class="row" >
         {% for item in posts %}
             <div class="card_search" onclick="location.href='{% url 'keyword_detail' item.images_id_pk %}'">
@@ -29,17 +30,21 @@
                 </div>
                 {% endif %}
                 <br>
-                <div class="title">{{ item.get_name }}</div>  
-                <span class="date_time">{{ item.get_at }}</span>
-                <br>
-                <span class="date_time">{{ item.center_place }}</span>
+                <div class="info">
+                    <div class="title">{{ item.get_name }}</div>  
+                    <span class="date_time">{{ item.get_at }}</span>
+                    <br>
+                    <span class="date_time">{{ item.center_place }}</span>
+                    <br>
+                    <span class="date_time">{{ item.name }}</span>
+                </div>
                 <hr>
             </div>
             {% endfor %} 
         </div>
         <div class="alarm">
             혹시 찾으시는 분실물이 없으신가요?<br>
-            비슷한 물건 들어왔을 때 <a href="/all_search/all_alarm/">알림받기</a>
+            비슷한 물건 들어왔을 때 <a href="{% url 'all_alarm' %}">알림받기</a>
         </div>
     </div>
     <!-- pagination -->

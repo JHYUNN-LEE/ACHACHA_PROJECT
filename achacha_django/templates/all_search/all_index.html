@@ -1,15 +1,45 @@
 {% extends 'base/base.html' %}
 {% block content %}
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
-<form method="post">{% csrf_token %}
+<!-- filter !-->
+<br>
+<form method="GET" action=".">
+    <div class="form-row">
+        <div class="input-group">
+            <!-- <label for="input_category">Category</label> -->
+            <select id="input_category" class="form-control" name="category">
+                <option selected disabled>카테고리</option>
+                <option value="지갑">지갑</option>
+                <option value="가방">가방</option>
+                <option value="유가증권&현금">유가증권&현금</option>
+                <option value="전자기기">전자기기</option>
+                <option value="신분증&카드">신분증&카드</option>
+                <option value="자동차">자동차</option>
+                <option value="컴퓨터">컴퓨터</option>
+                <option value="의류">의류</option>
+                <option value="도서용품&서류">도서용품&서류</option>
+                <option value="스포츠">스포츠</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <input class="form-control py-2 border" type="search" name="name" id="input_name" placeholder="분실자명">
+        </div>   
+        <button type="button" onclick="search()" class="btn btn-primary">검색</button>
+    </div>
+</form>
+<br>
+<!-- filter !-->
     <div class="container-fluid">
         <div class="row" >
             {% for item in posts %}
@@ -24,12 +54,14 @@
                 </div>
                 {% endif %}
                 <br>
-                <div class="title">{{ item.get_name }}</div>
-                <span class="date_time">{{ item.get_at }}</span>
-                <br>
-                <span class="get_place">{{ item.category }}</span>
-                <br>
-                <span class="cost">{{ item.get_place }}</span>
+                <div class="info">
+                    <div class="title">{{ item.get_name }}</div>
+                    <span class="date_time">{{ item.get_at }}</span>
+                    <br>
+                    <span class="get_place">{{ item.category }}</span>
+                    <br>
+                    <span class="cost">{{ item.get_place }}</span>
+                </div>
                 <hr>
             </div>
             
@@ -47,10 +79,12 @@
         <ul class="pagination">
             {% if posts.has_previous %}
             <li class="page-item">
-                <a class="page-link" href="?page={{ 1 }}">&lt;&lt;</a>
+                <!-- <a class="page-link" href="?page={{ 1 }}">&lt;&lt;</a> -->
+                <a class="page-link" onclick="pagefirst()">&lt;&lt;</a>
             </li>
             <li class="page-item">
-                <a class="page-link" href="?page={{posts.previous_page_number}}">&lt;</a>
+                <!-- <a class="page-link" href="?page={{posts.previous_page_number}}">&lt;</a> -->
+                <a class="page-link" onclick="pagebf()">&lt;</a>
             </li>
             {% else %}
             <li class="page-item disabled">
@@ -61,12 +95,14 @@
             {% for page_number in posts.paginator.page_range %}
             {% if page_number >= posts.number|add:-3 and page_number <= posts.number|add:3 %}
             {% if page_number == posts.number %}
-            <li class="page-item active" aria-current="page">
-                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+            <li class="page-item active" aria-current="page" id="current">
+                <!-- <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a> -->
+                <a class="page-link" onclick="pagemv(this)">{{ page_number }}</a>
             </li>
             {% else %}
             <li class="page-item">
-                <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+                <!-- <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a> -->
+                <a class="page-link"onclick="pagemv(this)">{{ page_number }}</a>
             </li>
             {% endif %}
             {% endif %}
@@ -74,10 +110,12 @@
             <!-- 다음페이지 -->
             {% if posts.has_next %}
             <li class="page-item">
-                <a class="page-link" href="?page={{ posts.next_page_number }}">&gt;</a>
+                <!-- <a class="page-link" href="?page={{ posts.next_page_number }}">&gt;</a> -->
+                <a class="page-link" onclick="pagenx()">&gt;</a>
             </li>
             <li class="page-item">
-                <a class="page-link" href="?page={{ max_index }}">&gt;&gt;</a>
+                <!-- <a class="page-link" href="?page={{ max_index }}">&gt;&gt;</a> -->
+                <a class="page-link" onclick="pagelast()">&gt;&gt;</a>
             </li>
             {% else %}
             <li class="page-item disabled">
@@ -88,13 +126,8 @@
     </div>
 
 
-
-
-
 {% endblock %}
 
 </body>
 
-
 </html>
-

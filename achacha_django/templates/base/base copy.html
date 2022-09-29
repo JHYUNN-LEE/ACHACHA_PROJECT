@@ -152,12 +152,11 @@
             margin: auto;
         }
         #logo{
-            float: left;
             width: 80px;
             
         }
         .logo{
-            margin-left: 38%;
+            margin-left: calc(50% - 52px) !important;           
         }
         #content{
             /* background: linear-gradient(rgb(29, 28, 28), black); */
@@ -272,12 +271,12 @@
                         {% if user.is_authenticated %}
                         <a class="collapse-item" href="{% url 'member:logout' %}">로그아웃</a>
                         {% else %}
-                        <a class="collapse-item" href="http://127.0.0.1:8000/member/login/">로그인</a>
+                        <a class="collapse-item" href="/member/login/">로그인</a>
                         {% endif %}
                         {% if user.is_authenticated %}
                         <span></span>
                         {% else %}
-                        <a class="collapse-item" href="http://127.0.0.1:8000/member/register/">회원가입</a>
+                        <a class="collapse-item" href="/member/register/">회원가입</a>
                         {% endif %}
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
@@ -320,15 +319,15 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top">
-                    <a class="nav-link" href="#" id="alertsDropdown" role="button"
+                    <a class="nav-link" onclick="back()" id="alertsDropdown" role="button"
                      aria-haspopup="true" aria-expanded="false">
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button class="btn btn-link d-md-none rounded-circle mr-3">
+                    <button class="btn btn-link d-md-none rounded-circle mr-3" onclick="back()">
                         <i class="fa fa-chevron-left" onclick="back()"></i>
                     </button>
                     </a>
                     <a class="logo" href="/">
-                        <img id="logo" class="img-profile rounded-circle" src= "{% static 'bootstrap/img/맨발의청춘_blue.png' %}" alt="">
+                        <img id="logo" class="img-profile rounded-circle" src= "{% static 'bootstrap/img/logo_blue.png' %}" alt="">
                     </a>
 
                     <!-- Topbar Navbar -->

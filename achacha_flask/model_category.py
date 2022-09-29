@@ -7,8 +7,8 @@ class ModelCategory():
         self.model_dict = {}
 
     def set_model(self):
-        R50x1_object_model, R50x1_clothing_model, R50x1_equipment_model, Mobilenet_v2_model = self.model_build_all()
-        # R50x1_object_model, R50x1_clothing_model, R50x1_equipment_model, R101x3_model, Mobilenet_v2_model = self.model_build_all()
+        R50x1_object_mode, R50x1_clothing_model, R50x1_equipment_model, Mobilenet_v2_model = self.model_build_all()
+
         self.model_dict['bag'] = {'model_name':'R50x1_object', 'model': R50x1_object_model, 'threshold':0.3}
         self.model_dict['cap'] = {'model_name':'R50x1_clothing', 'model':R50x1_clothing_model, 'threshold':0.3}
         self.model_dict['card'] = {'model_name':'R50x1_object', 'model':R50x1_object_model, 'threshold':0.5}
@@ -18,8 +18,8 @@ class ModelCategory():
         self.model_dict['wallet'] = {'model_name':'R50x1_object', 'model':R50x1_object_model, 'threshold':0.3}
         self.model_dict['watch'] = {'model_name':'R50x1_equipment', 'model':R50x1_equipment_model, 'threshold':0.4}
         self.model_dict['phone'] = {'model_name':'R50x1_equipment', 'model':R50x1_equipment_model, 'threshold':0.3}
-        # self.model_dict['ring'] = {'model_name':'R101x3', 'model':R101x3_model, 'threshold':0.5}
-        # self.model_dict['shoes'] = {'model_name':'R101x3', 'model':R101x3_model, 'threshold':0.5}
+        self.model_dict['ring'] = {'model_name':'R50x1_object', 'model':R50x1_object_model, 'threshold':0.5}
+        self.model_dict['shoes'] = {'model_name':'R50x1_clothing', 'model':R50x1_clothing_model, 'threshold':0.5}
         self.model_dict['shopping_bag'] = {'model_name':'Mobilenet_v2', 'model':Mobilenet_v2_model, 'threshold':0.5}
         self.model_dict['car_key'] = {'model_name':'Mobilenet_v2', 'model':Mobilenet_v2_model, 'threshold':0.45}
         self.model_dict['necklace'] = {'model_name':'Mobilenet_v2', 'model':Mobilenet_v2_model, 'threshold':0.6}
@@ -36,14 +36,13 @@ class ModelCategory():
         return model
 
     def model_build_all(self):
-        # model_names = ['R50x1_object', 'R50x1_clothing', 'R50x1_equipment', 'R101x3', 'Mobilenet_v2']
-
         model_names = ['R50x1_object', 'R50x1_clothing', 'R50x1_equipment', 'Mobilenet_v2']
+
         for model_name in model_names:
             globals()['{}_model'.format(model_name)] = self.model_build(model_name)
         
-        # return R50x1_object_model, R50x1_clothing_model, R50x1_equipment_model, R101x3_model, Mobilenet_v2_model
         return R50x1_object_model, R50x1_clothing_model, R50x1_equipment_model, Mobilenet_v2_model
+
 
 
     

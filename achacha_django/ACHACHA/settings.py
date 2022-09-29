@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-v#d(@2foe)gd_w0b-6h^uqr=zll)tg1czkq1)6v#@dqyjd236v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -152,3 +152,72 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'formatters': {
+        'sample': {
+            'format': "[%(asctime)s %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d%b%Y %H:%M:%S"
+        },
+        'request_format': {
+            'format': "%(asctime)s %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%Y-%b-%d %H:%M:%S"
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'encoding': 'utf-8',
+            'class' : 'logging.handlers.TimedRotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/error_log') + "/log",
+            'when': "midnight",
+            'formatter': 'sample',
+        },
+        'service_trace': {
+            'level': 'INFO',
+            'encoding': 'utf-8',
+            'class' : 'logging.handlers.TimedRotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/service_log') + "/service_log",
+            'when': "midnight",
+            'formatter': 'request_format',
+        },
+        #pip install python-logstash
+        'logstash': {
+            'level': 'INFO',
+            'class': 'logstash.TCPLogstashHandler',
+            'host': '54.64.90.112',
+            'port': 5044,
+            'version': 1,
+            'fqdn' : True,
+            'message_type' : 'logstash',
+            'tags' : ['django'],
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'user_acctive.request': {
+            'handlers': ['service_trace', 'logstash'],
+            'level': 'INFO',
+        },
+    }
+}
+
+
+
+# session 설정
+SESSION_COOKIE_AGE = 1200
+SESSION_SAVE_EVERY_REQUEST = True
