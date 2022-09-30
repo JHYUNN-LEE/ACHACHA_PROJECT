@@ -19,7 +19,7 @@
     <script>
         $(function() {
         var target = document.querySelector('.btn_open');
-        var btnPopClose = document.querySelector('.pop_wrap .btn_close');
+        var btnPopClose = document.querySelector('.btn_close');
         var targetID;
 
         // 팝업 열기
@@ -87,7 +87,7 @@
 
     {% for item in detail %}
     <!-- <form action="{% url 'detail' item.posts_id_pk %}" method="post">{% csrf_token %} -->
-        <form method="post"> {% csrf_token %}
+        <!-- <form method="post"> {% csrf_token %} -->
             <div class="img">
                 {% if item.img_src %}
                 <div class="img">
@@ -141,11 +141,11 @@
             <a href="#pop_info_1" class="btn_open">
                 <div class="basic_block_low2">
                     <div class="div_content">
-                        <button type="submit" name="deal" value="delivery" id="submit">대신 수령하기
+                        <button type="submit" name="deal" value="delivery" id="submit">찾아주기
                     </div>
                 </div>
             </a>
-        </form>
+        <!-- </form> -->
         
         <div id="pop_info_1" class="pop_wrap" style="display:none;">
             <div class="pop_inner">
