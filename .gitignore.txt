@@ -1,1 +1,1 @@
-achacha_django/*.DS_store
+achacha_django/*.DS_Store
