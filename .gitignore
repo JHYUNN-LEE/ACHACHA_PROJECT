@@ -1,3 +1,4 @@
+/.idea/
 /achacha_django/*.DS_Store
 /achacha_django/db.sqlite3
 /achacha_django/logs/
