@@ -1,0 +1,1 @@
+achacha_django/*.DS_store
