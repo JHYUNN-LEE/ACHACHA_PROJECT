@@ -1,0 +1,171 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css">
+
+    {% comment %} <script>
+        function alert_del(){
+            var res = confirm('게시글을 삭제하시겠습니까?');
+            if (res) {
+                window.location.href = "{% url 'delete' posts_id_pk %}"
+                alert('삭제되었습니다.');
+            }  
+        }
+    </script> {% endcomment %}
+    <script>
+        $(function() {
+        var target = document.querySelector('.btn_open');
+        var btnPopClose = document.querySelector('.btn_close');
+        var targetID;
+
+        // 팝업 열기
+        target.addEventListener('click', function(){
+            console.log("button click")
+            targetID = this.getAttribute('href');
+            document.querySelector(targetID).style.display = 'block';
+        });
+        
+
+        // 팝업 닫기
+        btnPopClose.addEventListener('click', function(){
+            this.parentNode.parentNode.style.display = 'none';
+        });
+        });
+    </script>
+    <style>
+        .warning{
+            color:red;
+            font-size: 10pt;
+        }
+        .btn_open{
+            font-weight:bold; 
+            margin:5px; 
+            padding:4px 6px; 
+            /* background:#000;  */
+            color:#fff;
+        }
+        .pop_wrap{
+            position:fixed; 
+            top:0; 
+            left:0; 
+            right:0; 
+            bottom:0; 
+            background:rgba(0,0,0,.5); 
+            font-size:0; 
+            text-align:center;
+        }
+        .text{
+            text-align: left;
+            font-size: 10pt;
+        }
+        .pop_wrap:after{
+            display:inline-block; 
+            height:100%; 
+            vertical-align:middle; 
+            content:'';
+        }
+        .pop_wrap .pop_inner{
+            display:inline-block; 
+            padding:20px 30px; 
+            background:#fff; 
+            width:80%; 
+            vertical-align:middle; 
+            font-size:15px;
+            border-radius: 10px;
+        }
+        .btn_close{
+            margin-top: 10px;
+            border: 1px solid #c9cbd7;
+        }
+    </style>
+</head>
+<body>
+
+    {% for item in detail %}
+    <!-- <form action="{% url 'detail' item.posts_id_pk %}" method="post">{% csrf_token %} -->
+        <!-- <form method="post"> {% csrf_token %} -->
+            <div class="img">
+                {% if item.img_src %}
+                <div class="img">
+                    <img class="img" src="{{ item.img_src.url }}">
+                </div>
+            {% else %}
+                <div class="img">
+                    <img class="img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
+                </div>
+            {% endif %} 
+        </div>   
+        <div class="lost_items">
+            <ul>
+                <div class="phrase">
+                    <div class="subheading">
+                        <li class="subtitle">분실 품목</li>
+                        <li class="">　</li>
+                    </div>
+                    <div class="subcontent">
+                        <li>분실물명 : <span class="title" name="title">{{ item.title }}</span></li>
+                        <li>카테고리 : <span class="category" name="category">{{ item.category }}</span></li>
+                    </div>
+                </div>
+                <hr>
+                <div class="phrase">
+                    <div class="subheading">
+                        <li class="subtitle">보관 장소</li>
+                        <li class="">　</li>
+                    </div>
+                    <div class="subcontent">
+                        <li>유실물센터 : <span class="location" name="location" id="location">{{ item.get_place }}</span></li>
+                        <li>센터번호 : <span class="content">{{ item.center_number }}</span></li>
+                    </div>
+                </div>
+                <hr>
+                <div class="phrase">
+                    <div class="subheading">
+                        <li class="subtitle">요청 정보</li>
+                        <li class="">　</li>
+                    </div>
+                    <div class="subcontent">
+                        <li>요청일시 : <span class="lost_date" name="lost_date">{{ item.created_at }}</span></li>
+                        <li>사례금 : <span class="cost" name="cost">{{ item.cost }}</span></li>
+                        <li>택배가능 : <span class="content">{{ item.parcel }}</span></li>
+                        <li>특이사항 : <span class="content">{{ item.content }}</span></li>
+                    </div>
+                </div>
+            </ul>
+            
+        </div>
+            <a href="#pop_info_1" class="btn_open">
+                <div class="basic_block_low2">
+                    <div class="div_content">
+                        <button type="submit" name="deal" value="delivery" id="submit">찾아주기
+                    </div>
+                </div>
+            </a>
+        <!-- </form> -->
+        
+        <div id="pop_info_1" class="pop_wrap" style="display:none;">
+            <div class="pop_inner">
+                <div class="title">대리 수령 프로세스 안내</div>
+                <div class="text">
+                <br>
+                1. 아차차에서 대리 수령 위임장을 분실자 & 대리수령인에게 발송 <br>
+                2. 분실자 & 대리수령인 위임장 날인 <br>
+                3. 아차차에서 위임장을 보관 장소에 발송 <br>
+                4. 위임장 발송 이후 대리 수령 가능<br>
+                <br>
+                곧 카카오톡으로 위임장을 발송해 드리겠습니다 &#128522;
+                </div>
+                <button type="button" class="btn_close">확인</button>
+            </div>
+        </div>
+
+
+    <!-- </form> -->
+    {% endfor %}
+{% endblock %}
+</body>
+</html>

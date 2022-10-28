@@ -1,0 +1,118 @@
+{% extends "base/base.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="{% static 'acha_money/css/base.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+{% if user.is_authenticated %}
+<div class="container-fluid">
+    {% if not posts %}
+    <div class="alarm">
+        아차차! 대신 수령한 내역이 없습니다.<br>
+        <a href="/acha_money/">대신 수령 해보기</a>
+    </div>
+    {% else %}
+
+    <div class="lost_items">
+        <div class="col-lg-6 mb-4">
+            {% for post in posts %}
+            <div class="right" onclick="location.href='delivery_detail/{{post.posts_id_pk}}/'">
+                <div class="title">{{ post.title }}</div>
+                <span class="created_at">{{ post.created_at}}</span>
+                <br>
+                <span class="cost">{{ post.cost }} 원</span>
+                <hr>
+            {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+    {% endif %} 
+{% else %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="card border-left-warning shadow w-100 py-2" id="login">
+            <div class="card-body">
+                <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
+                <p class="card-text">로그인을 해주세요</p>
+                <a href="/member/login" class="btn btn-primary">로그인 하러가기</a>
+            </div>
+        </div>
+        <div class="card border-left-warning shadow w-100 py-2" style="margin-bottom: 5px;">
+            <div class="card-body">
+                <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
+                <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요</p>
+                <a href="/member/register" class="btn btn-primary">회원가입 하러가기</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; ACHACHA 2022</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+</div>
+</body>
+{% endblock %}
+</html>

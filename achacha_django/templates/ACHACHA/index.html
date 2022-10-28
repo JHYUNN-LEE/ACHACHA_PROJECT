@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <script>
+    $(function() {
+        var typingBool = false; 
+var typingIdx=0; 
+        // 카운트 효과
+        var count0 = count1 = 3000;
+
+        timeCounter();
+
+        function timeCounter() {
+
+            id0 = setInterval(count0Fn, 0.00001);
+
+            function count0Fn() {
+            count0++;
+            if (count0 > 3569) {
+                clearInterval(id0);
+            } else {
+                $(".number").eq(0).text(count0);
+            }
+
+            }
+
+            id1 = setInterval(count1Fn, 0.00001);
+
+            function count1Fn() {
+            count1++;
+            if (count1 > 1000) {
+                clearInterval(id1);
+            } else {
+                $(".number").eq(1).text(count1);
+            }
+            }
+        }
+
+        // 텍스트 효과
+        var typingTxt = $(".typing-txt").text(); 
+
+        typingTxt=typingTxt.split(""); 
+
+        if(typingBool==false){ 
+        typingBool=true;     
+        var tyInt = setInterval(typing,100); 
+        } 
+            
+        function typing(){ 
+        if(typingIdx<typingTxt.length){ 
+            $(".typing").append(typingTxt[typingIdx]);
+            typingIdx++; 
+        } else{ 
+            clearInterval(tyInt); 
+        } 
+        } 
+        // 차트
+        var ctx = document.getElementById("myAreaChart");
+        var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["2016", "2017", "2018", "2019"],
+            datasets: [{
+            label: "Lost : ",
+            lineTension: 0.3,
+            backgroundColor: "rgba(78, 115, 223, 0.05)",
+            borderColor: "rgba(78, 115, 223, 1)",
+            pointRadius: 3,
+            pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)",
+            pointHoverRadius: 3,
+            pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHitRadius: 10,
+            pointBorderWidth: 2,
+            data: [756, 845, 928, 988],
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 7
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 5,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: false
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });
+
+        
+    });
+    
+    </script>
+
+    <style>
+        html{
+        height: 100%;
+        }
+        p, h1{
+            color: black;
+            text-align: center;
+            font-weight: bold;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+        button{
+            height: 40px;
+            background-color:#0805c8 ;
+            font-weight: bold;
+            color: white;
+            border: 0px;
+            padding: 8px 15px 5px 15px;
+            border-radius: 20px;
+        }
+        button:hover{
+            color: white;
+            text-shadow:0px 0px 1rem #eef0f1;
+        }
+        .btn{
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+        }
+        .name{
+            font-size: 12px;
+            color: #969696;
+        }
+        #source{
+            font-size: 10px;
+            color: #969696;
+            float: right;
+            padding: 5px 15px 0 0;
+        }
+        #main{
+            height: 430px;
+            border-radius: 2%;
+            background-image: url("../../static/bootstrap/img/by.jpg");
+            background-size: cover;
+
+        }
+        #catchphrase{
+            text-align: center;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .col-xl-8{
+            margin-top: -50px;
+        }
+        .typing-txt{
+            display: none;
+        }
+
+        .typing {  
+            display: inline-block; 
+            animation-name: cursor; 
+            animation-duration: 0.3s; 
+            animation-iteration-count: infinite; 
+            } 
+            @keyframes cursor{ 
+            0%{border-right: 1px solid #fff} 
+            50%{border-right: 1px solid #000} 
+            100%{border-right: 1px solid #fff} 
+        }
+        #typing{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="col-xl-3 col-md-6 mb-4">
+        <p class="text-primary" id="catchphrase">아차차! 당신의 잃어버린 물건을 찾아드려요</p>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card-body" id="main">
+            <br>
+            <div id="typing">
+            <p class="typing-txt"> 당신을 기다리고 있는 현상금 </p>
+            <p class="typing"></p>
+            </div>
+            <h1> 총 1000 만원 ! </h1>
+            <div class="btn"><button onclick="location.href='acha_money/'"> 현상금 지금 바로 확인 </button></div> 
+            <br>
+            <br>
+            <br>
+            <p class="black"> 지금까지 찾아간 분실물 </p>
+            <h1 class="black"> 누적 <span class="number" class="black"></span> 건 ! </h1>
+            <div class="btn"><button onclick="location.href='all_search/'"> 분실물 지금 바로 확인 </button></div>
+            <br>
+            <br>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- Area Chart -->
+    <div class="col-xl-8 col-lg-7">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">&lt; 연도별 분실물 발생 건수 &gt;</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="myAreaChart"></canvas>
+                </div>
+                <hr>
+                <span id="source">(출처 : 경찰청)</span>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+</body>
+</html>

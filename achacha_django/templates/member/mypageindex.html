@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base/base.html" %}
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+<style>
+    a{
+        text-decoration: none !important;
+        font-weight: bold;
+    }
+
+    .basic_block_1{
+        min-height: 130px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        margin: 0 5% 0 5%;
+        padding: 0;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        border-radius: 30px;
+        background-color: #333333;
+        font-family: Poppins,sans-serif;
+        color: white;
+    }
+
+    .basic_block_1:hover{
+        color:#FFDD33;
+    }
+
+    .basic_block_2{
+        min-height: 130px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: hidden;
+        margin: 0 5% 0 5%;
+        padding: 0;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        border-radius: 30px;
+        background-color: #FFDD33;
+        font-family: Poppins,sans-serif;
+        color: #333333;
+    }
+
+    .basic_block_2:hover{
+        color: white;
+    }
+    
+    img{
+        width:15%;
+        float: right;
+    }
+</style>
+</head>
+<body class="bg-gradient-primary">
+    {% if user.is_authenticated %}
+        <a href="/member/owner">
+            <div class="basic_block">
+                <div class="div_content">
+                    <ul role="list" class="feat_list">
+                        <li class="about_subtitle buy">
+                            <div class="subtitle-large">
+                                대신수령 요청기록
+                                <img class="rounded-circle" src="{% static 'bootstrap/img/help.png' %}">
+                            </div>
+                        </li>     
+                    </ul>
+                </div>
+            </div> 
+        </a> 
+
+        <a href="/member/delivery">
+            <div class="basic_block">
+                <div class="div_content">
+                    <ul role="list" class="feat_list">
+                        <li class="about_subtitle buy">
+                            <div class="subtitle-large">
+                                대신수령 이행기록
+                                <img class="rounded-circle" src="{% static 'bootstrap/img/give.png' %}">
+                            </div>
+                        </li>     
+                    </ul>
+                </div>
+            </div> 
+        </a> 
+
+
+        {% else %}
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="div_content">
+                    <ul role="list" class="feat_list">
+                        <li class="about_subtitle buy">
+                            <div class="subtitle-large">
+                                <h5 class="card-title">ACHACHA</h5>
+                                <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요!</p>
+                                <a href="/member/register/" class="btn btn-primary">회원가입 하러가기</a>
+                            </div>
+                        </li>     
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+        </div> 
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+{% endblock %}
+</html>

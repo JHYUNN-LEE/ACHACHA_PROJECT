@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base/base.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+      
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+    </script>
+    <script>
+        $(function() {
+            // 인증번호 발송
+            $("#phoneChk").click(function(){
+                var phone = $("#phone").val();
+                $.ajax({
+                    type:"POST",
+                    url:"{% url 'member:auth' %}",
+                    dataType: "json",
+                    data: JSON.stringify(phone),
+                    cache : false,
+                    success:function(data){
+                        if(phone == ""){
+                            $(".successPhone").text("유효한 번호를 입력해 주세요.");
+                            $(".successPhone").css("color","red");
+                            $("#phone").attr("autofocus",true);
+                        }else{	        		
+                            $("#phone2").attr("disabled",false);
+                            $("#phoneChk2").css("display","inline-block");
+                            $(".successPhone").text("인증번호 발송이 완료되었습니다.");
+                            $(".successPhoneChk").text("인증번호를 입력한 뒤 본인인증을 눌러주세요.");
+                            $(".successPhoneChk").css("color","green");
+                            $("#phone").attr("readonly",true);
+                        }
+                    }
+                });
+            });
+            // 인증번호 확인
+            $("#phoneChk2").click(function(){
+                $.ajax({
+                    type:"POST",
+                    url:"{% url 'member:auth_check' %}",
+                    dataType: "json",
+                    data: {'phone_number':$("#phone").val(), 'auth_number':$("#phone2").val()},
+                    success:function(data){
+                        $("#phone2").attr("disabled");
+                        $("#phoneChk2").css("display","inline-block");
+                        $(".successPhoneChk").text("인증되었습니다.");
+                        $(".successPhoneChk").css("color","green");
+                        $("#phone").attr("readonly",true);
+                    },
+                    error:function(error){
+                        $(".successPhoneChk").text("인증번호를 다시 확인해 주세요.");
+                        $(".successPhoneChk").css("color","red");
+                    }
+                });
+            });
+            // 전화번호 인증 유효성 검사
+            var join = document.register;
+            var input = $("#phone2");
+            join.onsubmit = function() { 
+                if (input.val()=="") { 
+                alert("전화번호를 인증해 주세요.")
+                $("#phone").focus(); 
+                return false; 
+                }
+             }
+        });
+    </script>
+    <style>
+        .doubleChk{
+            background-color: #d7d7d7;
+            color: black;
+            display: inline;
+            border: 1px solid;
+            border-color: #EAECF4;
+            padding: 9px;
+            font-size: 12px;
+            border-radius:4px;
+        }
+        .doubleChk:hover{
+            background-color: #b1aeae;
+        }
+        label{
+            display: block;
+        }
+        #phone, #phone2{
+            display: inline;
+            width: calc(100% - 100px);
+      
+        }
+        .successPhoneChk, .successPhone{
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-3">
+        <form method="post" name="register" action="{% url 'member:register' %}">
+            {% csrf_token %}
+            {% include "form_errors.html" %}
+            <div class="mb-3">
+                <label for="username">사용자 이름</label>
+                <input type="text" class="form-control" name="username" id="username"
+                       value="{{ form.username.value|default_if_none:'' }}">
+            </div>
+            <div class="mb-3">
+                <label for="password1">비밀번호</label>
+                <input type="password" class="form-control" name="password1" id="password1"
+                       value="{{ form.password1.value|default_if_none:'' }}">
+            </div>
+            <div class="mb-3">
+                <label for="password2">비밀번호 확인</label>
+                <input type="password" class="form-control" name="password2" id="password2"
+                       value="{{ form.password2.value|default_if_none:'' }}">
+            </div>
+            <div class="mb-3">
+                <label for="email">이메일</label>
+                <input type="text" class="form-control" name="email" id="email"
+                       value="{{ form.email.value|default_if_none:'' }}">
+            </div>
+            <div class="mb-3">
+                <label for="phone">전화번호</label>
+                <input type="text" class="form-control" name="phone" id="phone"
+                    value="{{ form.phone.value|default_if_none:'' }}">
+                <span id="phoneChk" class="doubleChk">인증번호 발송</span>
+                <div class="point successPhone"></div>         
+            </div>
+            <div class="mb-3">
+                <label for="phone2">인증번호</label>
+                <input id="phone2" class="form-control", type="text" name="phone2" title="인증번호 입력" disabled required/>
+                <span id="phoneChk2" class="doubleChk">인증번호 확인</span>
+			    <div class="point successPhoneChk"></div>
+            </div>
+            <div class="mb-3">
+                <label for="address">주소</label>
+                <input type="text" class="form-control" name="address" id="address"
+                       value="{{ form.address.value|default_if_none:'' }}">
+            </div>
+            <button type="submit" class="btn btn-primary">회원 가입하기</button>
+        </form>
+    </div>
+{% endblock %}
+
+</body>
+</html>

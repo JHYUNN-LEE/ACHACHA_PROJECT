@@ -1,0 +1,73 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'acha_money/css/post.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+{% for item in search_item %}
+
+<div class="container-fluid">  
+    <form method="post" action="{% url 'post_search' item.posts_id_pk %}" enctype="multipart/form-data"> {% csrf_token %}
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <input class="title" type="text" name="title" placeholder="글 제목">
+                    </div>
+                    <div class="card-body">
+                        <div class="content_box">
+                            <select class="category" name="category">
+                                <option value="" disabled selected>카테고리를 선택하세요</option>
+                                <option value="가방">가방</option>
+                                <option value="귀금속">귀금속</option>
+                                <option value="도서용품&서류">도서용품&서류</option>
+                                <option value="스포츠용품">스포츠용품</option>
+                                <option value="악기">악기</option>
+                                <option value="유가증권&현금">유가증권&현금</option>
+                                <option value="의류">의류</option>
+                                <option value="자동차">자동차</option>
+                                <option value="전자기기">전자기기</option>
+                                <option value="지갑">지갑</option>
+                                <option value="신분증&카드">신분증&카드</option>
+                                <option value="컴퓨터">컴퓨터</option>
+                                <option value="휴대폰">휴대폰</option>
+                                <option value="기타&산업용품">기타&산업용품</option>
+                            </select>
+                            <div>
+                                <input class="cost" type="text" name="cost" placeholder="사례금을 입력하세요">
+                            </div>
+                            <div class="get_place-wrap">
+                                <input class="get_place" type="text" name="get_place" value="{{ item.get_place }}" placeholder="분실물의 보관장소를 적어주세요">
+                            </div>
+                            <textarea class="content" name="content" placeholder="특이사항을 적어주세요"></textarea>
+                        </div>
+                        <div class="img-wrap">
+                            <input class="img" type="file" name="img_src" multiple>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" name="parcel" value="가능"> 택배로 받을게요.
+                            <br>
+                            <input type="checkbox" name="deal" value="seller"> 이 분실물이 본인의 분실물임을 확인했습니다. 
+                            <br>
+                            <input type="checkbox"> 습득처에 대리 수령이 가능한지 확인했습니다. 
+                            <br>
+                        </div>
+                        <hr>
+                        <a href="#"><button class="cancel" onClick="history.back();">취소</button></a>
+                        <input type="submit" value="작성" class="submit">
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </form>
+</div>
+    {% endfor %}
+    
+{% endblock %}
+</body>
+</html>

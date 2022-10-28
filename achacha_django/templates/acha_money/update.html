@@ -1,0 +1,71 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block css %}
+    <link href="{% static 'acha_money/css/post.css' %}" rel="stylesheet" type="text/css">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+        <form method="post" action="{% url 'update' posts.posts_id_pk %}" enctype="multipart/form-data"> {% csrf_token %}
+            <div class="posts">
+                <div class="user-wrap">
+                    <p>작성자: {{ request.user }}</p>
+                </div>
+                <div class="title-wrap">
+                    <input class="title" type="text" name="title" placeholder="글 제목" value="{{ posts.title }}">
+                </div>
+                <div class="category-wrap">
+                    <select class="category" name="category" required>
+                        <option value="" disabled selected>카테고리를 선택하세요</option>
+                        <option value="가방">가방</option>
+                        <option value="귀금속">귀금속</option>
+                        <option value="도서용품&서류">도서용품&서류</option>
+                        <option value="스포츠용품">스포츠용품</option>
+                        <option value="악기">악기</option>
+                        <option value="유가증권&현금">유가증권&현금</option>
+                        <option value="의류">의류</option>
+                        <option value="자동차">자동차</option>
+                        <option value="전자기기">전자기기</option>
+                        <option value="지갑">지갑</option>
+                        <option value="신분증&카드">신분증&카드</option>
+                        <option value="컴퓨터">컴퓨터</option>
+                        <option value="휴대폰">휴대폰</option>
+                        <option value="기타&산업용품">기타&산업용품</option>
+                    </select>
+                </div>
+
+                <div class="cost-wrap">
+                    <input class="cost" type="text" name="cost" placeholder="사례금" value={{ posts.cost }}>
+                </div>
+                <div class="img-wrap">
+                    <input class="img" type="file" name="img_src" value={{ posts.img_src }} multiple>
+                </div>
+                <textarea class="content" name="content">
+                    {{ posts.content }}
+                </textarea>
+
+                <div class="get_place-wrap">
+                    <input class="get_place" type="text" name="get_place" value={{ posts.get_place }} placeholder="분실물의 보관장소를 적어주세요.">
+                </div>
+                <div class="parcel-wrap">
+                    <input type="checkbox" name="parcel" value="가능">택배로 받아요.
+                </div>
+            </div>
+
+            
+            <input type="checkbox" name="deal" value="seller"> 이 물품이 본인의 물품임을 확인하였습니다. 
+
+            <input type="button" value="취소" class="cancel" onclick="{% url 'acha_money' %}">
+            <input type="submit" value="수정" class="submit">
+
+        </form>
+
+
+{% endblock %}
+</body>
+</html>

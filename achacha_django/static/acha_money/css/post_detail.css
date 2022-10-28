@@ -1,0 +1,123 @@
+.lost_items {
+    margin: 0 10% 0 0;
+}
+
+.img{
+    margin: auto;
+    width: 180px;
+    height: 240px;
+    color: #fafafa;
+    margin-bottom: 30px;
+}
+.detail{
+    margin: 10% 5%;
+}
+
+.basic_block_low{
+    height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    margin: 0 5% 4% 5%;
+    padding: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    border-radius: 40px;
+    background-color: #FFDD33;
+    font-family: Poppins,sans-serif;
+}
+.basic_block_low input{
+    color: white;
+}
+.basic_block_low:hover input{
+    color: #333333;
+}
+.basic_block_low:hover{
+    background-color: #ffc609;
+}
+
+h4, h5{
+    margin: 20px 0 10px 0;
+    color: #4e73df;
+    font-weight: bold;
+
+}
+
+li{
+    list-style:none;
+}
+
+.basic_block_low2{
+    height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    margin: 0 5% 4% 5%;
+    padding: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    border-radius: 40px;
+    background-color: #FFDD33;
+    font-family: Poppins,sans-serif;
+}
+.basic_block_low2 input{
+    color: white;
+}
+.basic_block_low2:hover input{
+    color: #333333;
+}
+.basic_block_low2:hover{
+    background-color: #ffc609;
+}
+
+ul > button{
+    /* float: left; */
+    background-color: #4e73df;
+    color: white;
+    height: 30px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    
+    border-radius: 5px;
+    margin: 5px 0;
+    margin-right: 5px;
+}
+ul > button:hover{
+    background-color: #1449e6;
+
+}
+
+.subheading{
+    margin: 0 20px 0 0;
+    color: #4e73df;
+    font-weight: bold;
+    /* display: inline-block; */
+}
+
+.subtitle{
+    border: 1px solid #e3e6f0;
+    width: 100px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.subcontent{
+    margin: 0;
+    /* display: inline-block; */
+}
+
+.phrase{
+    margin-bottom: 20px;
+    padding: 0;
+}

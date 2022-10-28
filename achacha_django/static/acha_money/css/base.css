@@ -1,0 +1,109 @@
+.lost_items {
+    margin: 0;
+}
+
+.lost_img {
+    width: 100%;
+    height: 200px;
+}
+
+.title {
+    color: #4e73df;
+    font-weight: bold;
+    font-size: 12pt;
+    height: 45px;
+}
+
+.cost{
+    font-size: 10pt;
+    color: black;
+}
+
+.date_time{
+    font-size: 9pt;
+}
+
+.get_place{
+    font-size: 10pt;
+}
+
+.pagination {
+    margin: auto;
+}
+
+.post {
+    float: right;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    height: 55px;
+    /* background-color: white; */
+
+}
+
+#post{
+    display: inline-block;
+    position: sticky;
+    width: 55px;
+    border: 1px solid #c9cbd7;
+    background-color: #4E73DF;
+}
+
+#post:hover{
+    background-color: #c9cbd7;
+}
+
+.wrapper{
+    margin: 0 10%;
+}
+
+
+.card_search{
+    width: 45%;
+    background-color: #fff !important;
+    border: none;
+    margin-right: 5px;
+    display: inline-block;
+
+}
+
+.row, .image_center{
+    display: flex;
+    justify-content: center;
+}
+
+.alarm{
+    font-size: 9pt;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.form-row{
+    margin: 0 5% 5% 5%;
+    width : 100%;
+    height: 20px;
+}
+.input-group{
+    width: 35%;
+    margin-right: 5px;
+    margin-left: 0px;
+}
+
+.form-control{
+    font-size: 10pt;
+}
+
+.form-row > button{
+    font-size: 10pt;
+    padding: 0;
+    width: 48px;
+}
+
+.info{
+    display: block;
+    height: 150px;
+}
+
+#login{
+    margin-bottom: 10px;
+}
