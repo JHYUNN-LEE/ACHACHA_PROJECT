@@ -92,7 +92,7 @@
 
 </style>
    
-    <form action="img_result/" method="POST" id="dataForm" enctype="multipart/form-data">{% csrf_token %}
+    <form action="img_result/" method="POST" id="dataForm" enctype="multipart/form-data" onsubmit="return form_check()">{% csrf_token %}
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-warning shadow h-100 py-2">
                 <div class="div_content">
@@ -101,7 +101,7 @@
                             <div class="subtitle-large">
                                 <p class="title">
                                     1. 잃어버린 물건의 유형을 선택해 주세요.</p>
-                                <select name="category" required> <!--필수선택-->
+                                <select name="category" id="category" required> <!--필수선택-->
                                     <option value="" selected disabled>유형 선택</option>    
                                     <option value="bag">가방</option>
                                     <option value="wallet">지갑</option>
@@ -151,6 +151,22 @@
         </div>
 
     </form>
+
+    <script>
+        // 값이 안 들어가먄 오류가 뜨게 설정
+        function form_check() {
+            if( !$('#category').val()) { 
+                alert("아차차! 카테고리를 선택해 주세요.");  
+                return false;
+                }
+    
+            else if(!$('#uploadfile').val()) {
+                alert("아차차! 파일을 첨부해 주세요")
+                return false;
+            }
+            return true;
+            }
+    </script>
 {% endblock %}
 
 </body>

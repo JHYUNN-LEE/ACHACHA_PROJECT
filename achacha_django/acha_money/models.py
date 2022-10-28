@@ -27,7 +27,7 @@ class Posts(models.Model):
     users_id = models.CharField(max_length=45, blank=True, null=True)
     title = models.CharField(max_length=45, blank=True, null=True)
     content = models.TextField(blank=True, null=True)
-    cost = models.IntegerField(blank=True, null=True, default=0)
+    cost = models.IntegerField(blank=True, null=True)
     parcel = models.CharField(max_length=45, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     category = models.CharField(max_length=45, blank=True, null=True)

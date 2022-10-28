@@ -16,7 +16,7 @@
             font-weight: bold;
         }
         .basic_block_low{
-            height: 30px;
+            height: 60px;
             margin-bottom: 10px;
             margin-top: 10px;
         }
@@ -25,7 +25,9 @@
         border-color: lightgray;
         font-size: small;
         }
-
+        #insert_date{
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -38,12 +40,12 @@
                         <div class="subtitle-large">
                             <p class="choose_btn" style="float: left;">
                                 1. 잃어버린 물건의 유형을 선택해 주세요.</p>
-                            <select name="insert_category" id="insert_category" style="width:180px;height:25px;">
-                                <option value="유형 선택" selected disabled hidden>------------선택------------</option>
+                            <select name="insert_category" id="insert_category" style="width:180px;height:30px;">
+                                <option value="유형 선택" selected disabled hidden>---------- 선  택 ----------</option>
                                 <option value="가방">가방</option>
                                 <option value="귀금속">귀금속</option>
-                                <option value="옷">의류</option>
-                                <option value="휴대폰">휴대폰</option>
+                                <option value="지갑">지갑</option>
+                                <option value="옷">의류</option>                                <option value="휴대폰">휴대폰</option>
                                 <option value="전자기기">전자기기</option>
                                 <option value="컴퓨터">컴퓨터</option>
                                 <option value="신분증&카드">신분증&카드</option>
@@ -51,6 +53,7 @@
                                 <option value="도서용품&서류">도서용품&서류</option>
                                 <option value="스포츠용품">스포츠용품</option>
                                 <option value="유가증권&현금">유가증권&현금</option>
+                                
                             </select>
                         </div>
                     </li>     
@@ -82,7 +85,7 @@
                     <li class="about_subtitle buy">
                         <div class="subtitle-large">
                             <p class="choose_btn" style="float: left;">
-                                3. 잃어버린 날짜를 선택해 주세요.</p>
+                                3. 잃어버린 날짜를 선택해 주세요. </p>
                             <input type="date" name="insert_date" id="insert_date">
                         </div>
                     </li>     

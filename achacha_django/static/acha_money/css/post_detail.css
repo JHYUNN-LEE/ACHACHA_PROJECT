@@ -32,7 +32,7 @@
     font-family: Poppins,sans-serif;
 }
 .basic_block_low input{
-    color: white;
+    color: black;
 }
 .basic_block_low:hover input{
     color: #333333;
@@ -120,4 +120,8 @@ ul > button:hover{
 .phrase{
     margin-bottom: 20px;
     padding: 0;
+}
+
+#login{
+    margin-bottom: 10px;
 }

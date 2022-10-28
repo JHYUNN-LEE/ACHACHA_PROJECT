@@ -22,57 +22,155 @@
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css" >
+    <script>
+        $(function() {
+        var target = document.querySelector('.btn_open');
+        var btnPopClose = document.querySelector('.btn_close');
+        var targetID;
 
+        // 팝업 열기
+        target.addEventListener('click', function(){
+            console.log("button click")
+            targetID = this.getAttribute('href');
+            document.querySelector(targetID).style.display = 'block';
+        });
+        
+
+        // 팝업 닫기
+        btnPopClose.addEventListener('click', function(){
+            this.parentNode.parentNode.style.display = 'none';
+        });
+        });
+    </script>
+    <style>
+         .warning{
+            color:red;
+            font-size: 10pt;
+        }
+        .btn_open, .btn_open2{
+            font-weight:bold; 
+            
+            /* padding:4px 6px;  */
+            /* background:#000;  */
+            color:#fff;
+        }
+
+        #phone_check{
+            /* float: left; */
+            background-color: #4e73df;
+            color: white;
+            height: 30px;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 5px 0;
+            margin-right: 3px;
+        }
+        .pop_wrap{
+            position:fixed; 
+            top:0; 
+            left:0; 
+            right:0; 
+            bottom:0; 
+            background:rgba(0,0,0,.5); 
+            font-size:0; 
+            text-align:center;
+        }
+        .text{
+            text-align: left;
+            font-size: 10pt;
+        }
+        .pop_wrap:after{
+            display:inline-block; 
+            height:100%; 
+            vertical-align:middle; 
+            content:'';
+        }
+        .pop_wrap .pop_inner{
+            display:inline-block; 
+            padding:20px 30px; 
+            background:#fff; 
+            width:80%; 
+            vertical-align:middle; 
+            font-size:15px;
+            border-radius: 10px;
+        }
+        .btn_close{
+            margin-top: 10px;
+            border: 1px solid #c9cbd7;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: white;
+            text-decoration: none;
+        }
+        .btn{
+            margin:0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
 {% if user.is_authenticated %}
     <div class="lost_items">
         <div class="col-lg-6 mb-4">
-        {% for post in posts %}
-        {% if post.lost_items_id %}
-            <div class="img">
-                <img class="img" src="{% get_static_prefix %}image/{{ item.lost_items_id }}.jpg" alt="image" onerror="this.onerror=null; this.src='{% static 'bootstrap/img/no_image.png' %}';">
-            </div>
-        {% else %}
-            <div class="img">
-                <img class="img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
-            </div>
-        {% endif %}
-        <ul>
-            <li>분실물명 : <span class="title" name="title">{{ post.title }}</span></li>
-            <li>작성일시 : <span class="lost_date" name="lost_date">{{ post.created_at}}</span></li>
-            <li>보관장소 : <span class="lost_place" name="lost_place">{{ post.get_place }}</span></li>
-            <li>사례금 : <span class="cost" name="cost">{{ post.cost }} 원</span></li>
-            <button class="phone_check">대신 수령 전화 확인
-            <button class="pay_check">송금하기
-        </ul>        
-        
-        {% endfor %}
-        </div> 
-    </div> 
-
-        
-        
-    {% else %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card border-left-warning shadow w-100 py-2" id="login">
-                <div class="card-body">
-                    <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
-                    <p class="card-text">로그인을 해주세요</p>
-                    <a href="/member/login" class="btn btn-primary">로그인 하러가기</a>
+            {% for post in posts %}
+            {% if post.lost_items_id %}
+                <div class="img">
+                    <img class="img" src="{% get_static_prefix %}/{{ post.img_src }}" alt="image" onerror="this.onerror=null; this.src='{% static 'bootstrap/img/no_image.png' %}';">
                 </div>
-            </div>
-            <div class="card border-left-warning shadow w-100 py-2" style="margin-bottom: 5px;">
-                <div class="card-body">
-                    <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
-                    <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요</p>
-                    <a href="/member/register" class="btn btn-primary">회원가입 하러가기</a>
+            {% else %}
+                <div class="img">
+                    <img class="img" src="{% static 'bootstrap/img/no_image.png' %}" alt="no image">
+                </div>
+            {% endif %}
+            <ul>
+                <li>분실물명 : <span class="title" name="title">{{ post.title }}</span></li>
+                <li>작성일시 : <span class="lost_date" name="lost_date">{{ post.created_at}}</span></li>
+                <li>보관장소 : <span class="lost_place" name="lost_place">{{ post.get_place }}</span></li>
+                <li>사례금 : <span class="cost" name="cost">{{ post.cost }} 원</span></li>
+                <a href="#pop_info_1" class="btn_open">
+                    <div class="btn">
+                        <button id="phone_check">대신 수령 전화 확인
+                    </div>
+                </a>
+                <button class="pay_check">송금하기
+                <br>
+            </ul>
+            {% endfor %}
+            
+            
+        </div>
+        
+        <!-- <p>{{posts.cost}}</p> -->
+        
+
+        <!-- {{deal.cost}} -->
+        
+        {% else %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card border-left-warning shadow w-100 py-2" id="login">
+                    <div class="card-body">
+                        <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
+                        <p class="card-text">로그인을 해주세요</p>
+                        <a href="/member/login" class="btn btn-primary">로그인 하러가기</a>
+                    </div>
+                </div>
+                <div class="card border-left-warning shadow w-100 py-2" style="margin-bottom: 5px;">
+                    <div class="card-body">
+                        <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">ACHACHA</div>
+                        <p class="card-text">아직 회원이 아니라면 회원가입을 해주세요</p>
+                        <a href="/member/register" class="btn btn-primary">회원가입 하러가기</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    {% endif %}
+        {% endif %}
 
             <!-- End of Main Content -->
 
@@ -117,22 +215,86 @@
         </div>
     </div>
 
+    <div id="pop_info_1" class="pop_wrap" style="display:none;">
+        <div class="pop_inner">
+            <div class="title">프로세스 안내</div>
+            <div class="text">
+            <br>
+            대신 수령이 가능한지 확인해 주셔서 감사합니다!
+            <br>
+            대신 수령자가 나타나면 배송 정보를 전달하겠습니다 😊
+            </div>
+            <button type="button" class="btn_close">확인</button>
+        </div>
+    </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/vendor/jquery/jquery.min.js"></script>
+    <script src="bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="bootstrap/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="bootstrap/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="bootstrap/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+    <script src="bootstrap/js/demo/datatables-demo.js"></script>
 
+    <!-- iamport import module -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+
+    <!-- iamport kakaopay -->
+    <script>
+        $(".pay_check").click(function() {
+            var IMP = window.IMP;
+            var cost = "{{ deal.cost }}";
+            var buyer_name = "{{ deal.users_id }}";
+            IMP.init('imp04413248');
+            IMP.request_pay({
+                pg: "tosspay",
+                pay_method: "card",
+                merchant_uid: "merchant_" + new Date().getTime(),
+                name: 'test',
+                amount: cost,
+                customer_uid : buyer_name + new Date().getTime(),
+                buyer_name : buyer_name,
+                m_redirect_url: '{http://localhost:8000/member/owner}'
+            }, function (rsp) {
+                console.log(rsp);
+                if (rsp.success) {
+                    var msg = '송금이 완료되었습니다.';
+                    
+                } else {
+                    var msg = '송금에 실패하였습니다.';
+
+                }
+                alert(msg);
+            });
+        });
+
+        $(function() {
+        var target = document.querySelector('.btn_open');
+        var btnPopClose = document.querySelector('.pop_wrap .btn_close');
+        var targetID;
+
+        // 팝업 열기
+        target.addEventListener('click', function(){
+            console.log("button click")
+            targetID = this.getAttribute('href');
+            document.querySelector(targetID).style.display = 'block';
+        });
+        
+
+        // 팝업 닫기
+        btnPopClose.addEventListener('click', function(){
+            this.parentNode.parentNode.style.display = 'none';
+        });
+    });
+    </script>
 </body>
 {% endblock %}

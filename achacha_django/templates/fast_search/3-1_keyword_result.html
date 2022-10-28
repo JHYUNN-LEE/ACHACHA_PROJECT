@@ -20,9 +20,9 @@
         <div class="row" >
         {% for item in posts %}
             <div class="card_search" onclick="location.href='{% url 'keyword_detail' item.images_id_pk %}'">
-                {% if item.img_src %}
+                {% if item.images_id_pk %}
                 <div class="image_center">
-                    <img class="lost_img" src="{{ item.img_src.url }}" alt="image">
+                    <img class="lost_img" src="{% get_static_prefix %}image/{{ item.images_id_pk }}.jpg" alt="image" onerror="this.onerror=null; this.src='{% get_static_prefix %}bootstrap/img/no_image.png'">
                 </div>
                 {% else %}
                 <div class="image_center">

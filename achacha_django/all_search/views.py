@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
-from acha_money.models import Posts
+from acha_money.models import Posts, UserDeal
 from . models import Alarm
 from . models import LostItems
 from hdfs import InsecureClient
@@ -40,24 +40,33 @@ def all_index(request):
 
 
 def all_detail(request, lost_items_id_pk):
-    # view 로그 추적 
+     # view 로그 추적 
     logger.trace_logger(request)
 
     if request.method == "POST":
-        users_id = request.user
-        category = request.POST['category']
-        get_place = request.POST['get_place']
+        users_id = str(request.user)
+        category = request.POST.get('category')
+        get_place = request.POST.get('get_place')
         img_src = request.FILES.get('img_src')
-        
+        lost_items_id = lost_items_id_pk
         search_item = Posts.objects.create(users_id=users_id,
                             category=category,
                             get_place=get_place,
-                            img_src=img_src)
-        return redirect('/acha_money/post_search/{}'.format(search_item.posts_id_pk), {'search_item': search_item})
+                            img_src=img_src,
+                            lost_items_id = lost_items_id)
+
+        user_deal = UserDeal.objects.create(users_id=users_id,
+                                            posts_id=search_item.posts_id_pk,
+                                            deal=request.POST['deal'])
+
+        context = {
+            'search_item': search_item,
+        }
+
+        return redirect('/acha_money/post_search/{}'.format(search_item.posts_id_pk), context)
     else:
         lost_items_list= LostItems.objects.filter(lost_items_id_pk=lost_items_id_pk)
-        return render(request, 'all_search/all_detail.html', {'lost_items_list': lost_items_list})
-    
+        return render(request, 'all_search/all_detail.html', {'lost_items_list': lost_items_list})    
     
 def all_alarm(request):
     # view 로그 추적 
