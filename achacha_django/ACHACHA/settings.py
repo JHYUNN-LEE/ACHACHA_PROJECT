@@ -91,9 +91,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'achacha',
-        'USER': 'root',
-        'PASSWORD': 'achacha7!',
-        'HOST': '35.76.119.109',
+        'USER': '유저를 입력해 주세요!',
+        'PASSWORD': '비밀번호를 입력해 주세요!',
+        'HOST': '호스트를 입력해 주세요!',
         'PORT': '3306',
     }
 }

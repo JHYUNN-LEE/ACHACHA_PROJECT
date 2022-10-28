@@ -110,7 +110,7 @@ def uploaded_image(request):
             pass
     
     # AWS에서 실행, hdfs 접속
-    client = InsecureClient("http://54.64.90.112:9870/", user="ubuntu")
+    client = InsecureClient("http://호스트 입력:9870/", user="ubuntu")
     
     # 유사 이미지 output for문으로 대조하여 이미지 가져오기 (가져온 이미지 list : download_list)
     ## image_src_list : /user/ubuntu/service_image/XXXX.jpg
@@ -171,7 +171,7 @@ def find_category_to_es(request):
     #print(insert_category, insert_color, insert_date)
     #print(insert_category, insert_color, insert_date)
 
-    es = Elasticsearch("http://54.64.90.112:9200")
+    es = Elasticsearch("http://호스트 입력:9200")
 
     res = es.search(index='lost112', size=10000,
                 query = {    
@@ -260,7 +260,7 @@ def keyword_detail(request, images_id_pk):
     else:
         logger.trace_logger(request)# view 로그 추적 
         
-        es = Elasticsearch("http://54.64.90.112:9200")
+        es = Elasticsearch("http://호스트 입력:9200")
 
         res = es.search(index='lost112', size=1,
                     body = { "query":  
