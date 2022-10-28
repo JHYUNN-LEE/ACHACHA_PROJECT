@@ -17,11 +17,13 @@ def index(request):
     lost_items_list = Posts.objects.all().order_by('-posts_id_pk')
     print(lost_items_list)
 
-    paginator = Paginator(lost_items_list, 6)
+    paginator = Paginator(lost_items_list, 10)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
+    max_index = len(paginator.page_range)
     return render(request, 'acha_money/acha_money.html', {'lost_items_list': lost_items_list,
-                                                          'posts': posts})
+                                                          'posts': posts,
+                                                          'max_index': max_index})
 
 
 def post(request):
@@ -63,7 +65,7 @@ def post_search(request, posts_id_pk):
     if request.method == 'POST':
         # posts table
         title = request.POST['title']
-        category = request.POST.get('category')
+        category = request.POST['category']
         cost = request.POST['cost']
         # 이미지 파일이 없을 경우 None으로 받음
         try:
@@ -72,7 +74,7 @@ def post_search(request, posts_id_pk):
             img_src = None
         
         content = request.POST['content']
-        parcel = request.POST.get('parcel')
+        parcel = request.POST['parcel']
         created_at = timezone.now()
         get_place = request.POST['get_place']
         posts = Posts.objects.filter(posts_id_pk=posts_id_pk)
@@ -84,7 +86,7 @@ def post_search(request, posts_id_pk):
                     parcel=parcel,
                     created_at=created_at,
                     get_place=get_place,
-                    users_id = request.user
+                    users_id = str(request.user)
                     )
         
         # userdeal table
@@ -106,14 +108,21 @@ def detail(request, posts_id_pk):
 
     if request.method ==  'POST':
         # user_detail table
-        users_id = request.user
-        user_deal = UserDeal.objects.create(users_id=users_id,
-                                        posts_id=posts_id_pk,
-                                        deal=request.POST['deal'])
+        user_deal = UserDeal()
+        user_deal.users_id = request.user
+        user_deal.posts_id = posts_id_pk
+        user_deal.deal = request.POST.get('deal', '')
+        user_deal.save()
         return redirect('acha_money')
         
     else:
         detail = Posts.objects.filter(posts_id_pk=posts_id_pk)
+        print(detail)
+        
+        # if detail.users_id == request.user:
+            # detail = True
+        # else:
+            # detail = False
         return render(request, 'acha_money/post_detail.html', {'detail': detail})
 
 def detail_proto(request, posts_id_pk):

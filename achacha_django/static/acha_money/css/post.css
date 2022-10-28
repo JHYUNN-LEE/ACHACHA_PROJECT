@@ -19,7 +19,9 @@
     padding: 0 5%;
     border: none;
     border-bottom: 1px solid #c9cbd7;
+
 }
+
 select option:first-child {
     color: lightgray;
 }
@@ -81,8 +83,7 @@ textarea{
     margin-bottom: 5px;
 }
 .submit:hover{
-    background-color: #1449e6;
-
+    background-color: #1449e6; 
 }
 
 .content_box{

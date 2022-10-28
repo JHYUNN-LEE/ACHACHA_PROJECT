@@ -168,7 +168,7 @@ def find_category_to_es(request):
         insert_date = request.GET.get("insert_date")
         
     
-    print(insert_category, insert_color, insert_date)
+    #print(insert_category, insert_color, insert_date)
     #print(insert_category, insert_color, insert_date)
 
     es = Elasticsearch("http://54.64.90.112:9200")
@@ -200,7 +200,7 @@ def find_category_to_es(request):
     paginator = Paginator(datas, 10)
     
 
-    print(datas) 
+    #print(datas) 
     max_index = len(paginator.page_range)
     posts = paginator.get_page(page)
    
@@ -250,8 +250,7 @@ def keyword_detail(request, images_id_pk):
         user_deal = UserDeal.objects.create(users_id= users_id,
                                         posts_id= search_item.posts_id_pk,
                                         deal= deal)
-    
-        
+                                        
         context = {
             'search_item': search_item,
         }
@@ -273,7 +272,7 @@ def keyword_detail(request, images_id_pk):
         datas = trans_source(hits)
         context = {'datas' : datas}
 
-        print(datas)
+        #print(datas)
         
         return render(request, 'fast_search/3-2_keyword_detail.html', context)
 

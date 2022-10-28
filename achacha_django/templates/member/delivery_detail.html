@@ -5,24 +5,99 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this page -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="{% static 'acha_money/css/post_detail.css' %}" rel="stylesheet" type="text/css" >
+    <script>
+        $(function() {
+        var target = document.querySelector('.btn_open');
+        var btnPopClose = document.querySelector('.btn_close');
+        var targetID;
+
+        // 팝업 열기
+        target.addEventListener('click', function(){
+            console.log("button click")
+            targetID = this.getAttribute('href');
+            document.querySelector(targetID).style.display = 'block';
+        });
+        
+
+        // 팝업 닫기
+        btnPopClose.addEventListener('click', function(){
+            this.parentNode.parentNode.style.display = 'none';
+        });
+        });
+    </script>
+    <style>
+        .warning{
+            color:red;
+            font-size: 10pt;
+        }
+        .btn_open, .btn_open2{
+            font-weight:bold; 
+            
+            /* padding:4px 6px;  */
+            /* background:#000;  */
+            color:#fff;
+        }
+
+        #find_check, #send_check{
+            /* float: left; */
+            background-color: #4e73df;
+            color: white;
+            height: 30px;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 5px 0;
+            margin-right: 3px;
+        }
+        .pop_wrap{
+            position:fixed; 
+            top:0; 
+            left:0; 
+            right:0; 
+            bottom:0; 
+            background:rgba(0,0,0,.5); 
+            font-size:0; 
+            text-align:center;
+        }
+        .text{
+            text-align: left;
+            font-size: 10pt;
+        }
+        .pop_wrap:after{
+            display:inline-block; 
+            height:100%; 
+            vertical-align:middle; 
+            content:'';
+        }
+        .pop_wrap .pop_inner{
+            display:inline-block; 
+            padding:20px 30px; 
+            background:#fff; 
+            width:80%; 
+            vertical-align:middle; 
+            font-size:15px;
+            border-radius: 10px;
+        }
+        .btn_close, .btn_close2{
+            margin-top: 10px;
+            border: 1px solid #c9cbd7;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: white;
+            text-decoration: none;
+        }
+        .btn{
+            margin:0;
+            padding: 0;
+        }
+    </style>
+
 </head>
 <body>
 {% if user.is_authenticated %}
@@ -31,7 +106,7 @@
         {% for post in posts %}
         {% if post.lost_items_id %}
             <div class="img">
-                <img class="img" src="{% get_static_prefix %}image/{{ item.lost_items_id }}.jpg" alt="image" onerror="this.onerror=null; this.src='{% static 'bootstrap/img/no_image.png' %}';">
+                <img class="img" src="{% get_static_prefix %}/{{ post.img_src }}" alt="image" onerror="this.onerror=null; this.src='{% static 'bootstrap/img/no_image.png' %}';">
             </div>
         {% else %}
             <div class="img">
@@ -44,15 +119,54 @@
             <li>작성자 : <span class="author" name="author">{{ request.user }}</span></li>
             <li>보관장소 : <span class="lost_place" name="lost_place">{{ post.get_place }}</span></li>
             <li>사례금 : <span class="cost" name="cost">{{ post.cost }} 원</span></li>
-            <button class="find_check">대신 수령 완료
-            <button class="accept_check">배송 완료
+            <li>
+                <a href="#pop_info_1" class="btn_open">
+                    <div class="btn">
+                        <!-- <div class="div_content"> -->
+                            <button id="find_check">대신 수령 완료
+                        <!-- </div> -->
+                    </div>
+                </a>
+                <a href="#pop_info_2" class="btn_open2">
+                    <div class="btn">
+                        <!-- <div class="div_content"> -->
+                            <button id="send_check">배송 완료
+                        <!-- </div> -->
+                    </div>
+                </a>
+            </li>
         </ul>
         
         {% endfor %}
         </div>
-
+    
     </div>
 
+    <div id="pop_info_1" class="pop_wrap" style="display:none;">
+        <div class="pop_inner">
+            <div class="title">프로세스 안내</div>
+            <div class="text">
+            <br>
+            대신 수령해 주셔서 감사합니다!
+            <br>
+            수령자에게 물건이 대신 수령되었음을 안내드리겠습니다. 🥳
+            </div>
+            <button type="button" class="btn_close">확인</button>
+        </div>
+    </div>
+
+    <div id="pop_info_2" class="pop_wrap" style="display:none;">
+        <div class="pop_inner">
+            <div class="title">프로세스 안내</div>
+            <div class="text">
+            <br>
+            배송해 주셔서 감사합니다!
+            <br>
+            수령자에게 물건이 배송되었음을 안내드리겠습니다. 💌
+            </div>
+            <button type="button" class="btn_close2">확인</button>
+        </div>
+    </div>
     <!-- /.container-fluid -->
 {% else %}
 <div class="container-fluid">
@@ -90,23 +204,47 @@
 </div>
 <!-- End of Content Wrapper -->
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script>
+        $(function() {
+            var target = document.querySelector('.btn_open');
+            var btnPopClose = document.querySelector('.pop_wrap .btn_close');
+            var targetID;
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+            // 팝업 열기
+            target.addEventListener('click', function(){
+                console.log("button click")
+                targetID = this.getAttribute('href');
+                document.querySelector(targetID).style.display = 'block';
+            });
+            
 
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+            // 팝업 닫기
+            btnPopClose.addEventListener('click', function(){
+                this.parentNode.parentNode.style.display = 'none';
+            });
+        });
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+        $(function() {
+            var target = document.querySelector('.btn_open2');
+            var btnPopClose = document.querySelector('.pop_wrap .btn_close2');
+            var targetID;
 
+            // 팝업 열기
+            target.addEventListener('click', function(){
+                console.log("button click")
+                targetID = this.getAttribute('href');
+                document.querySelector(targetID).style.display = 'block';
+            });
+            
+
+            // 팝업 닫기
+            btnPopClose.addEventListener('click', function(){
+                this.parentNode.parentNode.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 {% endblock %}
 </html>

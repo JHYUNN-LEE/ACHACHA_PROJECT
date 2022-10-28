@@ -180,8 +180,19 @@ class SMSVerificationView(View):
         
 def delivery_detail(request, posts_id_pk):
     posts = Posts.objects.filter(posts_id_pk=posts_id_pk)
-    return render(request, 'member/delivery_detail.html', {'posts': posts})
+    deal = posts.values()
+    context = {
+        "posts": posts,
+        "deal": deal,
+    }
+    return render(request, 'member/delivery_detail.html', context)
 
 def owner_detail(request, posts_id_pk):
     posts = Posts.objects.filter(posts_id_pk=posts_id_pk)
-    return render(request, 'member/owner_detail.html', {'posts': posts})
+    deal = posts.values()[0]
+    context = {
+        "posts": posts,
+        "deal": deal,
+    }
+    return render(request, 'member/owner_detail.html', context)
+
