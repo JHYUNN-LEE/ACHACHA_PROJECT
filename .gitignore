@@ -1,6 +1,7 @@
 /achacha_django/*.DS_Store
 /achacha_django/db.sqlite3
 /achacha_django/logs/
+/achacha_django/.idea/
 /achacha_django/static/image/
 
 /achacha_django/media/acha_money/*.png
@@ -19,3 +20,11 @@
 /achacha_django/acha_money/__pycache__/
 /achacha_django/member/__pycache__/
 
+/achacha_django/ACHACHA/*DS_Store
+/achacha_django/all_search/*DS_Store
+/achacha_django/fast_search/*DS_Store
+/achacha_django/acha_money/*DS_Store
+/achacha_django/member/*DS_Store
+/achacha_django/static/*DS_Store
+/achacha_django/templates/*DS_Store
+/achacha_django/media/*DS_Store
