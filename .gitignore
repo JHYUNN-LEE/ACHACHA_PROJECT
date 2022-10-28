@@ -5,6 +5,7 @@
 
 /achacha_django/media/acha_money/*.png
 /achacha_django/media/acha_money/*.jpg
+/achacha_django/media/acha_money/*.jpeg
 
 /achacha_django/media/result_image/*.png
 /achacha_django/media/result_image/*.jpg
