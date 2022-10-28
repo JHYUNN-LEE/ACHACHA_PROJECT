@@ -4,13 +4,13 @@
 /achacha_django/static/image/
 
 /achacha_django/media/acha_money/*.png
-/achacha_django/media/acha_money/*.jng
+/achacha_django/media/acha_money/*.jpg
 
 /achacha_django/media/result_image/*.png
-/achacha_django/media/result_image/*.jng
+/achacha_django/media/result_image/*.jpg
 
 /achacha_django/media/upload_image/*.png
-/achacha_django/media/upload_image/*.jng
+/achacha_django/media/upload_image/*.jpg
 
 /achacha_django/ACHACHA/__pycache__/
 /achacha_django/all_search/__pycache__/
