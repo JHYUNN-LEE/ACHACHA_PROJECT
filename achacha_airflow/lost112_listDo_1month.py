@@ -64,9 +64,7 @@ region_dict = {'서울' : 'LCA000', '경기도' : 'LCI000'}
 
 region_en_dict = {'서울' : 'Seoul', '경기도' : 'Gyeonggi'}
 
-# S3 정보
-#ACCESS_KEY_ID = "AKIATDCLVPF4IAWLKYXP"
-#SECRET_ACCESS_KEY = "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"
+
 
 # 마지막 페이지 넘버 찾기
 def last_page(category, region, start_date, end_date):
