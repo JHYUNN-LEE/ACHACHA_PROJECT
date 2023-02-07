@@ -1,9 +1,12 @@
+.DS_Store
+/environment/.env
 /.idea/
 /achacha_django/*.DS_Store
 /achacha_django/db.sqlite3
 /achacha_django/logs/
 /achacha_django/.idea/
 /achacha_django/static/image/
+/achacha_django/.static_root
 
 /achacha_django/media/acha_money/*.png
 /achacha_django/media/acha_money/*.jpg
